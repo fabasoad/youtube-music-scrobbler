@@ -33,7 +33,9 @@ jobs:
         run: uv sync
 
       - name: Write browser.json from secret
-        run: echo "${{ secrets.YTM_BROWSER }}" > browser.json
+        env:
+          YTM_BROWSER: "${{ secrets.YTM_BROWSER }}"
+        run: echo "${YTM_BROWSER}" > browser.json
 
       - name: Run scrobble script
         env:
