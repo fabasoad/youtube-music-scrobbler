@@ -1,9 +1,20 @@
 [
   {
+    "videoId": "K0YbSQj4rAo",
+    "title": "Harridan",
+    "artist": "Porcupine Tree",
+    "timestamp": 1784128782
+  },
+  {
+    "videoId": "C147uOKppWI",
+    "title": "Richter und Henker",
+    "artist": "OOMPH!",
+    "timestamp": 1784128602
+  },
+  {
     "videoId": "qgks-XJc8rw",
     "title": "Unzerst\u00f6rbar",
-    "artist": "Oomph!",
-    "timestamp": 1784128515
+    "artist": "Oomph!"
   },
   {
     "videoId": "mD3hgrlURkE",
@@ -238,16 +249,6 @@
   {
     "videoId": "0ysyWuu00Ms",
     "title": "Disconnect",
-    "artist": "Korn"
-  },
-  {
-    "videoId": "waXga8pyRPc",
-    "title": "Lost In The Grandeur",
-    "artist": "Korn"
-  },
-  {
-    "videoId": "L6mvLdiQvaY",
-    "title": "Start The Healing",
     "artist": "Korn"
   }
 ]
