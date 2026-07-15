@@ -1,44 +1,47 @@
+---
 name: Scrobble YT Music History
 
 on:
   schedule:
     - cron: '0 */2 * * *'
-  workflow_dispatch:
+  workflow_dispatch: {}
 
 permissions:
   contents: write
 
 jobs:
   scrobble:
-    runs-on: ubuntu-latest
-
+    name: Scrobble
+    runs-on: [ubuntu-latest]
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v4
+      - name: Checkout ${{ github.repository }}
+        uses: actions/checkout@v7
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
           persist-credentials: true
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
-          python-version: '3.11'
+          python-version-file: "pyproject.toml"
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v6
+        with:
+          version-file: "pyproject.toml"
 
       - name: Install dependencies
-        run: pip install -r requirements.txt
+        run: uv sync
 
       - name: Write browser.json from secret
-        env:
-          YTM_BROWSER: ${{ secrets.YTM_BROWSER }}
-        run: python3 -c "import os; open('browser.json', 'w').write(os.environ['YTM_BROWSER'])"
+        run: echo "${{ secrets.YTM_BROWSER }}" > browser.json
 
       - name: Run scrobble script
-        run: python scrobble.py
         env:
           LASTFM_API_KEY: ${{ secrets.LASTFM_API_KEY }}
           LASTFM_SECRET: ${{ secrets.LASTFM_SECRET }}
           LASTFM_USERNAME: ${{ secrets.LASTFM_USERNAME }}
           LASTFM_PASSWORD: ${{ secrets.LASTFM_PASSWORD }}
+        run: make run
 
       - name: Commit updated snapshot and log
         run: |

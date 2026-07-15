@@ -1,2 +1,0 @@
-pylast==7.0.2
-ytmusicapi==1.11.5

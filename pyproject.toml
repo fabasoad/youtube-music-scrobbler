@@ -1,0 +1,12 @@
+[project]
+name = "skribidi-scrobbler"
+version = "0.1.0"
+description = "Product Vulnerability Management"
+requires-python = ">=3.14"
+dependencies = [
+  "pylast==7.1.0",
+  "ytmusicapi==1.12.1",
+]
+
+[tool.uv]
+required-version = ">=0.11.28"
