@@ -1,5 +1,40 @@
 [
   {
+    "videoId": "tqNSypKzo7Q",
+    "title": "Tyranny Of Normality",
+    "artist": "Papa Roach",
+    "duration": "2:41",
+    "timestamp": 1784242866
+  },
+  {
+    "videoId": "TMIXPwVSF90",
+    "title": "Blanket Of Fear",
+    "artist": "Papa Roach",
+    "duration": "3:20",
+    "timestamp": 1784242705
+  },
+  {
+    "videoId": "Jn8l7XA_x0E",
+    "title": "Sometimes",
+    "artist": "Papa Roach",
+    "duration": "3:08",
+    "timestamp": 1784242505
+  },
+  {
+    "videoId": "QDYfEBY9NM4",
+    "title": "Let It Be (Remastered 2009)",
+    "artist": "The Beatles",
+    "duration": "4:04",
+    "timestamp": 1784242317
+  },
+  {
+    "videoId": "MKUex3fci5c",
+    "title": "Help! (Remastered 2009)",
+    "artist": "The Beatles",
+    "duration": "2:20",
+    "timestamp": 1784242073
+  },
+  {
     "videoId": "ezrRfEEuQ7A",
     "title": "Shock the Monkey",
     "artist": "Coal Chamber",
@@ -222,22 +257,10 @@
     "duration": "3:31"
   },
   {
-    "videoId": "K0YbSQj4rAo",
-    "title": "Harridan",
-    "artist": "Porcupine Tree",
-    "duration": "8:08"
-  },
-  {
     "videoId": "qgks-XJc8rw",
     "title": "Unzerst\u00f6rbar",
     "artist": "Oomph!",
     "duration": "3:41"
-  },
-  {
-    "videoId": "mD3hgrlURkE",
-    "title": "Uber-time",
-    "artist": "Korn",
-    "duration": "1:29"
   },
   {
     "videoId": "aSR8EXynfac",
@@ -250,18 +273,6 @@
     "title": "Banshee (Ghost Fame)",
     "artist": "letlive.",
     "duration": "4:03"
-  },
-  {
-    "videoId": "3Lg0GXh31SE",
-    "title": "Lazarus",
-    "artist": "Porcupine Tree",
-    "duration": "4:19"
-  },
-  {
-    "videoId": "VfE1_tX8D4Q",
-    "title": "Elephant",
-    "artist": "letlive.",
-    "duration": "2:41"
   },
   {
     "videoId": "GfrHum5LNJk",
@@ -292,11 +303,5 @@
     "title": "The Rest Will Flow",
     "artist": "Porcupine Tree",
     "duration": "3:19"
-  },
-  {
-    "videoId": "xs5zNf7WhgM",
-    "title": "Last Chance To Evacuate Planet Earth Before It Is Recycled",
-    "artist": "Porcupine Tree",
-    "duration": "4:50"
   }
 ]
