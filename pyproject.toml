@@ -1,7 +1,7 @@
 [project]
 name = "skribidi-scrobbler"
 version = "0.1.0"
-description = "Product Vulnerability Management"
+description = "Automatically scrobbles your YouTube Music listening history to Last.fm"
 requires-python = ">=3.14"
 dependencies = [
   "pylast==7.1.0",

@@ -21,6 +21,7 @@ def fetch_history(auth_path: str) -> list[dict]:
             "videoId": item.get("videoId", ""),
             "title": item.get("title", "Unknown Title"),
             "artist": artists[0]["name"] if artists else "Unknown Artist",
+            "duration": item.get("duration", "4:00"), # default: 4 min
         })
     return tracks
 
@@ -47,9 +48,11 @@ def diff_tracks(current: list[dict], snapshot: list[dict], min_seq: int = 3) -> 
 
 def assign_timestamps(tracks: list[dict]) -> list[dict]:
     now = int(time.time())
-    total = len(tracks)
-    for i, track in enumerate(tracks):
-        track["timestamp"] = now - (total - i) * 180
+    offset = 0
+    for track in reversed(tracks):
+        track["timestamp"] = now - offset
+        minutes, seconds = map(int, track["duration"].split(':'))
+        offset += minutes * 60 + seconds
     return tracks
 
 
