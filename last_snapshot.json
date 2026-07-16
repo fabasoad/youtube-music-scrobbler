@@ -1,256 +1,316 @@
 [
   {
+    "videoId": "ezrRfEEuQ7A",
+    "title": "Shock the Monkey",
+    "artist": "Coal Chamber",
+    "duration": "3:43",
+    "timestamp": 1784210609
+  },
+  {
+    "videoId": "4Z9ZHcyCpxM",
+    "title": "Shock The Monkey",
+    "artist": "Peter Gabriel",
+    "duration": "5:29",
+    "timestamp": 1784210386
+  },
+  {
+    "videoId": "1kffiOkmlts",
+    "title": "In the Air Tonight",
+    "artist": "Nonpoint",
+    "duration": "4:34",
+    "timestamp": 1784210057
+  },
+  {
+    "videoId": "NX39p_UMJ_0",
+    "title": "In the Air Tonight",
+    "artist": "Phil Collins",
+    "duration": "5:36",
+    "timestamp": 1784209783
+  },
+  {
+    "videoId": "uiKzKdLk-iQ",
+    "title": "Summer Breeze",
+    "artist": "Type O Negative",
+    "duration": "4:50",
+    "timestamp": 1784209447
+  },
+  {
+    "videoId": "ywL6tMQdG4c",
+    "title": "Summer Breeze",
+    "artist": "Seals and Crofts",
+    "duration": "3:26",
+    "timestamp": 1784209157
+  },
+  {
+    "videoId": "_ZKIfCJZvZo",
+    "title": "Tool - No Quarter (FULL HD)",
+    "artist": "lovigab",
+    "duration": "11:28",
+    "timestamp": 1784208951
+  },
+  {
+    "videoId": "TSM0jj-hZtw",
+    "title": "No Quarter (Remaster)",
+    "artist": "Led Zeppelin",
+    "duration": "7:03",
+    "timestamp": 1784208263
+  },
+  {
+    "videoId": "KB4DGnmMviU",
+    "title": "Casino Columbus",
+    "artist": "letlive.",
+    "duration": "3:59",
+    "timestamp": 1784207840
+  },
+  {
+    "videoId": "Gc3XDrXocQM",
+    "title": "Sag jetzt einfach nichts",
+    "artist": "OOMPH!",
+    "duration": "3:54",
+    "timestamp": 1784207601
+  },
+  {
+    "videoId": "8EADD4Phxaw",
+    "title": "Nichts wird mehr gut",
+    "artist": "OOMPH!",
+    "duration": "5:23",
+    "timestamp": 1784207367
+  },
+  {
+    "videoId": "qNOSWBxGXNM",
+    "title": "Schrei nur schrei",
+    "artist": "OOMPH!",
+    "duration": "5:09",
+    "timestamp": 1784207044
+  },
+  {
+    "videoId": "1Os3Y6CMbWI",
+    "title": "Nur ein Mensch",
+    "artist": "OOMPH!",
+    "duration": "4:15",
+    "timestamp": 1784206735
+  },
+  {
+    "videoId": "2h4CmCccmoY",
+    "title": "Soll das Liebe sein ?",
+    "artist": "OOMPH!",
+    "duration": "4:12",
+    "timestamp": 1784206480
+  },
+  {
     "videoId": "C147uOKppWI",
     "title": "Richter und Henker",
     "artist": "OOMPH!",
-    "timestamp": 1784196673
+    "duration": "4:38"
   },
   {
     "videoId": "uvjc0czYb9g",
     "title": "Wem die Stunde schl\u00e4gt",
     "artist": "OOMPH!",
-    "timestamp": 1784196493
+    "duration": "5:05"
   },
   {
     "videoId": "lb9gWXsLyms",
     "title": "Under You",
     "artist": "Foo Fighters",
-    "timestamp": 1784196313
+    "duration": "3:40"
   },
   {
     "videoId": "f_W2FyI1giU",
     "title": "Rescued",
     "artist": "Foo Fighters",
-    "timestamp": 1784196133
+    "duration": "4:19"
   },
   {
     "videoId": "wGzRM0Dpwaw",
     "title": "Enemies",
-    "artist": "letlive."
+    "artist": "letlive.",
+    "duration": "4:57"
   },
   {
     "videoId": "6IwknZBsr7M",
     "title": "Renegade 86'",
-    "artist": "letlive."
+    "artist": "letlive.",
+    "duration": "3:36"
   },
   {
     "videoId": "Wx0EhQ2Swzs",
     "title": "The Sick, Sick, 6.8 Billion",
-    "artist": "letlive."
+    "artist": "letlive.",
+    "duration": "3:13"
   },
   {
     "videoId": "39URSQKmHXw",
     "title": "Le Prologue",
-    "artist": "letlive."
+    "artist": "letlive.",
+    "duration": "1:46"
   },
   {
     "videoId": "iCE-2uQwGQ4",
     "title": "Teeth First",
-    "artist": "CR33PIA"
+    "artist": "CR33PIA",
+    "duration": "3:24"
   },
   {
     "videoId": "E1PwZinJ-y8",
     "title": "Running On Empty",
-    "artist": "CR33PIA"
+    "artist": "CR33PIA",
+    "duration": "2:27"
   },
   {
     "videoId": "8gMI82JoET0",
     "title": "Creep",
-    "artist": "CR33PIA"
+    "artist": "CR33PIA",
+    "duration": "2:44"
   },
   {
     "videoId": "qzrER0tL7Gg",
     "title": "27 Club",
-    "artist": "letlive."
+    "artist": "letlive.",
+    "duration": "7:29"
   },
   {
     "videoId": "X1dEb2X-lWA",
     "title": "Pheromone Cvlt",
-    "artist": "letlive."
+    "artist": "letlive.",
+    "duration": "4:06"
   },
   {
     "videoId": "lIqKgGdn-2E",
     "title": "The Priest And Used Cars",
-    "artist": "letlive."
+    "artist": "letlive.",
+    "duration": "3:47"
   },
   {
     "videoId": "bKZFcsyWzz8",
     "title": "The Dope Beat",
-    "artist": "letlive."
+    "artist": "letlive.",
+    "duration": "4:27"
   },
   {
     "videoId": "Nd7MenoTzA4",
     "title": "Younger",
-    "artist": "letlive."
+    "artist": "letlive.",
+    "duration": "3:14"
   },
   {
     "videoId": "0YqxB6PdRO8",
     "title": "Virgin Dirt",
-    "artist": "letlive."
+    "artist": "letlive.",
+    "duration": "4:46"
   },
   {
     "videoId": "3PDX0YDh-u0",
     "title": "That Fear Fever",
-    "artist": "letlive."
+    "artist": "letlive.",
+    "duration": "3:29"
   },
   {
     "videoId": "k8LdQEXS_rc",
     "title": "Dreamers Disease",
-    "artist": "letlive."
+    "artist": "letlive.",
+    "duration": "3:43"
   },
   {
     "videoId": "h1LIpQbkGt8",
     "title": "White America's Beautiful Black Market",
-    "artist": "letlive."
+    "artist": "letlive.",
+    "duration": "3:41"
   },
   {
     "videoId": "Sxm9bjEau-A",
     "title": "Nowhere To Go",
-    "artist": "Bad Omens"
+    "artist": "Bad Omens",
+    "duration": "4:07"
   },
   {
     "videoId": "zkitxSiPrho",
     "title": "Some Kind of Heaven",
-    "artist": "Smash Into Pieces"
+    "artist": "Smash Into Pieces",
+    "duration": "3:12"
   },
   {
     "videoId": "CC1T9x5e4lE",
     "title": "Wildfire",
-    "artist": "Smash Into Pieces"
+    "artist": "Smash Into Pieces",
+    "duration": "3:31"
   },
   {
     "videoId": "K0YbSQj4rAo",
     "title": "Harridan",
-    "artist": "Porcupine Tree"
+    "artist": "Porcupine Tree",
+    "duration": "8:08"
   },
   {
     "videoId": "qgks-XJc8rw",
     "title": "Unzerst\u00f6rbar",
-    "artist": "Oomph!"
+    "artist": "Oomph!",
+    "duration": "3:41"
   },
   {
     "videoId": "mD3hgrlURkE",
     "title": "Uber-time",
-    "artist": "Korn"
+    "artist": "Korn",
+    "duration": "1:29"
   },
   {
     "videoId": "aSR8EXynfac",
     "title": "Empty Elvis",
-    "artist": "letlive."
+    "artist": "letlive.",
+    "duration": "3:05"
   },
   {
     "videoId": "yZogWmG-y9g",
     "title": "Banshee (Ghost Fame)",
-    "artist": "letlive."
+    "artist": "letlive.",
+    "duration": "4:03"
   },
   {
     "videoId": "3Lg0GXh31SE",
     "title": "Lazarus",
-    "artist": "Porcupine Tree"
+    "artist": "Porcupine Tree",
+    "duration": "4:19"
   },
   {
     "videoId": "VfE1_tX8D4Q",
     "title": "Elephant",
-    "artist": "letlive."
+    "artist": "letlive.",
+    "duration": "2:41"
   },
   {
     "videoId": "GfrHum5LNJk",
     "title": "Feel So Low",
-    "artist": "Porcupine Tree"
+    "artist": "Porcupine Tree",
+    "duration": "5:23"
   },
   {
     "videoId": "wwTbL1ZD_yk",
     "title": "Russia On Ice",
-    "artist": "Porcupine Tree"
+    "artist": "Porcupine Tree",
+    "duration": "13:06"
   },
   {
     "videoId": "1TUTCv2UcSY",
     "title": "Where We Would Be",
-    "artist": "Porcupine Tree"
+    "artist": "Porcupine Tree",
+    "duration": "4:14"
   },
   {
     "videoId": "9Cd1M3n0Pz4",
     "title": "Hatesong",
-    "artist": "Porcupine Tree"
+    "artist": "Porcupine Tree",
+    "duration": "8:31"
   },
   {
     "videoId": "u1WDty-Vps0",
     "title": "The Rest Will Flow",
-    "artist": "Porcupine Tree"
+    "artist": "Porcupine Tree",
+    "duration": "3:19"
   },
   {
     "videoId": "xs5zNf7WhgM",
     "title": "Last Chance To Evacuate Planet Earth Before It Is Recycled",
-    "artist": "Porcupine Tree"
-  },
-  {
-    "videoId": "N1yM-Dj4U7A",
-    "title": "Shesmovedon",
-    "artist": "Porcupine Tree"
-  },
-  {
-    "videoId": "MdzDT3JMY54",
-    "title": "Four Chords That Made A Million",
-    "artist": "Porcupine Tree"
-  },
-  {
-    "videoId": "7MkiVEPeJTg",
-    "title": "How Is Your Life Today?",
-    "artist": "Porcupine Tree"
-  },
-  {
-    "videoId": "y0EoWpeBk5M",
-    "title": "Easy Street",
-    "artist": "Queens of the Stone Age"
-  },
-  {
-    "videoId": "8UAneXfkZwU",
-    "title": "METALICIOUS (feat. Left to Suffer)",
-    "artist": "Scene Queen"
-  },
-  {
-    "videoId": "osm7jNm2tQA",
-    "title": "Lightbulb Sun",
-    "artist": "Porcupine Tree"
-  },
-  {
-    "videoId": "oiYd70cXFQY",
-    "title": "Copper Colored Quiet",
-    "artist": "letlive."
-  },
-  {
-    "videoId": "1Gc4L5HBEKs",
-    "title": "If I'm The Devil...",
-    "artist": "letlive."
-  },
-  {
-    "videoId": "D632PruSpYc",
-    "title": "Another Offensive Song",
-    "artist": "letlive."
-  },
-  {
-    "videoId": "G2oheutTV1M",
-    "title": "Reluctantly Dead",
-    "artist": "letlive."
-  },
-  {
-    "videoId": "AWtS5eMNZMo",
-    "title": "Foreign Cab Rides",
-    "artist": "letlive."
-  },
-  {
-    "videoId": "mhqvRIY8818",
-    "title": "Bullet Ride (2020 Remastered)",
-    "artist": "In Flames"
-  },
-  {
-    "videoId": "azPpnJNcVQg",
-    "title": "A Weak Ago",
-    "artist": "letlive."
-  },
-  {
-    "videoId": "u_XaOfytSFk",
-    "title": "Who You Are Not",
-    "artist": "letlive."
+    "artist": "Porcupine Tree",
+    "duration": "4:50"
   }
 ]
