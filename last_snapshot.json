@@ -1,178 +1,300 @@
 [
   {
+    "videoId": "aY6BdhT6rmY",
+    "title": "\u30df\u30ce\u30ec\u30d0\u2606\u30ed\u30c3\u30af - Minoreba Rock",
+    "artist": "MAXIMUM THE HORMONE",
+    "duration": "8:18",
+    "timestamp": 1784296053
+  },
+  {
+    "videoId": "YaVcCX_t_OU",
+    "title": "Day Light",
+    "artist": "SunSay",
+    "duration": "2:28",
+    "timestamp": 1784295555
+  },
+  {
+    "videoId": "Po9JpfPwOV8",
+    "title": "\u6050\u559d\u301ckyokatsu\u301c - Kyokatsu (Men Men Men Live Streaming Edition)",
+    "artist": "MAXIMUM THE HORMONE",
+    "duration": "6:45",
+    "timestamp": 1784295407
+  },
+  {
+    "videoId": "q31XA5JQjTg",
+    "title": "\u30de\u30ad\u30b7\u30de\u30e0 \u30b6 \u30db\u30eb\u30e2\u30f3\u300e\u30ed\u30c3\u30af\u756a\u72c2\u308f\u305b\u300fMusic Video",
+    "artist": "MAXIMUM THE HORMONE",
+    "duration": "3:24",
+    "timestamp": 1784295002
+  },
+  {
+    "videoId": "dn17-EfMNY8",
+    "title": "\u62dd\u5553VAP\u6bbf - HAIKEI VAP DONO",
+    "artist": "Maximum the Hormone",
+    "duration": "7:17",
+    "timestamp": 1784294798
+  },
+  {
+    "videoId": "8cEQ2N-OSpM",
+    "title": "\u30de\u30ad\u30b7\u30de\u30e0 \u30b6 \u30db\u30eb\u30e2\u30f3\u300e\u30ed\u30c3\u30ad\u30f3\u30dd\u6bba\u3057\u300fMusic Video",
+    "artist": "MAXIMUM THE HORMONE",
+    "duration": "5:39",
+    "timestamp": 1784294361
+  },
+  {
+    "videoId": "Qv4_5fB-ShY",
+    "title": "\u604b\u306e\u30a2\u30e1\u30ea\u30ab",
+    "artist": "MAXIMUM THE HORMONE",
+    "duration": "6:06",
+    "timestamp": 1784294022
+  },
+  {
+    "videoId": "FjPdFjqzrxo",
+    "title": "\u30d3\u30ad\u30cb\u30fb\u30b9\u30dd\u30fc\u30c4\u30fb\u30dd\u30f3\u30c1\u30f3 - Bikini Sports Ponchin",
+    "artist": "MAXIMUM THE HORMONE",
+    "duration": "5:33",
+    "timestamp": 1784293656
+  },
+  {
+    "videoId": "2YV6IJLoBv4",
+    "title": "\u30de\u30ad\u30b7\u30de\u30e0 \u30b6 \u30db\u30eb\u30e2\u30f3 \u300e\u5c0f\u3055\u306a\u541b\u306e\u624b\u300f\uff5e\u300emaximum the hormone \u300f Music Video (\u518dUP)",
+    "artist": "MAXIMUM THE HORMONE",
+    "duration": "4:33",
+    "timestamp": 1784293323
+  },
+  {
+    "videoId": "EteuUoPvH5M",
+    "title": "Circle The Drain",
+    "artist": "Wage War",
+    "duration": "3:36",
+    "timestamp": 1784293050
+  },
+  {
+    "videoId": "c7rcjarewqo",
+    "title": "Circle The Drain",
+    "artist": "Machine Head",
+    "duration": "4:06",
+    "timestamp": 1784292834
+  },
+  {
+    "videoId": "0V786vxoJTI",
+    "title": "Pageburner (Remix) (feat. Enduser)",
+    "artist": "Culture Void",
+    "duration": "3:32",
+    "timestamp": 1784292588
+  },
+  {
+    "videoId": "WWfuHj5sv-E",
+    "title": "Show Me How",
+    "artist": "Foo Fighters",
+    "duration": "4:54",
+    "timestamp": 1784292376
+  },
+  {
+    "videoId": "GThHRzEexf0",
+    "title": "Nothing At All",
+    "artist": "Foo Fighters",
+    "duration": "3:28",
+    "timestamp": 1784292082
+  },
+  {
+    "videoId": "U1s49lfmwuA",
+    "title": "The Glass",
+    "artist": "Foo Fighters",
+    "duration": "3:50",
+    "timestamp": 1784291874
+  },
+  {
+    "videoId": "n9KCQj5-iF4",
+    "title": "But Here We Are",
+    "artist": "Foo Fighters",
+    "duration": "4:44",
+    "timestamp": 1784291644
+  },
+  {
+    "videoId": "P3KoSFRPjb8",
+    "title": "Hearing Voices",
+    "artist": "Foo Fighters",
+    "duration": "3:49",
+    "timestamp": 1784291360
+  },
+  {
+    "videoId": "lb9gWXsLyms",
+    "title": "Under You",
+    "artist": "Foo Fighters",
+    "duration": "3:40",
+    "timestamp": 1784291131
+  },
+  {
+    "videoId": "3l-vhossowA",
+    "title": "27 Club (Revisited)",
+    "artist": "letlive.",
+    "duration": "7:35",
+    "timestamp": 1784290911
+  },
+  {
+    "videoId": "hP9kecqhn6Q",
+    "title": "Pheromone Cvlt (Revisited)",
+    "artist": "letlive.",
+    "duration": "4:06",
+    "timestamp": 1784290456
+  },
+  {
+    "videoId": "MnOydi0jDc8",
+    "title": "Dead Bodies Everywhere",
+    "artist": "Carnifex",
+    "duration": "4:31",
+    "timestamp": 1784290210
+  },
+  {
     "videoId": "8Nd5XmZtVzU",
     "title": "\u6bba\u610fvs\u6bba\u610f",
     "artist": "MAXIMUM THE HORMONE",
-    "duration": "5:42",
-    "timestamp": 1784282564
+    "duration": "5:42"
   },
   {
     "videoId": "beN5ep5MrdY",
     "title": "\u4e88\u8972\u5fa9\u8b90 - Yoshu Fukushu [Our Merciless Home'war'k]",
     "artist": "MAXIMUM THE HORMONE",
-    "duration": "5:25",
-    "timestamp": 1784282222
+    "duration": "5:25"
   },
   {
     "videoId": "tKZbHjy9GWM",
     "title": "\u30cf\u30f3\u30b0\u30ea\u30fc\u30fb\u30d7\u30e9\u30a4\u30c9",
     "artist": "Maximum the Hormone",
-    "duration": "7:20",
-    "timestamp": 1784281897
+    "duration": "7:20"
   },
   {
     "videoId": "ztXnATr-mck",
     "title": "\u9b31\u304f\u3057\u304d\u4eba\u3005\u306e\u3046\u305f - Utsukushikihitobitonouta [Ode to Bluetiful People]",
     "artist": "MAXIMUM THE HORMONE",
-    "duration": "5:37",
-    "timestamp": 1784281457
+    "duration": "5:37"
   },
   {
     "videoId": "IC-wDpwzEt4",
     "title": "maximum the hormone \u2161\u301c\u3053\u308c\u304b\u3089\u306e\u9eba\u30ab\u30bf\u30b3\u30c3\u30c6\u30ea\u306e\u8a71\u3092\u3057\u3088\u3046\u301c - maximum the hormone II -RYO vs RYO-",
     "artist": "Maximum the Hormone",
-    "duration": "6:55",
-    "timestamp": 1784281120
+    "duration": "6:55"
   },
   {
     "videoId": "AUeRiPyjFH4",
     "title": "\u30de\u30ad\u30b7\u30de\u30e0 \u30b6 \u30db\u30eb\u30e2\u30f3 \u300e\u604b\u306e\u30b9\u30da\u30eb\u30de\u300f Music Video \u91ce\u5916\u30d5\u30a7\u30b9\u6620\u50cfver.",
     "artist": "\u30de\u30ad\u30b7\u30de\u30e0 \u30b6 \u30db\u30eb\u30e2\u30f3\u516c\u5f0f",
-    "duration": "5:57",
-    "timestamp": 1784280705
+    "duration": "5:57"
   },
   {
     "videoId": "B_vvv1oPnKY",
     "title": "\u7d76\u671b\u30d3\u30ea\u30fc",
     "artist": "MAXIMUM THE HORMONE",
-    "duration": "9:08",
-    "timestamp": 1784280348
+    "duration": "9:08"
   },
   {
     "videoId": "teRgh01Xb1U",
     "title": "\u30b7\u30df - Shimi (MV Special Ver.)",
     "artist": "MAXIMUM THE HORMONE",
-    "duration": "5:08",
-    "timestamp": 1784279800
+    "duration": "5:08"
   },
   {
     "videoId": "vfdNFL1xwi8",
     "title": "Cosmos I - The Dream",
     "artist": "IAPETVS",
-    "duration": "8:07",
-    "timestamp": 1784279492
+    "duration": "8:07"
   },
   {
     "videoId": "v6CVlQPoU08",
     "title": "Yearning: The unbeautiful after",
     "artist": "Boundaries",
-    "duration": "3:50",
-    "timestamp": 1784279005
+    "duration": "3:50"
   },
   {
     "videoId": "ci_Zq-dGxjU",
     "title": "Only endless",
     "artist": "Boundaries",
-    "duration": "4:02",
-    "timestamp": 1784278775
+    "duration": "4:02"
   },
   {
     "videoId": "LcqOdisypEk",
     "title": "Nothing, gathered",
     "artist": "Boundaries",
-    "duration": "4:28",
-    "timestamp": 1784278533
+    "duration": "4:28"
   },
   {
     "videoId": "eHKmVvLys_M",
     "title": "Evidence of extinction",
     "artist": "Boundaries",
-    "duration": "2:44",
-    "timestamp": 1784278265
+    "duration": "2:44"
   },
   {
     "videoId": "iPIdHFX4ios",
     "title": "Wasted angel",
     "artist": "Boundaries",
-    "duration": "2:26",
-    "timestamp": 1784278101
+    "duration": "2:26"
   },
   {
     "videoId": "NG85udHeCSw",
     "title": "Empty Space",
     "artist": "Hesus G",
-    "duration": "3:15",
-    "timestamp": 1784277955
+    "duration": "3:15"
   },
   {
     "videoId": "77mvitp8ROw",
     "title": "Front Toward Enemy",
     "artist": "Marilyn Manson",
-    "duration": "4:24",
-    "timestamp": 1784277760
+    "duration": "4:24"
   },
   {
     "videoId": "M96LKWeyfjA",
     "title": "Heretic (feat. Kim Dracula)",
     "artist": "In This Moment",
-    "duration": "3:04",
-    "timestamp": 1784277496
+    "duration": "3:04"
   },
   {
     "videoId": "VIwXPza_rwo",
     "title": "Sleeping With The Enemy",
     "artist": "In This Moment",
-    "duration": "4:07",
-    "timestamp": 1784277312
+    "duration": "4:07"
   },
   {
     "videoId": "AF2kda0U3CY",
     "title": "Phantasmal",
     "artist": "Kupla",
-    "duration": "2:48",
-    "timestamp": 1784277065
+    "duration": "2:48"
   },
   {
     "videoId": "Hrewz12vtH4",
     "title": "eclipsed by you",
     "artist": "Haken",
-    "duration": "3:25",
-    "timestamp": 1784276897
+    "duration": "3:25"
   },
   {
     "videoId": "AWmPK8CnZMg",
     "title": "lotus",
     "artist": "Haken",
-    "duration": "7:23",
-    "timestamp": 1784276692
+    "duration": "7:23"
   },
   {
     "videoId": "0HEHK0aEx-4",
     "title": "Crawl",
     "artist": "In This Moment",
-    "duration": "3:52",
-    "timestamp": 1784276249
+    "duration": "3:52"
   },
   {
     "videoId": "b9XnWqSuIkE",
     "title": "\u042f \u0417\u0410 \u0412\u0421\u0415 \u0425\u041e\u0420\u041e\u0428\u0415",
     "artist": "\u0445\u0435\u0439\u0442\u0441\u043f\u0456\u0447",
-    "duration": "1:41",
-    "timestamp": 1784276017
+    "duration": "1:41"
   },
   {
     "videoId": "chVpJy0jv3o",
     "title": "Crowned and crucified",
     "artist": "Boundaries & Landon Tewers",
-    "duration": "3:52",
-    "timestamp": 1784275916
+    "duration": "3:52"
   },
   {
     "videoId": "biwqvsRXiDI",
     "title": "The leper's bell",
     "artist": "Boundaries",
-    "duration": "3:45",
-    "timestamp": 1784275684
+    "duration": "3:45"
   },
   {
     "videoId": "LgUsKtDes7w",
@@ -197,131 +319,5 @@
     "title": "Torn wide open",
     "artist": "Boundaries & Make Them Suffer",
     "duration": "3:27"
-  },
-  {
-    "videoId": "vW0s0eqbk-o",
-    "title": "May this pain never leave",
-    "artist": "Boundaries",
-    "duration": "3:26"
-  },
-  {
-    "videoId": "2135B6oiYPE",
-    "title": "Skies cast amber black",
-    "artist": "Boundaries",
-    "duration": "3:02"
-  },
-  {
-    "videoId": "oNqjat4GcUQ",
-    "title": "Malconscience",
-    "artist": "Boundaries",
-    "duration": "2:22"
-  },
-  {
-    "videoId": "ra5v4_WUqr0",
-    "title": "In Awe (feat. Kadeem France)",
-    "artist": "Blanket",
-    "duration": "4:01"
-  },
-  {
-    "videoId": "4P81Ne5eINo",
-    "title": "No Stranger To You...",
-    "artist": "Loathe",
-    "duration": "4:48"
-  },
-  {
-    "videoId": "sE-HgzdS8Lw",
-    "title": "Gifted Every Strength",
-    "artist": "Loathe",
-    "duration": "7:49"
-  },
-  {
-    "videoId": "nA2gev3P5B4",
-    "title": "The Ladder (feat. Jordan Rakei)",
-    "artist": "Loathe",
-    "duration": "5:04"
-  },
-  {
-    "videoId": "j0hOSa0ESvg",
-    "title": "Fangs",
-    "artist": "Loathe",
-    "duration": "4:10"
-  },
-  {
-    "videoId": "MVpf8H2XquU",
-    "title": "Meet My Maker",
-    "artist": "Loathe",
-    "duration": "4:20"
-  },
-  {
-    "videoId": "FltgNeVkYsU",
-    "title": "The Way It Breaks (feat. Mansur Brown)",
-    "artist": "Loathe",
-    "duration": "5:07"
-  },
-  {
-    "videoId": "c7f0kpgy0Ws",
-    "title": "Revenant",
-    "artist": "Loathe",
-    "duration": "3:32"
-  },
-  {
-    "videoId": "Nc0UNj2aJRk",
-    "title": "\u0627\u062b\u064a\u0646\u0627 (feat. bucki sugar)",
-    "artist": "Loathe",
-    "duration": "2:08"
-  },
-  {
-    "videoId": "GmhwtGRgMRA",
-    "title": "Harder To Pretend",
-    "artist": "Loathe",
-    "duration": "3:33"
-  },
-  {
-    "videoId": "cs4tSQBTirQ",
-    "title": "Nothing Like The Knife",
-    "artist": "Loathe",
-    "duration": "0:43"
-  },
-  {
-    "videoId": "OUwxsLXuk4E",
-    "title": "Gemini",
-    "artist": "Loathe",
-    "duration": "2:42"
-  },
-  {
-    "videoId": "mRu5K9To8II",
-    "title": "Fortress Down",
-    "artist": "Loathe",
-    "duration": "3:26"
-  },
-  {
-    "videoId": "xVYRtFFMN2U",
-    "title": "Block Of Flats (feat. Static Dress)",
-    "artist": "Loathe",
-    "duration": "5:47"
-  },
-  {
-    "videoId": "fOdDeDh1R-E",
-    "title": "Entrance (feat. bucki sugar)",
-    "artist": "Loathe",
-    "duration": "2:02"
-  },
-  {
-    "videoId": "5rQh07UEew4",
-    "title": "Bully",
-    "artist": "Blinky",
-    "duration": "2:39"
-  },
-  {
-    "videoId": "aZ9vJCWAQHE",
-    "title": "Pro-Pain",
-    "artist": "State of Filth",
-    "duration": "2:54"
-  },
-  {
-    "videoId": "KaGaa0OoNZ4",
-    "title": "Dark Summer",
-    "artist": "Ceremony",
-    "duration": "3:56"
   }
 ]
