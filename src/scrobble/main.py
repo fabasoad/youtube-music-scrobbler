@@ -144,10 +144,11 @@ def write_summary(tracks: list[dict]) -> None:
       f.write("## Scrobbler\n\nNo new tracks scrobbled.\n")
       return
     f.write("## Scrobbler\n\n")
-    f.write("| # | Artist | Title | Duration |\n")
-    f.write("|---|--------|-------|----------|\n")
+    f.write("| # | Artist | Title | Album | Duration |\n")
+    f.write("|---|--------|-------|-------|----------|\n")
     for i, track in enumerate(tracks, 1):
-      f.write(f"| {i} | {track['artist']} | {track['title']} | {track['duration']} |\n")
+      album = "N/A" if track['album'] is None else track['album']
+      f.write(f"| {i} | {track['artist']} | {track['title']} | {album} | {track['duration']} |\n")
 
 
 def main():
