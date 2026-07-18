@@ -16,11 +16,20 @@ def fetch_history(auth_path: str) -> list[dict]:
   tracks = []
   for item in history[:50]:
     artists = item.get("artists") or []
+    album = item.get("album")
+
+    # default: 3 min
+    duration = item.get("duration") or "3:00"
+    minutes, seconds = map(int, duration.split(':'))
+    duration_in_sec = minutes * 60 + seconds
+
     tracks.append({
-      "videoId": item.get("videoId", ""),
-      "title": item.get("title", "Unknown Title"),
+      "videoId": item.get("videoId") or "",
+      "title": item.get("title") or "Unknown Title",
       "artist": artists[0]["name"] if artists else "Unknown Artist",
-      "duration": item.get("duration", "4:00"),  # default: 4 min
+      "duration": duration,
+      "durationInSec": duration_in_sec,
+      "album": album.get("name") if album and album.get("name") else None,
     })
   return tracks
 
@@ -51,8 +60,7 @@ def assign_timestamps(tracks: list[dict]) -> list[dict]:
   offset = 0
   for track in reversed(tracks):
     track["timestamp"] = now - offset
-    minutes, seconds = map(int, track["duration"].split(':'))
-    offset += minutes * 60 + seconds
+    offset += track["durationInSec"]
   return tracks
 
 
@@ -77,8 +85,11 @@ def scrobble(tracks: list[dict]) -> int:
           artist=track["artist"],
           title=track["title"],
           timestamp=track["timestamp"],
+          album=track["album"],
+          duration=track["durationInSec"],
         )
-        print(f"Scrobbled: {track['artist']} - {track['title']}")
+        album_part = "" if track['album'] is None else f" ({track['album']})"
+        print(f"Scrobbled: {track['artist']} — {track['title']}{album_part} {track['duration']}")
         scrobbled += 1
         time.sleep(1)
         break
