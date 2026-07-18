@@ -1,12 +1,20 @@
 [
   {
+    "videoId": "yOjrReHC4XM",
+    "title": "Paradox",
+    "artist": "Bury Tomorrow",
+    "duration": "4:37",
+    "durationInSec": 277,
+    "album": "Will You Haunt Me, With That Same Patience",
+    "timestamp": 1784386720
+  },
+  {
     "videoId": "OScpN6C610k",
     "title": "Let Go",
     "artist": "Bury Tomorrow",
     "duration": "3:53",
     "durationInSec": 233,
-    "album": "Will You Haunt Me, With That Same Patience",
-    "timestamp": 1784383419
+    "album": "Will You Haunt Me, With That Same Patience"
   },
   {
     "videoId": "rynZBOxUGJc",
@@ -390,14 +398,6 @@
     "artist": "\u30de\u30ad\u30b7\u30de\u30e0 \u30b6 \u30db\u30eb\u30e2\u30f3\u516c\u5f0f",
     "duration": "5:57",
     "durationInSec": 357,
-    "album": null
-  },
-  {
-    "videoId": "B_vvv1oPnKY",
-    "title": "\u7d76\u671b\u30d3\u30ea\u30fc",
-    "artist": "MAXIMUM THE HORMONE",
-    "duration": "9:08",
-    "durationInSec": 548,
     "album": null
   }
 ]
