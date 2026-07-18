@@ -1,314 +1,408 @@
 [
   {
+    "videoId": "rynZBOxUGJc",
+    "title": "Y\u014dkai (\u5996\u602a)",
+    "artist": "Bury Tomorrow",
+    "duration": "3:56",
+    "durationInSec": 236,
+    "album": "Will You Haunt Me, With That Same Patience",
+    "timestamp": 1784383232
+  },
+  {
+    "videoId": "4EHtSWyftCA",
+    "title": "Found No Throne",
+    "artist": "Bury Tomorrow",
+    "duration": "4:33",
+    "durationInSec": 273,
+    "album": "Will You Haunt Me, With That Same Patience",
+    "timestamp": 1784382996
+  },
+  {
+    "videoId": "kN_Sk30_PgY",
+    "title": "Silence Isn't Helping Us",
+    "artist": "Bury Tomorrow",
+    "duration": "3:47",
+    "durationInSec": 227,
+    "album": "Will You Haunt Me, With That Same Patience",
+    "timestamp": 1784382723
+  },
+  {
+    "videoId": "iz3HHz9KG0A",
+    "title": "Waiting",
+    "artist": "Bury Tomorrow",
+    "duration": "3:39",
+    "durationInSec": 219,
+    "album": "Will You Haunt Me, With That Same Patience",
+    "timestamp": 1784382496
+  },
+  {
+    "videoId": "bY3MOVsgkWc",
+    "title": "Forever The Night",
+    "artist": "Bury Tomorrow",
+    "duration": "4:06",
+    "durationInSec": 246,
+    "album": "Will You Haunt Me, With That Same Patience",
+    "timestamp": 1784382277
+  },
+  {
+    "videoId": "ixj5D6gHP5w",
+    "title": "What If I Burn",
+    "artist": "Bury Tomorrow",
+    "duration": "3:52",
+    "durationInSec": 232,
+    "album": "Will You Haunt Me, With That Same Patience",
+    "timestamp": 1784382031
+  },
+  {
     "videoId": "54pN4a4qoMI",
     "title": "Wasteland",
     "artist": "Bury Tomorrow",
     "duration": "3:22",
-    "timestamp": 1784381113
+    "durationInSec": 202,
+    "album": "Will You Haunt Me, With That Same Patience"
   },
   {
     "videoId": "piQixLjDk9A",
     "title": "Villain Arc",
     "artist": "Bury Tomorrow",
     "duration": "3:39",
-    "timestamp": 1784380911
+    "durationInSec": 219,
+    "album": "Will You Haunt Me, With That Same Patience"
   },
   {
     "videoId": "2WSlSy1xoQE",
     "title": "To Dream, To Forget",
     "artist": "Bury Tomorrow",
     "duration": "3:35",
-    "timestamp": 1784380692
+    "durationInSec": 215,
+    "album": "Will You Haunt Me, With That Same Patience"
   },
   {
     "videoId": "9Y2Q_9ExjGo",
     "title": "Black Smoke, Bleeding Earth",
     "artist": "Apogean",
     "duration": "6:53",
-    "timestamp": 1784380477
+    "durationInSec": 413,
+    "album": "Waste Where Life Begins"
   },
   {
     "videoId": "PU4l-x5bg9s",
     "title": "Ritual",
     "artist": "Apogean",
     "duration": "1:57",
-    "timestamp": 1784380064
+    "durationInSec": 117,
+    "album": "Waste Where Life Begins"
   },
   {
     "videoId": "JznehtMFVF0",
     "title": "Hologram (Singing Silently on an Empty Stage)",
     "artist": "Apogean",
     "duration": "3:47",
-    "timestamp": 1784379947
+    "durationInSec": 227,
+    "album": "Waste Where Life Begins"
   },
   {
     "videoId": "SxILrzN7GUw",
     "title": "Nassaru",
     "artist": "Apogean",
     "duration": "4:23",
-    "timestamp": 1784379720
+    "durationInSec": 263,
+    "album": "Waste Where Life Begins"
   },
   {
     "videoId": "NurMYPneEXo",
     "title": "White Trees, Black Leaves",
     "artist": "Apogean",
     "duration": "3:35",
-    "timestamp": 1784379457
+    "durationInSec": 215,
+    "album": "Waste Where Life Begins"
   },
   {
     "videoId": "RDsjTw3O43k",
     "title": "Lie in Cinder",
     "artist": "Apogean",
     "duration": "4:38",
-    "timestamp": 1784379242
+    "durationInSec": 278,
+    "album": "Waste Where Life Begins"
   },
   {
     "videoId": "ox9FXmdjJ_E",
     "title": "Waste Where Life Begins",
     "artist": "Apogean",
     "duration": "4:47",
-    "timestamp": 1784378964
+    "durationInSec": 287,
+    "album": "Waste Where Life Begins"
   },
   {
     "videoId": "27r5avVHKbg",
     "title": "Daughter of the Oak",
     "artist": "Apogean",
     "duration": "3:42",
-    "timestamp": 1784378677
+    "durationInSec": 222,
+    "album": "Waste Where Life Begins"
   },
   {
     "videoId": "9FPkTy8DeoQ",
     "title": "Loathe x andjxla x M00X - LJUBAV KO ROBIJA",
     "artist": "M00X",
     "duration": "3:55",
-    "timestamp": 1784378455
+    "durationInSec": 235,
+    "album": null
   },
   {
     "videoId": "St7am7VjzJk",
     "title": "\u30e1\u30bf\u76db\u308b\u30d5\u30a9\u30fc\u30bc\uff01 - Metamorphose!",
     "artist": "HANABIE.",
-    "duration": "3:23"
+    "duration": "3:23",
+    "durationInSec": 203,
+    "album": null
   },
   {
     "videoId": "m9x2WXF15HA",
     "title": "\u30a2\u30eb\u30d0\u30e0\"\u4e88\u8972\u5fa9\u8b90\"\u5168\u66f2\u30c8\u30ec\u30fc\u30e9\u30fc",
     "artist": "MAXIMUM THE HORMONE",
-    "duration": "6:11"
+    "duration": "6:11",
+    "durationInSec": 371,
+    "album": null
   },
   {
     "videoId": "gdS5QUS-BQw",
     "title": "\u6d77\u5916\u30c4\u30a2\u30fc\u3067\u4f1d\u7d71\u7684\u65e5\u672c\u8a9e\u3092\u6559\u3048\u3066\u304d\u305f\uff08EUROPEAN TOUR 2022\uff09",
     "artist": "MAXIMUM THE HORMONE",
-    "duration": "2:20"
+    "duration": "2:20",
+    "durationInSec": 140,
+    "album": null
   },
   {
     "videoId": "aY6BdhT6rmY",
     "title": "\u30df\u30ce\u30ec\u30d0\u2606\u30ed\u30c3\u30af - Minoreba Rock",
     "artist": "MAXIMUM THE HORMONE",
-    "duration": "8:18"
+    "duration": "8:18",
+    "durationInSec": 498,
+    "album": null
   },
   {
     "videoId": "YaVcCX_t_OU",
     "title": "Day Light",
     "artist": "SunSay",
-    "duration": "2:28"
+    "duration": "2:28",
+    "durationInSec": 148,
+    "album": "Day Light"
   },
   {
     "videoId": "Po9JpfPwOV8",
     "title": "\u6050\u559d\u301ckyokatsu\u301c - Kyokatsu (Men Men Men Live Streaming Edition)",
     "artist": "MAXIMUM THE HORMONE",
-    "duration": "6:45"
+    "duration": "6:45",
+    "durationInSec": 405,
+    "album": null
   },
   {
     "videoId": "q31XA5JQjTg",
     "title": "\u30de\u30ad\u30b7\u30de\u30e0 \u30b6 \u30db\u30eb\u30e2\u30f3\u300e\u30ed\u30c3\u30af\u756a\u72c2\u308f\u305b\u300fMusic Video",
     "artist": "MAXIMUM THE HORMONE",
-    "duration": "3:24"
+    "duration": "3:24",
+    "durationInSec": 204,
+    "album": null
   },
   {
     "videoId": "dn17-EfMNY8",
     "title": "\u62dd\u5553VAP\u6bbf - HAIKEI VAP DONO",
     "artist": "Maximum the Hormone",
-    "duration": "7:17"
+    "duration": "7:17",
+    "durationInSec": 437,
+    "album": null
   },
   {
     "videoId": "8cEQ2N-OSpM",
     "title": "\u30de\u30ad\u30b7\u30de\u30e0 \u30b6 \u30db\u30eb\u30e2\u30f3\u300e\u30ed\u30c3\u30ad\u30f3\u30dd\u6bba\u3057\u300fMusic Video",
     "artist": "MAXIMUM THE HORMONE",
-    "duration": "5:39"
+    "duration": "5:39",
+    "durationInSec": 339,
+    "album": null
   },
   {
     "videoId": "Qv4_5fB-ShY",
     "title": "\u604b\u306e\u30a2\u30e1\u30ea\u30ab",
     "artist": "MAXIMUM THE HORMONE",
-    "duration": "6:06"
+    "duration": "6:06",
+    "durationInSec": 366,
+    "album": null
   },
   {
     "videoId": "FjPdFjqzrxo",
     "title": "\u30d3\u30ad\u30cb\u30fb\u30b9\u30dd\u30fc\u30c4\u30fb\u30dd\u30f3\u30c1\u30f3 - Bikini Sports Ponchin",
     "artist": "MAXIMUM THE HORMONE",
-    "duration": "5:33"
+    "duration": "5:33",
+    "durationInSec": 333,
+    "album": null
   },
   {
     "videoId": "2YV6IJLoBv4",
     "title": "\u30de\u30ad\u30b7\u30de\u30e0 \u30b6 \u30db\u30eb\u30e2\u30f3 \u300e\u5c0f\u3055\u306a\u541b\u306e\u624b\u300f\uff5e\u300emaximum the hormone \u300f Music Video (\u518dUP)",
     "artist": "MAXIMUM THE HORMONE",
-    "duration": "4:33"
+    "duration": "4:33",
+    "durationInSec": 273,
+    "album": null
   },
   {
     "videoId": "EteuUoPvH5M",
     "title": "Circle The Drain",
     "artist": "Wage War",
-    "duration": "3:36"
+    "duration": "3:36",
+    "durationInSec": 216,
+    "album": "Manic"
   },
   {
     "videoId": "c7rcjarewqo",
     "title": "Circle The Drain",
     "artist": "Machine Head",
-    "duration": "4:06"
+    "duration": "4:06",
+    "durationInSec": 246,
+    "album": "Circle The Drain"
   },
   {
     "videoId": "0V786vxoJTI",
     "title": "Pageburner (Remix) (feat. Enduser)",
     "artist": "Culture Void",
-    "duration": "3:32"
+    "duration": "3:32",
+    "durationInSec": 212,
+    "album": "Pageburner [Remix]"
   },
   {
     "videoId": "WWfuHj5sv-E",
     "title": "Show Me How",
     "artist": "Foo Fighters",
-    "duration": "4:54"
+    "duration": "4:54",
+    "durationInSec": 294,
+    "album": "But Here We Are"
   },
   {
     "videoId": "GThHRzEexf0",
     "title": "Nothing At All",
     "artist": "Foo Fighters",
-    "duration": "3:28"
+    "duration": "3:28",
+    "durationInSec": 208,
+    "album": "But Here We Are"
   },
   {
     "videoId": "U1s49lfmwuA",
     "title": "The Glass",
     "artist": "Foo Fighters",
-    "duration": "3:50"
+    "duration": "3:50",
+    "durationInSec": 230,
+    "album": "But Here We Are"
   },
   {
     "videoId": "n9KCQj5-iF4",
     "title": "But Here We Are",
     "artist": "Foo Fighters",
-    "duration": "4:44"
+    "duration": "4:44",
+    "durationInSec": 284,
+    "album": "But Here We Are"
   },
   {
     "videoId": "P3KoSFRPjb8",
     "title": "Hearing Voices",
     "artist": "Foo Fighters",
-    "duration": "3:49"
+    "duration": "3:49",
+    "durationInSec": 229,
+    "album": "But Here We Are"
   },
   {
     "videoId": "lb9gWXsLyms",
     "title": "Under You",
     "artist": "Foo Fighters",
-    "duration": "3:40"
+    "duration": "3:40",
+    "durationInSec": 220,
+    "album": "But Here We Are"
   },
   {
     "videoId": "3l-vhossowA",
     "title": "27 Club (Revisited)",
     "artist": "letlive.",
-    "duration": "7:35"
+    "duration": "7:35",
+    "durationInSec": 455,
+    "album": "The Blackest Beautiful (Revisited)"
   },
   {
     "videoId": "hP9kecqhn6Q",
     "title": "Pheromone Cvlt (Revisited)",
     "artist": "letlive.",
-    "duration": "4:06"
+    "duration": "4:06",
+    "durationInSec": 246,
+    "album": "The Blackest Beautiful (Revisited)"
   },
   {
     "videoId": "MnOydi0jDc8",
     "title": "Dead Bodies Everywhere",
     "artist": "Carnifex",
-    "duration": "4:31"
+    "duration": "4:31",
+    "durationInSec": 271,
+    "album": "Dead Bodies Everywhere"
   },
   {
     "videoId": "8Nd5XmZtVzU",
     "title": "\u6bba\u610fvs\u6bba\u610f",
     "artist": "MAXIMUM THE HORMONE",
-    "duration": "5:42"
+    "duration": "5:42",
+    "durationInSec": 342,
+    "album": null
   },
   {
     "videoId": "beN5ep5MrdY",
     "title": "\u4e88\u8972\u5fa9\u8b90 - Yoshu Fukushu [Our Merciless Home'war'k]",
     "artist": "MAXIMUM THE HORMONE",
-    "duration": "5:25"
+    "duration": "5:25",
+    "durationInSec": 325,
+    "album": null
   },
   {
     "videoId": "tKZbHjy9GWM",
     "title": "\u30cf\u30f3\u30b0\u30ea\u30fc\u30fb\u30d7\u30e9\u30a4\u30c9",
     "artist": "Maximum the Hormone",
-    "duration": "7:20"
+    "duration": "7:20",
+    "durationInSec": 440,
+    "album": null
   },
   {
     "videoId": "ztXnATr-mck",
     "title": "\u9b31\u304f\u3057\u304d\u4eba\u3005\u306e\u3046\u305f - Utsukushikihitobitonouta [Ode to Bluetiful People]",
     "artist": "MAXIMUM THE HORMONE",
-    "duration": "5:37"
+    "duration": "5:37",
+    "durationInSec": 337,
+    "album": null
   },
   {
     "videoId": "IC-wDpwzEt4",
     "title": "maximum the hormone \u2161\u301c\u3053\u308c\u304b\u3089\u306e\u9eba\u30ab\u30bf\u30b3\u30c3\u30c6\u30ea\u306e\u8a71\u3092\u3057\u3088\u3046\u301c - maximum the hormone II -RYO vs RYO-",
     "artist": "Maximum the Hormone",
-    "duration": "6:55"
+    "duration": "6:55",
+    "durationInSec": 415,
+    "album": null
   },
   {
     "videoId": "AUeRiPyjFH4",
     "title": "\u30de\u30ad\u30b7\u30de\u30e0 \u30b6 \u30db\u30eb\u30e2\u30f3 \u300e\u604b\u306e\u30b9\u30da\u30eb\u30de\u300f Music Video \u91ce\u5916\u30d5\u30a7\u30b9\u6620\u50cfver.",
     "artist": "\u30de\u30ad\u30b7\u30de\u30e0 \u30b6 \u30db\u30eb\u30e2\u30f3\u516c\u5f0f",
-    "duration": "5:57"
+    "duration": "5:57",
+    "durationInSec": 357,
+    "album": null
   },
   {
     "videoId": "B_vvv1oPnKY",
     "title": "\u7d76\u671b\u30d3\u30ea\u30fc",
     "artist": "MAXIMUM THE HORMONE",
-    "duration": "9:08"
+    "duration": "9:08",
+    "durationInSec": 548,
+    "album": null
   },
   {
     "videoId": "teRgh01Xb1U",
     "title": "\u30b7\u30df - Shimi (MV Special Ver.)",
     "artist": "MAXIMUM THE HORMONE",
-    "duration": "5:08"
-  },
-  {
-    "videoId": "vfdNFL1xwi8",
-    "title": "Cosmos I - The Dream",
-    "artist": "IAPETVS",
-    "duration": "8:07"
-  },
-  {
-    "videoId": "v6CVlQPoU08",
-    "title": "Yearning: The unbeautiful after",
-    "artist": "Boundaries",
-    "duration": "3:50"
-  },
-  {
-    "videoId": "ci_Zq-dGxjU",
-    "title": "Only endless",
-    "artist": "Boundaries",
-    "duration": "4:02"
-  },
-  {
-    "videoId": "LcqOdisypEk",
-    "title": "Nothing, gathered",
-    "artist": "Boundaries",
-    "duration": "4:28"
-  },
-  {
-    "videoId": "eHKmVvLys_M",
-    "title": "Evidence of extinction",
-    "artist": "Boundaries",
-    "duration": "2:44"
-  },
-  {
-    "videoId": "iPIdHFX4ios",
-    "title": "Wasted angel",
-    "artist": "Boundaries",
-    "duration": "2:26"
+    "duration": "5:08",
+    "durationInSec": 308,
+    "album": null
   }
 ]
