@@ -1,12 +1,20 @@
 [
   {
+    "videoId": "OScpN6C610k",
+    "title": "Let Go",
+    "artist": "Bury Tomorrow",
+    "duration": "3:53",
+    "durationInSec": 233,
+    "album": "Will You Haunt Me, With That Same Patience",
+    "timestamp": 1784383419
+  },
+  {
     "videoId": "rynZBOxUGJc",
     "title": "Y\u014dkai (\u5996\u602a)",
     "artist": "Bury Tomorrow",
     "duration": "3:56",
     "durationInSec": 236,
-    "album": "Will You Haunt Me, With That Same Patience",
-    "timestamp": 1784383232
+    "album": "Will You Haunt Me, With That Same Patience"
   },
   {
     "videoId": "4EHtSWyftCA",
@@ -14,8 +22,7 @@
     "artist": "Bury Tomorrow",
     "duration": "4:33",
     "durationInSec": 273,
-    "album": "Will You Haunt Me, With That Same Patience",
-    "timestamp": 1784382996
+    "album": "Will You Haunt Me, With That Same Patience"
   },
   {
     "videoId": "kN_Sk30_PgY",
@@ -23,8 +30,7 @@
     "artist": "Bury Tomorrow",
     "duration": "3:47",
     "durationInSec": 227,
-    "album": "Will You Haunt Me, With That Same Patience",
-    "timestamp": 1784382723
+    "album": "Will You Haunt Me, With That Same Patience"
   },
   {
     "videoId": "iz3HHz9KG0A",
@@ -32,8 +38,7 @@
     "artist": "Bury Tomorrow",
     "duration": "3:39",
     "durationInSec": 219,
-    "album": "Will You Haunt Me, With That Same Patience",
-    "timestamp": 1784382496
+    "album": "Will You Haunt Me, With That Same Patience"
   },
   {
     "videoId": "bY3MOVsgkWc",
@@ -41,8 +46,7 @@
     "artist": "Bury Tomorrow",
     "duration": "4:06",
     "durationInSec": 246,
-    "album": "Will You Haunt Me, With That Same Patience",
-    "timestamp": 1784382277
+    "album": "Will You Haunt Me, With That Same Patience"
   },
   {
     "videoId": "ixj5D6gHP5w",
@@ -50,8 +54,7 @@
     "artist": "Bury Tomorrow",
     "duration": "3:52",
     "durationInSec": 232,
-    "album": "Will You Haunt Me, With That Same Patience",
-    "timestamp": 1784382031
+    "album": "Will You Haunt Me, With That Same Patience"
   },
   {
     "videoId": "54pN4a4qoMI",
@@ -395,14 +398,6 @@
     "artist": "MAXIMUM THE HORMONE",
     "duration": "9:08",
     "durationInSec": 548,
-    "album": null
-  },
-  {
-    "videoId": "teRgh01Xb1U",
-    "title": "\u30b7\u30df - Shimi (MV Special Ver.)",
-    "artist": "MAXIMUM THE HORMONE",
-    "duration": "5:08",
-    "durationInSec": 308,
     "album": null
   }
 ]
