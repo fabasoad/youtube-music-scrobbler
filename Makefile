@@ -1,6 +1,6 @@
 .PHONY: run
 run:
-	uv run python scrobble.py
+	uv run scrobble
 
 .PHONY: install
 install:

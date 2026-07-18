@@ -5,12 +5,11 @@ Steps:
 1. Open music.youtube.com in Chrome
 2. DevTools -> Network tab -> filter 'browse' -> click anything on the page
 3. Right-click the 'browse' request -> Copy -> Copy as cURL
-4. Paste the cURL command when prompted
-5. Press Ctrl+D when done
-6. Copy the new browser.json contents to the YTM_BROWSER GitHub Secret
+4. Paste the cURL command into a file called 'curl.txt' and run this script
 """
 
 import json
+import os
 import re
 import sys
 
@@ -42,7 +41,7 @@ def parse_curl(curl: str) -> dict:
 
 def main():
     curl_file = "curl.txt"
-    if not __import__("os").path.exists(curl_file):
+    if not os.path.exists(curl_file):
         print(f"Please paste your cURL command into a file called '{curl_file}' and run this script again.")
         sys.exit(0)
 
