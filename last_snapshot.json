@@ -1,5 +1,149 @@
 [
   {
+    "videoId": "AM33DEhVF1k",
+    "title": "Hourglass (feat. Dani Winter-Bates)",
+    "artist": "Normandie",
+    "duration": "5:02",
+    "durationInSec": 302,
+    "album": "Hourglass (feat. Dani Winter-Bates)",
+    "timestamp": 1784431205
+  },
+  {
+    "videoId": "raMwUI95OVQ",
+    "title": "Sx",
+    "artist": "Bury Tomorrow",
+    "duration": "4:03",
+    "durationInSec": 243,
+    "album": "Sx",
+    "timestamp": 1784430903
+  },
+  {
+    "videoId": "iy4gtEql93o",
+    "title": "The Carcass King (feat. Cody Frost)",
+    "artist": "Bury Tomorrow",
+    "duration": "4:35",
+    "durationInSec": 275,
+    "album": "The Seventh Sun",
+    "timestamp": 1784430660
+  },
+  {
+    "videoId": "q2ay_YyS114",
+    "title": "Care",
+    "artist": "Bury Tomorrow",
+    "duration": "3:07",
+    "durationInSec": 187,
+    "album": "The Seventh Sun",
+    "timestamp": 1784430385
+  },
+  {
+    "videoId": "6iHBsTprSGM",
+    "title": "Recovery?",
+    "artist": "Bury Tomorrow",
+    "duration": "3:47",
+    "durationInSec": 227,
+    "album": "The Seventh Sun",
+    "timestamp": 1784430198
+  },
+  {
+    "videoId": "AEs8WAr9v_E",
+    "title": "Heretic (feat. Loz Taylor)",
+    "artist": "Bury Tomorrow",
+    "duration": "3:33",
+    "durationInSec": 213,
+    "album": "The Seventh Sun",
+    "timestamp": 1784429971
+  },
+  {
+    "videoId": "rWsp7dVsibk",
+    "title": "Majesty",
+    "artist": "Bury Tomorrow",
+    "duration": "4:17",
+    "durationInSec": 257,
+    "album": "The Seventh Sun",
+    "timestamp": 1784429758
+  },
+  {
+    "videoId": "mji8XR0AUkc",
+    "title": "Wrath",
+    "artist": "Bury Tomorrow",
+    "duration": "5:07",
+    "durationInSec": 307,
+    "album": "The Seventh Sun",
+    "timestamp": 1784429501
+  },
+  {
+    "videoId": "Gg2LX3RBH9A",
+    "title": "Boltcutter",
+    "artist": "Bury Tomorrow",
+    "duration": "3:38",
+    "durationInSec": 218,
+    "album": "The Seventh Sun",
+    "timestamp": 1784429194
+  },
+  {
+    "videoId": "YiTPI_5frio",
+    "title": "Forced Divide",
+    "artist": "Bury Tomorrow",
+    "duration": "3:28",
+    "durationInSec": 208,
+    "album": "The Seventh Sun",
+    "timestamp": 1784428976
+  },
+  {
+    "videoId": "DXJymNxesg0",
+    "title": "Begin Again",
+    "artist": "Bury Tomorrow",
+    "duration": "3:36",
+    "durationInSec": 216,
+    "album": "The Seventh Sun",
+    "timestamp": 1784428768
+  },
+  {
+    "videoId": "Xhg58FakN7I",
+    "title": "Abandon Us",
+    "artist": "Bury Tomorrow",
+    "duration": "3:43",
+    "durationInSec": 223,
+    "album": "The Seventh Sun",
+    "timestamp": 1784428552
+  },
+  {
+    "videoId": "GV0s3GmhlS8",
+    "title": "The Seventh Sun",
+    "artist": "Bury Tomorrow",
+    "duration": "3:42",
+    "durationInSec": 222,
+    "album": "The Seventh Sun",
+    "timestamp": 1784428329
+  },
+  {
+    "videoId": "qkDWi-_o4gA",
+    "title": "The Torch",
+    "artist": "Bury Tomorrow",
+    "duration": "4:15",
+    "durationInSec": 255,
+    "album": "Runes",
+    "timestamp": 1784428107
+  },
+  {
+    "videoId": "QQz_7ZJ6_7E",
+    "title": "Beyond Me",
+    "artist": "Foo Fighters",
+    "duration": "3:55",
+    "durationInSec": 235,
+    "album": "But Here We Are",
+    "timestamp": 1784427852
+  },
+  {
+    "videoId": "WWfuHj5sv-E",
+    "title": "Show Me How",
+    "artist": "Foo Fighters",
+    "duration": "4:54",
+    "durationInSec": 294,
+    "album": "But Here We Are",
+    "timestamp": 1784427617
+  },
+  {
     "videoId": "yOjrReHC4XM",
     "title": "Paradox",
     "artist": "Bury Tomorrow",
@@ -160,14 +304,6 @@
     "album": null
   },
   {
-    "videoId": "St7am7VjzJk",
-    "title": "\u30e1\u30bf\u76db\u308b\u30d5\u30a9\u30fc\u30bc\uff01 - Metamorphose!",
-    "artist": "HANABIE.",
-    "duration": "3:23",
-    "durationInSec": 203,
-    "album": null
-  },
-  {
     "videoId": "m9x2WXF15HA",
     "title": "\u30a2\u30eb\u30d0\u30e0\"\u4e88\u8972\u5fa9\u8b90\"\u5168\u66f2\u30c8\u30ec\u30fc\u30e9\u30fc",
     "artist": "MAXIMUM THE HORMONE",
@@ -278,125 +414,5 @@
     "duration": "3:32",
     "durationInSec": 212,
     "album": "Pageburner [Remix]"
-  },
-  {
-    "videoId": "WWfuHj5sv-E",
-    "title": "Show Me How",
-    "artist": "Foo Fighters",
-    "duration": "4:54",
-    "durationInSec": 294,
-    "album": "But Here We Are"
-  },
-  {
-    "videoId": "GThHRzEexf0",
-    "title": "Nothing At All",
-    "artist": "Foo Fighters",
-    "duration": "3:28",
-    "durationInSec": 208,
-    "album": "But Here We Are"
-  },
-  {
-    "videoId": "U1s49lfmwuA",
-    "title": "The Glass",
-    "artist": "Foo Fighters",
-    "duration": "3:50",
-    "durationInSec": 230,
-    "album": "But Here We Are"
-  },
-  {
-    "videoId": "n9KCQj5-iF4",
-    "title": "But Here We Are",
-    "artist": "Foo Fighters",
-    "duration": "4:44",
-    "durationInSec": 284,
-    "album": "But Here We Are"
-  },
-  {
-    "videoId": "P3KoSFRPjb8",
-    "title": "Hearing Voices",
-    "artist": "Foo Fighters",
-    "duration": "3:49",
-    "durationInSec": 229,
-    "album": "But Here We Are"
-  },
-  {
-    "videoId": "lb9gWXsLyms",
-    "title": "Under You",
-    "artist": "Foo Fighters",
-    "duration": "3:40",
-    "durationInSec": 220,
-    "album": "But Here We Are"
-  },
-  {
-    "videoId": "3l-vhossowA",
-    "title": "27 Club (Revisited)",
-    "artist": "letlive.",
-    "duration": "7:35",
-    "durationInSec": 455,
-    "album": "The Blackest Beautiful (Revisited)"
-  },
-  {
-    "videoId": "hP9kecqhn6Q",
-    "title": "Pheromone Cvlt (Revisited)",
-    "artist": "letlive.",
-    "duration": "4:06",
-    "durationInSec": 246,
-    "album": "The Blackest Beautiful (Revisited)"
-  },
-  {
-    "videoId": "MnOydi0jDc8",
-    "title": "Dead Bodies Everywhere",
-    "artist": "Carnifex",
-    "duration": "4:31",
-    "durationInSec": 271,
-    "album": "Dead Bodies Everywhere"
-  },
-  {
-    "videoId": "8Nd5XmZtVzU",
-    "title": "\u6bba\u610fvs\u6bba\u610f",
-    "artist": "MAXIMUM THE HORMONE",
-    "duration": "5:42",
-    "durationInSec": 342,
-    "album": null
-  },
-  {
-    "videoId": "beN5ep5MrdY",
-    "title": "\u4e88\u8972\u5fa9\u8b90 - Yoshu Fukushu [Our Merciless Home'war'k]",
-    "artist": "MAXIMUM THE HORMONE",
-    "duration": "5:25",
-    "durationInSec": 325,
-    "album": null
-  },
-  {
-    "videoId": "tKZbHjy9GWM",
-    "title": "\u30cf\u30f3\u30b0\u30ea\u30fc\u30fb\u30d7\u30e9\u30a4\u30c9",
-    "artist": "Maximum the Hormone",
-    "duration": "7:20",
-    "durationInSec": 440,
-    "album": null
-  },
-  {
-    "videoId": "ztXnATr-mck",
-    "title": "\u9b31\u304f\u3057\u304d\u4eba\u3005\u306e\u3046\u305f - Utsukushikihitobitonouta [Ode to Bluetiful People]",
-    "artist": "MAXIMUM THE HORMONE",
-    "duration": "5:37",
-    "durationInSec": 337,
-    "album": null
-  },
-  {
-    "videoId": "IC-wDpwzEt4",
-    "title": "maximum the hormone \u2161\u301c\u3053\u308c\u304b\u3089\u306e\u9eba\u30ab\u30bf\u30b3\u30c3\u30c6\u30ea\u306e\u8a71\u3092\u3057\u3088\u3046\u301c - maximum the hormone II -RYO vs RYO-",
-    "artist": "Maximum the Hormone",
-    "duration": "6:55",
-    "durationInSec": 415,
-    "album": null
-  },
-  {
-    "videoId": "AUeRiPyjFH4",
-    "title": "\u30de\u30ad\u30b7\u30de\u30e0 \u30b6 \u30db\u30eb\u30e2\u30f3 \u300e\u604b\u306e\u30b9\u30da\u30eb\u30de\u300f Music Video \u91ce\u5916\u30d5\u30a7\u30b9\u6620\u50cfver.",
-    "artist": "\u30de\u30ad\u30b7\u30de\u30e0 \u30b6 \u30db\u30eb\u30e2\u30f3\u516c\u5f0f",
-    "duration": "5:57",
-    "durationInSec": 357,
-    "album": null
   }
 ]
