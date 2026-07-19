@@ -224,14 +224,6 @@
     "album": "Cannibal"
   },
   {
-    "videoId": "ucVvSxQ-R1E",
-    "title": "IS THIS HOW IT ENDS?",
-    "artist": "Wage War",
-    "duration": "4:00",
-    "durationInSec": 240,
-    "album": "STIGMA"
-  },
-  {
     "videoId": "roiVDsOZsa4",
     "title": "Perfect (w/ Silence)",
     "artist": "Lifer",
@@ -397,6 +389,14 @@
     "artist": "Bury Tomorrow",
     "duration": "4:17",
     "durationInSec": 257,
+    "album": "The Seventh Sun"
+  },
+  {
+    "videoId": "mji8XR0AUkc",
+    "title": "Wrath",
+    "artist": "Bury Tomorrow",
+    "duration": "5:07",
+    "durationInSec": 307,
     "album": "The Seventh Sun"
   }
 ]
