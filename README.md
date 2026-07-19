@@ -73,14 +73,14 @@ its internal API.
 3. Type `browse` in the filter, then interact with the page
 4. Right-click the matching `browse` request → **Copy** → **Copy as cURL**
 5. Paste the cURL command into a file named `curl.txt` in the project root
-6. Run `uv run refresh-auth` to generate `browser.json`
+6. Run `make refresh-auth` to generate `browser.json`
 
 `browser.json` holds your session cookies — **never commit it**.
 
 To verify it works:
 
 ```shell
-uv run verify
+make verify
 ```
 
 You should see track objects with `title`, `artists`, and `videoId` fields.
@@ -125,7 +125,7 @@ When the workflow fails due to expired cookies:
 2. DevTools → Network → filter by `browse` → interact with the page
 3. Right-click the `browse` request → **Copy** → **Copy as cURL**
 4. Save to `curl.txt` in the project root
-5. Run `uv run refresh-auth` locally to regenerate `browser.json`
+5. Run `make refresh-auth` locally to regenerate `browser.json`
 6. Update the `YTM_BROWSER` GitHub Secret with the new file contents
 
 GitHub will email you on workflow failure, so you'll know when to refresh.

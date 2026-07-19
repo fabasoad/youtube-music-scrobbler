@@ -11,10 +11,14 @@ YouTube Music Scrobbler syncs YouTube Music listening history to Last.fm via Git
 ## Commands
 
 ```bash
-make install    # uv sync — install dependencies
-make run        # uv run scrobble — run the full scrobble workflow
-make test       # uv run pytest — run unit tests
-make lint       # ruff check + ruff format --check
+make install      # uv sync — install dependencies
+make run          # uv run scrobble — run the full scrobble workflow
+make refresh-auth # uv run refresh-auth — parse curl.txt → browser.json
+make verify       # uv run python verify.py — test YouTube Music auth connection
+make test         # uv run pytest — run unit tests
+make lint         # ruff check + ruff format --check
+make audit        # uv audit — vulnerability scan
+make outdated     # uv tree --outdated --depth 1 — check for dependency updates
 ```
 
 Run a single test file:
@@ -46,11 +50,31 @@ Timestamps are synthetic — computed by walking backward from `datetime.now()` 
 
 `scrobble()` retries up to 3 times with a 5-second backoff on any `pylast` exception.
 
+## Key Data Structure
+
+Track dict passed through the pipeline:
+```python
+{
+  "videoId": str,       # YouTube video ID — used as the unique key for diffing
+  "title": str,
+  "artist": str,
+  "duration": str,      # "M:SS" string
+  "durationInSec": int, # derived — used for synthetic timestamp math
+  "album": str | None,
+  "timestamp": int,     # Unix epoch — added by assign_timestamps(), required by Last.fm
+}
+```
+
+`last_snapshot.json` and `runs.log` are **git-tracked** and committed back to the repo by the `scrobble.yml` workflow after each run.
+
 ## Code Style
 
+- Python `>=3.14` required
+- Line length: 110 characters
 - Indentation: 2 spaces
 - Strings: double quotes preferred over single quotes
 - Typings: always annotate variables, function parameters, and return types
+- Ruff rules: `E`, `F`, `I` (isort), `UP` (pyupgrade), `B` (bugbear), `SIM` (simplify)
 
 ## Secrets & Auth
 
