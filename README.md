@@ -1,9 +1,9 @@
 # YouTube Music Scrobbler
 
 [![Stand With Ukraine](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/badges/StandWithUkraine.svg)](https://stand-with-ukraine.pp.ua)
-![unit-tests](https://github.com/fabasoad/yotube-music-scrobbler/actions/workflows/unit-tests.yml/badge.svg)
-![security](https://github.com/fabasoad/yotube-music-scrobbler/actions/workflows/security.yml/badge.svg)
-![linting](https://github.com/fabasoad/yotube-music-scrobbler/actions/workflows/linting.yml/badge.svg)
+![unit-tests](https://github.com/fabasoad/youtube-music-scrobbler/actions/workflows/unit-tests.yml/badge.svg)
+![security](https://github.com/fabasoad/youtube-music-scrobbler/actions/workflows/security.yml/badge.svg)
+![linting](https://github.com/fabasoad/youtube-music-scrobbler/actions/workflows/linting.yml/badge.svg)
 
 Automatically syncs your YouTube Music listening history to Last.fm — runs on
 GitHub Actions every 2 hours, no server required.
