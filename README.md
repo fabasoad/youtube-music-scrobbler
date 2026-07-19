@@ -1,4 +1,9 @@
-# youtube-music-scrobbler
+# YouTube Music Scrobbler
+
+[![Stand With Ukraine](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/badges/StandWithUkraine.svg)](https://stand-with-ukraine.pp.ua)
+![unit-tests](https://github.com/fabasoad/yotube-music-scrobbler/actions/workflows/unit-tests.yml/badge.svg)
+![security](https://github.com/fabasoad/yotube-music-scrobbler/actions/workflows/security.yml/badge.svg)
+![linting](https://github.com/fabasoad/yotube-music-scrobbler/actions/workflows/linting.yml/badge.svg)
 
 Automatically syncs your YouTube Music listening history to Last.fm — runs on
 GitHub Actions every 2 hours, no server required.
@@ -22,7 +27,8 @@ your Google account except your own browser cookies.
 2. It pulls your 50 most recently played tracks from YouTube Music using browser
    cookie authentication
 3. Those tracks are compared against a saved snapshot to identify new plays
-4. New tracks are scrobbled to Last.fm with timestamps spaced 3 minutes apart
+4. New tracks are scrobbled to Last.fm with timestamps spaced by each track's
+   duration apart (defaulting to 3 minutes if duration is unavailable)
 5. The snapshot is updated and committed back to the repo for the next run
 
 > **Note:** YouTube Music only provides relative timestamps like "Today" or
@@ -119,7 +125,7 @@ When the workflow fails due to expired cookies:
 2. DevTools → Network → filter by `browse` → interact with the page
 3. Right-click the `browse` request → **Copy** → **Copy as cURL**
 4. Save to `curl.txt` in the project root
-5. Run `refresh-auth` locally to regenerate `browser.json`
+5. Run `uv run refresh-auth` locally to regenerate `browser.json`
 6. Update the `YTM_BROWSER` GitHub Secret with the new file contents
 
 GitHub will email you on workflow failure, so you'll know when to refresh.

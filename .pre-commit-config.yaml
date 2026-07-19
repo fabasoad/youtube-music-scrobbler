@@ -1,7 +1,7 @@
 ---
 default_install_hook_types: ["pre-commit", "pre-push"]
 default_stages: ["pre-commit", "pre-push"]
-exclude: ^((.idea|.venv)/.*|browser.json|uv.lock|last_snapshot.json)$
+exclude: ^((.idea|.venv)/.*|browser.json|uv.lock|last_snapshot.json|CLAUDE.md)$
 minimum_pre_commit_version: 4.4.0
 repos:
   - repo: local

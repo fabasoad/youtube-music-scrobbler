@@ -2,6 +2,14 @@
 run:
 	uv run scrobble
 
+.PHONY: refresh-auth
+refresh-auth:
+	uv run refresh-auth
+
+.PHONY: verify
+verify:
+	uv run python verify.py
+
 .PHONY: install
 install:
 	uv sync
@@ -21,4 +29,4 @@ lint:
 
 .PHONY: test
 test:
-	uv run pytest
+	uv run python -m pytest
