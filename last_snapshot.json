@@ -1,12 +1,227 @@
 [
   {
+    "videoId": "tc0IdGru8JA",
+    "title": "Starved",
+    "artist": "Sunk Loto",
+    "duration": "4:13",
+    "durationInSec": 253,
+    "album": "Between Birth & Death",
+    "timestamp": 1784455047
+  },
+  {
+    "videoId": "JGi4xaLZRqc",
+    "title": "Help",
+    "artist": "Sunk Loto",
+    "duration": "4:01",
+    "durationInSec": 241,
+    "album": "Between Birth & Death",
+    "timestamp": 1784454794
+  },
+  {
+    "videoId": "hd5-5Is-Nm8",
+    "title": "Empty And Alone",
+    "artist": "Sunk Loto",
+    "duration": "3:04",
+    "durationInSec": 184,
+    "album": "Between Birth & Death",
+    "timestamp": 1784454553
+  },
+  {
+    "videoId": "4-EWyOVVrBE",
+    "title": "Fall Apart",
+    "artist": "Sunk Loto",
+    "duration": "3:29",
+    "durationInSec": 209,
+    "album": "Between Birth & Death",
+    "timestamp": 1784454369
+  },
+  {
+    "videoId": "dxwz7wT9yvk",
+    "title": "5 Years Of Silence",
+    "artist": "Sunk Loto",
+    "duration": "3:47",
+    "durationInSec": 227,
+    "album": "Between Birth & Death",
+    "timestamp": 1784454160
+  },
+  {
+    "videoId": "NV7K5eVRSgs",
+    "title": "Adrenaline",
+    "artist": "Bury Tomorrow",
+    "duration": "2:44",
+    "durationInSec": 164,
+    "album": "Black Flame",
+    "timestamp": 1784453933
+  },
+  {
+    "videoId": "NJhylnlnYJc",
+    "title": "No Less Violent",
+    "artist": "Bury Tomorrow",
+    "duration": "3:30",
+    "durationInSec": 210,
+    "album": "Black Flame",
+    "timestamp": 1784453769
+  },
+  {
+    "videoId": "y-VAq6p563g",
+    "title": "Twisting in Torment",
+    "artist": "Witches Hammer",
+    "duration": "8:32",
+    "durationInSec": 512,
+    "album": "Final Storm",
+    "timestamp": 1784453559
+  },
+  {
+    "videoId": "3jHec8xBSaI",
+    "title": "From Below",
+    "artist": "Witches Hammer",
+    "duration": "4:38",
+    "durationInSec": 278,
+    "album": "Final Storm",
+    "timestamp": 1784453047
+  },
+  {
+    "videoId": "XptDsrg8o5I",
+    "title": "Death of No Reprieve",
+    "artist": "Witches Hammer",
+    "duration": "4:35",
+    "durationInSec": 275,
+    "album": "Final Storm",
+    "timestamp": 1784452769
+  },
+  {
+    "videoId": "_pwf8T0qCGc",
+    "title": "Malicious Assault",
+    "artist": "Witches Hammer",
+    "duration": "3:17",
+    "durationInSec": 197,
+    "album": "Final Storm",
+    "timestamp": 1784452494
+  },
+  {
+    "videoId": "ti7IkQZKyvQ",
+    "title": "Across the River Styx",
+    "artist": "Witches Hammer",
+    "duration": "1:37",
+    "durationInSec": 97,
+    "album": "Final Storm",
+    "timestamp": 1784452297
+  },
+  {
+    "videoId": "RwI5kDJ8qvQ",
+    "title": "Mantle of Death",
+    "artist": "Witches Hammer",
+    "duration": "3:48",
+    "durationInSec": 228,
+    "album": "Final Storm",
+    "timestamp": 1784452200
+  },
+  {
+    "videoId": "ZVc_JT9F0IY",
+    "title": "Nocturnal Oblivion",
+    "artist": "Witches Hammer",
+    "duration": "2:56",
+    "durationInSec": 176,
+    "album": "Final Storm",
+    "timestamp": 1784451972
+  },
+  {
+    "videoId": "wtfXKg4w-DY",
+    "title": "We Are Legion",
+    "artist": "Witches Hammer",
+    "duration": "3:22",
+    "durationInSec": 202,
+    "album": "Final Storm",
+    "timestamp": 1784451796
+  },
+  {
+    "videoId": "xytMJwG739E",
+    "title": "Into the Gates of Hell",
+    "artist": "Witches Hammer",
+    "duration": "5:39",
+    "durationInSec": 339,
+    "album": "Final Storm",
+    "timestamp": 1784451594
+  },
+  {
+    "videoId": "afSOT8bJTsw",
+    "title": "An Honourable Reign",
+    "artist": "Bury Tomorrow",
+    "duration": "4:00",
+    "durationInSec": 240,
+    "album": "The Union of Crowns",
+    "timestamp": 1784451255
+  },
+  {
+    "videoId": "ltMnMj_BYuc",
+    "title": "Dark, Infinite",
+    "artist": "Bury Tomorrow",
+    "duration": "4:02",
+    "durationInSec": 242,
+    "album": "Cannibal",
+    "timestamp": 1784451015
+  },
+  {
+    "videoId": "esyc77tpb5g",
+    "title": "Cold Sleep",
+    "artist": "Bury Tomorrow",
+    "duration": "3:40",
+    "durationInSec": 220,
+    "album": "Cannibal",
+    "timestamp": 1784450773
+  },
+  {
+    "videoId": "bNkB8dx4WxI",
+    "title": "Voice & Truth",
+    "artist": "Bury Tomorrow",
+    "duration": "3:07",
+    "durationInSec": 187,
+    "album": "Cannibal",
+    "timestamp": 1784450553
+  },
+  {
+    "videoId": "tOzJf_bxzG0",
+    "title": "Gods & Machines",
+    "artist": "Bury Tomorrow",
+    "duration": "4:06",
+    "durationInSec": 246,
+    "album": "Cannibal",
+    "timestamp": 1784450366
+  },
+  {
+    "videoId": "IdbZ0wSx_Vc",
+    "title": "Quake",
+    "artist": "Bury Tomorrow",
+    "duration": "4:26",
+    "durationInSec": 266,
+    "album": "Cannibal",
+    "timestamp": 1784450120
+  },
+  {
+    "videoId": "xHtwWiedB9w",
+    "title": "The Agonist",
+    "artist": "Bury Tomorrow",
+    "duration": "4:03",
+    "durationInSec": 243,
+    "album": "Cannibal",
+    "timestamp": 1784449854
+  },
+  {
+    "videoId": "xg_ies0GI0A",
+    "title": "Better Below",
+    "artist": "Bury Tomorrow",
+    "duration": "3:13",
+    "durationInSec": 193,
+    "album": "Cannibal",
+    "timestamp": 1784449611
+  },
+  {
     "videoId": "EALTafyU7wk",
     "title": "Imposter",
     "artist": "Bury Tomorrow",
     "duration": "3:28",
     "durationInSec": 208,
-    "album": "Cannibal",
-    "timestamp": 1784444124
+    "album": "Cannibal"
   },
   {
     "videoId": "x-5SnE543kM",
@@ -14,8 +229,7 @@
     "artist": "Bury Tomorrow",
     "duration": "3:59",
     "durationInSec": 239,
-    "album": "Cannibal",
-    "timestamp": 1784443916
+    "album": "Cannibal"
   },
   {
     "videoId": "X6XWUhFyHPY",
@@ -23,8 +237,7 @@
     "artist": "Bury Tomorrow",
     "duration": "4:16",
     "durationInSec": 256,
-    "album": "Cannibal",
-    "timestamp": 1784443677
+    "album": "Cannibal"
   },
   {
     "videoId": "4A63_6DBin4",
@@ -32,8 +245,7 @@
     "artist": "Bury Tomorrow",
     "duration": "3:48",
     "durationInSec": 228,
-    "album": "Cannibal",
-    "timestamp": 1784443421
+    "album": "Cannibal"
   },
   {
     "videoId": "ucVvSxQ-R1E",
@@ -41,8 +253,7 @@
     "artist": "Wage War",
     "duration": "4:00",
     "durationInSec": 240,
-    "album": "STIGMA",
-    "timestamp": 1784443193
+    "album": "STIGMA"
   },
   {
     "videoId": "roiVDsOZsa4",
@@ -50,8 +261,7 @@
     "artist": "Lifer",
     "duration": "7:41",
     "durationInSec": 461,
-    "album": "Lifer",
-    "timestamp": 1784442953
+    "album": "Lifer"
   },
   {
     "videoId": "DOA5hq-g1P0",
@@ -59,8 +269,7 @@
     "artist": "Lifer",
     "duration": "4:45",
     "durationInSec": 285,
-    "album": "Lifer",
-    "timestamp": 1784442492
+    "album": "Lifer"
   },
   {
     "videoId": "oBcZCJqctQQ",
@@ -68,8 +277,7 @@
     "artist": "Lifer",
     "duration": "3:57",
     "durationInSec": 237,
-    "album": "Lifer",
-    "timestamp": 1784442207
+    "album": "Lifer"
   },
   {
     "videoId": "5HZgKzDPVKc",
@@ -77,8 +285,7 @@
     "artist": "Lifer",
     "duration": "3:09",
     "durationInSec": 189,
-    "album": "Lifer",
-    "timestamp": 1784441970
+    "album": "Lifer"
   },
   {
     "videoId": "6jyDyFpCPik",
@@ -86,8 +293,7 @@
     "artist": "Lifer",
     "duration": "4:39",
     "durationInSec": 279,
-    "album": "Lifer",
-    "timestamp": 1784441781
+    "album": "Lifer"
   },
   {
     "videoId": "n4uJ_HFmArU",
@@ -95,8 +301,7 @@
     "artist": "Lifer",
     "duration": "3:12",
     "durationInSec": 192,
-    "album": "Lifer",
-    "timestamp": 1784441502
+    "album": "Lifer"
   },
   {
     "videoId": "5aai9yVjtIc",
@@ -104,8 +309,7 @@
     "artist": "Lifer",
     "duration": "3:43",
     "durationInSec": 223,
-    "album": "Lifer",
-    "timestamp": 1784441310
+    "album": "Lifer"
   },
   {
     "videoId": "Ue-DaWZYOrU",
@@ -113,8 +317,7 @@
     "artist": "Lifer",
     "duration": "2:41",
     "durationInSec": 161,
-    "album": "Lifer",
-    "timestamp": 1784441087
+    "album": "Lifer"
   },
   {
     "videoId": "F20ADZFjFWE",
@@ -122,8 +325,7 @@
     "artist": "Lifer",
     "duration": "3:53",
     "durationInSec": 233,
-    "album": "Lifer",
-    "timestamp": 1784440926
+    "album": "Lifer"
   },
   {
     "videoId": "9oHFFZuopqM",
@@ -131,8 +333,7 @@
     "artist": "Lifer",
     "duration": "4:18",
     "durationInSec": 258,
-    "album": "Lifer",
-    "timestamp": 1784440693
+    "album": "Lifer"
   },
   {
     "videoId": "eMfSfyNzw90",
@@ -140,8 +341,7 @@
     "artist": "SAGE",
     "duration": "3:31",
     "durationInSec": 211,
-    "album": "COLD BLOODED",
-    "timestamp": 1784440435
+    "album": "COLD BLOODED"
   },
   {
     "videoId": "BiXOebP_PxY",
@@ -149,8 +349,7 @@
     "artist": "Lifer",
     "duration": "3:47",
     "durationInSec": 227,
-    "album": "Lifer",
-    "timestamp": 1784440224
+    "album": "Lifer"
   },
   {
     "videoId": "QP4wZhdkbGo",
@@ -158,8 +357,7 @@
     "artist": "Lifer",
     "duration": "3:23",
     "durationInSec": 203,
-    "album": "Lifer",
-    "timestamp": 1784439997
+    "album": "Lifer"
   },
   {
     "videoId": "uWnrH3g9jQM",
@@ -167,8 +365,7 @@
     "artist": "Lifer",
     "duration": "3:51",
     "durationInSec": 231,
-    "album": "Lifer",
-    "timestamp": 1784439794
+    "album": "Lifer"
   },
   {
     "videoId": "AM33DEhVF1k",
@@ -225,197 +422,5 @@
     "duration": "4:17",
     "durationInSec": 257,
     "album": "The Seventh Sun"
-  },
-  {
-    "videoId": "mji8XR0AUkc",
-    "title": "Wrath",
-    "artist": "Bury Tomorrow",
-    "duration": "5:07",
-    "durationInSec": 307,
-    "album": "The Seventh Sun"
-  },
-  {
-    "videoId": "Gg2LX3RBH9A",
-    "title": "Boltcutter",
-    "artist": "Bury Tomorrow",
-    "duration": "3:38",
-    "durationInSec": 218,
-    "album": "The Seventh Sun"
-  },
-  {
-    "videoId": "YiTPI_5frio",
-    "title": "Forced Divide",
-    "artist": "Bury Tomorrow",
-    "duration": "3:28",
-    "durationInSec": 208,
-    "album": "The Seventh Sun"
-  },
-  {
-    "videoId": "DXJymNxesg0",
-    "title": "Begin Again",
-    "artist": "Bury Tomorrow",
-    "duration": "3:36",
-    "durationInSec": 216,
-    "album": "The Seventh Sun"
-  },
-  {
-    "videoId": "Xhg58FakN7I",
-    "title": "Abandon Us",
-    "artist": "Bury Tomorrow",
-    "duration": "3:43",
-    "durationInSec": 223,
-    "album": "The Seventh Sun"
-  },
-  {
-    "videoId": "GV0s3GmhlS8",
-    "title": "The Seventh Sun",
-    "artist": "Bury Tomorrow",
-    "duration": "3:42",
-    "durationInSec": 222,
-    "album": "The Seventh Sun"
-  },
-  {
-    "videoId": "qkDWi-_o4gA",
-    "title": "The Torch",
-    "artist": "Bury Tomorrow",
-    "duration": "4:15",
-    "durationInSec": 255,
-    "album": "Runes"
-  },
-  {
-    "videoId": "QQz_7ZJ6_7E",
-    "title": "Beyond Me",
-    "artist": "Foo Fighters",
-    "duration": "3:55",
-    "durationInSec": 235,
-    "album": "But Here We Are"
-  },
-  {
-    "videoId": "WWfuHj5sv-E",
-    "title": "Show Me How",
-    "artist": "Foo Fighters",
-    "duration": "4:54",
-    "durationInSec": 294,
-    "album": "But Here We Are"
-  },
-  {
-    "videoId": "yOjrReHC4XM",
-    "title": "Paradox",
-    "artist": "Bury Tomorrow",
-    "duration": "4:37",
-    "durationInSec": 277,
-    "album": "Will You Haunt Me, With That Same Patience"
-  },
-  {
-    "videoId": "OScpN6C610k",
-    "title": "Let Go",
-    "artist": "Bury Tomorrow",
-    "duration": "3:53",
-    "durationInSec": 233,
-    "album": "Will You Haunt Me, With That Same Patience"
-  },
-  {
-    "videoId": "rynZBOxUGJc",
-    "title": "Y\u014dkai (\u5996\u602a)",
-    "artist": "Bury Tomorrow",
-    "duration": "3:56",
-    "durationInSec": 236,
-    "album": "Will You Haunt Me, With That Same Patience"
-  },
-  {
-    "videoId": "4EHtSWyftCA",
-    "title": "Found No Throne",
-    "artist": "Bury Tomorrow",
-    "duration": "4:33",
-    "durationInSec": 273,
-    "album": "Will You Haunt Me, With That Same Patience"
-  },
-  {
-    "videoId": "kN_Sk30_PgY",
-    "title": "Silence Isn't Helping Us",
-    "artist": "Bury Tomorrow",
-    "duration": "3:47",
-    "durationInSec": 227,
-    "album": "Will You Haunt Me, With That Same Patience"
-  },
-  {
-    "videoId": "iz3HHz9KG0A",
-    "title": "Waiting",
-    "artist": "Bury Tomorrow",
-    "duration": "3:39",
-    "durationInSec": 219,
-    "album": "Will You Haunt Me, With That Same Patience"
-  },
-  {
-    "videoId": "bY3MOVsgkWc",
-    "title": "Forever The Night",
-    "artist": "Bury Tomorrow",
-    "duration": "4:06",
-    "durationInSec": 246,
-    "album": "Will You Haunt Me, With That Same Patience"
-  },
-  {
-    "videoId": "ixj5D6gHP5w",
-    "title": "What If I Burn",
-    "artist": "Bury Tomorrow",
-    "duration": "3:52",
-    "durationInSec": 232,
-    "album": "Will You Haunt Me, With That Same Patience"
-  },
-  {
-    "videoId": "54pN4a4qoMI",
-    "title": "Wasteland",
-    "artist": "Bury Tomorrow",
-    "duration": "3:22",
-    "durationInSec": 202,
-    "album": "Will You Haunt Me, With That Same Patience"
-  },
-  {
-    "videoId": "piQixLjDk9A",
-    "title": "Villain Arc",
-    "artist": "Bury Tomorrow",
-    "duration": "3:39",
-    "durationInSec": 219,
-    "album": "Will You Haunt Me, With That Same Patience"
-  },
-  {
-    "videoId": "2WSlSy1xoQE",
-    "title": "To Dream, To Forget",
-    "artist": "Bury Tomorrow",
-    "duration": "3:35",
-    "durationInSec": 215,
-    "album": "Will You Haunt Me, With That Same Patience"
-  },
-  {
-    "videoId": "9Y2Q_9ExjGo",
-    "title": "Black Smoke, Bleeding Earth",
-    "artist": "Apogean",
-    "duration": "6:53",
-    "durationInSec": 413,
-    "album": "Waste Where Life Begins"
-  },
-  {
-    "videoId": "PU4l-x5bg9s",
-    "title": "Ritual",
-    "artist": "Apogean",
-    "duration": "1:57",
-    "durationInSec": 117,
-    "album": "Waste Where Life Begins"
-  },
-  {
-    "videoId": "JznehtMFVF0",
-    "title": "Hologram (Singing Silently on an Empty Stage)",
-    "artist": "Apogean",
-    "duration": "3:47",
-    "durationInSec": 227,
-    "album": "Waste Where Life Begins"
-  },
-  {
-    "videoId": "SxILrzN7GUw",
-    "title": "Nassaru",
-    "artist": "Apogean",
-    "duration": "4:23",
-    "durationInSec": 263,
-    "album": "Waste Where Life Begins"
   }
 ]
