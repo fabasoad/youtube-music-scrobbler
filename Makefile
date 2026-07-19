@@ -13,3 +13,12 @@ outdated:
 .PHONY: audit
 audit:
 	uv audit
+
+.PHONY: lint
+lint:
+	uv run ruff check .
+	uv run ruff format --check .
+
+.PHONY: test
+test:
+	uv run pytest

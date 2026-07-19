@@ -1,0 +1,22 @@
+---
+name: Unit Tests
+
+on: # yamllint disable-line rule:truthy
+  pull_request:
+    paths:
+      - .github/workflows/unit-tests.yml
+      - pyproject.toml
+      - uv.lock
+      - src/**
+      - tests/**
+  push:
+    branches:
+      - main
+  workflow_dispatch: {}
+
+jobs:
+  pytest:
+    name: Pytest
+    uses: fabasoad/reusable-workflows/.github/workflows/wf-python-unit-tests.yml@main
+    permissions:
+      contents: read

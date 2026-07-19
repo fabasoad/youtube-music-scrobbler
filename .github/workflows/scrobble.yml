@@ -9,6 +9,10 @@ on:
 permissions:
   contents: write
 
+defaults:
+  run:
+    shell: sh
+
 jobs:
   scrobble:
     name: Scrobble
@@ -17,7 +21,7 @@ jobs:
       - name: Checkout ${{ github.repository }}
         uses: actions/checkout@v7
         with:
-          persist-credentials: true
+          persist-credentials: "true"
 
       - name: Set up Python
         uses: actions/setup-python@v6

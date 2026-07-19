@@ -1,0 +1,91 @@
+---
+default_install_hook_types: ["pre-commit", "pre-push"]
+default_stages: ["pre-commit", "pre-push"]
+exclude: ^((.idea|.venv)/.*|browser.json|uv.lock|last_snapshot.json)$
+minimum_pre_commit_version: 4.4.0
+repos:
+  - repo: local
+    hooks:
+      - id: test
+        name: Unit tests
+        entry: make test
+        language: unsupported
+        pass_filenames: false
+        verbose: true
+        stages: ["pre-push"]
+  # Security
+      - id: audit
+        name: pnpm audit
+        entry: make audit
+        language: unsupported
+        pass_filenames: false
+        verbose: false
+        stages: ["pre-push"]
+  # Python
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.15.22
+    hooks:
+      - id: ruff
+        args: ["--fix"]
+        stages: ["pre-commit"]
+      - id: ruff-format
+        stages: ["pre-commit"]
+  - repo: https://github.com/Yelp/detect-secrets
+    rev: v1.5.0
+    hooks:
+      - id: detect-secrets
+  - repo: https://github.com/gitleaks/gitleaks
+    rev: v8.30.1
+    hooks:
+      - id: gitleaks
+  - repo: https://github.com/fabasoad/pre-commit-grype
+    rev: v0.6.4
+    hooks:
+      - id: grype-dir
+        args:
+          - --grype-args=--by-cve --fail-on=low --exclude=**/node_modules
+          - --hook-args=--log-level debug
+        stages: ["pre-push"]
+  - repo: https://github.com/google/osv-scanner
+    rev: v2.4.0
+    hooks:
+      - id: osv-scanner
+        args:
+          - --lockfile=uv.lock
+        verbose: true
+        stages: ["pre-push"]
+  # Markdown
+  - repo: https://github.com/igorshubovych/markdownlint-cli
+    rev: v0.49.1
+    hooks:
+      - id: markdownlint-fix
+        stages: ["pre-commit"]
+  # Yaml
+  - repo: https://github.com/adrienverge/yamllint
+    rev: v1.38.0
+    hooks:
+      - id: yamllint
+        stages: ["pre-push"]
+  # GitHub Actions
+  - repo: https://github.com/rhysd/actionlint
+    rev: v1.7.12
+    hooks:
+      - id: actionlint
+        args: ["-pyflakes=", "-shellcheck="]
+        stages: ["pre-commit"]
+  # Other
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v6.0.0
+    hooks:
+      - id: check-merge-conflict
+      - id: check-json
+        stages: ["pre-push"]
+      - id: check-toml
+        stages: ["pre-push"]
+      - id: detect-private-key
+      - id: end-of-file-fixer
+      - id: mixed-line-ending
+        args: ["--fix=lf"]
+      - id: no-commit-to-branch
+        stages: ["pre-commit"]
+      - id: trailing-whitespace
