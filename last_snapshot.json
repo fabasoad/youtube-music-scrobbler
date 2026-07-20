@@ -1,5 +1,32 @@
 [
   {
+    "videoId": "4JVVgvVl2jc",
+    "title": "My Revenge",
+    "artist": "Bury Tomorrow",
+    "duration": "4:26",
+    "durationInSec": 266,
+    "album": "Black Flame",
+    "timestamp": 1784519070
+  },
+  {
+    "videoId": "opup1WFaSYQ",
+    "title": "Black Flame",
+    "artist": "Bury Tomorrow",
+    "duration": "5:19",
+    "durationInSec": 319,
+    "album": "Black Flame",
+    "timestamp": 1784518804
+  },
+  {
+    "videoId": "RmpiTP8kND4",
+    "title": "Golden Crown",
+    "artist": "Entheos",
+    "duration": "3:33",
+    "durationInSec": 213,
+    "album": "Golden Crown",
+    "timestamp": 1784518485
+  },
+  {
     "videoId": "tc0IdGru8JA",
     "title": "Starved",
     "artist": "Sunk Loto",
@@ -373,30 +400,6 @@
     "artist": "Bury Tomorrow",
     "duration": "3:47",
     "durationInSec": 227,
-    "album": "The Seventh Sun"
-  },
-  {
-    "videoId": "AEs8WAr9v_E",
-    "title": "Heretic (feat. Loz Taylor)",
-    "artist": "Bury Tomorrow",
-    "duration": "3:33",
-    "durationInSec": 213,
-    "album": "The Seventh Sun"
-  },
-  {
-    "videoId": "rWsp7dVsibk",
-    "title": "Majesty",
-    "artist": "Bury Tomorrow",
-    "duration": "4:17",
-    "durationInSec": 257,
-    "album": "The Seventh Sun"
-  },
-  {
-    "videoId": "mji8XR0AUkc",
-    "title": "Wrath",
-    "artist": "Bury Tomorrow",
-    "duration": "5:07",
-    "durationInSec": 307,
     "album": "The Seventh Sun"
   }
 ]
