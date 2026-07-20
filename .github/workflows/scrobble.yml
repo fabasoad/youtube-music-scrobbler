@@ -2,8 +2,8 @@
 name: Scrobble YT Music History
 
 on:
-  schedule:
-    - cron: '0 */2 * * *'
+  # Due to unstable scheduler for free accounts and significant delays, this job
+  # is running on schedule via cron-job.org instead of "schedule" trigger.
   workflow_dispatch: {}
 
 permissions:
