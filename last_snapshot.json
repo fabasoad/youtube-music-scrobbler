@@ -1,11 +1,92 @@
 [
   {
+    "videoId": "zrw-aMdDbJ4",
+    "title": "Everything Everyway",
+    "artist": "Sunk Loto",
+    "duration": "3:36",
+    "durationInSec": 216,
+    "album": "Between Birth & Death",
+    "likeStatus": "INDIFFERENT",
+    "timestamp": 1784586121
+  },
+  {
+    "videoId": "5__040m4vIw",
+    "title": "SET IN FLOW",
+    "artist": "As Everything Unfolds",
+    "duration": "2:53",
+    "durationInSec": 173,
+    "album": "WHAT YOU WANTED",
+    "likeStatus": "INDIFFERENT",
+    "timestamp": 1784585905
+  },
+  {
+    "videoId": "uMhrkIzGljk",
+    "title": "POINT OF VIEW",
+    "artist": "As Everything Unfolds",
+    "duration": "4:08",
+    "durationInSec": 248,
+    "album": "WHAT YOU WANTED",
+    "likeStatus": "INDIFFERENT",
+    "timestamp": 1784585732
+  },
+  {
+    "videoId": "jwNhi3LWFB4",
+    "title": "WHAT YOU WANTED (feat. Dani Winter-Bates)",
+    "artist": "As Everything Unfolds",
+    "duration": "4:00",
+    "durationInSec": 240,
+    "album": "WHAT YOU WANTED",
+    "likeStatus": "INDIFFERENT",
+    "timestamp": 1784585484
+  },
+  {
+    "videoId": "kncQSnAFD6c",
+    "title": "Bloodline",
+    "artist": "Bury Tomorrow",
+    "duration": "3:56",
+    "durationInSec": 236,
+    "album": "Earthbound",
+    "likeStatus": "INDIFFERENT",
+    "timestamp": 1784585244
+  },
+  {
+    "videoId": "QlMNg6o_oN4",
+    "title": "For Us",
+    "artist": "Bury Tomorrow",
+    "duration": "3:20",
+    "durationInSec": 200,
+    "album": "Earthbound",
+    "likeStatus": "INDIFFERENT",
+    "timestamp": 1784585008
+  },
+  {
+    "videoId": "8S0XW01QCD0",
+    "title": "Memories",
+    "artist": "Bury Tomorrow",
+    "duration": "3:54",
+    "durationInSec": 234,
+    "album": "Earthbound",
+    "likeStatus": "LIKE",
+    "timestamp": 1784584808
+  },
+  {
+    "videoId": "7asPRHkkeN8",
+    "title": "301",
+    "artist": "Bury Tomorrow",
+    "duration": "3:20",
+    "durationInSec": 200,
+    "album": "Earthbound",
+    "likeStatus": "INDIFFERENT",
+    "timestamp": 1784584574
+  },
+  {
     "videoId": "83oB5tD0SWQ",
     "title": "Restless & Cold",
     "artist": "Bury Tomorrow",
     "duration": "3:34",
     "durationInSec": 214,
-    "album": "Earthbound"
+    "album": "Earthbound",
+    "likeStatus": "INDIFFERENT"
   },
   {
     "videoId": "xVq6MEjao8c",
@@ -13,7 +94,8 @@
     "artist": "Bury Tomorrow",
     "duration": "4:07",
     "durationInSec": 247,
-    "album": "Earthbound"
+    "album": "Earthbound",
+    "likeStatus": "INDIFFERENT"
   },
   {
     "videoId": "qgOGO9aUGTA",
@@ -21,7 +103,8 @@
     "artist": "Bury Tomorrow",
     "duration": "3:27",
     "durationInSec": 207,
-    "album": "Earthbound"
+    "album": "Earthbound",
+    "likeStatus": "LIKE"
   },
   {
     "videoId": "F4RmzS5sdBQ",
@@ -29,7 +112,8 @@
     "artist": "Bury Tomorrow",
     "duration": "3:43",
     "durationInSec": 223,
-    "album": "Earthbound"
+    "album": "Earthbound",
+    "likeStatus": "LIKE"
   },
   {
     "videoId": "jgrwAqQnB-M",
@@ -37,7 +121,8 @@
     "artist": "Bury Tomorrow",
     "duration": "3:57",
     "durationInSec": 237,
-    "album": "Earthbound"
+    "album": "Earthbound",
+    "likeStatus": "INDIFFERENT"
   },
   {
     "videoId": "yH4yFWymPGQ",
@@ -45,7 +130,8 @@
     "artist": "Bury Tomorrow",
     "duration": "3:24",
     "durationInSec": 204,
-    "album": "Earthbound"
+    "album": "Earthbound",
+    "likeStatus": "INDIFFERENT"
   },
   {
     "videoId": "7b90k5caa6g",
@@ -53,7 +139,8 @@
     "artist": "Bury Tomorrow",
     "duration": "4:06",
     "durationInSec": 246,
-    "album": "Black Flame"
+    "album": "Black Flame",
+    "likeStatus": "INDIFFERENT"
   },
   {
     "videoId": "6HacWXAk6fY",
@@ -61,7 +148,8 @@
     "artist": "Bury Tomorrow",
     "duration": "5:08",
     "durationInSec": 308,
-    "album": "Black Flame"
+    "album": "Black Flame",
+    "likeStatus": "INDIFFERENT"
   },
   {
     "videoId": "LvhVKMtV22I",
@@ -69,7 +157,8 @@
     "artist": "Bury Tomorrow",
     "duration": "3:15",
     "durationInSec": 195,
-    "album": "Black Flame"
+    "album": "Black Flame",
+    "likeStatus": "INDIFFERENT"
   },
   {
     "videoId": "zDnKPKbzYBQ",
@@ -77,7 +166,8 @@
     "artist": "Bury Tomorrow",
     "duration": "3:34",
     "durationInSec": 214,
-    "album": "Black Flame"
+    "album": "Black Flame",
+    "likeStatus": "LIKE"
   },
   {
     "videoId": "A1W1WFQOjBA",
@@ -85,7 +175,8 @@
     "artist": "Bury Tomorrow",
     "duration": "3:50",
     "durationInSec": 230,
-    "album": "Black Flame (Deluxe)"
+    "album": "Black Flame (Deluxe)",
+    "likeStatus": "INDIFFERENT"
   },
   {
     "videoId": "LKj1LJEzXuY",
@@ -93,7 +184,8 @@
     "artist": "Bury Tomorrow",
     "duration": "2:59",
     "durationInSec": 179,
-    "album": "Black Flame"
+    "album": "Black Flame",
+    "likeStatus": "INDIFFERENT"
   },
   {
     "videoId": "C5-SgTxF1Kg",
@@ -101,7 +193,8 @@
     "artist": "Bury Tomorrow",
     "duration": "5:32",
     "durationInSec": 332,
-    "album": "Black Flame"
+    "album": "Black Flame",
+    "likeStatus": "INDIFFERENT"
   },
   {
     "videoId": "4JVVgvVl2jc",
@@ -109,7 +202,8 @@
     "artist": "Bury Tomorrow",
     "duration": "4:26",
     "durationInSec": 266,
-    "album": "Black Flame"
+    "album": "Black Flame",
+    "likeStatus": "INDIFFERENT"
   },
   {
     "videoId": "opup1WFaSYQ",
@@ -117,7 +211,8 @@
     "artist": "Bury Tomorrow",
     "duration": "5:19",
     "durationInSec": 319,
-    "album": "Black Flame"
+    "album": "Black Flame",
+    "likeStatus": "INDIFFERENT"
   },
   {
     "videoId": "RmpiTP8kND4",
@@ -125,7 +220,8 @@
     "artist": "Entheos",
     "duration": "3:33",
     "durationInSec": 213,
-    "album": "Golden Crown"
+    "album": "Golden Crown",
+    "likeStatus": "LIKE"
   },
   {
     "videoId": "tc0IdGru8JA",
@@ -133,7 +229,8 @@
     "artist": "Sunk Loto",
     "duration": "4:13",
     "durationInSec": 253,
-    "album": "Between Birth & Death"
+    "album": "Between Birth & Death",
+    "likeStatus": "INDIFFERENT"
   },
   {
     "videoId": "JGi4xaLZRqc",
@@ -141,7 +238,8 @@
     "artist": "Sunk Loto",
     "duration": "4:01",
     "durationInSec": 241,
-    "album": "Between Birth & Death"
+    "album": "Between Birth & Death",
+    "likeStatus": "INDIFFERENT"
   },
   {
     "videoId": "hd5-5Is-Nm8",
@@ -149,7 +247,8 @@
     "artist": "Sunk Loto",
     "duration": "3:04",
     "durationInSec": 184,
-    "album": "Between Birth & Death"
+    "album": "Between Birth & Death",
+    "likeStatus": "INDIFFERENT"
   },
   {
     "videoId": "4-EWyOVVrBE",
@@ -157,7 +256,8 @@
     "artist": "Sunk Loto",
     "duration": "3:29",
     "durationInSec": 209,
-    "album": "Between Birth & Death"
+    "album": "Between Birth & Death",
+    "likeStatus": "INDIFFERENT"
   },
   {
     "videoId": "dxwz7wT9yvk",
@@ -165,7 +265,8 @@
     "artist": "Sunk Loto",
     "duration": "3:47",
     "durationInSec": 227,
-    "album": "Between Birth & Death"
+    "album": "Between Birth & Death",
+    "likeStatus": "INDIFFERENT"
   },
   {
     "videoId": "NV7K5eVRSgs",
@@ -173,7 +274,8 @@
     "artist": "Bury Tomorrow",
     "duration": "2:44",
     "durationInSec": 164,
-    "album": "Black Flame"
+    "album": "Black Flame",
+    "likeStatus": "INDIFFERENT"
   },
   {
     "videoId": "NJhylnlnYJc",
@@ -181,7 +283,8 @@
     "artist": "Bury Tomorrow",
     "duration": "3:30",
     "durationInSec": 210,
-    "album": "Black Flame"
+    "album": "Black Flame",
+    "likeStatus": "INDIFFERENT"
   },
   {
     "videoId": "y-VAq6p563g",
@@ -189,7 +292,8 @@
     "artist": "Witches Hammer",
     "duration": "8:32",
     "durationInSec": 512,
-    "album": "Final Storm"
+    "album": "Final Storm",
+    "likeStatus": "INDIFFERENT"
   },
   {
     "videoId": "3jHec8xBSaI",
@@ -197,7 +301,8 @@
     "artist": "Witches Hammer",
     "duration": "4:38",
     "durationInSec": 278,
-    "album": "Final Storm"
+    "album": "Final Storm",
+    "likeStatus": "INDIFFERENT"
   },
   {
     "videoId": "XptDsrg8o5I",
@@ -205,7 +310,8 @@
     "artist": "Witches Hammer",
     "duration": "4:35",
     "durationInSec": 275,
-    "album": "Final Storm"
+    "album": "Final Storm",
+    "likeStatus": "INDIFFERENT"
   },
   {
     "videoId": "_pwf8T0qCGc",
@@ -213,7 +319,8 @@
     "artist": "Witches Hammer",
     "duration": "3:17",
     "durationInSec": 197,
-    "album": "Final Storm"
+    "album": "Final Storm",
+    "likeStatus": "INDIFFERENT"
   },
   {
     "videoId": "ti7IkQZKyvQ",
@@ -221,7 +328,8 @@
     "artist": "Witches Hammer",
     "duration": "1:37",
     "durationInSec": 97,
-    "album": "Final Storm"
+    "album": "Final Storm",
+    "likeStatus": "INDIFFERENT"
   },
   {
     "videoId": "RwI5kDJ8qvQ",
@@ -229,7 +337,8 @@
     "artist": "Witches Hammer",
     "duration": "3:48",
     "durationInSec": 228,
-    "album": "Final Storm"
+    "album": "Final Storm",
+    "likeStatus": "INDIFFERENT"
   },
   {
     "videoId": "ZVc_JT9F0IY",
@@ -237,7 +346,8 @@
     "artist": "Witches Hammer",
     "duration": "2:56",
     "durationInSec": 176,
-    "album": "Final Storm"
+    "album": "Final Storm",
+    "likeStatus": "INDIFFERENT"
   },
   {
     "videoId": "wtfXKg4w-DY",
@@ -245,7 +355,8 @@
     "artist": "Witches Hammer",
     "duration": "3:22",
     "durationInSec": 202,
-    "album": "Final Storm"
+    "album": "Final Storm",
+    "likeStatus": "INDIFFERENT"
   },
   {
     "videoId": "xytMJwG739E",
@@ -253,7 +364,8 @@
     "artist": "Witches Hammer",
     "duration": "5:39",
     "durationInSec": 339,
-    "album": "Final Storm"
+    "album": "Final Storm",
+    "likeStatus": "INDIFFERENT"
   },
   {
     "videoId": "ltMnMj_BYuc",
@@ -261,7 +373,8 @@
     "artist": "Bury Tomorrow",
     "duration": "4:02",
     "durationInSec": 242,
-    "album": "Cannibal"
+    "album": "Cannibal",
+    "likeStatus": "INDIFFERENT"
   },
   {
     "videoId": "esyc77tpb5g",
@@ -269,7 +382,8 @@
     "artist": "Bury Tomorrow",
     "duration": "3:40",
     "durationInSec": 220,
-    "album": "Cannibal"
+    "album": "Cannibal",
+    "likeStatus": "LIKE"
   },
   {
     "videoId": "bNkB8dx4WxI",
@@ -277,7 +391,8 @@
     "artist": "Bury Tomorrow",
     "duration": "3:07",
     "durationInSec": 187,
-    "album": "Cannibal"
+    "album": "Cannibal",
+    "likeStatus": "INDIFFERENT"
   },
   {
     "videoId": "tOzJf_bxzG0",
@@ -285,7 +400,8 @@
     "artist": "Bury Tomorrow",
     "duration": "4:06",
     "durationInSec": 246,
-    "album": "Cannibal"
+    "album": "Cannibal",
+    "likeStatus": "INDIFFERENT"
   },
   {
     "videoId": "IdbZ0wSx_Vc",
@@ -293,7 +409,8 @@
     "artist": "Bury Tomorrow",
     "duration": "4:26",
     "durationInSec": 266,
-    "album": "Cannibal"
+    "album": "Cannibal",
+    "likeStatus": "INDIFFERENT"
   },
   {
     "videoId": "xHtwWiedB9w",
@@ -301,7 +418,8 @@
     "artist": "Bury Tomorrow",
     "duration": "4:03",
     "durationInSec": 243,
-    "album": "Cannibal"
+    "album": "Cannibal",
+    "likeStatus": "INDIFFERENT"
   },
   {
     "videoId": "xg_ies0GI0A",
@@ -309,7 +427,8 @@
     "artist": "Bury Tomorrow",
     "duration": "3:13",
     "durationInSec": 193,
-    "album": "Cannibal"
+    "album": "Cannibal",
+    "likeStatus": "LIKE"
   },
   {
     "videoId": "EALTafyU7wk",
@@ -317,7 +436,8 @@
     "artist": "Bury Tomorrow",
     "duration": "3:28",
     "durationInSec": 208,
-    "album": "Cannibal"
+    "album": "Cannibal",
+    "likeStatus": "INDIFFERENT"
   },
   {
     "videoId": "x-5SnE543kM",
@@ -325,7 +445,8 @@
     "artist": "Bury Tomorrow",
     "duration": "3:59",
     "durationInSec": 239,
-    "album": "Cannibal"
+    "album": "Cannibal",
+    "likeStatus": "INDIFFERENT"
   },
   {
     "videoId": "X6XWUhFyHPY",
@@ -333,70 +454,7 @@
     "artist": "Bury Tomorrow",
     "duration": "4:16",
     "durationInSec": 256,
-    "album": "Cannibal"
-  },
-  {
-    "videoId": "4A63_6DBin4",
-    "title": "Choke",
-    "artist": "Bury Tomorrow",
-    "duration": "3:48",
-    "durationInSec": 228,
-    "album": "Cannibal"
-  },
-  {
-    "videoId": "roiVDsOZsa4",
-    "title": "Perfect (w/ Silence)",
-    "artist": "Lifer",
-    "duration": "7:41",
-    "durationInSec": 461,
-    "album": "Lifer"
-  },
-  {
-    "videoId": "DOA5hq-g1P0",
-    "title": "Breathless",
-    "artist": "Lifer",
-    "duration": "4:45",
-    "durationInSec": 285,
-    "album": "Lifer"
-  },
-  {
-    "videoId": "oBcZCJqctQQ",
-    "title": "Not Like You",
-    "artist": "Lifer",
-    "duration": "3:57",
-    "durationInSec": 237,
-    "album": "Lifer"
-  },
-  {
-    "videoId": "5HZgKzDPVKc",
-    "title": "Heave",
-    "artist": "Lifer",
-    "duration": "3:09",
-    "durationInSec": 189,
-    "album": "Lifer"
-  },
-  {
-    "videoId": "6jyDyFpCPik",
-    "title": "Blurred",
-    "artist": "Lifer",
-    "duration": "4:39",
-    "durationInSec": 279,
-    "album": "Lifer"
-  },
-  {
-    "videoId": "n4uJ_HFmArU",
-    "title": "Disbelief",
-    "artist": "Lifer",
-    "duration": "3:12",
-    "durationInSec": 192,
-    "album": "Lifer"
-  },
-  {
-    "videoId": "5aai9yVjtIc",
-    "title": "New",
-    "artist": "Lifer",
-    "duration": "3:43",
-    "durationInSec": 223,
-    "album": "Lifer"
+    "album": "Cannibal",
+    "likeStatus": "LIKE"
   }
 ]

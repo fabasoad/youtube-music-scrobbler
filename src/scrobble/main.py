@@ -32,6 +32,7 @@ def fetch_history(auth_path: str) -> list[dict]:
         "duration": duration,
         "durationInSec": duration_in_sec,
         "album": album.get("name") if album and album.get("name") else None,
+        "likeStatus": item.get("likeStatus") or "INDIFFERENT",
       }
     )
   return tracks
@@ -83,6 +84,16 @@ def scrobble(tracks: list[dict]) -> int:
   for track in tracks:
     for attempt in range(3):
       try:
+        if track["likeStatus"] != "INDIFFERENT":
+          pylast_track: pylast.Track = network.get_track(
+            track["artist"],
+            track["title"],
+          )
+          if track["likeStatus"] == "LIKE":
+            pylast_track.love()
+          else:
+            pylast_track.unlove()
+
         network.scrobble(
           artist=track["artist"],
           title=track["title"],
