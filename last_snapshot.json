@@ -256,14 +256,6 @@
     "album": "Final Storm"
   },
   {
-    "videoId": "afSOT8bJTsw",
-    "title": "An Honourable Reign",
-    "artist": "Bury Tomorrow",
-    "duration": "4:00",
-    "durationInSec": 240,
-    "album": "The Union of Crowns"
-  },
-  {
     "videoId": "ltMnMj_BYuc",
     "title": "Dark, Infinite",
     "artist": "Bury Tomorrow",
@@ -397,6 +389,14 @@
     "artist": "Lifer",
     "duration": "3:12",
     "durationInSec": 192,
+    "album": "Lifer"
+  },
+  {
+    "videoId": "5aai9yVjtIc",
+    "title": "New",
+    "artist": "Lifer",
+    "duration": "3:43",
+    "durationInSec": 223,
     "album": "Lifer"
   }
 ]
