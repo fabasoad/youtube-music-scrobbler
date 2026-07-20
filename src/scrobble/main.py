@@ -91,7 +91,8 @@ def scrobble(tracks: list[dict]) -> int:
           duration=track["durationInSec"],
         )
         album_part: str = "" if track["album"] is None else f" ({track['album']})"
-        print(f"Scrobbled: {track['artist']} — {track['title']}{album_part} {track['duration']}")
+        duration_part: str = f"0{track['duration']}" if len(track["duration"]) == 4 else track["duration"]
+        print(f"Scrobbled: [{duration_part}] {track['artist']} — {track['title']}{album_part}")
         scrobbled += 1
         time.sleep(1)
         break
