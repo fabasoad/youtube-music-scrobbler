@@ -1,13 +1,52 @@
 [
   {
+    "videoId": "9TA9siwq2iA",
+    "title": "Roll For Initiative",
+    "artist": "Riley!",
+    "duration": "3:38",
+    "durationInSec": 218,
+    "album": "To Live And Die In The American South",
+    "likeStatus": "INDIFFERENT",
+    "timestamp": 1784617252
+  },
+  {
+    "videoId": "StWIuk_wBz8",
+    "title": "Chanting Spells I",
+    "artist": "Carbon Tomb",
+    "duration": "2:49",
+    "durationInSec": 169,
+    "album": "Passage to a Neutron Star",
+    "likeStatus": "INDIFFERENT",
+    "timestamp": 1784617034
+  },
+  {
+    "videoId": "-6jktt0uxk0",
+    "title": "Tummy Tum Tum",
+    "artist": "The Dollyrots",
+    "duration": "2:43",
+    "durationInSec": 163,
+    "album": "Because I'm Awesome",
+    "likeStatus": "INDIFFERENT",
+    "timestamp": 1784616865
+  },
+  {
+    "videoId": "u_qR8BHGL_E",
+    "title": "Turn You Down",
+    "artist": "The Dollyrots",
+    "duration": "3:09",
+    "durationInSec": 189,
+    "album": "Because I'm Awesome",
+    "likeStatus": "INDIFFERENT",
+    "timestamp": 1784616702
+  },
+  {
     "videoId": "fNeD_Gr9d30",
     "title": "Nobody Wants U",
     "artist": "The Dollyrots",
     "duration": "3:53",
     "durationInSec": 233,
     "album": "Because I'm Awesome",
-    "likeStatus": "INDIFFERENT",
-    "timestamp": 1784610038
+    "likeStatus": "INDIFFERENT"
   },
   {
     "videoId": "E5UrU3rav68",
@@ -16,8 +55,7 @@
     "duration": "2:37",
     "durationInSec": 157,
     "album": "Because I'm Awesome",
-    "likeStatus": "INDIFFERENT",
-    "timestamp": 1784609805
+    "likeStatus": "INDIFFERENT"
   },
   {
     "videoId": "ls2FXWP7QNc",
@@ -26,8 +64,7 @@
     "duration": "3:11",
     "durationInSec": 191,
     "album": "Because I'm Awesome",
-    "likeStatus": "INDIFFERENT",
-    "timestamp": 1784609648
+    "likeStatus": "INDIFFERENT"
   },
   {
     "videoId": "cRv98AJn8pA",
@@ -36,8 +73,7 @@
     "duration": "3:37",
     "durationInSec": 217,
     "album": "Because I'm Awesome",
-    "likeStatus": "INDIFFERENT",
-    "timestamp": 1784609457
+    "likeStatus": "INDIFFERENT"
   },
   {
     "videoId": "RzkAvdi4xs8",
@@ -46,8 +82,7 @@
     "duration": "3:11",
     "durationInSec": 191,
     "album": "Because I'm Awesome",
-    "likeStatus": "INDIFFERENT",
-    "timestamp": 1784609240
+    "likeStatus": "INDIFFERENT"
   },
   {
     "videoId": "SXCWY-azH2U",
@@ -56,8 +91,7 @@
     "duration": "2:56",
     "durationInSec": 176,
     "album": "Because I'm Awesome",
-    "likeStatus": "INDIFFERENT",
-    "timestamp": 1784609049
+    "likeStatus": "INDIFFERENT"
   },
   {
     "videoId": "cJsqnEZUI5w",
@@ -66,8 +100,7 @@
     "duration": "3:02",
     "durationInSec": 182,
     "album": "Because I'm Awesome",
-    "likeStatus": "INDIFFERENT",
-    "timestamp": 1784608873
+    "likeStatus": "INDIFFERENT"
   },
   {
     "videoId": "S9abpxfWy3w",
@@ -76,8 +109,7 @@
     "duration": "2:53",
     "durationInSec": 173,
     "album": "Because I'm Awesome",
-    "likeStatus": "INDIFFERENT",
-    "timestamp": 1784608691
+    "likeStatus": "INDIFFERENT"
   },
   {
     "videoId": "4e3Hs_b5KEU",
@@ -86,8 +118,7 @@
     "duration": "3:14",
     "durationInSec": 194,
     "album": "Because I'm Awesome",
-    "likeStatus": "INDIFFERENT",
-    "timestamp": 1784608518
+    "likeStatus": "INDIFFERENT"
   },
   {
     "videoId": "Za9esFIeg58",
@@ -96,8 +127,7 @@
     "duration": "3:11",
     "durationInSec": 191,
     "album": "Because I'm Awesome",
-    "likeStatus": "INDIFFERENT",
-    "timestamp": 1784608324
+    "likeStatus": "INDIFFERENT"
   },
   {
     "videoId": "_tVuRYIYNFE",
@@ -106,8 +136,7 @@
     "duration": "3:02",
     "durationInSec": 182,
     "album": "Attention Span",
-    "likeStatus": "INDIFFERENT",
-    "timestamp": 1784608133
+    "likeStatus": "INDIFFERENT"
   },
   {
     "videoId": "8i088B6Stp8",
@@ -116,8 +145,7 @@
     "duration": "3:21",
     "durationInSec": 201,
     "album": "Because I'm Awesome",
-    "likeStatus": "INDIFFERENT",
-    "timestamp": 1784607951
+    "likeStatus": "INDIFFERENT"
   },
   {
     "videoId": "4UlEUawITXA",
@@ -423,42 +451,6 @@
     "duration": "2:20",
     "durationInSec": 140,
     "album": "NSFW",
-    "likeStatus": "INDIFFERENT"
-  },
-  {
-    "videoId": "26Yh8eFgpdM",
-    "title": "Ms. Lauren",
-    "artist": "The Paradox",
-    "duration": "2:29",
-    "durationInSec": 149,
-    "album": "Ms. Lauren",
-    "likeStatus": "INDIFFERENT"
-  },
-  {
-    "videoId": "53vrLmvyepc",
-    "title": "Get The Message",
-    "artist": "The Paradox",
-    "duration": "2:43",
-    "durationInSec": 163,
-    "album": "Get The Message",
-    "likeStatus": "INDIFFERENT"
-  },
-  {
-    "videoId": "-Kq4OkTxjGo",
-    "title": "Do It Again",
-    "artist": "The Paradox",
-    "duration": "2:29",
-    "durationInSec": 149,
-    "album": "Do It Again",
-    "likeStatus": "INDIFFERENT"
-  },
-  {
-    "videoId": "6XoIY-4OrLY",
-    "title": "Good For Me",
-    "artist": "The Paradox",
-    "duration": "2:55",
-    "durationInSec": 175,
-    "album": "Good For Me",
     "likeStatus": "INDIFFERENT"
   }
 ]
