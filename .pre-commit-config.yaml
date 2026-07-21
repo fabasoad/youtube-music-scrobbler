@@ -21,15 +21,6 @@ repos:
         pass_filenames: false
         verbose: false
         stages: ["pre-push"]
-  # Python
-  - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.15.22
-    hooks:
-      - id: ruff-check
-        args: ["--fix"]
-        stages: ["pre-commit"]
-      - id: ruff-format
-        stages: ["pre-commit"]
   - repo: https://github.com/Yelp/detect-secrets
     rev: v1.5.0
     hooks:
@@ -54,6 +45,15 @@ repos:
           - --lockfile=uv.lock
         verbose: true
         stages: ["pre-push"]
+  # Python
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.15.22
+    hooks:
+      - id: ruff-check
+        args: ["--fix"]
+        stages: ["pre-commit"]
+      - id: ruff-format
+        stages: ["pre-commit"]
   # Markdown
   - repo: https://github.com/igorshubovych/markdownlint-cli
     rev: v0.49.1
