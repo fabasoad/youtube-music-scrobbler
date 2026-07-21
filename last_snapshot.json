@@ -405,15 +405,6 @@
     "likeStatus": "INDIFFERENT"
   },
   {
-    "videoId": "LGTAkIjuYNI",
-    "title": "Pretty Mouth",
-    "artist": "girlfriends",
-    "duration": "2:56",
-    "durationInSec": 176,
-    "album": "Pretty Mouth",
-    "likeStatus": "INDIFFERENT"
-  },
-  {
     "videoId": "yRKjzPhHkjw",
     "title": "Speak Of The Devil",
     "artist": "A Day To Remember",
@@ -446,6 +437,15 @@
     "artist": "girlfriends",
     "duration": "2:23",
     "durationInSec": 143,
+    "album": "girlfriends",
+    "likeStatus": "INDIFFERENT"
+  },
+  {
+    "videoId": "VUT7yHgBImM",
+    "title": "2am (feat. DeathbyRomy)",
+    "artist": "girlfriends",
+    "duration": "2:28",
+    "durationInSec": 148,
     "album": "girlfriends",
     "likeStatus": "INDIFFERENT"
   }
