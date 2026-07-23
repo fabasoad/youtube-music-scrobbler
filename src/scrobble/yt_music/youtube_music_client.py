@@ -6,7 +6,7 @@ from scrobble.yt_music.artist_filter import ArtistFilter
 
 
 class YouTubeMusicClient:
-  def __init__(self):
+  def __init__(self) -> None:
     self.auth_path: str = "browser.json"
     self.history_limit: int = 50
     self.artist_filters: list[ArtistFilter] = [

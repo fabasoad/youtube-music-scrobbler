@@ -46,11 +46,15 @@ def write_summary(tracks: list[YouTubeMusicTrack]) -> None:
       f.write("## Scrobbler\n\nNo new tracks scrobbled.\n")
       return
     f.write("## Scrobbler\n\n")
-    f.write("| # | Artist | Title | Album | Duration |\n")
-    f.write("|---|--------|-------|-------|----------|\n")
+    f.write("| # | Duration | Artist | Title | Album |  |\n")
+    f.write("|---|----------|--------|-------|-------|---|\n")
     for i, track in enumerate(tracks):
+      duration: str = "N/A"
+      if track.duration:
+        duration = f"0{track.duration}" if len(track.duration) == 4 else track.duration
       album: str = "N/A" if track.album is None else track.album
-      f.write(f"| {i} | {' & '.join(track.artists)} | {track.title} | {album} | {track.duration} |\n")
+      thumbnail: str = f"![]({track.thumbnail})" if track.thumbnail else ""
+      f.write(f"| {i} | {duration} | {' & '.join(track.artists)} | {track.title} | {album} | {thumbnail} |\n")
 
 
 def main() -> None:
