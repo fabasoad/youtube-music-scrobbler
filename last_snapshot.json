@@ -1,457 +1,457 @@
 [
   {
-    "videoId": "3uGq5W3asY4",
+    "video_id": "3uGq5W3asY4",
     "title": "Never Heaven",
     "artist": "InVogue Records",
     "duration": "3:12",
-    "durationInSec": 192,
+    "duration_in_sec": 192,
     "album": "A Bitter Truth You Can't Undo",
-    "likeStatus": "LIKE",
+    "like_status": "LIKE",
     "timestamp": 1784804433
   },
   {
-    "videoId": "JluO1Qr8ubM",
+    "video_id": "JluO1Qr8ubM",
     "title": "Synthetic",
     "artist": "InVogue Records",
     "duration": "3:05",
-    "durationInSec": 185,
+    "duration_in_sec": 185,
     "album": "A Bitter Truth You Can't Undo",
-    "likeStatus": "INDIFFERENT",
+    "like_status": "INDIFFERENT",
     "timestamp": 1784804241
   },
   {
-    "videoId": "ds7xRN7quU4",
+    "video_id": "ds7xRN7quU4",
     "title": "Haunted",
     "artist": "InVogue Records",
     "duration": "2:41",
-    "durationInSec": 161,
+    "duration_in_sec": 161,
     "album": "A Bitter Truth You Can't Undo",
-    "likeStatus": "LIKE",
+    "like_status": "LIKE",
     "timestamp": 1784804056
   },
   {
-    "videoId": "5mcZLcZacMo",
+    "video_id": "5mcZLcZacMo",
     "title": "Counterfeit Love",
     "artist": "InVogue Records",
     "duration": "2:56",
-    "durationInSec": 176,
+    "duration_in_sec": 176,
     "album": "A Bitter Truth You Can't Undo",
-    "likeStatus": "LIKE",
+    "like_status": "LIKE",
     "timestamp": 1784803895
   },
   {
-    "videoId": "aw93yZM-gRE",
+    "video_id": "aw93yZM-gRE",
     "title": "Ghost Habit",
     "artist": "InVogue Records",
     "duration": "3:14",
-    "durationInSec": 194,
+    "duration_in_sec": 194,
     "album": "A Bitter Truth You Can't Undo",
-    "likeStatus": "LIKE",
+    "like_status": "LIKE",
     "timestamp": 1784803719
   },
   {
-    "videoId": "NtvS7e8lP_c",
+    "video_id": "NtvS7e8lP_c",
     "title": "Waking Up to the Dark",
     "artist": "InVogue Records",
     "duration": "3:06",
-    "durationInSec": 186,
+    "duration_in_sec": 186,
     "album": "A Bitter Truth You Can't Undo",
-    "likeStatus": "LIKE"
+    "like_status": "LIKE"
   },
   {
-    "videoId": "jmJsApWmVvk",
+    "video_id": "jmJsApWmVvk",
     "title": "Circadian",
     "artist": "InVogue Records",
     "duration": "3:23",
-    "durationInSec": 203,
+    "duration_in_sec": 203,
     "album": "A Bitter Truth You Can't Undo",
-    "likeStatus": "INDIFFERENT"
+    "like_status": "INDIFFERENT"
   },
   {
-    "videoId": "_8XMINNZvxI",
+    "video_id": "_8XMINNZvxI",
     "title": "Hate Myself",
     "artist": "InVogue Records",
     "duration": "2:58",
-    "durationInSec": 178,
+    "duration_in_sec": 178,
     "album": "A Bitter Truth You Can't Undo",
-    "likeStatus": "INDIFFERENT"
+    "like_status": "INDIFFERENT"
   },
   {
-    "videoId": "irC63uCOTOo",
+    "video_id": "irC63uCOTOo",
     "title": "CRIMINAL [MR. BILL REMIX]",
     "artist": "Stand Atlantic",
     "duration": "3:31",
-    "durationInSec": 211,
+    "duration_in_sec": 211,
     "album": "WAS HERE (DELUXE)",
-    "likeStatus": "INDIFFERENT"
+    "like_status": "INDIFFERENT"
   },
   {
-    "videoId": "QldY0ahd9AU",
+    "video_id": "QldY0ahd9AU",
     "title": "FREAKIN' OUT [PVRIS REMIX]",
     "artist": "Stand Atlantic",
     "duration": "2:43",
-    "durationInSec": 163,
+    "duration_in_sec": 163,
     "album": "WAS HERE (DELUXE)",
-    "likeStatus": "INDIFFERENT"
+    "like_status": "INDIFFERENT"
   },
   {
-    "videoId": "9pCeOf4F4lA",
+    "video_id": "9pCeOf4F4lA",
     "title": "NOTHING HURTS WHEN YOU'RE HOLLOW",
     "artist": "Stand Atlantic",
     "duration": "2:48",
-    "durationInSec": 168,
+    "duration_in_sec": 168,
     "album": "WAS HERE (DELUXE)",
-    "likeStatus": "INDIFFERENT"
+    "like_status": "INDIFFERENT"
   },
   {
-    "videoId": "nK75rhF4wNk",
+    "video_id": "nK75rhF4wNk",
     "title": "I'M THE MAN (feat. Lauren Sanderson)",
     "artist": "Stand Atlantic",
     "duration": "2:43",
-    "durationInSec": 163,
+    "duration_in_sec": 163,
     "album": "WAS HERE (DELUXE)",
-    "likeStatus": "INDIFFERENT"
+    "like_status": "INDIFFERENT"
   },
   {
-    "videoId": "AMLRAIuGVTw",
+    "video_id": "AMLRAIuGVTw",
     "title": "KILL[H]ER",
     "artist": "Stand Atlantic",
     "duration": "2:26",
-    "durationInSec": 146,
+    "duration_in_sec": 146,
     "album": "WAS HERE",
-    "likeStatus": "INDIFFERENT"
+    "like_status": "INDIFFERENT"
   },
   {
-    "videoId": "ez7Uf8oXnM4",
+    "video_id": "ez7Uf8oXnM4",
     "title": "SEX ON THE BEACH",
     "artist": "Stand Atlantic",
     "duration": "3:11",
-    "durationInSec": 191,
+    "duration_in_sec": 191,
     "album": "WAS HERE",
-    "likeStatus": "INDIFFERENT"
+    "like_status": "INDIFFERENT"
   },
   {
-    "videoId": "-S8SOq6mA4I",
+    "video_id": "-S8SOq6mA4I",
     "title": "ROCKSTAR",
     "artist": "Stand Atlantic",
     "duration": "2:39",
-    "durationInSec": 159,
+    "duration_in_sec": 159,
     "album": "WAS HERE",
-    "likeStatus": "INDIFFERENT"
+    "like_status": "INDIFFERENT"
   },
   {
-    "videoId": "fCSpFjyLeJk",
+    "video_id": "fCSpFjyLeJk",
     "title": "G.A.G.",
     "artist": "Stand Atlantic",
     "duration": "2:23",
-    "durationInSec": 143,
+    "duration_in_sec": 143,
     "album": "WAS HERE",
-    "likeStatus": "INDIFFERENT"
+    "like_status": "INDIFFERENT"
   },
   {
-    "videoId": "CxbQW4d0n2U",
+    "video_id": "CxbQW4d0n2U",
     "title": "17 // REPRIZE [ONE TAKE]",
     "artist": "Stand Atlantic",
     "duration": "1:29",
-    "durationInSec": 89,
+    "duration_in_sec": 89,
     "album": "WAS HERE",
-    "likeStatus": "INDIFFERENT"
+    "like_status": "INDIFFERENT"
   },
   {
-    "videoId": "NLeXjyVbEUg",
+    "video_id": "NLeXjyVbEUg",
     "title": "17",
     "artist": "Stand Atlantic",
     "duration": "3:08",
-    "durationInSec": 188,
+    "duration_in_sec": 188,
     "album": "WAS HERE",
-    "likeStatus": "INDIFFERENT"
+    "like_status": "INDIFFERENT"
   },
   {
-    "videoId": "cgOM7E_WYio",
+    "video_id": "cgOM7E_WYio",
     "title": "CRIMINAL",
     "artist": "Stand Atlantic",
     "duration": "3:48",
-    "durationInSec": 228,
+    "duration_in_sec": 228,
     "album": "WAS HERE",
-    "likeStatus": "INDIFFERENT"
+    "like_status": "INDIFFERENT"
   },
   {
-    "videoId": "rSGwJRKaCwo",
+    "video_id": "rSGwJRKaCwo",
     "title": "WARZ0NE",
     "artist": "Stand Atlantic",
     "duration": "2:39",
-    "durationInSec": 159,
+    "duration_in_sec": 159,
     "album": "WAS HERE",
-    "likeStatus": "INDIFFERENT"
+    "like_status": "INDIFFERENT"
   },
   {
-    "videoId": "taJDKmhOqyM",
+    "video_id": "taJDKmhOqyM",
     "title": "KISSIN' KILLER COBRAS",
     "artist": "Stand Atlantic",
     "duration": "2:46",
-    "durationInSec": 166,
+    "duration_in_sec": 166,
     "album": "WAS HERE",
-    "likeStatus": "INDIFFERENT"
+    "like_status": "INDIFFERENT"
   },
   {
-    "videoId": "KLZFTuRB-SM",
+    "video_id": "KLZFTuRB-SM",
     "title": "LOVE U ANYWAY",
     "artist": "Stand Atlantic",
     "duration": "2:57",
-    "durationInSec": 177,
+    "duration_in_sec": 177,
     "album": "WAS HERE",
-    "likeStatus": "INDIFFERENT"
+    "like_status": "INDIFFERENT"
   },
   {
-    "videoId": "QXh2eNr8foQ",
+    "video_id": "QXh2eNr8foQ",
     "title": "NOSE BLEED",
     "artist": "Stand Atlantic",
     "duration": "3:16",
-    "durationInSec": 196,
+    "duration_in_sec": 196,
     "album": "WAS HERE",
-    "likeStatus": "INDIFFERENT"
+    "like_status": "INDIFFERENT"
   },
   {
-    "videoId": "8AIdREYNpXk",
+    "video_id": "8AIdREYNpXk",
     "title": "FREAKIN' OUT",
     "artist": "Stand Atlantic",
     "duration": "2:46",
-    "durationInSec": 166,
+    "duration_in_sec": 166,
     "album": "WAS HERE",
-    "likeStatus": "INDIFFERENT"
+    "like_status": "INDIFFERENT"
   },
   {
-    "videoId": "jmbdLrqG5Dk",
+    "video_id": "jmbdLrqG5Dk",
     "title": "GIRL$",
     "artist": "Stand Atlantic",
     "duration": "2:13",
-    "durationInSec": 133,
+    "duration_in_sec": 133,
     "album": "WAS HERE",
-    "likeStatus": "INDIFFERENT"
+    "like_status": "INDIFFERENT"
   },
   {
-    "videoId": "KICraaUBSck",
+    "video_id": "KICraaUBSck",
     "title": "FRENEMIES",
     "artist": "Stand Atlantic",
     "duration": "3:11",
-    "durationInSec": 191,
+    "duration_in_sec": 191,
     "album": "WAS HERE",
-    "likeStatus": "INDIFFERENT"
+    "like_status": "INDIFFERENT"
   },
   {
-    "videoId": "oQZasVM6qFw",
+    "video_id": "oQZasVM6qFw",
     "title": "WAKE UP-SIT DOWN-SHUT UP",
     "artist": "Stand Atlantic",
     "duration": "3:01",
-    "durationInSec": 181,
+    "duration_in_sec": 181,
     "album": "WAS HERE",
-    "likeStatus": "INDIFFERENT"
+    "like_status": "INDIFFERENT"
   },
   {
-    "videoId": "uZovAqx2Syc",
+    "video_id": "uZovAqx2Syc",
     "title": "The Paradigm Mirror",
     "artist": "Dreadnought",
     "duration": "6:02",
-    "durationInSec": 362,
+    "duration_in_sec": 362,
     "album": "The Endless",
-    "likeStatus": "INDIFFERENT"
+    "like_status": "INDIFFERENT"
   },
   {
-    "videoId": "Ca2IwW2kNMc",
+    "video_id": "Ca2IwW2kNMc",
     "title": "Gears of Violent Endurance",
     "artist": "Dreadnought",
     "duration": "6:10",
-    "durationInSec": 370,
+    "duration_in_sec": 370,
     "album": "The Endless",
-    "likeStatus": "INDIFFERENT"
+    "like_status": "INDIFFERENT"
   },
   {
-    "videoId": "makjF5gd_MI",
+    "video_id": "makjF5gd_MI",
     "title": "Liminal Veil",
     "artist": "Dreadnought",
     "duration": "9:08",
-    "durationInSec": 548,
+    "duration_in_sec": 548,
     "album": "The Endless",
-    "likeStatus": "INDIFFERENT"
+    "like_status": "INDIFFERENT"
   },
   {
-    "videoId": "MBF6sgo0Dzk",
+    "video_id": "MBF6sgo0Dzk",
     "title": "The Endless",
     "artist": "Dreadnought",
     "duration": "4:40",
-    "durationInSec": 280,
+    "duration_in_sec": 280,
     "album": "The Endless",
-    "likeStatus": "INDIFFERENT"
+    "like_status": "INDIFFERENT"
   },
   {
-    "videoId": "1uUwbc8UCNo",
+    "video_id": "1uUwbc8UCNo",
     "title": "Midnight Moon",
     "artist": "Dreadnought",
     "duration": "6:43",
-    "durationInSec": 403,
+    "duration_in_sec": 403,
     "album": "The Endless",
-    "likeStatus": "INDIFFERENT"
+    "like_status": "INDIFFERENT"
   },
   {
-    "videoId": "KnNMffp8NCA",
+    "video_id": "KnNMffp8NCA",
     "title": "Worlds Break",
     "artist": "Dreadnought",
     "duration": "8:29",
-    "durationInSec": 509,
+    "duration_in_sec": 509,
     "album": "The Endless",
-    "likeStatus": "INDIFFERENT"
+    "like_status": "INDIFFERENT"
   },
   {
-    "videoId": "tiP6M8ZB6r0",
+    "video_id": "tiP6M8ZB6r0",
     "title": "if we didn't cry",
     "artist": "smush",
     "duration": "4:27",
-    "durationInSec": 267,
+    "duration_in_sec": 267,
     "album": "if we didn't cry",
-    "likeStatus": "INDIFFERENT"
+    "like_status": "INDIFFERENT"
   },
   {
-    "videoId": "vw71F5BZZts",
+    "video_id": "vw71F5BZZts",
     "title": "Transient",
     "artist": "InVogue Records",
     "duration": "4:30",
-    "durationInSec": 270,
+    "duration_in_sec": 270,
     "album": "Hyperreal",
-    "likeStatus": "LIKE"
+    "like_status": "LIKE"
   },
   {
-    "videoId": "XIRJFpilG24",
+    "video_id": "XIRJFpilG24",
     "title": "Kingdom Falls",
     "artist": "InVogue Records",
     "duration": "3:36",
-    "durationInSec": 216,
+    "duration_in_sec": 216,
     "album": "A Bitter Truth You Can't Undo",
-    "likeStatus": "LIKE"
+    "like_status": "LIKE"
   },
   {
-    "videoId": "eH9zRtG8otU",
+    "video_id": "eH9zRtG8otU",
     "title": "Silk (feat. Savage Hands)",
     "artist": "InVogue Records",
     "duration": "3:42",
-    "durationInSec": 222,
+    "duration_in_sec": 222,
     "album": "A Bitter Truth You Can't Undo",
-    "likeStatus": "LIKE"
+    "like_status": "LIKE"
   },
   {
-    "videoId": "6Ev3f6N9qWU",
+    "video_id": "6Ev3f6N9qWU",
     "title": "Hyperreal",
     "artist": "InVogue Records",
     "duration": "4:48",
-    "durationInSec": 288,
+    "duration_in_sec": 288,
     "album": "Hyperreal",
-    "likeStatus": "INDIFFERENT"
+    "like_status": "INDIFFERENT"
   },
   {
-    "videoId": "6dEDhT0E-XQ",
+    "video_id": "6dEDhT0E-XQ",
     "title": "I Can't Hide",
     "artist": "Pantera",
     "duration": "2:17",
-    "durationInSec": 137,
+    "duration_in_sec": 137,
     "album": "Official Live: 101 Proof",
-    "likeStatus": "LIKE"
+    "like_status": "LIKE"
   },
   {
-    "videoId": "0puFuQtUpxk",
+    "video_id": "0puFuQtUpxk",
     "title": "Last Time",
     "artist": "Small Voice",
     "duration": "3:20",
-    "durationInSec": 200,
+    "duration_in_sec": 200,
     "album": "Testimonies",
-    "likeStatus": "INDIFFERENT"
+    "like_status": "INDIFFERENT"
   },
   {
-    "videoId": "w5h6_bsvP7M",
+    "video_id": "w5h6_bsvP7M",
     "title": "Psalm 111",
     "artist": "Small Voice & Sower",
     "duration": "3:54",
-    "durationInSec": 234,
+    "duration_in_sec": 234,
     "album": "Testimonies",
-    "likeStatus": "INDIFFERENT"
+    "like_status": "INDIFFERENT"
   },
   {
-    "videoId": "obt8Htmv9-M",
+    "video_id": "obt8Htmv9-M",
     "title": "Anxious For Nothing",
     "artist": "Small Voice",
     "duration": "3:06",
-    "durationInSec": 186,
+    "duration_in_sec": 186,
     "album": "Testimonies",
-    "likeStatus": "INDIFFERENT"
+    "like_status": "INDIFFERENT"
   },
   {
-    "videoId": "S6gN1rtxB2M",
+    "video_id": "S6gN1rtxB2M",
     "title": "You're All I Have",
     "artist": "Small Voice",
     "duration": "2:54",
-    "durationInSec": 174,
+    "duration_in_sec": 174,
     "album": "Testimonies",
-    "likeStatus": "INDIFFERENT"
+    "like_status": "INDIFFERENT"
   },
   {
-    "videoId": "mM4ATjtxFRA",
+    "video_id": "mM4ATjtxFRA",
     "title": "Some Days",
     "artist": "Small Voice & What We Seek",
     "duration": "2:29",
-    "durationInSec": 149,
+    "duration_in_sec": 149,
     "album": "Testimonies",
-    "likeStatus": "INDIFFERENT"
+    "like_status": "INDIFFERENT"
   },
   {
-    "videoId": "qjUia7db_iU",
+    "video_id": "qjUia7db_iU",
     "title": "Goodbye",
     "artist": "Small Voice",
     "duration": "3:27",
-    "durationInSec": 207,
+    "duration_in_sec": 207,
     "album": "Testimonies",
-    "likeStatus": "INDIFFERENT"
+    "like_status": "INDIFFERENT"
   },
   {
-    "videoId": "Zafq8efhux8",
+    "video_id": "Zafq8efhux8",
     "title": "Apostle",
     "artist": "Small Voice & Immortal Construct",
     "duration": "2:42",
-    "durationInSec": 162,
+    "duration_in_sec": 162,
     "album": "Testimonies",
-    "likeStatus": "INDIFFERENT"
+    "like_status": "INDIFFERENT"
   },
   {
-    "videoId": "Vp8K5o72-R4",
+    "video_id": "Vp8K5o72-R4",
     "title": "No King But Christ",
     "artist": "Small Voice",
     "duration": "1:43",
-    "durationInSec": 103,
+    "duration_in_sec": 103,
     "album": "Testimonies",
-    "likeStatus": "INDIFFERENT"
+    "like_status": "INDIFFERENT"
   },
   {
-    "videoId": "wM8FpYGqp7U",
+    "video_id": "wM8FpYGqp7U",
     "title": "Surfaced Remains",
     "artist": "Eaten by Sharks",
     "duration": "1:26",
-    "durationInSec": 86,
+    "duration_in_sec": 86,
     "album": "The Undertow Of Hate",
-    "likeStatus": "INDIFFERENT"
+    "like_status": "INDIFFERENT"
   },
   {
-    "videoId": "Dc1X2TMSHUw",
+    "video_id": "Dc1X2TMSHUw",
     "title": "Crimson Tide",
     "artist": "Eaten by Sharks",
     "duration": "4:03",
-    "durationInSec": 243,
+    "duration_in_sec": 243,
     "album": "The Undertow Of Hate",
-    "likeStatus": "INDIFFERENT"
+    "like_status": "INDIFFERENT"
   },
   {
-    "videoId": "GnxJEnZVBGw",
+    "video_id": "GnxJEnZVBGw",
     "title": "Becoming Chum",
     "artist": "Eaten by Sharks",
     "duration": "4:25",
-    "durationInSec": 265,
+    "duration_in_sec": 265,
     "album": "The Undertow Of Hate",
-    "likeStatus": "INDIFFERENT"
+    "like_status": "INDIFFERENT"
   }
 ]

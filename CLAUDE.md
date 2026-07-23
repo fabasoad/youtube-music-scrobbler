@@ -59,7 +59,7 @@ Track dict passed through the pipeline:
   "title": str,
   "artist": str,
   "duration": str,      # "M:SS" string
-  "durationInSec": int, # derived — used for synthetic timestamp math
+  "duration_in_sec": int, # derived — used for synthetic timestamp math
   "album": str | None,
   "timestamp": int,     # Unix epoch — added by assign_timestamps(), required by Last.fm
 }
