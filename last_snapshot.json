@@ -1,5 +1,53 @@
 [
   {
+    "video_id": "6VRwIlHfZ4M",
+    "title": "Cathedral Butchery Feast",
+    "artists": [
+      "Cranial Osteotomy"
+    ],
+    "duration": "3:37",
+    "album": "Vortex Of The Dark Knowledge",
+    "like_status": "INDIFFERENT",
+    "duration_seconds": 217,
+    "thumbnail": "https://yt3.googleusercontent.com/9Np-NbKzuS32hv8_FwIhi9wxJ-lz5K10TWmN75m1OfzRr44rQWWZblM7Y-zVHX2q4EU9l6dx74AInvxs=w60-h60-l90-rj"
+  },
+  {
+    "video_id": "yFEJzUpVsTI",
+    "title": "Structures of Decadence Impurity",
+    "artists": [
+      "Cranial Osteotomy"
+    ],
+    "duration": "3:09",
+    "album": "Vortex Of The Dark Knowledge",
+    "like_status": "INDIFFERENT",
+    "duration_seconds": 189,
+    "thumbnail": "https://yt3.googleusercontent.com/9Np-NbKzuS32hv8_FwIhi9wxJ-lz5K10TWmN75m1OfzRr44rQWWZblM7Y-zVHX2q4EU9l6dx74AInvxs=w60-h60-l90-rj"
+  },
+  {
+    "video_id": "4fDhs3RyDIs",
+    "title": "Dipping into Sombre Quagmire",
+    "artists": [
+      "Cranial Osteotomy"
+    ],
+    "duration": "3:32",
+    "album": "Vortex Of The Dark Knowledge",
+    "like_status": "INDIFFERENT",
+    "duration_seconds": 212,
+    "thumbnail": "https://yt3.googleusercontent.com/9Np-NbKzuS32hv8_FwIhi9wxJ-lz5K10TWmN75m1OfzRr44rQWWZblM7Y-zVHX2q4EU9l6dx74AInvxs=w60-h60-l90-rj"
+  },
+  {
+    "video_id": "imYG2eo6Uwk",
+    "title": "Hideous Monument of Ambrosial Pulchritude",
+    "artists": [
+      "Cranial Osteotomy"
+    ],
+    "duration": "3:04",
+    "album": "Vortex Of The Dark Knowledge",
+    "like_status": "INDIFFERENT",
+    "duration_seconds": 184,
+    "thumbnail": "https://yt3.googleusercontent.com/9Np-NbKzuS32hv8_FwIhi9wxJ-lz5K10TWmN75m1OfzRr44rQWWZblM7Y-zVHX2q4EU9l6dx74AInvxs=w60-h60-l90-rj"
+  },
+  {
     "video_id": "6NUBa9DcVRs",
     "title": "Thanatomorpheus",
     "artists": [
@@ -557,53 +605,5 @@
     "like_status": "LIKE",
     "duration_seconds": 270,
     "thumbnail": "https://yt3.googleusercontent.com/DBGlL-QF-Ms8Uup6DosaA0tKvviWmnDokgy2-xVvwNJq7Z02h_XwuyR2V-dXEQJy92ZDyvd3EEdJ0sY=w60-h60-l90-rj"
-  },
-  {
-    "video_id": "6Ev3f6N9qWU",
-    "title": "Hyperreal",
-    "artists": [
-      "Makari"
-    ],
-    "duration": "4:48",
-    "album": "Hyperreal",
-    "like_status": "INDIFFERENT",
-    "duration_seconds": 288,
-    "thumbnail": "https://yt3.googleusercontent.com/DBGlL-QF-Ms8Uup6DosaA0tKvviWmnDokgy2-xVvwNJq7Z02h_XwuyR2V-dXEQJy92ZDyvd3EEdJ0sY=w60-h60-l90-rj"
-  },
-  {
-    "video_id": "6dEDhT0E-XQ",
-    "title": "I Can't Hide",
-    "artists": [
-      "Pantera"
-    ],
-    "duration": "2:17",
-    "album": "Official Live: 101 Proof",
-    "like_status": "LIKE",
-    "duration_seconds": 137,
-    "thumbnail": "https://yt3.googleusercontent.com/Tzyn7ep-E2rrzRr93UZG5Vw4XYSo9vi-qloLdpFK1NSWjZ-99mLp-w6pnll_ZBgoGoz6iCz1r-jyxiUX=w60-h60-l90-rj"
-  },
-  {
-    "video_id": "0puFuQtUpxk",
-    "title": "Last Time",
-    "artists": [
-      "Small Voice"
-    ],
-    "duration": "3:20",
-    "album": "Testimonies",
-    "like_status": "INDIFFERENT",
-    "duration_seconds": 200,
-    "thumbnail": "https://yt3.googleusercontent.com/LrmaQl2a-DUq2gB3ICalFv0CWdpKdrU-hXrg29mkh-XnRjyrYox9W0NBNvYe15ojfAjZa1kGdx7ID9o=w60-h60-l90-rj"
-  },
-  {
-    "video_id": "w5h6_bsvP7M",
-    "title": "Psalm 111",
-    "artists": [
-      "Small Voice & Sower"
-    ],
-    "duration": "3:54",
-    "album": "Testimonies",
-    "like_status": "INDIFFERENT",
-    "duration_seconds": 234,
-    "thumbnail": "https://yt3.googleusercontent.com/LrmaQl2a-DUq2gB3ICalFv0CWdpKdrU-hXrg29mkh-XnRjyrYox9W0NBNvYe15ojfAjZa1kGdx7ID9o=w60-h60-l90-rj"
   }
 ]
