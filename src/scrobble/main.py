@@ -6,7 +6,7 @@ from datetime import UTC
 from scrobble.lastfm_client import LastFmClient
 from scrobble.snapshot_manager import SnapshotManager
 from scrobble.types import YouTubeMusicTrack
-from scrobble.youtube_music_client import YouTubeMusicClient
+from scrobble.yt_music.youtube_music_client import YouTubeMusicClient
 
 
 def prune_logs(log_path: str, keep_days: int = 365) -> None:
