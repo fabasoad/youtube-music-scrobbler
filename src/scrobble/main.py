@@ -54,7 +54,9 @@ def write_summary(tracks: list[YouTubeMusicTrack]) -> None:
         duration = f"0{track.duration}" if len(track.duration) == 4 else track.duration
       album: str = "N/A" if track.album is None else track.album
       thumbnail: str = f"![]({track.thumbnail})" if track.thumbnail else ""
-      f.write(f"| {i+1} | {duration} | {' & '.join(track.artists)} | {track.title} | {album} | {thumbnail} |\n")
+      f.write(
+        f"| {i + 1} | {duration} | {' & '.join(track.artists)} | {track.title} | {album} | {thumbnail} |\n"
+      )
 
 
 def main() -> None:
