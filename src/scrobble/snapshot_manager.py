@@ -1,7 +1,5 @@
 import json
 import os
-import time
-
 from dataclasses import asdict
 
 from scrobble.types import YouTubeMusicTrack
@@ -18,8 +16,11 @@ class SnapshotManager:
       data: list[dict] = json.load(f)
       return [YouTubeMusicTrack(**item) for item in data]
 
-  @staticmethod
-  def _diff_tracks(current: list[YouTubeMusicTrack], snapshot: list[YouTubeMusicTrack], min_seq: int = 3) -> list[YouTubeMusicTrack]:
+  def get_diff_from_snapshot(
+    self, current: list[YouTubeMusicTrack], min_seq: int = 3
+  ) -> list[YouTubeMusicTrack]:
+    snapshot = self._load_snapshot()
+
     if not snapshot:
       return []
 
@@ -34,14 +35,6 @@ class SnapshotManager:
 
     return list(reversed(current[:join]))  # oldest first
 
-  def get_diff_from_snapshot(self, current: list[YouTubeMusicTrack]) -> list[YouTubeMusicTrack]:
-    snapshot: list[YouTubeMusicTrack] = self._load_snapshot()
-    new_tracks: list[YouTubeMusicTrack] = SnapshotManager._diff_tracks(current, snapshot)
-    if new_tracks:
-      return SnapshotManager._assign_timestamps(new_tracks)
-    return []
-
   def save_snapshot(self, tracks: list[YouTubeMusicTrack]) -> None:
     with open(self.snapshot_path, "w") as f:
       json.dump([asdict(track) for track in tracks], f, indent=2)
-

@@ -15,7 +15,7 @@ class YouTubeMusicClient:
 
   def fetch_history(self) -> list[YouTubeMusicTrack]:
     yt: YTMusic = YTMusic(self.auth_path)
-    history: list[dict] = yt.get_history()[:self.history_limit]
+    history: list[dict] = yt.get_history()[: self.history_limit]
     tracks: list[YouTubeMusicTrack] = []
     for item in history:
       artists: list[dict] = item.get("artists") or []
@@ -29,19 +29,27 @@ class YouTubeMusicClient:
 
       # If after filtering list is empty, we need to fill it with at least something
       if not filtered_artists:
-        # If we filtered out all the available artists, then let's leave them as is
-        if artists:
-          filtered_artists = [artist["name"] for artist in artists]
-        # If original list of artists is also empty, then we use a placeholder
-        else:
-          filtered_artists = ["Unknown Artist"]
+        # - If we filtered out all the available artists, then let's leave them as is.
+        # - If original list of artists is also empty, then we use a placeholder.
+        filtered_artists = [artist["name"] for artist in artists] if artists else ["Unknown Artist"]
 
-      tracks.append(YouTubeMusicTrack(
-        video_id = item.get("videoId") or "",
-        title = item.get("title") or "Unknown Title",
-        artists = filtered_artists,
-        duration = item.get("duration") or "3:00", # default: 3 min
-        album = album.get("name") if album and album.get("name") else None,
-        like_status = item.get("likeStatus") or "INDIFFERENT",
-      ))
+      thumbnails = item.get("thumbnails") or []
+      thumbnail: str | None = None
+      for t in thumbnails:
+        if t.get("width") == 60 and t.get("height") == 60:
+          thumbnail = t.get("url")
+          break
+
+      tracks.append(
+        YouTubeMusicTrack(
+          video_id=item.get("videoId") or "",
+          title=item.get("title") or "Unknown Title",
+          artists=filtered_artists,
+          duration=item.get("duration"),
+          duration_seconds=item.get("duration_seconds"),
+          album=album.get("name") if album and album.get("name") else None,
+          like_status=item.get("likeStatus") or "INDIFFERENT",
+          thumbnail=thumbnail,
+        )
+      )
     return tracks

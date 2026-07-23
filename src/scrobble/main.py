@@ -1,6 +1,5 @@
 import os
 import sys
-
 from datetime import UTC
 
 from scrobble.lastfm_client import LastFmClient
@@ -51,7 +50,7 @@ def write_summary(tracks: list[YouTubeMusicTrack]) -> None:
     f.write("|---|--------|-------|-------|----------|\n")
     for i, track in enumerate(tracks):
       album: str = "N/A" if track.album is None else track.album
-      f.write(f"| {i} | {', '.join(track.artists)} | {track.title} | {album} | {track.duration} |\n")
+      f.write(f"| {i} | {' & '.join(track.artists)} | {track.title} | {album} | {track.duration} |\n")
 
 
 def main() -> None:
@@ -64,8 +63,8 @@ def main() -> None:
     new_tracks: list[YouTubeMusicTrack] = snapshot_manager.get_diff_from_snapshot(current)
 
     if new_tracks:
-      lastfm_client.update_like_status(new_tracks)
       scrobbled: int = lastfm_client.scrobble(new_tracks)
+      lastfm_client.update_like_status(new_tracks)
     else:
       print("No new tracks to scrobble.")
       scrobbled = 0
