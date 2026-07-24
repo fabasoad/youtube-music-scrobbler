@@ -15,7 +15,7 @@ refresh-auth = "scrobble.auth:main"
 [dependency-groups]
 dev = [
   "pytest>=9.1.1",
-  "ruff>=0.15.22",
+  "ruff>=0.16.0",
 ]
 
 [tool.uv]

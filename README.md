@@ -83,7 +83,7 @@ To verify it works:
 make verify
 ```
 
-You should see track objects with `title`, `artists`, and `videoId` fields.
+You should see track objects with `title`, `artists`, and `video_id` fields.
 
 > **Cookie expiry:** Cookies typically expire after 1–3 months. When the workflow
 > starts failing, repeat steps 4–6 and update the `YTM_BROWSER` secret.
