@@ -1,5 +1,53 @@
 [
   {
+    "video_id": "57oRzErSDEU",
+    "title": "Rolling Strong (Acoustic)",
+    "artists": [
+      "MxPx"
+    ],
+    "duration": "1:59",
+    "album": "MxPx (Deluxe)",
+    "like_status": "INDIFFERENT",
+    "duration_seconds": 119,
+    "thumbnail": "https://yt3.googleusercontent.com/gW7l8VLNhEtgWMuCcABZ4WspXhZfQOnw2NsDO-IAJ0UCf85J55JaT5G76xqRoXXhPKtPEyn3tRCevy1P=w60-h60-l90-rj"
+  },
+  {
+    "video_id": "S0eTgDlDOIU",
+    "title": "Uptown Streets (Acoustic)",
+    "artists": [
+      "MxPx"
+    ],
+    "duration": "3:21",
+    "album": "MxPx (Deluxe)",
+    "like_status": "INDIFFERENT",
+    "duration_seconds": 201,
+    "thumbnail": "https://yt3.googleusercontent.com/gW7l8VLNhEtgWMuCcABZ4WspXhZfQOnw2NsDO-IAJ0UCf85J55JaT5G76xqRoXXhPKtPEyn3tRCevy1P=w60-h60-l90-rj"
+  },
+  {
+    "video_id": "UKY1mIYESW8",
+    "title": "All of It (Acoustic)",
+    "artists": [
+      "MxPx"
+    ],
+    "duration": "2:31",
+    "album": "MxPx (Deluxe)",
+    "like_status": "INDIFFERENT",
+    "duration_seconds": 151,
+    "thumbnail": "https://yt3.googleusercontent.com/gW7l8VLNhEtgWMuCcABZ4WspXhZfQOnw2NsDO-IAJ0UCf85J55JaT5G76xqRoXXhPKtPEyn3tRCevy1P=w60-h60-l90-rj"
+  },
+  {
+    "video_id": "Kwhvp8P4vl0",
+    "title": "Let's Ride (Acoustic)",
+    "artists": [
+      "MxPx"
+    ],
+    "duration": "3:34",
+    "album": "MxPx (Deluxe)",
+    "like_status": "INDIFFERENT",
+    "duration_seconds": 214,
+    "thumbnail": "https://yt3.googleusercontent.com/gW7l8VLNhEtgWMuCcABZ4WspXhZfQOnw2NsDO-IAJ0UCf85J55JaT5G76xqRoXXhPKtPEyn3tRCevy1P=w60-h60-l90-rj"
+  },
+  {
     "video_id": "Vgpu6O98lqo",
     "title": "That's Life",
     "artists": [
@@ -549,54 +597,6 @@
     "album": "Vortex Of The Dark Knowledge",
     "like_status": "INDIFFERENT",
     "duration_seconds": 189,
-    "thumbnail": "https://yt3.googleusercontent.com/9Np-NbKzuS32hv8_FwIhi9wxJ-lz5K10TWmN75m1OfzRr44rQWWZblM7Y-zVHX2q4EU9l6dx74AInvxs=w60-h60-l90-rj"
-  },
-  {
-    "video_id": "4fDhs3RyDIs",
-    "title": "Dipping into Sombre Quagmire",
-    "artists": [
-      "Cranial Osteotomy"
-    ],
-    "duration": "3:32",
-    "album": "Vortex Of The Dark Knowledge",
-    "like_status": "INDIFFERENT",
-    "duration_seconds": 212,
-    "thumbnail": "https://yt3.googleusercontent.com/9Np-NbKzuS32hv8_FwIhi9wxJ-lz5K10TWmN75m1OfzRr44rQWWZblM7Y-zVHX2q4EU9l6dx74AInvxs=w60-h60-l90-rj"
-  },
-  {
-    "video_id": "imYG2eo6Uwk",
-    "title": "Hideous Monument of Ambrosial Pulchritude",
-    "artists": [
-      "Cranial Osteotomy"
-    ],
-    "duration": "3:04",
-    "album": "Vortex Of The Dark Knowledge",
-    "like_status": "INDIFFERENT",
-    "duration_seconds": 184,
-    "thumbnail": "https://yt3.googleusercontent.com/9Np-NbKzuS32hv8_FwIhi9wxJ-lz5K10TWmN75m1OfzRr44rQWWZblM7Y-zVHX2q4EU9l6dx74AInvxs=w60-h60-l90-rj"
-  },
-  {
-    "video_id": "6NUBa9DcVRs",
-    "title": "Thanatomorpheus",
-    "artists": [
-      "Cranial Osteotomy"
-    ],
-    "duration": "3:47",
-    "album": "Vortex Of The Dark Knowledge",
-    "like_status": "INDIFFERENT",
-    "duration_seconds": 227,
-    "thumbnail": "https://yt3.googleusercontent.com/9Np-NbKzuS32hv8_FwIhi9wxJ-lz5K10TWmN75m1OfzRr44rQWWZblM7Y-zVHX2q4EU9l6dx74AInvxs=w60-h60-l90-rj"
-  },
-  {
-    "video_id": "8uH9EvaiMag",
-    "title": "Praecursor",
-    "artists": [
-      "Cranial Osteotomy"
-    ],
-    "duration": "0:47",
-    "album": "Vortex Of The Dark Knowledge",
-    "like_status": "INDIFFERENT",
-    "duration_seconds": 47,
     "thumbnail": "https://yt3.googleusercontent.com/9Np-NbKzuS32hv8_FwIhi9wxJ-lz5K10TWmN75m1OfzRr44rQWWZblM7Y-zVHX2q4EU9l6dx74AInvxs=w60-h60-l90-rj"
   }
 ]
