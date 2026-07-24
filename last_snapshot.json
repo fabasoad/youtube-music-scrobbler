@@ -1,5 +1,53 @@
 [
   {
+    "video_id": "WXdeG4ge0vI",
+    "title": "Disenchantment (2026 Remastered)",
+    "artists": [
+      "Meshuggah"
+    ],
+    "duration": "1:45",
+    "album": "Catch Thirtythree: 20th Anniversary Edition (2026 Remastered)",
+    "like_status": "INDIFFERENT",
+    "duration_seconds": 105,
+    "thumbnail": "https://yt3.googleusercontent.com/fbQyPrLgvBXowfEiNscIdyKflc9HJznxS2De3Wcwl5Mp_fqzT2ej_sdLr8Pdn6L2hgNCSYhWrN5SlsE=w60-h60-l90-rj"
+  },
+  {
+    "video_id": "4a0BoQAQ45s",
+    "title": "Imprint Of The Un-Saved (2026 Remastered)",
+    "artists": [
+      "Meshuggah"
+    ],
+    "duration": "1:36",
+    "album": "Catch Thirtythree: 20th Anniversary Edition (2026 Remastered)",
+    "like_status": "INDIFFERENT",
+    "duration_seconds": 96,
+    "thumbnail": "https://yt3.googleusercontent.com/fbQyPrLgvBXowfEiNscIdyKflc9HJznxS2De3Wcwl5Mp_fqzT2ej_sdLr8Pdn6L2hgNCSYhWrN5SlsE=w60-h60-l90-rj"
+  },
+  {
+    "video_id": "6jJCoh7yko0",
+    "title": "Autonomy Lost (2026 Remastered)",
+    "artists": [
+      "Meshuggah"
+    ],
+    "duration": "1:41",
+    "album": "Catch Thirtythree: 20th Anniversary Edition (2026 Remastered)",
+    "like_status": "INDIFFERENT",
+    "duration_seconds": 101,
+    "thumbnail": "https://yt3.googleusercontent.com/fbQyPrLgvBXowfEiNscIdyKflc9HJznxS2De3Wcwl5Mp_fqzT2ej_sdLr8Pdn6L2hgNCSYhWrN5SlsE=w60-h60-l90-rj"
+  },
+  {
+    "video_id": "9X_eZpWh6oQ",
+    "title": "Moments Like This (Acoustic)",
+    "artists": [
+      "MxPx"
+    ],
+    "duration": "2:54",
+    "album": "MxPx (Deluxe)",
+    "like_status": "INDIFFERENT",
+    "duration_seconds": 174,
+    "thumbnail": "https://yt3.googleusercontent.com/gW7l8VLNhEtgWMuCcABZ4WspXhZfQOnw2NsDO-IAJ0UCf85J55JaT5G76xqRoXXhPKtPEyn3tRCevy1P=w60-h60-l90-rj"
+  },
+  {
     "video_id": "57oRzErSDEU",
     "title": "Rolling Strong (Acoustic)",
     "artists": [
@@ -549,54 +597,6 @@
     "album": "Vortex Of The Dark Knowledge",
     "like_status": "INDIFFERENT",
     "duration_seconds": 212,
-    "thumbnail": "https://yt3.googleusercontent.com/9Np-NbKzuS32hv8_FwIhi9wxJ-lz5K10TWmN75m1OfzRr44rQWWZblM7Y-zVHX2q4EU9l6dx74AInvxs=w60-h60-l90-rj"
-  },
-  {
-    "video_id": "c1nMe6ZXTAU",
-    "title": "Obscenity Aeon",
-    "artists": [
-      "Cranial Osteotomy"
-    ],
-    "duration": "2:58",
-    "album": "Vortex Of The Dark Knowledge",
-    "like_status": "INDIFFERENT",
-    "duration_seconds": 178,
-    "thumbnail": "https://yt3.googleusercontent.com/9Np-NbKzuS32hv8_FwIhi9wxJ-lz5K10TWmN75m1OfzRr44rQWWZblM7Y-zVHX2q4EU9l6dx74AInvxs=w60-h60-l90-rj"
-  },
-  {
-    "video_id": "16FypD6bzRk",
-    "title": "Divine Desecration",
-    "artists": [
-      "Cranial Osteotomy"
-    ],
-    "duration": "3:18",
-    "album": "Vortex Of The Dark Knowledge",
-    "like_status": "INDIFFERENT",
-    "duration_seconds": 198,
-    "thumbnail": "https://yt3.googleusercontent.com/9Np-NbKzuS32hv8_FwIhi9wxJ-lz5K10TWmN75m1OfzRr44rQWWZblM7Y-zVHX2q4EU9l6dx74AInvxs=w60-h60-l90-rj"
-  },
-  {
-    "video_id": "6VRwIlHfZ4M",
-    "title": "Cathedral Butchery Feast",
-    "artists": [
-      "Cranial Osteotomy"
-    ],
-    "duration": "3:37",
-    "album": "Vortex Of The Dark Knowledge",
-    "like_status": "INDIFFERENT",
-    "duration_seconds": 217,
-    "thumbnail": "https://yt3.googleusercontent.com/9Np-NbKzuS32hv8_FwIhi9wxJ-lz5K10TWmN75m1OfzRr44rQWWZblM7Y-zVHX2q4EU9l6dx74AInvxs=w60-h60-l90-rj"
-  },
-  {
-    "video_id": "yFEJzUpVsTI",
-    "title": "Structures of Decadence Impurity",
-    "artists": [
-      "Cranial Osteotomy"
-    ],
-    "duration": "3:09",
-    "album": "Vortex Of The Dark Knowledge",
-    "like_status": "INDIFFERENT",
-    "duration_seconds": 189,
     "thumbnail": "https://yt3.googleusercontent.com/9Np-NbKzuS32hv8_FwIhi9wxJ-lz5K10TWmN75m1OfzRr44rQWWZblM7Y-zVHX2q4EU9l6dx74AInvxs=w60-h60-l90-rj"
   }
 ]
