@@ -1,5 +1,69 @@
 [
   {
+    "video_id": "Yzsq9L8nW60",
+    "title": "Avenged Sevenfold- LIGHTS",
+    "artists": [
+      "Ryan",
+      "3.6K views"
+    ],
+    "duration": "2:19",
+    "album": null,
+    "like_status": "INDIFFERENT",
+    "duration_seconds": 139,
+    "thumbnail": null
+  },
+  {
+    "video_id": "WskZrq-aQ-Q",
+    "title": "STATICA - Avenged Sevenfold (Song HQ)",
+    "artists": [
+      "theerown",
+      "22K views"
+    ],
+    "duration": "5:34",
+    "album": null,
+    "like_status": "INDIFFERENT",
+    "duration_seconds": 334,
+    "thumbnail": null
+  },
+  {
+    "video_id": "BQ5rPfc_x7o",
+    "title": "Avenged Sevenfold- REJOICE",
+    "artists": [
+      "Ryan",
+      "6.2K views"
+    ],
+    "duration": "4:21",
+    "album": null,
+    "like_status": "INDIFFERENT",
+    "duration_seconds": 261,
+    "thumbnail": null
+  },
+  {
+    "video_id": "aS5KbMe2NTY",
+    "title": "Avenged Sevenfold- ASHES",
+    "artists": [
+      "Ryan",
+      "3.7K views"
+    ],
+    "duration": "5:51",
+    "album": null,
+    "like_status": "INDIFFERENT",
+    "duration_seconds": 351,
+    "thumbnail": null
+  },
+  {
+    "video_id": "kaRbPNiKYug",
+    "title": "Rolling Stone",
+    "artists": [
+      "Southpaw FLHC"
+    ],
+    "duration": "3:19",
+    "album": "Rolling Stone",
+    "like_status": "INDIFFERENT",
+    "duration_seconds": 199,
+    "thumbnail": "https://yt3.googleusercontent.com/FxN_ijsJQ1yjjEddZIgYlbWQzwo_yZPX6BmrSimuKUX3GUjczEi7cTkRgcAyC-xFKa6p_3gMZfwMoCE=w60-h60-l90-rj"
+  },
+  {
     "video_id": "BbMEg5XbvH8",
     "title": "AGGRESSIVE NATURE",
     "artists": [
@@ -538,66 +602,6 @@
     "album": "Melophobia",
     "like_status": "INDIFFERENT",
     "duration_seconds": 249,
-    "thumbnail": "https://yt3.googleusercontent.com/uDNHhjvHCQYZns66erc3UVkOQxuU3TXRvOhLZ2YZlbYhz5ZCheqy2U1KkAesUzF-QKq88Xdqk5XakE2H=w60-h60-l90-rj"
-  },
-  {
-    "video_id": "E7B3MLep4aM",
-    "title": "Black Widow",
-    "artists": [
-      "Cage The Elephant"
-    ],
-    "duration": "3:08",
-    "album": "Melophobia",
-    "like_status": "INDIFFERENT",
-    "duration_seconds": 188,
-    "thumbnail": "https://yt3.googleusercontent.com/uDNHhjvHCQYZns66erc3UVkOQxuU3TXRvOhLZ2YZlbYhz5ZCheqy2U1KkAesUzF-QKq88Xdqk5XakE2H=w60-h60-l90-rj"
-  },
-  {
-    "video_id": "peaSHTjFM58",
-    "title": "Halo",
-    "artists": [
-      "Cage The Elephant"
-    ],
-    "duration": "2:58",
-    "album": "Melophobia",
-    "like_status": "INDIFFERENT",
-    "duration_seconds": 178,
-    "thumbnail": "https://yt3.googleusercontent.com/uDNHhjvHCQYZns66erc3UVkOQxuU3TXRvOhLZ2YZlbYhz5ZCheqy2U1KkAesUzF-QKq88Xdqk5XakE2H=w60-h60-l90-rj"
-  },
-  {
-    "video_id": "_uRk98WQtTM",
-    "title": "Take It Or Leave It",
-    "artists": [
-      "Cage The Elephant"
-    ],
-    "duration": "3:28",
-    "album": "Melophobia",
-    "like_status": "INDIFFERENT",
-    "duration_seconds": 208,
-    "thumbnail": "https://yt3.googleusercontent.com/uDNHhjvHCQYZns66erc3UVkOQxuU3TXRvOhLZ2YZlbYhz5ZCheqy2U1KkAesUzF-QKq88Xdqk5XakE2H=w60-h60-l90-rj"
-  },
-  {
-    "video_id": "GouP9Kzy3mo",
-    "title": "Telescope",
-    "artists": [
-      "Cage The Elephant"
-    ],
-    "duration": "3:49",
-    "album": "Melophobia",
-    "like_status": "INDIFFERENT",
-    "duration_seconds": 229,
-    "thumbnail": "https://yt3.googleusercontent.com/uDNHhjvHCQYZns66erc3UVkOQxuU3TXRvOhLZ2YZlbYhz5ZCheqy2U1KkAesUzF-QKq88Xdqk5XakE2H=w60-h60-l90-rj"
-  },
-  {
-    "video_id": "LKJ4j2rYvr0",
-    "title": "Come A Little Closer",
-    "artists": [
-      "Cage The Elephant"
-    ],
-    "duration": "3:50",
-    "album": "Melophobia",
-    "like_status": "LIKE",
-    "duration_seconds": 230,
     "thumbnail": "https://yt3.googleusercontent.com/uDNHhjvHCQYZns66erc3UVkOQxuU3TXRvOhLZ2YZlbYhz5ZCheqy2U1KkAesUzF-QKq88Xdqk5XakE2H=w60-h60-l90-rj"
   }
 ]
