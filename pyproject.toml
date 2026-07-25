@@ -36,6 +36,7 @@ testpaths = ["tests"]
 target-version = "py314"
 line-length = 110
 indent-width = 2
+exclude = ["CLAUDE.md"]
 
 [tool.ruff.lint]
 select = ["E", "F", "I", "UP", "B", "SIM"]
