@@ -61,7 +61,7 @@ class LastFmClient:
             title=lastfm_track.title,
             timestamp=lastfm_track.timestamp,
             album=lastfm_track.album,
-            album_artist=lastfm_track.artist,
+            album_artist=lastfm_track.album_artist,
             duration=lastfm_track.duration_seconds,
           )
           album_part: str = "" if lastfm_track.album is None else f" ({lastfm_track.album})"
