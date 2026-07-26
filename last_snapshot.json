@@ -1,5 +1,17 @@
 [
   {
+    "video_id": "f5WguOv29Uo",
+    "title": "Red Yeti (feat. Skye Sweetnam)",
+    "artists": [
+      "Nonpoint"
+    ],
+    "duration": "2:51",
+    "album": "Red Yeti",
+    "like_status": "INDIFFERENT",
+    "duration_seconds": 171,
+    "thumbnail": "https://yt3.googleusercontent.com/4Rz-Rpbr2yqmGTY6UUSwn8Vhqh1UUBBaYvDuR-8BVeozIQ4FltiMPeHFdv76sw3baM1oiGAK-Qqf4cg=w60-h60-l90-rj"
+  },
+  {
     "video_id": "ilTtNUFOnsk",
     "title": "Terminal Lucidity",
     "artists": [
@@ -413,7 +425,7 @@
     "title": "Avenged Sevenfold- LIGHTS",
     "artists": [
       "Ryan",
-      "6.2K views"
+      "6.3K views"
     ],
     "duration": "2:19",
     "album": null,
@@ -426,7 +438,7 @@
     "title": "STATICA - Avenged Sevenfold (Song HQ)",
     "artists": [
       "theerown",
-      "38K views"
+      "39K views"
     ],
     "duration": "5:34",
     "album": null,
@@ -452,7 +464,7 @@
     "title": "Avenged Sevenfold- ASHES",
     "artists": [
       "Ryan",
-      "7.1K views"
+      "7.2K views"
     ],
     "duration": "5:51",
     "album": null,
@@ -592,17 +604,5 @@
     "like_status": "INDIFFERENT",
     "duration_seconds": 187,
     "thumbnail": "https://yt3.googleusercontent.com/KainDdBuonY15mJ_ShctlsMvT2vrNYhDH7OQA9ftZPdHhJtdZWxEjf-1hJQSSq3IHGqHUqEDzLVA2J8c=w60-h60-l90-rj"
-  },
-  {
-    "video_id": "n34tDjcbtCU",
-    "title": "167 Damillia",
-    "artists": [
-      "Ocean Grove"
-    ],
-    "duration": "3:41",
-    "album": "Black Label",
-    "like_status": "INDIFFERENT",
-    "duration_seconds": 221,
-    "thumbnail": "https://yt3.googleusercontent.com/nj4etrZw93kIR3F4oRFiSFt1pT-WcOktJk7tgd6MRzH-gNFjcVpqCgqJMsiSMyvOjRXzthfvSbRYEbMn=w60-h60-l90-rj"
   }
 ]
