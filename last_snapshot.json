@@ -1,5 +1,41 @@
 [
   {
+    "video_id": "Vx4pRZ9ExIQ",
+    "title": "...if i don't try",
+    "artists": [
+      "rozemary"
+    ],
+    "duration": "2:37",
+    "album": "it's harder now to breathe",
+    "like_status": "INDIFFERENT",
+    "duration_seconds": 157,
+    "thumbnail": "https://yt3.googleusercontent.com/cCWKByEb4V-NvC4fvhUQgoiXlULCqpc7WCYzLAcHOurU5V_Ctlk2oU98jNsbKDU8mW5h3NQkByUDJc0=w60-h60-l90-rj"
+  },
+  {
+    "video_id": "1K8kZbmnonI",
+    "title": "lost",
+    "artists": [
+      "rozemary"
+    ],
+    "duration": "2:54",
+    "album": "it's harder now to breathe",
+    "like_status": "INDIFFERENT",
+    "duration_seconds": 174,
+    "thumbnail": "https://yt3.googleusercontent.com/cCWKByEb4V-NvC4fvhUQgoiXlULCqpc7WCYzLAcHOurU5V_Ctlk2oU98jNsbKDU8mW5h3NQkByUDJc0=w60-h60-l90-rj"
+  },
+  {
+    "video_id": "VHA4K3aJ6uE",
+    "title": "i won't change...",
+    "artists": [
+      "rozemary"
+    ],
+    "duration": "3:59",
+    "album": "it's harder now to breathe",
+    "like_status": "INDIFFERENT",
+    "duration_seconds": 239,
+    "thumbnail": "https://yt3.googleusercontent.com/cCWKByEb4V-NvC4fvhUQgoiXlULCqpc7WCYzLAcHOurU5V_Ctlk2oU98jNsbKDU8mW5h3NQkByUDJc0=w60-h60-l90-rj"
+  },
+  {
     "video_id": "CoqtASX90PE",
     "title": "anguish (feat. Calcine)",
     "artists": [
@@ -563,41 +599,5 @@
     "like_status": "INDIFFERENT",
     "duration_seconds": 159,
     "thumbnail": "https://yt3.googleusercontent.com/KaJkJXorkHo6L79rtZ2R77Jq_lJAjKvBESwwt_5Vjk54VuvP2NxTjF54d2Sb4UcukP-uayx39u6ajCQC=w60-h60-l90-rj"
-  },
-  {
-    "video_id": "MMirlMOzMVg",
-    "title": "Perpetual Cycles of Violence",
-    "artists": [
-      "The Primer"
-    ],
-    "duration": "2:02",
-    "album": "Perpetual Cycles of Violence",
-    "like_status": "INDIFFERENT",
-    "duration_seconds": 122,
-    "thumbnail": "https://yt3.googleusercontent.com/KaJkJXorkHo6L79rtZ2R77Jq_lJAjKvBESwwt_5Vjk54VuvP2NxTjF54d2Sb4UcukP-uayx39u6ajCQC=w60-h60-l90-rj"
-  },
-  {
-    "video_id": "qxto7mNPKfU",
-    "title": "Unravel",
-    "artists": [
-      "The Primer"
-    ],
-    "duration": "2:59",
-    "album": "Perpetual Cycles of Violence",
-    "like_status": "INDIFFERENT",
-    "duration_seconds": 179,
-    "thumbnail": "https://yt3.googleusercontent.com/KaJkJXorkHo6L79rtZ2R77Jq_lJAjKvBESwwt_5Vjk54VuvP2NxTjF54d2Sb4UcukP-uayx39u6ajCQC=w60-h60-l90-rj"
-  },
-  {
-    "video_id": "O2kvcc4t4Kg",
-    "title": "\u5606\u304d\u306e\u30b7\u30eb\u30a8\u30c3\u30c8",
-    "artists": [
-      "Re:O"
-    ],
-    "duration": "4:14",
-    "album": "\u5606\u304d\u306e\u30b7\u30eb\u30a8\u30c3\u30c8",
-    "like_status": "INDIFFERENT",
-    "duration_seconds": 254,
-    "thumbnail": "https://yt3.googleusercontent.com/IVgddj_zhdC_8CgRv4_L_Obdu7S4gzX0qc8KldtFxtBn2Vk2M5sSS5jFWCQukPJ68q2zK2T55shxHEIF=w60-h60-l90-rj"
   }
 ]
