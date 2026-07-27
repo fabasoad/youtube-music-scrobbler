@@ -289,18 +289,6 @@
     "thumbnail": "https://yt3.googleusercontent.com/KaJkJXorkHo6L79rtZ2R77Jq_lJAjKvBESwwt_5Vjk54VuvP2NxTjF54d2Sb4UcukP-uayx39u6ajCQC=w60-h60-l90-rj"
   },
   {
-    "video_id": "zZbza_8UMqw",
-    "title": "Evangeline",
-    "artists": [
-      "Die Spitz"
-    ],
-    "duration": "2:30",
-    "album": "The Revenge of Evangeline",
-    "like_status": "INDIFFERENT",
-    "duration_seconds": 150,
-    "thumbnail": "https://yt3.googleusercontent.com/SZzGlp0fuq4TZ38P7aycSvERJCmNVblsMPCpwtL4FbQoYWTbJsy0Q5B6700iYuCEaLxh7lDfQNMUhVGJ=w60-h60-l90-rj"
-  },
-  {
     "video_id": "O2kvcc4t4Kg",
     "title": "\u5606\u304d\u306e\u30b7\u30eb\u30a8\u30c3\u30c8",
     "artists": [
@@ -485,7 +473,7 @@
     "title": "Avenged Sevenfold- LIGHTS",
     "artists": [
       "Ryan",
-      "6.9K views"
+      "7K views"
     ],
     "duration": "2:19",
     "album": null,
@@ -498,7 +486,7 @@
     "title": "STATICA - Avenged Sevenfold (Song HQ)",
     "artists": [
       "theerown",
-      "43K views"
+      "44K views"
     ],
     "duration": "5:34",
     "album": null,
@@ -524,7 +512,7 @@
     "title": "Avenged Sevenfold- ASHES",
     "artists": [
       "Ryan",
-      "8K views"
+      "8.2K views"
     ],
     "duration": "5:51",
     "album": null,
@@ -603,5 +591,18 @@
     "like_status": "INDIFFERENT",
     "duration_seconds": 140,
     "thumbnail": "https://yt3.googleusercontent.com/NerJD_-qZXMyKN6LrjoAFUJS2XEDbPumBJoS43FTgNOinDvLYywjOz_jBCJaY8cAVM3veaKrFxDJDgZR=w60-h60-l90-rj"
+  },
+  {
+    "video_id": "xbvd2TFu7Rs",
+    "title": "It's Just Forever",
+    "artists": [
+      "Alison Mosshart",
+      "Cage The Elephant"
+    ],
+    "duration": "3:31",
+    "album": "Melophobia",
+    "like_status": "INDIFFERENT",
+    "duration_seconds": 211,
+    "thumbnail": "https://yt3.googleusercontent.com/uDNHhjvHCQYZns66erc3UVkOQxuU3TXRvOhLZ2YZlbYhz5ZCheqy2U1KkAesUzF-QKq88Xdqk5XakE2H=w60-h60-l90-rj"
   }
 ]
