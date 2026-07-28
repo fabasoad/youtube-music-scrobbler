@@ -1,5 +1,29 @@
 [
   {
+    "video_id": "604egdeZNOU",
+    "title": "Brussels Is Haunted",
+    "artists": [
+      "Echo & The Bunnymen"
+    ],
+    "duration": "3:23",
+    "album": "Brussels Is Haunted",
+    "like_status": "INDIFFERENT",
+    "duration_seconds": 203,
+    "thumbnail": "https://yt3.googleusercontent.com/RFs7DqsT351XgrL1Z93TQtpSXJl3i2zb-bCu48K_Ui4gmlEtAvnvS9Ku6RN4Izcb3SnNjTaSykMB-pQ=w60-h60-l90-rj"
+  },
+  {
+    "video_id": "BPR-kM-SPKQ",
+    "title": "What Are You Going To Do With Your Life?",
+    "artists": [
+      "Echo & The Bunnymen"
+    ],
+    "duration": "5:13",
+    "album": "What Are You Going To Do With Your Life? (Remastered & Expanded)",
+    "like_status": "INDIFFERENT",
+    "duration_seconds": 313,
+    "thumbnail": "https://yt3.googleusercontent.com/RhmnbUkqix134OxTu0rkVjOJ7MKTX0PgAIFOwSSllMD-SPcSRc6SK9KjsdQsNCalyX9Etjz_Pk9TX5QEFw=w60-h60-l90-rj"
+  },
+  {
     "video_id": "gaG9r0Jho14",
     "title": "Harbingers Of Death",
     "artists": [
@@ -575,29 +599,5 @@
     "like_status": "INDIFFERENT",
     "duration_seconds": 186,
     "thumbnail": "https://yt3.googleusercontent.com/a-sN4x-7Xi6zl9wuJgjJtDBqvsEzRn1O7POh2ug6CDHA3P29L_6GdU1afMT35jgglLTtsG5LSUtDzFQ=w60-h60-l90-rj"
-  },
-  {
-    "video_id": "iHqHrqoMvus",
-    "title": "Redeath",
-    "artists": [
-      "The Primer"
-    ],
-    "duration": "4:30",
-    "album": "Perpetual Cycles of Violence",
-    "like_status": "INDIFFERENT",
-    "duration_seconds": 270,
-    "thumbnail": "https://yt3.googleusercontent.com/KaJkJXorkHo6L79rtZ2R77Jq_lJAjKvBESwwt_5Vjk54VuvP2NxTjF54d2Sb4UcukP-uayx39u6ajCQC=w60-h60-l90-rj"
-  },
-  {
-    "video_id": "j_za8ADy6T4",
-    "title": "Hollow Man",
-    "artists": [
-      "The Primer"
-    ],
-    "duration": "3:02",
-    "album": "Perpetual Cycles of Violence",
-    "like_status": "INDIFFERENT",
-    "duration_seconds": 182,
-    "thumbnail": "https://yt3.googleusercontent.com/KaJkJXorkHo6L79rtZ2R77Jq_lJAjKvBESwwt_5Vjk54VuvP2NxTjF54d2Sb4UcukP-uayx39u6ajCQC=w60-h60-l90-rj"
   }
 ]
