@@ -1,5 +1,17 @@
 [
   {
+    "video_id": "6bwGzM7Ie78",
+    "title": "Sentenced To Oblivion",
+    "artists": [
+      "Grim Legion"
+    ],
+    "duration": "2:42",
+    "album": "Harbingers Of Death",
+    "like_status": "INDIFFERENT",
+    "duration_seconds": 162,
+    "thumbnail": "https://yt3.googleusercontent.com/84I-UtxpSqXGKPEd71Yq7G9J63nhatyRYR5lme1f9VuXkFsmiQ3KQJYMeHWURFqFz6cQ8x6ln2IKovs6mQ=w60-h60-l90-rj"
+  },
+  {
     "video_id": "eUVfKP4ftbM",
     "title": "Seraphic Decay",
     "artists": [
@@ -52,7 +64,7 @@
     "title": "no flowers bloom",
     "artists": [
       "rozemary",
-      "208 views"
+      "212 views"
     ],
     "duration": "3:56",
     "album": null,
@@ -586,18 +598,6 @@
     "album": "Perpetual Cycles of Violence",
     "like_status": "INDIFFERENT",
     "duration_seconds": 195,
-    "thumbnail": "https://yt3.googleusercontent.com/KaJkJXorkHo6L79rtZ2R77Jq_lJAjKvBESwwt_5Vjk54VuvP2NxTjF54d2Sb4UcukP-uayx39u6ajCQC=w60-h60-l90-rj"
-  },
-  {
-    "video_id": "HPg9UNK7j5c",
-    "title": "Sineater",
-    "artists": [
-      "The Primer"
-    ],
-    "duration": "4:31",
-    "album": "Perpetual Cycles of Violence",
-    "like_status": "INDIFFERENT",
-    "duration_seconds": 271,
     "thumbnail": "https://yt3.googleusercontent.com/KaJkJXorkHo6L79rtZ2R77Jq_lJAjKvBESwwt_5Vjk54VuvP2NxTjF54d2Sb4UcukP-uayx39u6ajCQC=w60-h60-l90-rj"
   }
 ]
