@@ -1,5 +1,17 @@
 [
   {
+    "video_id": "eUVfKP4ftbM",
+    "title": "Seraphic Decay",
+    "artists": [
+      "Grim Legion"
+    ],
+    "duration": "2:56",
+    "album": "Harbingers Of Death",
+    "like_status": "INDIFFERENT",
+    "duration_seconds": 176,
+    "thumbnail": "https://yt3.googleusercontent.com/84I-UtxpSqXGKPEd71Yq7G9J63nhatyRYR5lme1f9VuXkFsmiQ3KQJYMeHWURFqFz6cQ8x6ln2IKovs6mQ=w60-h60-l90-rj"
+  },
+  {
     "video_id": "GXEfuKUt9H4",
     "title": "Planet Of The Dead",
     "artists": [
@@ -586,18 +598,6 @@
     "album": "Perpetual Cycles of Violence",
     "like_status": "INDIFFERENT",
     "duration_seconds": 271,
-    "thumbnail": "https://yt3.googleusercontent.com/KaJkJXorkHo6L79rtZ2R77Jq_lJAjKvBESwwt_5Vjk54VuvP2NxTjF54d2Sb4UcukP-uayx39u6ajCQC=w60-h60-l90-rj"
-  },
-  {
-    "video_id": "59k9jJEZXeU",
-    "title": "Immolate",
-    "artists": [
-      "The Primer"
-    ],
-    "duration": "4:06",
-    "album": "Perpetual Cycles of Violence",
-    "like_status": "INDIFFERENT",
-    "duration_seconds": 246,
     "thumbnail": "https://yt3.googleusercontent.com/KaJkJXorkHo6L79rtZ2R77Jq_lJAjKvBESwwt_5Vjk54VuvP2NxTjF54d2Sb4UcukP-uayx39u6ajCQC=w60-h60-l90-rj"
   }
 ]
