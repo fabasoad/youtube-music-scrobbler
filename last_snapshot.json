@@ -1,5 +1,29 @@
 [
   {
+    "video_id": "gaG9r0Jho14",
+    "title": "Harbingers Of Death",
+    "artists": [
+      "Grim Legion"
+    ],
+    "duration": "3:01",
+    "album": "Harbingers Of Death",
+    "like_status": "INDIFFERENT",
+    "duration_seconds": 181,
+    "thumbnail": "https://yt3.googleusercontent.com/84I-UtxpSqXGKPEd71Yq7G9J63nhatyRYR5lme1f9VuXkFsmiQ3KQJYMeHWURFqFz6cQ8x6ln2IKovs6mQ=w60-h60-l90-rj"
+  },
+  {
+    "video_id": "83uc18Wn010",
+    "title": "Descend Into Hell",
+    "artists": [
+      "Grim Legion"
+    ],
+    "duration": "3:48",
+    "album": "Harbingers Of Death",
+    "like_status": "INDIFFERENT",
+    "duration_seconds": 228,
+    "thumbnail": "https://yt3.googleusercontent.com/84I-UtxpSqXGKPEd71Yq7G9J63nhatyRYR5lme1f9VuXkFsmiQ3KQJYMeHWURFqFz6cQ8x6ln2IKovs6mQ=w60-h60-l90-rj"
+  },
+  {
     "video_id": "6bwGzM7Ie78",
     "title": "Sentenced To Oblivion",
     "artists": [
@@ -574,30 +598,6 @@
     "album": "Perpetual Cycles of Violence",
     "like_status": "INDIFFERENT",
     "duration_seconds": 182,
-    "thumbnail": "https://yt3.googleusercontent.com/KaJkJXorkHo6L79rtZ2R77Jq_lJAjKvBESwwt_5Vjk54VuvP2NxTjF54d2Sb4UcukP-uayx39u6ajCQC=w60-h60-l90-rj"
-  },
-  {
-    "video_id": "RnoJp98ObTA",
-    "title": "ad_infinitum_redux",
-    "artists": [
-      "The Primer"
-    ],
-    "duration": "4:40",
-    "album": "ad_infinitum_redux",
-    "like_status": "INDIFFERENT",
-    "duration_seconds": 280,
-    "thumbnail": "https://yt3.googleusercontent.com/W-KesSt-wJO29KxM4bje1UWfxaRN3fWFEmDsGvN-kQ6_yuGg8LlpA1xQtYghjooZ5fKnvI7jrVRLA-w=w60-h60-l90-rj"
-  },
-  {
-    "video_id": "m2wg5xZ5vZs",
-    "title": "Weightless",
-    "artists": [
-      "The Primer"
-    ],
-    "duration": "3:15",
-    "album": "Perpetual Cycles of Violence",
-    "like_status": "INDIFFERENT",
-    "duration_seconds": 195,
     "thumbnail": "https://yt3.googleusercontent.com/KaJkJXorkHo6L79rtZ2R77Jq_lJAjKvBESwwt_5Vjk54VuvP2NxTjF54d2Sb4UcukP-uayx39u6ajCQC=w60-h60-l90-rj"
   }
 ]
