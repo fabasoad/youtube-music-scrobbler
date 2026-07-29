@@ -1,5 +1,41 @@
 [
   {
+    "video_id": "HXBfNmMFLEY",
+    "title": "Finale",
+    "artists": [
+      "Show Me The Body"
+    ],
+    "duration": "2:14",
+    "album": "Alone Together",
+    "like_status": "INDIFFERENT",
+    "duration_seconds": 134,
+    "thumbnail": "https://yt3.googleusercontent.com/LjZVW5b7icf2uDKoGDL2zEyUHlnBwkAG14ARHuQ4hdEJMUFl-b5NU2TXmuoyaGScMmVH-DMW5cK21EM=w60-h60-l90-rj"
+  },
+  {
+    "video_id": "8-WlFLMDKlo",
+    "title": "Trust",
+    "artists": [
+      "Show Me The Body"
+    ],
+    "duration": "3:36",
+    "album": "Alone Together",
+    "like_status": "INDIFFERENT",
+    "duration_seconds": 216,
+    "thumbnail": "https://yt3.googleusercontent.com/LjZVW5b7icf2uDKoGDL2zEyUHlnBwkAG14ARHuQ4hdEJMUFl-b5NU2TXmuoyaGScMmVH-DMW5cK21EM=w60-h60-l90-rj"
+  },
+  {
+    "video_id": "AA8w1sEK2_s",
+    "title": "New Line",
+    "artists": [
+      "Show Me The Body"
+    ],
+    "duration": "2:19",
+    "album": "Alone Together",
+    "like_status": "INDIFFERENT",
+    "duration_seconds": 139,
+    "thumbnail": "https://yt3.googleusercontent.com/LjZVW5b7icf2uDKoGDL2zEyUHlnBwkAG14ARHuQ4hdEJMUFl-b5NU2TXmuoyaGScMmVH-DMW5cK21EM=w60-h60-l90-rj"
+  },
+  {
     "video_id": "dvC47bgwfl0",
     "title": "Mileage",
     "artists": [
@@ -389,7 +425,7 @@
     "title": "no flowers bloom",
     "artists": [
       "rozemary",
-      "218 views"
+      "219 views"
     ],
     "duration": "3:56",
     "album": null,
@@ -563,42 +599,6 @@
     "album": "Reach Beyond the Sun",
     "like_status": "LIKE",
     "duration_seconds": 211,
-    "thumbnail": "https://yt3.googleusercontent.com/rbRhPV6XVdqhcU0v5LpNKHWmj-gGQX23SRJtRn0_6TkcI4aSxKEOYb_8osMXGaReC78MNsMqoiwh0iY=w60-h60-l90-rj"
-  },
-  {
-    "video_id": "XBfx-DIW-b8",
-    "title": "Reach Beyond the Sun",
-    "artists": [
-      "Shai Hulud"
-    ],
-    "duration": "3:01",
-    "album": "Reach Beyond the Sun",
-    "like_status": "INDIFFERENT",
-    "duration_seconds": 181,
-    "thumbnail": "https://yt3.googleusercontent.com/rbRhPV6XVdqhcU0v5LpNKHWmj-gGQX23SRJtRn0_6TkcI4aSxKEOYb_8osMXGaReC78MNsMqoiwh0iY=w60-h60-l90-rj"
-  },
-  {
-    "video_id": "-I7V3e5qcfA",
-    "title": "I, Saturnine",
-    "artists": [
-      "Shai Hulud"
-    ],
-    "duration": "1:47",
-    "album": "Reach Beyond the Sun",
-    "like_status": "INDIFFERENT",
-    "duration_seconds": 107,
-    "thumbnail": "https://yt3.googleusercontent.com/rbRhPV6XVdqhcU0v5LpNKHWmj-gGQX23SRJtRn0_6TkcI4aSxKEOYb_8osMXGaReC78MNsMqoiwh0iY=w60-h60-l90-rj"
-  },
-  {
-    "video_id": "j_SstqSDQe8",
-    "title": "The Mean Spirits, Breathing",
-    "artists": [
-      "Shai Hulud"
-    ],
-    "duration": "2:57",
-    "album": "Reach Beyond the Sun",
-    "like_status": "INDIFFERENT",
-    "duration_seconds": 177,
     "thumbnail": "https://yt3.googleusercontent.com/rbRhPV6XVdqhcU0v5LpNKHWmj-gGQX23SRJtRn0_6TkcI4aSxKEOYb_8osMXGaReC78MNsMqoiwh0iY=w60-h60-l90-rj"
   }
 ]
