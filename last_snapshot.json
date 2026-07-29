@@ -1,5 +1,17 @@
 [
   {
+    "video_id": "4yuerYNSmKk",
+    "title": "Undead And Buried",
+    "artists": [
+      "Grim Legion"
+    ],
+    "duration": "3:21",
+    "album": "Harbingers Of Death",
+    "like_status": "INDIFFERENT",
+    "duration_seconds": 201,
+    "thumbnail": "https://yt3.googleusercontent.com/84I-UtxpSqXGKPEd71Yq7G9J63nhatyRYR5lme1f9VuXkFsmiQ3KQJYMeHWURFqFz6cQ8x6ln2IKovs6mQ=w60-h60-l90-rj"
+  },
+  {
     "video_id": "604egdeZNOU",
     "title": "Brussels Is Haunted",
     "artists": [
@@ -586,18 +598,6 @@
     "album": "Terminal Lucidity",
     "like_status": "INDIFFERENT",
     "duration_seconds": 194,
-    "thumbnail": "https://yt3.googleusercontent.com/a-sN4x-7Xi6zl9wuJgjJtDBqvsEzRn1O7POh2ug6CDHA3P29L_6GdU1afMT35jgglLTtsG5LSUtDzFQ=w60-h60-l90-rj"
-  },
-  {
-    "video_id": "FpmtvMuxFLs",
-    "title": "Into The Ether",
-    "artists": [
-      "The Primer"
-    ],
-    "duration": "3:06",
-    "album": "Terminal Lucidity",
-    "like_status": "INDIFFERENT",
-    "duration_seconds": 186,
     "thumbnail": "https://yt3.googleusercontent.com/a-sN4x-7Xi6zl9wuJgjJtDBqvsEzRn1O7POh2ug6CDHA3P29L_6GdU1afMT35jgglLTtsG5LSUtDzFQ=w60-h60-l90-rj"
   }
 ]
