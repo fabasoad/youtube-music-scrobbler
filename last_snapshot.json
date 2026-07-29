@@ -1,5 +1,114 @@
 [
   {
+    "video_id": "gkisk_14mnk",
+    "title": "Khlyst",
+    "artists": [
+      "Haserot"
+    ],
+    "duration": "3:23",
+    "album": "Advent of Suffering",
+    "like_status": "INDIFFERENT",
+    "duration_seconds": 203,
+    "thumbnail": "https://yt3.googleusercontent.com/APgP2-t23jejXr-ZKGADx4TVdqjXWN48mbXbWVGxkQPU8anKamj1-gQPxsgw5akRNLQuSVLAUTP32UFSOg=w60-h60-l90-rj"
+  },
+  {
+    "video_id": "PxyVPqJ7ZlQ",
+    "title": "Cruentis Omega",
+    "artists": [
+      "Haserot"
+    ],
+    "duration": "1:36",
+    "album": "Advent of Suffering",
+    "like_status": "INDIFFERENT",
+    "duration_seconds": 96,
+    "thumbnail": "https://yt3.googleusercontent.com/APgP2-t23jejXr-ZKGADx4TVdqjXWN48mbXbWVGxkQPU8anKamj1-gQPxsgw5akRNLQuSVLAUTP32UFSOg=w60-h60-l90-rj"
+  },
+  {
+    "video_id": "6JGGv-QRRI8",
+    "title": "Tears in Bethlehem",
+    "artists": [
+      "Haserot"
+    ],
+    "duration": "4:45",
+    "album": "Advent of Suffering",
+    "like_status": "INDIFFERENT",
+    "duration_seconds": 285,
+    "thumbnail": "https://yt3.googleusercontent.com/APgP2-t23jejXr-ZKGADx4TVdqjXWN48mbXbWVGxkQPU8anKamj1-gQPxsgw5akRNLQuSVLAUTP32UFSOg=w60-h60-l90-rj"
+  },
+  {
+    "video_id": "s6pvW8QFiDI",
+    "title": "Apophis",
+    "artists": [
+      "Haserot"
+    ],
+    "duration": "2:49",
+    "album": "Advent of Suffering",
+    "like_status": "INDIFFERENT",
+    "duration_seconds": 169,
+    "thumbnail": "https://yt3.googleusercontent.com/APgP2-t23jejXr-ZKGADx4TVdqjXWN48mbXbWVGxkQPU8anKamj1-gQPxsgw5akRNLQuSVLAUTP32UFSOg=w60-h60-l90-rj"
+  },
+  {
+    "video_id": "JR_IQnQ4A6I",
+    "title": "Poverty of Thought",
+    "artists": [
+      "Haserot"
+    ],
+    "duration": "3:50",
+    "album": "Advent of Suffering",
+    "like_status": "INDIFFERENT",
+    "duration_seconds": 230,
+    "thumbnail": "https://yt3.googleusercontent.com/APgP2-t23jejXr-ZKGADx4TVdqjXWN48mbXbWVGxkQPU8anKamj1-gQPxsgw5akRNLQuSVLAUTP32UFSOg=w60-h60-l90-rj"
+  },
+  {
+    "video_id": "dD2Cep4uUx0",
+    "title": "Advent of Suffering",
+    "artists": [
+      "Haserot"
+    ],
+    "duration": "5:51",
+    "album": "Advent of Suffering",
+    "like_status": "INDIFFERENT",
+    "duration_seconds": 351,
+    "thumbnail": "https://yt3.googleusercontent.com/APgP2-t23jejXr-ZKGADx4TVdqjXWN48mbXbWVGxkQPU8anKamj1-gQPxsgw5akRNLQuSVLAUTP32UFSOg=w60-h60-l90-rj"
+  },
+  {
+    "video_id": "MRstSSoBzfk",
+    "title": "Suicide Salvation",
+    "artists": [
+      "Grim Legion"
+    ],
+    "duration": "2:17",
+    "album": "Harbingers Of Death",
+    "like_status": "INDIFFERENT",
+    "duration_seconds": 137,
+    "thumbnail": "https://yt3.googleusercontent.com/84I-UtxpSqXGKPEd71Yq7G9J63nhatyRYR5lme1f9VuXkFsmiQ3KQJYMeHWURFqFz6cQ8x6ln2IKovs6mQ=w60-h60-l90-rj"
+  },
+  {
+    "video_id": "c39TVkEMOi4",
+    "title": "Slaughter Of Kings",
+    "artists": [
+      "Grim Legion"
+    ],
+    "duration": "4:00",
+    "album": "Harbingers Of Death",
+    "like_status": "INDIFFERENT",
+    "duration_seconds": 240,
+    "thumbnail": "https://yt3.googleusercontent.com/84I-UtxpSqXGKPEd71Yq7G9J63nhatyRYR5lme1f9VuXkFsmiQ3KQJYMeHWURFqFz6cQ8x6ln2IKovs6mQ=w60-h60-l90-rj"
+  },
+  {
+    "video_id": "3zf6Vyi7fS0",
+    "title": "The Machine",
+    "artists": [
+      "Reed Wonder",
+      "Aurora Olivas"
+    ],
+    "duration": "3:12",
+    "album": "The Machine",
+    "like_status": "INDIFFERENT",
+    "duration_seconds": 192,
+    "thumbnail": "https://yt3.googleusercontent.com/-OrMrp5BMrh2KXIPlSo8VMI1MFsPxGEbkS7d7K1HtZusKM6MQL50e0CAP0b3MFCLmheH_a8U3e64pWr3Ew=w60-h60-l90-rj"
+  },
+  {
     "video_id": "4yuerYNSmKk",
     "title": "Undead And Buried",
     "artists": [
@@ -491,113 +600,5 @@
     "like_status": "INDIFFERENT",
     "duration_seconds": 285,
     "thumbnail": "https://yt3.googleusercontent.com/aHYDX0CKfaOuJOkvmCqG-2GWnACTBLKHJOgUhthlGJsgGeCPffoBnlg6Mcgrdj-PAFHDNMXDDhXKO5j5=w60-h60-l90-rj"
-  },
-  {
-    "video_id": "5HpVpUDHbB8",
-    "title": "Rot 'N' Roll",
-    "artists": [
-      "Carcass"
-    ],
-    "duration": "3:50",
-    "album": "The Heartwork EP",
-    "like_status": "INDIFFERENT",
-    "duration_seconds": 230,
-    "thumbnail": "https://yt3.googleusercontent.com/D08N1OR4OBHWMhQNEhJBNob75aT_BLAHlrtrfRCgnVyrFcyo-CyECHs88O5osuFUcMyDELMxOPDQCNYI=w60-h60-l90-rj"
-  },
-  {
-    "video_id": "6YdLZRX97SU",
-    "title": "This Is Your Life",
-    "artists": [
-      "Carcass"
-    ],
-    "duration": "4:09",
-    "album": "The Heartwork EP",
-    "like_status": "INDIFFERENT",
-    "duration_seconds": 249,
-    "thumbnail": "https://yt3.googleusercontent.com/D08N1OR4OBHWMhQNEhJBNob75aT_BLAHlrtrfRCgnVyrFcyo-CyECHs88O5osuFUcMyDELMxOPDQCNYI=w60-h60-l90-rj"
-  },
-  {
-    "video_id": "UqQmC_9XiYI",
-    "title": "Heartwork",
-    "artists": [
-      "Carcass"
-    ],
-    "duration": "4:34",
-    "album": "The Heartwork EP",
-    "like_status": "INDIFFERENT",
-    "duration_seconds": 274,
-    "thumbnail": "https://yt3.googleusercontent.com/D08N1OR4OBHWMhQNEhJBNob75aT_BLAHlrtrfRCgnVyrFcyo-CyECHs88O5osuFUcMyDELMxOPDQCNYI=w60-h60-l90-rj"
-  },
-  {
-    "video_id": "u_WPpTSQv70",
-    "title": "Fallen at My Feet",
-    "artists": [
-      "Guilt Trip"
-    ],
-    "duration": "1:17",
-    "album": "Severance",
-    "like_status": "INDIFFERENT",
-    "duration_seconds": 77,
-    "thumbnail": "https://yt3.googleusercontent.com/sCDau2uKG_5ADgMZqTC0Skwa1qtL6FtlGihHeuCy5Z15fzMA5W9bdw5QvNcheT89TNyM_aVMNBaYHEvk=w60-h60-l90-rj"
-  },
-  {
-    "video_id": "f5WguOv29Uo",
-    "title": "Red Yeti (feat. Skye Sweetnam)",
-    "artists": [
-      "Nonpoint"
-    ],
-    "duration": "2:51",
-    "album": "Red Yeti",
-    "like_status": "INDIFFERENT",
-    "duration_seconds": 171,
-    "thumbnail": "https://yt3.googleusercontent.com/4Rz-Rpbr2yqmGTY6UUSwn8Vhqh1UUBBaYvDuR-8BVeozIQ4FltiMPeHFdv76sw3baM1oiGAK-Qqf4cg=w60-h60-l90-rj"
-  },
-  {
-    "video_id": "ilTtNUFOnsk",
-    "title": "Terminal Lucidity",
-    "artists": [
-      "The Primer"
-    ],
-    "duration": "3:13",
-    "album": "Terminal Lucidity",
-    "like_status": "INDIFFERENT",
-    "duration_seconds": 193,
-    "thumbnail": "https://yt3.googleusercontent.com/a-sN4x-7Xi6zl9wuJgjJtDBqvsEzRn1O7POh2ug6CDHA3P29L_6GdU1afMT35jgglLTtsG5LSUtDzFQ=w60-h60-l90-rj"
-  },
-  {
-    "video_id": "JPS6D5CqtT4",
-    "title": "Ashen",
-    "artists": [
-      "The Primer"
-    ],
-    "duration": "2:39",
-    "album": "Perpetual Cycles of Violence",
-    "like_status": "INDIFFERENT",
-    "duration_seconds": 159,
-    "thumbnail": "https://yt3.googleusercontent.com/KaJkJXorkHo6L79rtZ2R77Jq_lJAjKvBESwwt_5Vjk54VuvP2NxTjF54d2Sb4UcukP-uayx39u6ajCQC=w60-h60-l90-rj"
-  },
-  {
-    "video_id": "PgiQWPHnDJo",
-    "title": "Misanthropy Pure",
-    "artists": [
-      "Shai Hulud"
-    ],
-    "duration": "4:29",
-    "album": "Misanthropy Pure",
-    "like_status": "INDIFFERENT",
-    "duration_seconds": 269,
-    "thumbnail": "https://yt3.googleusercontent.com/ecMIe1_Uf8_3G1qvqrZmFE8OJiKFM-x5jQhU8B9eAR66yNe1pitkPUFGkXdXIExLbO1wKApVh4Oxwbhf=w60-h60-l90-rj"
-  },
-  {
-    "video_id": "ogFQXwURTwc",
-    "title": "Descent",
-    "artists": [
-      "The Primer"
-    ],
-    "duration": "3:14",
-    "album": "Terminal Lucidity",
-    "like_status": "INDIFFERENT",
-    "duration_seconds": 194,
-    "thumbnail": "https://yt3.googleusercontent.com/a-sN4x-7Xi6zl9wuJgjJtDBqvsEzRn1O7POh2ug6CDHA3P29L_6GdU1afMT35jgglLTtsG5LSUtDzFQ=w60-h60-l90-rj"
   }
 ]
