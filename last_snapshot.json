@@ -1,5 +1,41 @@
 [
   {
+    "video_id": "td6kx0fq3KE",
+    "title": "The Tenth Circle",
+    "artists": [
+      "Haserot"
+    ],
+    "duration": "4:44",
+    "album": "Advent of Suffering",
+    "like_status": "INDIFFERENT",
+    "duration_seconds": 284,
+    "thumbnail": "https://yt3.googleusercontent.com/APgP2-t23jejXr-ZKGADx4TVdqjXWN48mbXbWVGxkQPU8anKamj1-gQPxsgw5akRNLQuSVLAUTP32UFSOg=w60-h60-l90-rj"
+  },
+  {
+    "video_id": "hlXqry3xe6I",
+    "title": "Madness and the Void",
+    "artists": [
+      "Haserot"
+    ],
+    "duration": "3:35",
+    "album": "Advent of Suffering",
+    "like_status": "INDIFFERENT",
+    "duration_seconds": 215,
+    "thumbnail": "https://yt3.googleusercontent.com/APgP2-t23jejXr-ZKGADx4TVdqjXWN48mbXbWVGxkQPU8anKamj1-gQPxsgw5akRNLQuSVLAUTP32UFSOg=w60-h60-l90-rj"
+  },
+  {
+    "video_id": "e3kL3FIrhAo",
+    "title": "Beneath the Cairn",
+    "artists": [
+      "Haserot"
+    ],
+    "duration": "3:54",
+    "album": "Advent of Suffering",
+    "like_status": "INDIFFERENT",
+    "duration_seconds": 234,
+    "thumbnail": "https://yt3.googleusercontent.com/APgP2-t23jejXr-ZKGADx4TVdqjXWN48mbXbWVGxkQPU8anKamj1-gQPxsgw5akRNLQuSVLAUTP32UFSOg=w60-h60-l90-rj"
+  },
+  {
     "video_id": "gkisk_14mnk",
     "title": "Khlyst",
     "artists": [
@@ -233,7 +269,7 @@
     "title": "no flowers bloom",
     "artists": [
       "rozemary",
-      "216 views"
+      "217 views"
     ],
     "duration": "3:56",
     "album": null,
@@ -563,42 +599,6 @@
     "album": "Tools of the Trade",
     "like_status": "INDIFFERENT",
     "duration_seconds": 399,
-    "thumbnail": "https://yt3.googleusercontent.com/aHYDX0CKfaOuJOkvmCqG-2GWnACTBLKHJOgUhthlGJsgGeCPffoBnlg6Mcgrdj-PAFHDNMXDDhXKO5j5=w60-h60-l90-rj"
-  },
-  {
-    "video_id": "dNHz5ND7a0g",
-    "title": "Pyosified (Still Rotten to the Gore)",
-    "artists": [
-      "Carcass"
-    ],
-    "duration": "3:10",
-    "album": "Tools of the Trade",
-    "like_status": "INDIFFERENT",
-    "duration_seconds": 190,
-    "thumbnail": "https://yt3.googleusercontent.com/aHYDX0CKfaOuJOkvmCqG-2GWnACTBLKHJOgUhthlGJsgGeCPffoBnlg6Mcgrdj-PAFHDNMXDDhXKO5j5=w60-h60-l90-rj"
-  },
-  {
-    "video_id": "ag-iwPo33Cg",
-    "title": "Tools of the Trade",
-    "artists": [
-      "Carcass"
-    ],
-    "duration": "3:07",
-    "album": "Tools of the Trade",
-    "like_status": "INDIFFERENT",
-    "duration_seconds": 187,
-    "thumbnail": "https://yt3.googleusercontent.com/aHYDX0CKfaOuJOkvmCqG-2GWnACTBLKHJOgUhthlGJsgGeCPffoBnlg6Mcgrdj-PAFHDNMXDDhXKO5j5=w60-h60-l90-rj"
-  },
-  {
-    "video_id": "1hNZBq8800E",
-    "title": "Incarnated Solvent Abuse",
-    "artists": [
-      "Carcass"
-    ],
-    "duration": "4:45",
-    "album": "Tools of the Trade",
-    "like_status": "INDIFFERENT",
-    "duration_seconds": 285,
     "thumbnail": "https://yt3.googleusercontent.com/aHYDX0CKfaOuJOkvmCqG-2GWnACTBLKHJOgUhthlGJsgGeCPffoBnlg6Mcgrdj-PAFHDNMXDDhXKO5j5=w60-h60-l90-rj"
   }
 ]
