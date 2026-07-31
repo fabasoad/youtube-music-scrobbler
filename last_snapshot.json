@@ -1,5 +1,29 @@
 [
   {
+    "video_id": "ZaBzjbciby8",
+    "title": "Destroy Fascism (Too Good to Steal from Edition)",
+    "artists": [
+      "Heaven Shall Burn"
+    ],
+    "duration": "1:59",
+    "album": "Heimat",
+    "like_status": "INDIFFERENT",
+    "duration_seconds": 119,
+    "thumbnail": "https://yt3.googleusercontent.com/wM6v1xGkQThI7-lMGHpyAkfSKnquI2eNYaSl9mfrBqMNV_qLpPSLHPHwLqTg55ho8D2zUjtaYUpdBTI=w60-h60-l90-rj"
+  },
+  {
+    "video_id": "pmTWLC7lJ_g",
+    "title": "Eisenkopf",
+    "artists": [
+      "Heaven Shall Burn"
+    ],
+    "duration": "3:51",
+    "album": "Heimat",
+    "like_status": "INDIFFERENT",
+    "duration_seconds": 231,
+    "thumbnail": "https://yt3.googleusercontent.com/wM6v1xGkQThI7-lMGHpyAkfSKnquI2eNYaSl9mfrBqMNV_qLpPSLHPHwLqTg55ho8D2zUjtaYUpdBTI=w60-h60-l90-rj"
+  },
+  {
     "video_id": "PC4vepzlXz0",
     "title": "Schweineherbst (feat. D\u00ffse)",
     "artists": [
@@ -574,29 +598,5 @@
     "like_status": "INDIFFERENT",
     "duration_seconds": 221,
     "thumbnail": "https://yt3.googleusercontent.com/Jrcws67rGflH1eJNV3dpOsBP8JosmTswvHNUQ2jD_a8-_EBYNXkUAwzHRPIgsuxY0G9Xf5MQde-mJQKP=w60-h60-s-l90-rj"
-  },
-  {
-    "video_id": "0T-BCIFeqq8",
-    "title": "I WANNA BE YOUR SLAVE",
-    "artists": [
-      "M\u00e5neskin"
-    ],
-    "duration": "2:54",
-    "album": "Teatro d'ira - Vol. I",
-    "like_status": "LIKE",
-    "duration_seconds": 174,
-    "thumbnail": "https://yt3.googleusercontent.com/hxO_ffTTFP1Xyl2AnDh4FI81Q-LD9dUXqTop3o2DBUwZ-bUSPXQG69nFvgeEQ9TKzPneIhYg3UfmWz8=w60-h60-l90-rj"
-  },
-  {
-    "video_id": "pGjhnGXRAIo",
-    "title": "Fame < Infamy",
-    "artists": [
-      "Fall Out Boy"
-    ],
-    "duration": "3:07",
-    "album": "Infinity On High",
-    "like_status": "INDIFFERENT",
-    "duration_seconds": 187,
-    "thumbnail": "https://yt3.googleusercontent.com/xgxVFoIkLyQUIoiduh-mw4LQ2ja5s3w3b64zQGDg68oR4ad3wlkAuvpI-Ftppo0yAxcIFgrLGdnSKR4=w60-h60-s-l90-rj"
   }
 ]
