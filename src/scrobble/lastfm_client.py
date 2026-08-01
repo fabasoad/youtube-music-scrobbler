@@ -21,7 +21,7 @@ class LastFmClient:
     offset: int = 0
     for track in reversed(tracks):
       track.timestamp = now - offset
-      offset += track.duration_seconds
+      offset += track.duration_seconds or 0
     return tracks
 
   @staticmethod

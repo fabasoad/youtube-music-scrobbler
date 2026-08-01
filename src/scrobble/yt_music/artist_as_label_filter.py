@@ -2,6 +2,8 @@ from scrobble.yt_music.artist_filter import ArtistFilter
 
 
 class ArtistAsLabelFilter(ArtistFilter):
+  """Filters out music labels that YouTube Music incorrectly marks as artists."""
+
   def __init__(self) -> None:
     self.excluded_artists: list[str] = [
       # This label is marked as an artist in YouTube Music:
@@ -10,11 +12,7 @@ class ArtistAsLabelFilter(ArtistFilter):
       # We need to filter out InVogue Records and leave <Artist> only.
       "InVogue Records",
     ]
+    self._excluded_lower: set[str] = {a.casefold() for a in self.excluded_artists}
 
   def filter(self, artist: str) -> bool:
-    allow = True
-    for excluded_artist in self.excluded_artists:
-      if artist.casefold() == excluded_artist.casefold():
-        allow = False
-        break
-    return allow
+    return artist.casefold() not in self._excluded_lower
