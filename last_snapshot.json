@@ -1,5 +1,17 @@
 [
   {
+    "video_id": "Azprn03Hm04",
+    "title": "La R\u00e9sistance",
+    "artists": [
+      "Heaven Shall Burn"
+    ],
+    "duration": "5:07",
+    "album": "Of Truth And Sacrifice",
+    "like_status": "INDIFFERENT",
+    "duration_seconds": 307,
+    "thumbnail": "https://yt3.googleusercontent.com/TyoNQmCZWhJA7ZIXs2F6UB2irfxdh5-lVPzmuvYNseQ9_abApEXSFfb-T8YnMbi-ZbfkQUOX-GstDrY=w60-h60-l90-rj"
+  },
+  {
     "video_id": "z1KKulAl1KY",
     "title": "Children of a Lesser God",
     "artists": [
@@ -586,18 +598,6 @@
     "album": "So Much (For) Stardust",
     "like_status": "INDIFFERENT",
     "duration_seconds": 218,
-    "thumbnail": "https://yt3.googleusercontent.com/qKbrr-JHBgCtKr8UcXhLQH1jE9TIoNLCa8zNq3Ondt6Z-KlLIAlQ8YFPQQpqQ_mpN0kOPnepUXw9nXyRXw=w60-h60-l90-rj"
-  },
-  {
-    "video_id": "k-nq6eb3eTo",
-    "title": "I Am My Own Muse",
-    "artists": [
-      "Fall Out Boy"
-    ],
-    "duration": "3:46",
-    "album": "So Much (For) Stardust",
-    "like_status": "INDIFFERENT",
-    "duration_seconds": 226,
     "thumbnail": "https://yt3.googleusercontent.com/qKbrr-JHBgCtKr8UcXhLQH1jE9TIoNLCa8zNq3Ondt6Z-KlLIAlQ8YFPQQpqQ_mpN0kOPnepUXw9nXyRXw=w60-h60-l90-rj"
   }
 ]
