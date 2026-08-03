@@ -1,5 +1,41 @@
 [
   {
+    "video_id": "3kMDzaJ5j_o",
+    "title": "Tirpitz",
+    "artists": [
+      "Heaven Shall Burn"
+    ],
+    "duration": "5:55",
+    "album": "Of Truth And Sacrifice",
+    "like_status": "INDIFFERENT",
+    "duration_seconds": 355,
+    "thumbnail": "https://yt3.googleusercontent.com/TyoNQmCZWhJA7ZIXs2F6UB2irfxdh5-lVPzmuvYNseQ9_abApEXSFfb-T8YnMbi-ZbfkQUOX-GstDrY=w60-h60-l90-rj"
+  },
+  {
+    "video_id": "nFENs7526eM",
+    "title": "Stateless",
+    "artists": [
+      "Heaven Shall Burn"
+    ],
+    "duration": "3:50",
+    "album": "Of Truth And Sacrifice",
+    "like_status": "INDIFFERENT",
+    "duration_seconds": 230,
+    "thumbnail": "https://yt3.googleusercontent.com/TyoNQmCZWhJA7ZIXs2F6UB2irfxdh5-lVPzmuvYNseQ9_abApEXSFfb-T8YnMbi-ZbfkQUOX-GstDrY=w60-h60-l90-rj"
+  },
+  {
+    "video_id": "XpjUPWE9ibI",
+    "title": "The Sorrows of Victory (feat. Lord Of The Lost)",
+    "artists": [
+      "Heaven Shall Burn"
+    ],
+    "duration": "8:26",
+    "album": "Of Truth And Sacrifice",
+    "like_status": "INDIFFERENT",
+    "duration_seconds": 506,
+    "thumbnail": "https://yt3.googleusercontent.com/TyoNQmCZWhJA7ZIXs2F6UB2irfxdh5-lVPzmuvYNseQ9_abApEXSFfb-T8YnMbi-ZbfkQUOX-GstDrY=w60-h60-l90-rj"
+  },
+  {
     "video_id": "Azprn03Hm04",
     "title": "La R\u00e9sistance",
     "artists": [
@@ -562,42 +598,6 @@
     "album": "So Much (For) Stardust",
     "like_status": "INDIFFERENT",
     "duration_seconds": 223,
-    "thumbnail": "https://yt3.googleusercontent.com/qKbrr-JHBgCtKr8UcXhLQH1jE9TIoNLCa8zNq3Ondt6Z-KlLIAlQ8YFPQQpqQ_mpN0kOPnepUXw9nXyRXw=w60-h60-l90-rj"
-  },
-  {
-    "video_id": "uEvZCV4m8jo",
-    "title": "The Kintsugi Kid (Ten Years)",
-    "artists": [
-      "Fall Out Boy"
-    ],
-    "duration": "3:56",
-    "album": "So Much (For) Stardust",
-    "like_status": "INDIFFERENT",
-    "duration_seconds": 236,
-    "thumbnail": "https://yt3.googleusercontent.com/qKbrr-JHBgCtKr8UcXhLQH1jE9TIoNLCa8zNq3Ondt6Z-KlLIAlQ8YFPQQpqQ_mpN0kOPnepUXw9nXyRXw=w60-h60-l90-rj"
-  },
-  {
-    "video_id": "Q2cJUoEMJLw",
-    "title": "Baby Annihilation",
-    "artists": [
-      "Fall Out Boy"
-    ],
-    "duration": "1:08",
-    "album": "So Much (For) Stardust",
-    "like_status": "INDIFFERENT",
-    "duration_seconds": 68,
-    "thumbnail": "https://yt3.googleusercontent.com/qKbrr-JHBgCtKr8UcXhLQH1jE9TIoNLCa8zNq3Ondt6Z-KlLIAlQ8YFPQQpqQ_mpN0kOPnepUXw9nXyRXw=w60-h60-l90-rj"
-  },
-  {
-    "video_id": "ZYDloJPoXRI",
-    "title": "Flu Game",
-    "artists": [
-      "Fall Out Boy"
-    ],
-    "duration": "3:38",
-    "album": "So Much (For) Stardust",
-    "like_status": "INDIFFERENT",
-    "duration_seconds": 218,
     "thumbnail": "https://yt3.googleusercontent.com/qKbrr-JHBgCtKr8UcXhLQH1jE9TIoNLCa8zNq3Ondt6Z-KlLIAlQ8YFPQQpqQ_mpN0kOPnepUXw9nXyRXw=w60-h60-l90-rj"
   }
 ]
