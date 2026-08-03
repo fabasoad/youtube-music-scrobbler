@@ -1,5 +1,89 @@
 [
   {
+    "video_id": "Vmds5CG_H2Y",
+    "title": "Nixy",
+    "artists": [
+      "Future Palace"
+    ],
+    "duration": "3:21",
+    "album": "Resurgence",
+    "like_status": "LIKE",
+    "duration_seconds": 201,
+    "thumbnail": "https://yt3.googleusercontent.com/kaEJikLacTCqJWTn7enh3f8_P_vfrI6egX8MGYXqAk7-wVkkEmos1QAXMbiV2dhsD397bVrnqktUMXw=w60-h60-l90-rj"
+  },
+  {
+    "video_id": "ZL8quoSo1sY",
+    "title": "The Shades",
+    "artists": [
+      "Future Palace"
+    ],
+    "duration": "2:41",
+    "album": "Resurgence",
+    "like_status": "INDIFFERENT",
+    "duration_seconds": 161,
+    "thumbnail": "https://yt3.googleusercontent.com/kaEJikLacTCqJWTn7enh3f8_P_vfrI6egX8MGYXqAk7-wVkkEmos1QAXMbiV2dhsD397bVrnqktUMXw=w60-h60-l90-rj"
+  },
+  {
+    "video_id": "vZHG4-cwgiM",
+    "title": "Disintegrate",
+    "artists": [
+      "Future Palace"
+    ],
+    "duration": "3:12",
+    "album": "Resurgence",
+    "like_status": "INDIFFERENT",
+    "duration_seconds": 192,
+    "thumbnail": "https://yt3.googleusercontent.com/kaEJikLacTCqJWTn7enh3f8_P_vfrI6egX8MGYXqAk7-wVkkEmos1QAXMbiV2dhsD397bVrnqktUMXw=w60-h60-l90-rj"
+  },
+  {
+    "video_id": "rHIpQIO_Eow",
+    "title": "Supernova",
+    "artists": [
+      "Future Palace"
+    ],
+    "duration": "4:07",
+    "album": "Resurgence",
+    "like_status": "LIKE",
+    "duration_seconds": 247,
+    "thumbnail": "https://yt3.googleusercontent.com/kaEJikLacTCqJWTn7enh3f8_P_vfrI6egX8MGYXqAk7-wVkkEmos1QAXMbiV2dhsD397bVrnqktUMXw=w60-h60-l90-rj"
+  },
+  {
+    "video_id": "4YQ7XXFLxlI",
+    "title": "Resurge",
+    "artists": [
+      "Future Palace"
+    ],
+    "duration": "3:17",
+    "album": "Resurgence",
+    "like_status": "INDIFFERENT",
+    "duration_seconds": 197,
+    "thumbnail": "https://yt3.googleusercontent.com/kaEJikLacTCqJWTn7enh3f8_P_vfrI6egX8MGYXqAk7-wVkkEmos1QAXMbiV2dhsD397bVrnqktUMXw=w60-h60-l90-rj"
+  },
+  {
+    "video_id": "so3MezwJgGs",
+    "title": "Deep Blue",
+    "artists": [
+      "Future Palace"
+    ],
+    "duration": "2:53",
+    "album": "Resurgence",
+    "like_status": "INDIFFERENT",
+    "duration_seconds": 173,
+    "thumbnail": "https://yt3.googleusercontent.com/kaEJikLacTCqJWTn7enh3f8_P_vfrI6egX8MGYXqAk7-wVkkEmos1QAXMbiV2dhsD397bVrnqktUMXw=w60-h60-l90-rj"
+  },
+  {
+    "video_id": "orEKvzSw6DU",
+    "title": "Eagles Among Vultures",
+    "artists": [
+      "Heaven Shall Burn"
+    ],
+    "duration": "5:07",
+    "album": "Of Truth And Sacrifice",
+    "like_status": "INDIFFERENT",
+    "duration_seconds": 307,
+    "thumbnail": "https://yt3.googleusercontent.com/TyoNQmCZWhJA7ZIXs2F6UB2irfxdh5-lVPzmuvYNseQ9_abApEXSFfb-T8YnMbi-ZbfkQUOX-GstDrY=w60-h60-l90-rj"
+  },
+  {
     "video_id": "e-HsW8R47XU",
     "title": "Critical Mass",
     "artists": [
@@ -515,89 +599,5 @@
     "like_status": "INDIFFERENT",
     "duration_seconds": 193,
     "thumbnail": "https://yt3.googleusercontent.com/5-qyEVZXwTRljJ2AtbgGdzvNoo_JXDOr6NIdpJWMzwT5AyaTwmGcEYdhBy30aipbNjNKc6aanIzmiCSv=w60-h60-l90-rj"
-  },
-  {
-    "video_id": "Ztos1mhVx78",
-    "title": "Heaven\u2019s Gate",
-    "artists": [
-      "Fall Out Boy"
-    ],
-    "duration": "3:46",
-    "album": "MANIA",
-    "like_status": "INDIFFERENT",
-    "duration_seconds": 226,
-    "thumbnail": "https://yt3.googleusercontent.com/5-qyEVZXwTRljJ2AtbgGdzvNoo_JXDOr6NIdpJWMzwT5AyaTwmGcEYdhBy30aipbNjNKc6aanIzmiCSv=w60-h60-l90-rj"
-  },
-  {
-    "video_id": "mJGT21-xxyE",
-    "title": "Church",
-    "artists": [
-      "Fall Out Boy"
-    ],
-    "duration": "3:32",
-    "album": "MANIA",
-    "like_status": "INDIFFERENT",
-    "duration_seconds": 212,
-    "thumbnail": "https://yt3.googleusercontent.com/5-qyEVZXwTRljJ2AtbgGdzvNoo_JXDOr6NIdpJWMzwT5AyaTwmGcEYdhBy30aipbNjNKc6aanIzmiCSv=w60-h60-l90-rj"
-  },
-  {
-    "video_id": "a1SufF16YXU",
-    "title": "Wilson (Expensive Mistakes)",
-    "artists": [
-      "Fall Out Boy"
-    ],
-    "duration": "3:37",
-    "album": "MANIA",
-    "like_status": "INDIFFERENT",
-    "duration_seconds": 217,
-    "thumbnail": "https://yt3.googleusercontent.com/5-qyEVZXwTRljJ2AtbgGdzvNoo_JXDOr6NIdpJWMzwT5AyaTwmGcEYdhBy30aipbNjNKc6aanIzmiCSv=w60-h60-l90-rj"
-  },
-  {
-    "video_id": "65ER4SmNq8c",
-    "title": "HOLD ME TIGHT OR DON\u2019T",
-    "artists": [
-      "Fall Out Boy"
-    ],
-    "duration": "3:31",
-    "album": "MANIA",
-    "like_status": "INDIFFERENT",
-    "duration_seconds": 211,
-    "thumbnail": "https://yt3.googleusercontent.com/5-qyEVZXwTRljJ2AtbgGdzvNoo_JXDOr6NIdpJWMzwT5AyaTwmGcEYdhBy30aipbNjNKc6aanIzmiCSv=w60-h60-l90-rj"
-  },
-  {
-    "video_id": "vV2rvrqlWL8",
-    "title": "The Last Of The Real Ones",
-    "artists": [
-      "Fall Out Boy"
-    ],
-    "duration": "3:51",
-    "album": "MANIA",
-    "like_status": "INDIFFERENT",
-    "duration_seconds": 231,
-    "thumbnail": "https://yt3.googleusercontent.com/5-qyEVZXwTRljJ2AtbgGdzvNoo_JXDOr6NIdpJWMzwT5AyaTwmGcEYdhBy30aipbNjNKc6aanIzmiCSv=w60-h60-l90-rj"
-  },
-  {
-    "video_id": "dxnKj8NAzUA",
-    "title": "Stay Frosty Royal Milk Tea",
-    "artists": [
-      "Fall Out Boy"
-    ],
-    "duration": "2:52",
-    "album": "MANIA",
-    "like_status": "INDIFFERENT",
-    "duration_seconds": 172,
-    "thumbnail": "https://yt3.googleusercontent.com/5-qyEVZXwTRljJ2AtbgGdzvNoo_JXDOr6NIdpJWMzwT5AyaTwmGcEYdhBy30aipbNjNKc6aanIzmiCSv=w60-h60-l90-rj"
-  },
-  {
-    "video_id": "Yv9UNaDp2UU",
-    "title": "We Didn\u2019t Start The Fire (Bonus Track)",
-    "artists": [
-      "Fall Out Boy"
-    ],
-    "duration": "3:36",
-    "album": "So Much (For) Stardust",
-    "like_status": "LIKE",
-    "duration_seconds": 216,
-    "thumbnail": "https://yt3.googleusercontent.com/qKbrr-JHBgCtKr8UcXhLQH1jE9TIoNLCa8zNq3Ondt6Z-KlLIAlQ8YFPQQpqQ_mpN0kOPnepUXw9nXyRXw=w60-h60-l90-rj"
   }
 ]
