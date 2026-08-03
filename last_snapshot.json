@@ -1,5 +1,29 @@
 [
   {
+    "video_id": "e-HsW8R47XU",
+    "title": "Critical Mass",
+    "artists": [
+      "Heaven Shall Burn"
+    ],
+    "duration": "3:36",
+    "album": "Of Truth And Sacrifice",
+    "like_status": "INDIFFERENT",
+    "duration_seconds": 216,
+    "thumbnail": "https://yt3.googleusercontent.com/TyoNQmCZWhJA7ZIXs2F6UB2irfxdh5-lVPzmuvYNseQ9_abApEXSFfb-T8YnMbi-ZbfkQUOX-GstDrY=w60-h60-l90-rj"
+  },
+  {
+    "video_id": "kGRnPxXE7UE",
+    "title": "Truther",
+    "artists": [
+      "Heaven Shall Burn"
+    ],
+    "duration": "2:42",
+    "album": "Of Truth And Sacrifice",
+    "like_status": "INDIFFERENT",
+    "duration_seconds": 162,
+    "thumbnail": "https://yt3.googleusercontent.com/TyoNQmCZWhJA7ZIXs2F6UB2irfxdh5-lVPzmuvYNseQ9_abApEXSFfb-T8YnMbi-ZbfkQUOX-GstDrY=w60-h60-l90-rj"
+  },
+  {
     "video_id": "3kMDzaJ5j_o",
     "title": "Tirpitz",
     "artists": [
@@ -574,30 +598,6 @@
     "album": "So Much (For) Stardust",
     "like_status": "LIKE",
     "duration_seconds": 216,
-    "thumbnail": "https://yt3.googleusercontent.com/qKbrr-JHBgCtKr8UcXhLQH1jE9TIoNLCa8zNq3Ondt6Z-KlLIAlQ8YFPQQpqQ_mpN0kOPnepUXw9nXyRXw=w60-h60-l90-rj"
-  },
-  {
-    "video_id": "4Xl4WQo2xcA",
-    "title": "So Much (For) Stardust",
-    "artists": [
-      "Fall Out Boy"
-    ],
-    "duration": "4:52",
-    "album": "So Much (For) Stardust",
-    "like_status": "LIKE",
-    "duration_seconds": 292,
-    "thumbnail": "https://yt3.googleusercontent.com/qKbrr-JHBgCtKr8UcXhLQH1jE9TIoNLCa8zNq3Ondt6Z-KlLIAlQ8YFPQQpqQ_mpN0kOPnepUXw9nXyRXw=w60-h60-l90-rj"
-  },
-  {
-    "video_id": "cYk9-uwpCi8",
-    "title": "What a Time To Be Alive",
-    "artists": [
-      "Fall Out Boy"
-    ],
-    "duration": "3:43",
-    "album": "So Much (For) Stardust",
-    "like_status": "INDIFFERENT",
-    "duration_seconds": 223,
     "thumbnail": "https://yt3.googleusercontent.com/qKbrr-JHBgCtKr8UcXhLQH1jE9TIoNLCa8zNq3Ondt6Z-KlLIAlQ8YFPQQpqQ_mpN0kOPnepUXw9nXyRXw=w60-h60-l90-rj"
   }
 ]
