@@ -1,5 +1,29 @@
 [
   {
+    "video_id": "SNw41nBRtqQ",
+    "title": "Symphony of the Clouds",
+    "artists": [
+      "Future Palace"
+    ],
+    "duration": "3:06",
+    "album": "Resurgence",
+    "like_status": "INDIFFERENT",
+    "duration_seconds": 186,
+    "thumbnail": "https://yt3.googleusercontent.com/kaEJikLacTCqJWTn7enh3f8_P_vfrI6egX8MGYXqAk7-wVkkEmos1QAXMbiV2dhsD397bVrnqktUMXw=w60-h60-l90-rj"
+  },
+  {
+    "video_id": "yBptTh0QZ54",
+    "title": "Nightfall",
+    "artists": [
+      "Future Palace"
+    ],
+    "duration": "4:54",
+    "album": "Resurgence",
+    "like_status": "INDIFFERENT",
+    "duration_seconds": 294,
+    "thumbnail": "https://yt3.googleusercontent.com/kaEJikLacTCqJWTn7enh3f8_P_vfrI6egX8MGYXqAk7-wVkkEmos1QAXMbiV2dhsD397bVrnqktUMXw=w60-h60-l90-rj"
+  },
+  {
     "video_id": "lbvNaZTMF8M",
     "title": "S. P.",
     "artists": [
@@ -574,30 +598,6 @@
     "album": "Heimat",
     "like_status": "INDIFFERENT",
     "duration_seconds": 253,
-    "thumbnail": "https://yt3.googleusercontent.com/wM6v1xGkQThI7-lMGHpyAkfSKnquI2eNYaSl9mfrBqMNV_qLpPSLHPHwLqTg55ho8D2zUjtaYUpdBTI=w60-h60-l90-rj"
-  },
-  {
-    "video_id": "aQevkCCjtPs",
-    "title": "Numbered Days (feat. Jesse Leach & Killswitch Engage)",
-    "artists": [
-      "Heaven Shall Burn"
-    ],
-    "duration": "3:40",
-    "album": "Heimat",
-    "like_status": "INDIFFERENT",
-    "duration_seconds": 220,
-    "thumbnail": "https://yt3.googleusercontent.com/wM6v1xGkQThI7-lMGHpyAkfSKnquI2eNYaSl9mfrBqMNV_qLpPSLHPHwLqTg55ho8D2zUjtaYUpdBTI=w60-h60-l90-rj"
-  },
-  {
-    "video_id": "3FDoc8NVIEg",
-    "title": "Ten Days in May",
-    "artists": [
-      "Heaven Shall Burn"
-    ],
-    "duration": "4:38",
-    "album": "Heimat",
-    "like_status": "INDIFFERENT",
-    "duration_seconds": 278,
     "thumbnail": "https://yt3.googleusercontent.com/wM6v1xGkQThI7-lMGHpyAkfSKnquI2eNYaSl9mfrBqMNV_qLpPSLHPHwLqTg55ho8D2zUjtaYUpdBTI=w60-h60-l90-rj"
   }
 ]
