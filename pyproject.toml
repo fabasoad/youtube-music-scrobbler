@@ -2,7 +2,7 @@
 name = "youtube-music-scrobbler"
 version = "0.1.0"
 description = "Automatically scrobbles your YouTube Music listening history to Last.fm"
-requires-python = ">=3.12"
+requires-python = ">=3.14"
 dependencies = [
   "pylast==7.1.0",
   "ytmusicapi==1.12.1",
@@ -33,7 +33,7 @@ packages = ["src/scrobble"]
 testpaths = ["tests"]
 
 [tool.ruff]
-target-version = "py312"
+target-version = "py314"
 line-length = 110
 indent-width = 2
 exclude = ["CLAUDE.md"]

@@ -41,7 +41,7 @@ your Google account except your own browser cookies.
 
 - A [GitHub](https://github.com) account
 - A [Last.fm](https://www.last.fm) account with API access
-- Python 3.12+ on your local machine (for the one-time setup)
+- Python 3.14+ on your local machine (for the one-time setup)
 - A YouTube Music account with listening history enabled
 
 ---
