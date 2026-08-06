@@ -1,0 +1,335 @@
+2026-08-06T14:28:18.0439799Z Current runner version: '2.336.0'
+2026-08-06T14:28:18.0490977Z ##[group]Runner Image Provisioner
+2026-08-06T14:28:18.0492527Z Hosted Compute Agent
+2026-08-06T14:28:18.0493636Z Version: 20260707.563
+2026-08-06T14:28:18.0494711Z Commit: 02667638d2b423fbc733a8e32a88b44996a3ba6e
+2026-08-06T14:28:18.0495897Z Build Date: 2026-07-07T19:33:50Z
+2026-08-06T14:28:18.0497096Z Worker ID: {799f6aa8-bba7-4cee-87fe-122a18e0103f}
+2026-08-06T14:28:18.0498256Z Azure Region: westcentralus
+2026-08-06T14:28:18.0499295Z ##[endgroup]
+2026-08-06T14:28:18.0501132Z ##[group]Operating System
+2026-08-06T14:28:18.0502367Z Ubuntu
+2026-08-06T14:28:18.0503304Z 24.04.4
+2026-08-06T14:28:18.0504266Z LTS
+2026-08-06T14:28:18.0505161Z ##[endgroup]
+2026-08-06T14:28:18.0506175Z ##[group]Runner Image
+2026-08-06T14:28:18.0507246Z Image: ubuntu-24.04
+2026-08-06T14:28:18.0508237Z Version: 20260720.247.2
+2026-08-06T14:28:18.0510062Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260720.247/images/ubuntu/Ubuntu2404-Readme.md
+2026-08-06T14:28:18.0512251Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260720.247
+2026-08-06T14:28:18.0513747Z ##[endgroup]
+2026-08-06T14:28:18.0515478Z ##[group]GITHUB_TOKEN Permissions
+2026-08-06T14:28:18.0517919Z Contents: write
+2026-08-06T14:28:18.0518960Z Metadata: read
+2026-08-06T14:28:18.0519956Z ##[endgroup]
+2026-08-06T14:28:18.0522668Z Secret source: Actions
+2026-08-06T14:28:18.0524369Z Prepare workflow directory
+2026-08-06T14:28:18.0974471Z Prepare all required actions
+2026-08-06T14:28:18.1021830Z Getting action download info
+2026-08-06T14:28:18.4247855Z Download action repository 'actions/create-github-app-token@v3' (SHA:bcd2ba49218906704ab6c1aa796996da409d3eb1)
+2026-08-06T14:28:19.0991253Z Download action repository 'actions/checkout@v7' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
+2026-08-06T14:28:19.6656739Z Download action repository 'actions/setup-python@v6' (SHA:ece7cb06caefa5fff74198d8649806c4678c61a1)
+2026-08-06T14:28:19.7837226Z Download action repository 'astral-sh/setup-uv@11f9893b081a58869d3b5fccaea48c9e9e46f990' (SHA:11f9893b081a58869d3b5fccaea48c9e9e46f990)
+2026-08-06T14:28:20.7413132Z Download action repository 'pyTooling/Actions@6f3d6d20558fd3891554da44666a148767e33a67' (SHA:6f3d6d20558fd3891554da44666a148767e33a67)
+2026-08-06T14:28:21.7835127Z Complete job name: Scrobble
+2026-08-06T14:28:21.8510187Z ##[warning]Input 'app-id' has been deprecated with message: Use 'client-id' instead.
+2026-08-06T14:28:21.8621946Z ##[group]Run actions/create-github-app-token@v3
+2026-08-06T14:28:21.8622776Z with:
+2026-08-06T14:28:21.8623127Z   app-id: 2100307
+2026-08-06T14:28:21.8630752Z   private-key: ***
+2026-08-06T14:28:21.8631140Z   skip-token-revoke: false
+2026-08-06T14:28:21.8631567Z   github-api-url: https://api.github.com
+2026-08-06T14:28:21.8632553Z ##[endgroup]
+2026-08-06T14:28:21.9431482Z Inputs 'owner' and 'repositories' are not set. Creating token for this repository (fabasoad/youtube-music-scrobbler).
+2026-08-06T14:28:22.4550863Z ##[group]Run actions/checkout@v7
+2026-08-06T14:28:22.4551334Z with:
+2026-08-06T14:28:22.4552175Z   token: ***
+2026-08-06T14:28:22.4552553Z   persist-credentials: true
+2026-08-06T14:28:22.4553002Z   repository: fabasoad/youtube-music-scrobbler
+2026-08-06T14:28:22.4553464Z   ssh-strict: true
+2026-08-06T14:28:22.4553814Z   ssh-user: git
+2026-08-06T14:28:22.4554153Z   clean: true
+2026-08-06T14:28:22.4554516Z   sparse-checkout-cone-mode: true
+2026-08-06T14:28:22.4554924Z   fetch-depth: 1
+2026-08-06T14:28:22.4555269Z   fetch-tags: false
+2026-08-06T14:28:22.4555629Z   show-progress: true
+2026-08-06T14:28:22.4556017Z   lfs: false
+2026-08-06T14:28:22.4556379Z   submodules: false
+2026-08-06T14:28:22.4556740Z   set-safe-directory: true
+2026-08-06T14:28:22.4557144Z   allow-unsafe-pr-checkout: false
+2026-08-06T14:28:22.4557578Z ##[endgroup]
+2026-08-06T14:28:22.5512656Z Syncing repository: fabasoad/youtube-music-scrobbler
+2026-08-06T14:28:22.5514935Z ##[group]Getting Git version info
+2026-08-06T14:28:22.5516075Z Working directory is '/home/runner/work/youtube-music-scrobbler/youtube-music-scrobbler'
+2026-08-06T14:28:22.5517943Z [command]/usr/bin/git version
+2026-08-06T14:28:22.5543121Z git version 2.54.0
+2026-08-06T14:28:22.5562331Z ##[endgroup]
+2026-08-06T14:28:22.5582340Z Temporarily overriding HOME='/home/runner/work/_temp/e7c3a2bc-d5ae-4bde-84be-a9d55db9d361' before making global git config changes
+2026-08-06T14:28:22.5584059Z Adding repository directory to the temporary git global config as a safe directory
+2026-08-06T14:28:22.5588456Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/youtube-music-scrobbler/youtube-music-scrobbler
+2026-08-06T14:28:22.5631355Z Deleting the contents of '/home/runner/work/youtube-music-scrobbler/youtube-music-scrobbler'
+2026-08-06T14:28:22.5634835Z ##[group]Determining repository object format
+2026-08-06T14:28:22.5636376Z ##[endgroup]
+2026-08-06T14:28:22.5637401Z ##[group]Initializing the repository
+2026-08-06T14:28:22.5641009Z [command]/usr/bin/git init /home/runner/work/youtube-music-scrobbler/youtube-music-scrobbler
+2026-08-06T14:28:22.5725855Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-08-06T14:28:22.5726881Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-08-06T14:28:22.5728428Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-08-06T14:28:22.5729427Z hint: call:
+2026-08-06T14:28:22.5729997Z hint:
+2026-08-06T14:28:22.5730900Z hint: 	git config --global init.defaultBranch <name>
+2026-08-06T14:28:22.5732096Z hint:
+2026-08-06T14:28:22.5733085Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-08-06T14:28:22.5734453Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-08-06T14:28:22.5735611Z hint:
+2026-08-06T14:28:22.5736360Z hint: 	git branch -m <name>
+2026-08-06T14:28:22.5737125Z hint:
+2026-08-06T14:28:22.5738097Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-08-06T14:28:22.5739821Z Initialized empty Git repository in /home/runner/work/youtube-music-scrobbler/youtube-music-scrobbler/.git/
+2026-08-06T14:28:22.5743443Z [command]/usr/bin/git remote add origin https://github.com/fabasoad/youtube-music-scrobbler
+2026-08-06T14:28:22.5795716Z ##[endgroup]
+2026-08-06T14:28:22.5796992Z ##[group]Disabling automatic garbage collection
+2026-08-06T14:28:22.5798143Z [command]/usr/bin/git config --local gc.auto 0
+2026-08-06T14:28:22.5830256Z ##[endgroup]
+2026-08-06T14:28:22.5831128Z ##[group]Setting up auth
+2026-08-06T14:28:22.5832047Z Removing SSH command configuration
+2026-08-06T14:28:22.5841800Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-08-06T14:28:22.5874059Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-08-06T14:28:22.6213675Z Removing HTTP extra header
+2026-08-06T14:28:22.6220087Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-08-06T14:28:22.6258231Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-08-06T14:28:22.6523011Z Removing includeIf entries pointing to credentials config files
+2026-08-06T14:28:22.6528254Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-08-06T14:28:22.6565753Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-08-06T14:28:22.6807879Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-1df970c2-aaa1-4c42-9173-c78ffffa39ea.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-08-06T14:28:22.6849919Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/youtube-music-scrobbler/youtube-music-scrobbler/.git.path /home/runner/work/_temp/git-credentials-1df970c2-aaa1-4c42-9173-c78ffffa39ea.config
+2026-08-06T14:28:22.6885241Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/youtube-music-scrobbler/youtube-music-scrobbler/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-1df970c2-aaa1-4c42-9173-c78ffffa39ea.config
+2026-08-06T14:28:22.6924500Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-1df970c2-aaa1-4c42-9173-c78ffffa39ea.config
+2026-08-06T14:28:22.6962433Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-1df970c2-aaa1-4c42-9173-c78ffffa39ea.config
+2026-08-06T14:28:22.6996760Z ##[endgroup]
+2026-08-06T14:28:22.6997640Z ##[group]Fetching the repository
+2026-08-06T14:28:22.7004246Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +6ceb0aab6ce9805681f89fec2a0bd40c264f64f7:refs/remotes/origin/main
+2026-08-06T14:28:23.1303383Z From https://github.com/fabasoad/youtube-music-scrobbler
+2026-08-06T14:28:23.1304984Z  * [new ref]         6ceb0aab6ce9805681f89fec2a0bd40c264f64f7 -> origin/main
+2026-08-06T14:28:23.1345174Z [command]/usr/bin/git branch --list --remote origin/main
+2026-08-06T14:28:23.1379571Z   origin/main
+2026-08-06T14:28:23.1389175Z [command]/usr/bin/git rev-parse refs/remotes/origin/main
+2026-08-06T14:28:23.1418433Z 6ceb0aab6ce9805681f89fec2a0bd40c264f64f7
+2026-08-06T14:28:23.1424426Z ##[endgroup]
+2026-08-06T14:28:23.1425413Z ##[group]Determining the checkout info
+2026-08-06T14:28:23.1426479Z ##[endgroup]
+2026-08-06T14:28:23.1428212Z [command]/usr/bin/git sparse-checkout disable
+2026-08-06T14:28:23.1479850Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-08-06T14:28:23.1517692Z ##[group]Checking out the ref
+2026-08-06T14:28:23.1521298Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-08-06T14:28:23.1605212Z Switched to a new branch 'main'
+2026-08-06T14:28:23.1607658Z branch 'main' set up to track 'origin/main'.
+2026-08-06T14:28:23.1620406Z ##[endgroup]
+2026-08-06T14:28:23.1667512Z [command]/usr/bin/git log -1 --format=%H
+2026-08-06T14:28:23.1702191Z 6ceb0aab6ce9805681f89fec2a0bd40c264f64f7
+2026-08-06T14:28:23.1914494Z ##[group]Run actions/setup-python@v6
+2026-08-06T14:28:23.1914914Z with:
+2026-08-06T14:28:23.1915260Z   python-version-file: pyproject.toml
+2026-08-06T14:28:23.1915667Z   check-latest: false
+2026-08-06T14:28:23.1918198Z   token: ***
+2026-08-06T14:28:23.1918546Z   update-environment: true
+2026-08-06T14:28:23.1918925Z   allow-prereleases: false
+2026-08-06T14:28:23.1919283Z   freethreaded: false
+2026-08-06T14:28:23.1919632Z ##[endgroup]
+2026-08-06T14:28:23.3192704Z Extracted >=3.14 from pyproject.toml
+2026-08-06T14:28:23.3212849Z ##[group]Installed versions
+2026-08-06T14:28:23.3289653Z Successfully set up CPython (3.14.6)
+2026-08-06T14:28:23.3290700Z ##[endgroup]
+2026-08-06T14:28:23.3557917Z ##[group]Run astral-sh/setup-uv@11f9893b081a58869d3b5fccaea48c9e9e46f990
+2026-08-06T14:28:23.3558658Z with:
+2026-08-06T14:28:23.3559024Z   version-file: pyproject.toml
+2026-08-06T14:28:23.3559590Z   activate-environment: false
+2026-08-06T14:28:23.3560043Z   no-project: false
+2026-08-06T14:28:23.3560598Z   working-directory: /home/runner/work/youtube-music-scrobbler/youtube-music-scrobbler
+2026-08-06T14:28:23.3565437Z   github-token: ***
+2026-08-06T14:28:23.3566044Z   enable-cache: auto
+2026-08-06T14:28:23.3567171Z   cache-dependency-glob: **/*requirements*.txt
+**/*requirements*.in
+**/*constraints*.txt
+**/*constraints*.in
+**/pyproject.toml
+**/uv.lock
+**/*.py.lock
+
+2026-08-06T14:28:23.3568364Z   restore-cache: true
+2026-08-06T14:28:23.3568872Z   save-cache: true
+2026-08-06T14:28:23.3569354Z   prune-cache: true
+2026-08-06T14:28:23.3569909Z   cache-python: false
+2026-08-06T14:28:23.3570439Z   ignore-nothing-to-cache: false
+2026-08-06T14:28:23.3571107Z   ignore-empty-workdir: false
+2026-08-06T14:28:23.3572444Z   download-from-astral-mirror: true
+2026-08-06T14:28:23.3573191Z   add-problem-matchers: true
+2026-08-06T14:28:23.3573810Z   quiet: false
+2026-08-06T14:28:23.3574377Z   resolution-strategy: highest
+2026-08-06T14:28:23.3574987Z env:
+2026-08-06T14:28:23.3575648Z   pythonLocation: /opt/hostedtoolcache/Python/3.14.6/x64
+2026-08-06T14:28:23.3576601Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.14.6/x64/lib/pkgconfig
+2026-08-06T14:28:23.3577527Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.6/x64
+2026-08-06T14:28:23.3578277Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.6/x64
+2026-08-06T14:28:23.3578803Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.6/x64
+2026-08-06T14:28:23.3579432Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.14.6/x64/lib
+2026-08-06T14:28:23.3580056Z ##[endgroup]
+2026-08-06T14:28:23.5298282Z Trying to find version for uv in: /home/runner/work/youtube-music-scrobbler/youtube-music-scrobbler/pyproject.toml
+2026-08-06T14:28:23.5323314Z Found version for uv in /home/runner/work/youtube-music-scrobbler/youtube-music-scrobbler/pyproject.toml: >=0.11.28
+2026-08-06T14:28:23.5383688Z Found minimum version specifier, using latest version
+2026-08-06T14:28:23.5384501Z Fetching manifest data from https://raw.githubusercontent.com/astral-sh/versions/main/v1/uv.ndjson ...
+2026-08-06T14:28:23.6783163Z Downloading uv from "https://releases.astral.sh/github/uv/releases/download/0.12.2/uv-x86_64-unknown-linux-gnu.tar.gz" ...
+2026-08-06T14:28:24.6123413Z [command]/usr/bin/tar xz --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/0a5215f5-f8ff-428f-99a0-f9e129497ce1 -f /home/runner/work/_temp/61fd7da5-3553-401f-8103-24ef3265b70e
+2026-08-06T14:28:25.0778970Z Added /home/runner/.local/bin to the path
+2026-08-06T14:28:25.0782371Z Added /opt/hostedtoolcache/uv/0.12.2/x86_64 to the path
+2026-08-06T14:28:25.0783912Z Set UV_PYTHON_INSTALL_DIR to /home/runner/work/_temp/uv-python-dir
+2026-08-06T14:28:25.0784976Z Added /home/runner/work/_temp/uv-python-dir to the path
+2026-08-06T14:28:25.0795059Z Set UV_CACHE_DIR to /home/runner/work/_temp/setup-uv-cache
+2026-08-06T14:28:25.0795730Z Successfully installed uv version 0.12.2
+2026-08-06T14:28:25.7467131Z Searching files using cache dependency glob: /home/runner/work/youtube-music-scrobbler/youtube-music-scrobbler/**/*requirements*.txt,/home/runner/work/youtube-music-scrobbler/youtube-music-scrobbler/**/*requirements*.in,/home/runner/work/youtube-music-scrobbler/youtube-music-scrobbler/**/*constraints*.txt,/home/runner/work/youtube-music-scrobbler/youtube-music-scrobbler/**/*constraints*.in,/home/runner/work/youtube-music-scrobbler/youtube-music-scrobbler/**/pyproject.toml,/home/runner/work/youtube-music-scrobbler/youtube-music-scrobbler/**/uv.lock,/home/runner/work/youtube-music-scrobbler/youtube-music-scrobbler/**/*.py.lock
+2026-08-06T14:28:25.7915973Z /home/runner/work/youtube-music-scrobbler/youtube-music-scrobbler/pyproject.toml
+2026-08-06T14:28:25.7963053Z /home/runner/work/youtube-music-scrobbler/youtube-music-scrobbler/uv.lock
+2026-08-06T14:28:25.7970182Z Found 2 files to hash.
+2026-08-06T14:28:25.8043560Z Trying to restore cache from GitHub Actions cache with key: setup-uv-2-x86_64-unknown-linux-gnu-ubuntu-24.04-3.14.6-pruned-ba4c514967f2e8fa61b5a15c8148c07e3b3328b976803e8a93486b594edc1300
+2026-08-06T14:28:26.0200032Z Cache hit for: setup-uv-2-x86_64-unknown-linux-gnu-ubuntu-24.04-3.14.6-pruned-ba4c514967f2e8fa61b5a15c8148c07e3b3328b976803e8a93486b594edc1300
+2026-08-06T14:28:26.5213908Z Received 70819 of 70819 (100.0%), 0.2 MBs/sec
+2026-08-06T14:28:26.5214787Z Cache Size: ~0 MB (70819 B)
+2026-08-06T14:28:26.5243481Z [command]/usr/bin/tar -xf /home/runner/work/_temp/878734c4-6929-483b-ba57-53e926a7b4e8/cache.tzst -P -C /home/runner/work/youtube-music-scrobbler/youtube-music-scrobbler --use-compress-program unzstd
+2026-08-06T14:28:26.5327398Z Cache restored successfully
+2026-08-06T14:28:26.5331842Z cache restored from GitHub Actions cache with key: setup-uv-2-x86_64-unknown-linux-gnu-ubuntu-24.04-3.14.6-pruned-ba4c514967f2e8fa61b5a15c8148c07e3b3328b976803e8a93486b594edc1300
+2026-08-06T14:28:26.6486659Z ##[group]Run make install
+2026-08-06T14:28:26.6487133Z [36;1mmake install[0m
+2026-08-06T14:28:26.6516353Z shell: /usr/bin/sh -e {0}
+2026-08-06T14:28:26.6516755Z env:
+2026-08-06T14:28:26.6517166Z   pythonLocation: /opt/hostedtoolcache/Python/3.14.6/x64
+2026-08-06T14:28:26.6517766Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.14.6/x64/lib/pkgconfig
+2026-08-06T14:28:26.6518345Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.6/x64
+2026-08-06T14:28:26.6518894Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.6/x64
+2026-08-06T14:28:26.6519438Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.6/x64
+2026-08-06T14:28:26.6519977Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.14.6/x64/lib
+2026-08-06T14:28:26.6520528Z   UV_PYTHON_INSTALL_DIR: /home/runner/work/_temp/uv-python-dir
+2026-08-06T14:28:26.6521074Z   UV_CACHE_DIR: /home/runner/work/_temp/setup-uv-cache
+2026-08-06T14:28:26.6521567Z ##[endgroup]
+2026-08-06T14:28:26.6606260Z uv sync
+2026-08-06T14:28:26.6722149Z Using CPython 3.14.6 interpreter at: /opt/hostedtoolcache/Python/3.14.6/x64/bin/python3
+2026-08-06T14:28:26.6723151Z Creating virtual environment at: .venv
+2026-08-06T14:28:26.6740246Z Resolved 21 packages in 0.59ms
+2026-08-06T14:28:26.6811151Z    Building youtube-music-scrobbler @ file:///home/runner/work/youtube-music-scrobbler/youtube-music-scrobbler
+2026-08-06T14:28:26.8115771Z Downloading pygments (1.2MiB)
+2026-08-06T14:28:26.8116474Z Downloading ruff (10.9MiB)
+2026-08-06T14:28:27.0549469Z  Downloaded pygments
+2026-08-06T14:28:27.1007693Z  Downloaded ruff
+2026-08-06T14:28:27.9360915Z       Built youtube-music-scrobbler @ file:///home/runner/work/youtube-music-scrobbler/youtube-music-scrobbler
+2026-08-06T14:28:27.9369595Z Prepared 20 packages in 1.26s
+2026-08-06T14:28:27.9508804Z Installed 20 packages in 13ms
+2026-08-06T14:28:27.9509438Z  + anyio==4.14.2
+2026-08-06T14:28:27.9509986Z  + certifi==2026.7.22
+2026-08-06T14:28:27.9510570Z  + charset-normalizer==3.4.9
+2026-08-06T14:28:27.9511185Z  + h11==0.16.0
+2026-08-06T14:28:27.9511878Z  + httpcore2==2.9.1
+2026-08-06T14:28:27.9512417Z  + httpx2==2.9.1
+2026-08-06T14:28:27.9512915Z  + idna==3.18
+2026-08-06T14:28:27.9513418Z  + iniconfig==2.3.0
+2026-08-06T14:28:27.9513939Z  + packaging==26.2
+2026-08-06T14:28:27.9514454Z  + pluggy==1.6.0
+2026-08-06T14:28:27.9514969Z  + pygments==2.20.0
+2026-08-06T14:28:27.9515535Z  + pylast==7.1.0
+2026-08-06T14:28:27.9516059Z  + pylistenbrainz==0.5.1
+2026-08-06T14:28:27.9516630Z  + pytest==9.1.1
+2026-08-06T14:28:27.9517141Z  + requests==2.34.2
+2026-08-06T14:28:27.9517655Z  + ruff==0.16.0
+2026-08-06T14:28:27.9518157Z  + truststore==0.10.4
+2026-08-06T14:28:27.9518619Z  + urllib3==2.7.0
+2026-08-06T14:28:27.9519482Z  + youtube-music-scrobbler==0.1.0 (from file:///home/runner/work/youtube-music-scrobbler/youtube-music-scrobbler)
+2026-08-06T14:28:27.9520509Z  + ytmusicapi==1.12.1
+2026-08-06T14:28:27.9701935Z ##[group]Run pyTooling/Actions/with-post-step@6f3d6d20558fd3891554da44666a148767e33a67
+2026-08-06T14:28:27.9702575Z with:
+2026-08-06T14:28:27.9702936Z   main: echo "${YTM_BROWSER}" > browser.json
+2026-08-06T14:28:27.9703376Z   post: rm -f browser.json
+2026-08-06T14:28:27.9703761Z   key: POST
+2026-08-06T14:28:27.9704076Z env:
+2026-08-06T14:28:27.9704465Z   pythonLocation: /opt/hostedtoolcache/Python/3.14.6/x64
+2026-08-06T14:28:27.9705051Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.14.6/x64/lib/pkgconfig
+2026-08-06T14:28:27.9705611Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.6/x64
+2026-08-06T14:28:27.9706132Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.6/x64
+2026-08-06T14:28:27.9706630Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.6/x64
+2026-08-06T14:28:27.9707142Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.14.6/x64/lib
+2026-08-06T14:28:27.9707673Z   UV_PYTHON_INSTALL_DIR: /home/runner/work/_temp/uv-python-dir
+2026-08-06T14:28:27.9708211Z   UV_CACHE_DIR: /home/runner/work/_temp/setup-uv-cache
+2026-08-06T14:28:27.9730122Z   YTM_BROWSER: ***
+2026-08-06T14:28:27.9730703Z ##[endgroup]
+2026-08-06T14:28:28.0107804Z ##[group]Run make run
+2026-08-06T14:28:28.0108200Z [36;1mmake run[0m
+2026-08-06T14:28:28.0132820Z shell: /usr/bin/sh -e {0}
+2026-08-06T14:28:28.0133193Z env:
+2026-08-06T14:28:28.0133595Z   pythonLocation: /opt/hostedtoolcache/Python/3.14.6/x64
+2026-08-06T14:28:28.0134180Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.14.6/x64/lib/pkgconfig
+2026-08-06T14:28:28.0134742Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.6/x64
+2026-08-06T14:28:28.0135256Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.6/x64
+2026-08-06T14:28:28.0135760Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.6/x64
+2026-08-06T14:28:28.0136263Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.14.6/x64/lib
+2026-08-06T14:28:28.0136802Z   UV_PYTHON_INSTALL_DIR: /home/runner/work/_temp/uv-python-dir
+2026-08-06T14:28:28.0137317Z   UV_CACHE_DIR: /home/runner/work/_temp/setup-uv-cache
+2026-08-06T14:28:28.0137893Z   LASTFM_API_KEY: ***
+2026-08-06T14:28:28.0138294Z   LASTFM_SECRET: ***
+2026-08-06T14:28:28.0138711Z   LASTFM_USERNAME: ***
+2026-08-06T14:28:28.0139113Z   LASTFM_PASSWORD: ***
+2026-08-06T14:28:28.0139526Z   LISTENBRAINZ_TOKEN: ***
+2026-08-06T14:28:28.0139884Z ##[endgroup]
+2026-08-06T14:28:28.0194595Z uv run scrobble
+2026-08-06T14:28:30.3093195Z [Last.fm] Scrobbler configured.
+2026-08-06T14:28:30.3099262Z Traceback (most recent call last):
+2026-08-06T14:28:30.3112109Z   File "/home/runner/work/youtube-music-scrobbler/youtube-music-scrobbler/.venv/bin/scrobble", line 10, in <module>
+2026-08-06T14:28:30.3112875Z     sys.exit(main())
+2026-08-06T14:28:30.3113238Z              ~~~~^^
+2026-08-06T14:28:30.3113935Z   File "/home/runner/work/youtube-music-scrobbler/youtube-music-scrobbler/src/scrobble/main.py", line 85, in main
+2026-08-06T14:28:30.3114658Z     scrobblers: list[Scrobbler] = build_scrobblers()
+2026-08-06T14:28:30.3115128Z                                   ~~~~~~~~~~~~~~~~^^
+2026-08-06T14:28:30.3115903Z   File "/home/runner/work/youtube-music-scrobbler/youtube-music-scrobbler/src/scrobble/main.py", line 74, in build_scrobblers
+2026-08-06T14:28:30.3116683Z     scrobblers.append(ListenBrainzScrobbler())
+2026-08-06T14:28:30.3117133Z                       ~~~~~~~~~~~~~~~~~~~~~^^
+2026-08-06T14:28:30.3117940Z   File "/home/runner/work/youtube-music-scrobbler/youtube-music-scrobbler/src/scrobble/scrobblers/listenbrainz.py", line 14, in __init__
+2026-08-06T14:28:30.3118772Z     self.client.set_auth_token(os.environ["LISTENBRAINZ_TOKEN"])
+2026-08-06T14:28:30.3119287Z     ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-08-06T14:28:30.3120220Z   File "/home/runner/work/youtube-music-scrobbler/youtube-music-scrobbler/.venv/lib/python3.14/site-packages/pylistenbrainz/client.py", line 185, in set_auth_token
+2026-08-06T14:28:30.3121150Z     raise errors.InvalidAuthTokenException
+2026-08-06T14:28:30.3121749Z pylistenbrainz.errors.InvalidAuthTokenException
+2026-08-06T14:28:30.3494721Z make: *** [Makefile:3: run] Error 1
+2026-08-06T14:28:30.3503231Z ##[error]Process completed with exit code 2.
+2026-08-06T14:28:30.3586775Z Post job cleanup.
+2026-08-06T14:28:30.4063427Z Post job cleanup.
+2026-08-06T14:28:30.4957136Z [command]/usr/bin/git version
+2026-08-06T14:28:30.4999717Z git version 2.54.0
+2026-08-06T14:28:30.5046873Z Temporarily overriding HOME='/home/runner/work/_temp/2209320f-c2dc-49c0-b2c2-4e680e71dd59' before making global git config changes
+2026-08-06T14:28:30.5047992Z Adding repository directory to the temporary git global config as a safe directory
+2026-08-06T14:28:30.5052538Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/youtube-music-scrobbler/youtube-music-scrobbler
+2026-08-06T14:28:30.5087340Z Removing SSH command configuration
+2026-08-06T14:28:30.5094346Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-08-06T14:28:30.5131431Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-08-06T14:28:30.5418477Z Removing HTTP extra header
+2026-08-06T14:28:30.5419564Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-08-06T14:28:30.5460478Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-08-06T14:28:30.5752170Z Removing includeIf entries pointing to credentials config files
+2026-08-06T14:28:30.5759254Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-08-06T14:28:30.5793106Z includeif.gitdir:/home/runner/work/youtube-music-scrobbler/youtube-music-scrobbler/.git.path
+2026-08-06T14:28:30.5795923Z includeif.gitdir:/home/runner/work/youtube-music-scrobbler/youtube-music-scrobbler/.git/worktrees/*.path
+2026-08-06T14:28:30.5797336Z includeif.gitdir:/github/workspace/.git.path
+2026-08-06T14:28:30.5798396Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-08-06T14:28:30.5805254Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/youtube-music-scrobbler/youtube-music-scrobbler/.git.path
+2026-08-06T14:28:30.5832443Z /home/runner/work/_temp/git-credentials-1df970c2-aaa1-4c42-9173-c78ffffa39ea.config
+2026-08-06T14:28:30.5848113Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/youtube-music-scrobbler/youtube-music-scrobbler/.git.path \/home\/runner\/work\/_temp\/git\-credentials\-1df970c2\-aaa1\-4c42\-9173\-c78ffffa39ea\.config
+2026-08-06T14:28:30.5893800Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/youtube-music-scrobbler/youtube-music-scrobbler/.git/worktrees/*.path
+2026-08-06T14:28:30.5922486Z /home/runner/work/_temp/git-credentials-1df970c2-aaa1-4c42-9173-c78ffffa39ea.config
+2026-08-06T14:28:30.5946173Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/youtube-music-scrobbler/youtube-music-scrobbler/.git/worktrees/*.path \/home\/runner\/work\/_temp\/git\-credentials\-1df970c2\-aaa1\-4c42\-9173\-c78ffffa39ea\.config
+2026-08-06T14:28:30.5996167Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+2026-08-06T14:28:30.6015631Z /github/runner_temp/git-credentials-1df970c2-aaa1-4c42-9173-c78ffffa39ea.config
+2026-08-06T14:28:30.6033143Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path \/github\/runner_temp\/git\-credentials\-1df970c2\-aaa1\-4c42\-9173\-c78ffffa39ea\.config
+2026-08-06T14:28:30.6074699Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-08-06T14:28:30.6118395Z /github/runner_temp/git-credentials-1df970c2-aaa1-4c42-9173-c78ffffa39ea.config
+2026-08-06T14:28:30.6125887Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-1df970c2\-aaa1\-4c42\-9173\-c78ffffa39ea\.config
+2026-08-06T14:28:30.6173365Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-08-06T14:28:30.6470529Z Removing credentials config '/home/runner/work/_temp/git-credentials-1df970c2-aaa1-4c42-9173-c78ffffa39ea.config'
+2026-08-06T14:28:30.6682167Z ##[warning]Input 'app-id' has been deprecated with message: Use 'client-id' instead.
+2026-08-06T14:28:30.6726090Z Post job cleanup.
+2026-08-06T14:28:31.0264941Z Token revoked
+2026-08-06T14:28:31.0700269Z Cleaning up orphan processes

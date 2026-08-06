@@ -71,8 +71,11 @@ def build_scrobblers() -> list[Scrobbler]:
     scrobblers.append(LastFmScrobbler())
     print("[Last.fm] Scrobbler configured.")
   if os.environ.get("LISTENBRAINZ_TOKEN"):
-    scrobblers.append(ListenBrainzScrobbler())
-    print("[ListenBrainz] Scrobbler configured.")
+    try:
+      scrobblers.append(ListenBrainzScrobbler())
+      print("[ListenBrainz] Scrobbler configured.")
+    except Exception as e:
+      print(f"[ListenBrainz] Failed to configure scrobbler: {e}")
   else:
     print("[ListenBrainz] Not configured. Missing: LISTENBRAINZ_TOKEN")
   if not scrobblers:
