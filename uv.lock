@@ -162,6 +162,18 @@ wheels = [
 ]
 
 [[package]]
+name = "pylistenbrainz"
+version = "0.5.1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "requests" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/e3/11/24ca2dcec2be635728521610274088888fbf721e5cc0e2302d658fe8ebf2/pylistenbrainz-0.5.1.tar.gz", hash = "sha256:20f4649bad2e5d5e949ad0bf9238c4e632a8df0a0b2b2220bd055506fb95ab48", size = 11292, upload-time = "2021-12-11T18:45:29.904Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/17/07/1af138c78dafcea3d1e5262b148cdf589593ff00cdf6db34effc69a89012/pylistenbrainz-0.5.1-py3-none-any.whl", hash = "sha256:5d56c281898f0ff3a75ade720a09fbfe56832e277fd0c2b5cc0949848c46dfc2", size = 28890, upload-time = "2021-12-11T18:45:24.547Z" },
+]
+
+[[package]]
 name = "pytest"
 version = "9.1.1"
 source = { registry = "https://pypi.org/simple" }
@@ -241,6 +253,7 @@ version = "0.1.0"
 source = { editable = "." }
 dependencies = [
     { name = "pylast" },
+    { name = "pylistenbrainz" },
     { name = "ytmusicapi" },
 ]
 
@@ -253,6 +266,7 @@ dev = [
 [package.metadata]
 requires-dist = [
     { name = "pylast", specifier = "==7.1.0" },
+    { name = "pylistenbrainz", specifier = ">=0.5.1" },
     { name = "ytmusicapi", specifier = "==1.12.1" },
 ]
 

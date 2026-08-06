@@ -2,9 +2,11 @@ import os
 import sys
 from datetime import UTC
 
-from scrobble.lastfm_client import LastFmClient
+from scrobble.scrobblers.base import Scrobbler
+from scrobble.scrobblers.lastfm import LastFmScrobbler
+from scrobble.scrobblers.listenbrainz import ListenBrainzScrobbler
 from scrobble.snapshot_manager import SnapshotManager
-from scrobble.types import YouTubeMusicTrack
+from scrobble.types import ScrobblerTrack, YouTubeMusicTrack, prepare_tracks
 from scrobble.yt_music.youtube_music_client import YouTubeMusicClient
 
 
@@ -59,9 +61,21 @@ def write_summary(tracks: list[YouTubeMusicTrack]) -> None:
       )
 
 
+def build_scrobblers() -> list[Scrobbler]:
+  scrobblers: list[Scrobbler] = []
+  lastfm_vars = ("LASTFM_API_KEY", "LASTFM_SECRET", "LASTFM_USERNAME", "LASTFM_PASSWORD")
+  if all(os.environ.get(v) for v in lastfm_vars):
+    scrobblers.append(LastFmScrobbler())
+  if os.environ.get("LISTENBRAINZ_TOKEN"):
+    scrobblers.append(ListenBrainzScrobbler())
+  if not scrobblers:
+    raise RuntimeError("No scrobblers configured. Set at least one set of credentials.")
+  return scrobblers
+
+
 def main() -> None:
   yt_music_client = YouTubeMusicClient()
-  lastfm_client = LastFmClient()
+  scrobblers: list[Scrobbler] = build_scrobblers()
   snapshot_manager = SnapshotManager()
 
   try:
@@ -69,8 +83,11 @@ def main() -> None:
     new_tracks: list[YouTubeMusicTrack] = snapshot_manager.get_diff_from_snapshot(current)
 
     if new_tracks:
-      scrobbled: int = lastfm_client.scrobble(new_tracks)
-      lastfm_client.update_like_status(new_tracks)
+      prepared: list[ScrobblerTrack] = prepare_tracks(new_tracks)
+      scrobbled: int = 0
+      for scrobbler in scrobblers:
+        scrobbled = max(scrobbled, scrobbler.scrobble(prepared))
+        scrobbler.update_like_status(prepared)
     else:
       print("No new tracks to scrobble.")
       scrobbled = 0
