@@ -30,12 +30,13 @@ class LastFmScrobbler(Scrobbler):
         duration_part: str = LastFmScrobbler._format_duration(track.duration)
         if track.like_status == "LIKE":
           pylast_track.love()
-          print(f"Liked: [{duration_part}] {track.artist} — {track.title}{album_part}")
+          print(f"[Last.fm] Liked: [{duration_part}] {track.artist} — {track.title}{album_part}")
         else:
           pylast_track.unlove()
-          print(f"Disliked: [{duration_part}] {track.artist} — {track.title}{album_part}")
+          print(f"[Last.fm] Disliked: [{duration_part}] {track.artist} — {track.title}{album_part}")
 
   def scrobble(self, tracks: list[ScrobblerTrack]) -> int:
+    print(f"[Last.fm] Scrobbling {len(tracks)} track(s)...")
     scrobbled: int = 0
     for track in tracks:
       for attempt in range(3):
@@ -50,15 +51,16 @@ class LastFmScrobbler(Scrobbler):
           )
           album_part: str = "" if track.album is None else f" ({track.album})"
           duration_part: str = LastFmScrobbler._format_duration(track.duration)
-          print(f"Scrobbled: [{duration_part}] {track.artist} — {track.title}{album_part}")
+          print(f"[Last.fm] Scrobbled: [{duration_part}] {track.artist} — {track.title}{album_part}")
           scrobbled += 1
           time.sleep(1)
           break
         except (pylast.NetworkError, pylast.MalformedResponseError) as e:
-          print(f"Attempt {attempt + 1} failed for {track.title}: {e}")
+          print(f"[Last.fm] Attempt {attempt + 1} failed for {track.title}: {e}")
           if attempt < 2:
             time.sleep(5)
           else:
-            print(f"Skipping: {track.title} after 3 failed attempts")
+            print(f"[Last.fm] Skipping: {track.title} after 3 failed attempts")
 
+    print(f"[Last.fm] Done. {scrobbled}/{len(tracks)} track(s) scrobbled.")
     return scrobbled

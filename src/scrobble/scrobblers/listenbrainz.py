@@ -14,6 +14,7 @@ class ListenBrainzScrobbler(Scrobbler):
     self.client.set_auth_token(os.environ["LISTENBRAINZ_TOKEN"])
 
   def scrobble(self, tracks: list[ScrobblerTrack]) -> int:
+    print(f"[ListenBrainz] Scrobbling {len(tracks)} track(s)...")
     listens: list[pylistenbrainz.Listen] = [
       pylistenbrainz.Listen(
         track_name=track.title,
@@ -31,8 +32,9 @@ class ListenBrainzScrobbler(Scrobbler):
         duration_part: str = "N/A"
         if track.duration:
           duration_part = f"0{track.duration}" if len(track.duration) == 4 else track.duration
-        print(f"Scrobbled: [{duration_part}] {track.artist} — {track.title}{album_part}")
+        print(f"[ListenBrainz] Scrobbled: [{duration_part}] {track.artist} — {track.title}{album_part}")
+      print(f"[ListenBrainz] Done. {len(listens)}/{len(tracks)} track(s) scrobbled.")
       return len(listens)
     except pylistenbrainz.errors.ListenBrainzException as e:
-      print(f"ListenBrainz submission failed: {e}")
+      print(f"[ListenBrainz] Submission failed: {e}")
       return 0

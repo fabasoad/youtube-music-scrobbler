@@ -64,10 +64,17 @@ def write_summary(tracks: list[YouTubeMusicTrack]) -> None:
 def build_scrobblers() -> list[Scrobbler]:
   scrobblers: list[Scrobbler] = []
   lastfm_vars = ("LASTFM_API_KEY", "LASTFM_SECRET", "LASTFM_USERNAME", "LASTFM_PASSWORD")
-  if all(os.environ.get(v) for v in lastfm_vars):
+  missing_lastfm: list[str] = [v for v in lastfm_vars if not os.environ.get(v)]
+  if missing_lastfm:
+    print(f"[Last.fm] Not configured. Missing: {', '.join(missing_lastfm)}")
+  else:
     scrobblers.append(LastFmScrobbler())
+    print("[Last.fm] Scrobbler configured.")
   if os.environ.get("LISTENBRAINZ_TOKEN"):
     scrobblers.append(ListenBrainzScrobbler())
+    print("[ListenBrainz] Scrobbler configured.")
+  else:
+    print("[ListenBrainz] Not configured. Missing: LISTENBRAINZ_TOKEN")
   if not scrobblers:
     raise RuntimeError("No scrobblers configured. Set at least one set of credentials.")
   return scrobblers
