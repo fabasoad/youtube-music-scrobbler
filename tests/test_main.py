@@ -9,10 +9,10 @@ from scrobble.scrobblers.listenbrainz import ListenBrainzScrobbler
 from scrobble.types import YouTubeMusicTrack
 
 LASTFM_VARS = {
-  "LASTFM_API_KEY": "key",
-  "LASTFM_SECRET": "secret",
+  "LASTFM_API_KEY": "key",  # pragma: allowlist secret
+  "LASTFM_SECRET": "secret",  # pragma: allowlist secret
   "LASTFM_USERNAME": "user",
-  "LASTFM_PASSWORD": "pass",
+  "LASTFM_PASSWORD": "pass",  # pragma: allowlist secret
 }
 
 

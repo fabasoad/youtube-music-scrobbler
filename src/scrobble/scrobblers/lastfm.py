@@ -1,36 +1,10 @@
 import os
 import time
-from dataclasses import dataclass
 
 import pylast
 
 from scrobble.scrobblers.base import Scrobbler
-from scrobble.types import YouTubeMusicTrack
-
-
-@dataclass
-class LastFmTrack:
-  artist: str
-  title: str
-  timestamp: int
-  album: str | None
-  album_artist: str | None
-  duration: str | None
-  duration_seconds: int | None
-
-
-def convert_track_ytm_to_lfm(track: YouTubeMusicTrack, timestamp: int) -> LastFmTrack:
-  artist: str = " & ".join(track.artists) if track.artists else "Unknown Artist"
-  album_artist: str = track.artists[0] if track.artists else "Unknown Artist"
-  return LastFmTrack(
-    artist=artist,
-    title=track.title,
-    timestamp=timestamp,
-    album=track.album,
-    album_artist=album_artist,
-    duration=track.duration,
-    duration_seconds=track.duration_seconds,
-  )
+from scrobble.types import ScrobblerTrack
 
 
 class LastFmScrobbler(Scrobbler):
@@ -43,56 +17,48 @@ class LastFmScrobbler(Scrobbler):
     )
 
   @staticmethod
-  def _log_like_status(prefix: str, track: YouTubeMusicTrack) -> None:
-    artist_part: str = " & ".join(track.artists) if track.artists else "Unknown Artist"
-    album_part: str = "" if track.album is None else f" ({track.album})"
-    duration_part: str = " N/A "
-    if track.duration:
-      duration_part = f"0{track.duration}" if len(track.duration) == 4 else track.duration
-    print(f"{prefix}: [{duration_part}] {artist_part} — {track.title}{album_part}")
+  def _format_duration(duration: str | None) -> str:
+    if not duration:
+      return "N/A"
+    return f"0{duration}" if len(duration) == 4 else duration
 
-  def update_like_status(self, tracks: list[YouTubeMusicTrack]) -> None:
+  def update_like_status(self, tracks: list[ScrobblerTrack]) -> None:
     for track in tracks:
       if track.like_status != "INDIFFERENT":
-        artist: str = " & ".join(track.artists) if track.artists else "Unknown Artist"
-        pylast_track: pylast.Track = self.network.get_track(artist, track.title)
+        pylast_track: pylast.Track = self.network.get_track(track.artist, track.title)
+        album_part: str = "" if track.album is None else f" ({track.album})"
+        duration_part: str = LastFmScrobbler._format_duration(track.duration)
         if track.like_status == "LIKE":
           pylast_track.love()
-          LastFmScrobbler._log_like_status("Liked", track)
+          print(f"Liked: [{duration_part}] {track.artist} — {track.title}{album_part}")
         else:
           pylast_track.unlove()
-          LastFmScrobbler._log_like_status("Disliked", track)
+          print(f"Disliked: [{duration_part}] {track.artist} — {track.title}{album_part}")
 
-  def scrobble(self, tracks: list[YouTubeMusicTrack]) -> int:
-    timestamped = Scrobbler.assign_timestamps(tracks)
-    lastfm_tracks = [convert_track_ytm_to_lfm(track, ts) for track, ts in timestamped]
+  def scrobble(self, tracks: list[ScrobblerTrack]) -> int:
     scrobbled: int = 0
-    for lastfm_track in lastfm_tracks:
+    for track in tracks:
       for attempt in range(3):
         try:
           self.network.scrobble(
-            artist=lastfm_track.artist,
-            title=lastfm_track.title,
-            timestamp=lastfm_track.timestamp,
-            album=lastfm_track.album,
-            album_artist=lastfm_track.album_artist,
-            duration=lastfm_track.duration_seconds,
+            artist=track.artist,
+            title=track.title,
+            timestamp=track.timestamp,
+            album=track.album,
+            album_artist=track.album_artist,
+            duration=track.duration_seconds,
           )
-          album_part: str = "" if lastfm_track.album is None else f" ({lastfm_track.album})"
-          duration_part: str = "N/A"
-          if lastfm_track.duration:
-            duration_part = (
-              f"0{lastfm_track.duration}" if len(lastfm_track.duration) == 4 else lastfm_track.duration
-            )
-          print(f"Scrobbled: [{duration_part}] {lastfm_track.artist} — {lastfm_track.title}{album_part}")
+          album_part: str = "" if track.album is None else f" ({track.album})"
+          duration_part: str = LastFmScrobbler._format_duration(track.duration)
+          print(f"Scrobbled: [{duration_part}] {track.artist} — {track.title}{album_part}")
           scrobbled += 1
           time.sleep(1)
           break
         except (pylast.NetworkError, pylast.MalformedResponseError) as e:
-          print(f"Attempt {attempt + 1} failed for {lastfm_track.title}: {e}")
+          print(f"Attempt {attempt + 1} failed for {track.title}: {e}")
           if attempt < 2:
             time.sleep(5)
           else:
-            print(f"Skipping: {lastfm_track.title} after 3 failed attempts")
+            print(f"Skipping: {track.title} after 3 failed attempts")
 
     return scrobbled

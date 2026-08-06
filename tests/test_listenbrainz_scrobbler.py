@@ -5,7 +5,21 @@ import pylistenbrainz.errors
 import pytest
 
 from scrobble.scrobblers.listenbrainz import ListenBrainzScrobbler
-from scrobble.types import YouTubeMusicTrack
+from scrobble.types import ScrobblerTrack
+
+
+def make_track(**kwargs) -> ScrobblerTrack:
+  defaults = {
+    "artist": "Artist",
+    "title": "Title",
+    "album": "Album",
+    "album_artist": "Artist",
+    "duration": "3:00",
+    "duration_seconds": 180,
+    "timestamp": 1000000,
+    "like_status": "INDIFFERENT",
+  }
+  return ScrobblerTrack(**{**defaults, **kwargs})
 
 
 def make_scrobbler() -> ListenBrainzScrobbler:
@@ -17,60 +31,36 @@ def make_scrobbler() -> ListenBrainzScrobbler:
 
 
 class TestListenBrainzScrobbler:
-  def test_scrobble_submits_all_tracks(self, sample_tracks: list[YouTubeMusicTrack]) -> None:
+  def test_scrobble_submits_all_tracks(self) -> None:
     scrobbler = make_scrobbler()
     scrobbler.client.submit_multiple_listens = MagicMock()
-    with patch("scrobble.scrobblers.base.time") as mock_time:
-      mock_time.time.return_value = 1000000
-      result = scrobbler.scrobble(sample_tracks)
-    assert result == len(sample_tracks)
+    tracks = [make_track(title="T1"), make_track(title="T2")]
+    result = scrobbler.scrobble(tracks)
+    assert result == 2
     scrobbler.client.submit_multiple_listens.assert_called_once()
     submitted: list[pylistenbrainz.Listen] = scrobbler.client.submit_multiple_listens.call_args[0][0]
-    assert len(submitted) == len(sample_tracks)
+    assert len(submitted) == 2
 
-  def test_scrobble_maps_fields_correctly(self, sample_track: YouTubeMusicTrack) -> None:
+  def test_scrobble_maps_fields_correctly(self) -> None:
     scrobbler = make_scrobbler()
     scrobbler.client.submit_multiple_listens = MagicMock()
-    with patch("scrobble.scrobblers.base.time") as mock_time:
-      mock_time.time.return_value = 1000000
-      scrobbler.scrobble([sample_track])
+    track = make_track(artist="Test Artist", title="Test Song", album="Test Album", timestamp=999)
+    scrobbler.scrobble([track])
     submitted: list[pylistenbrainz.Listen] = scrobbler.client.submit_multiple_listens.call_args[0][0]
     listen = submitted[0]
     assert listen.track_name == "Test Song"
     assert listen.artist_name == "Test Artist"
     assert listen.release_name == "Test Album"
-    assert listen.listened_at == 1000000
+    assert listen.listened_at == 999
     assert listen.listening_from == "youtube-music"
 
-  def test_scrobble_empty_artists_uses_placeholder(self) -> None:
-    scrobbler = make_scrobbler()
-    scrobbler.client.submit_multiple_listens = MagicMock()
-    track = YouTubeMusicTrack(
-      video_id="v",
-      title="T",
-      artists=[],
-      duration=None,
-      album=None,
-      like_status="INDIFFERENT",
-    )
-    scrobbler.scrobble([track])
-    submitted: list[pylistenbrainz.Listen] = scrobbler.client.submit_multiple_listens.call_args[0][0]
-    assert submitted[0].artist_name == "Unknown Artist"
-
-  def test_scrobble_returns_zero_on_api_error(self, sample_track: YouTubeMusicTrack) -> None:
+  def test_scrobble_returns_zero_on_api_error(self) -> None:
     scrobbler = make_scrobbler()
     scrobbler.client.submit_multiple_listens = MagicMock(
       side_effect=pylistenbrainz.errors.ListenBrainzAPIException(400, "Bad Request")
     )
-    result = scrobbler.scrobble([sample_track])
+    result = scrobbler.scrobble([make_track()])
     assert result == 0
-
-  def test_scrobble_multi_artist_joined(self, multi_artist_track: YouTubeMusicTrack) -> None:
-    scrobbler = make_scrobbler()
-    scrobbler.client.submit_multiple_listens = MagicMock()
-    scrobbler.scrobble([multi_artist_track])
-    submitted: list[pylistenbrainz.Listen] = scrobbler.client.submit_multiple_listens.call_args[0][0]
-    assert submitted[0].artist_name == "Artist A & Artist B & Artist C"
 
   def test_init_sets_auth_token(self, monkeypatch: pytest.MonkeyPatch) -> None:
     monkeypatch.setenv("LISTENBRAINZ_TOKEN", "test-token")

@@ -6,7 +6,7 @@ from scrobble.scrobblers.base import Scrobbler
 from scrobble.scrobblers.lastfm import LastFmScrobbler
 from scrobble.scrobblers.listenbrainz import ListenBrainzScrobbler
 from scrobble.snapshot_manager import SnapshotManager
-from scrobble.types import YouTubeMusicTrack
+from scrobble.types import ScrobblerTrack, YouTubeMusicTrack, prepare_tracks
 from scrobble.yt_music.youtube_music_client import YouTubeMusicClient
 
 
@@ -83,10 +83,11 @@ def main() -> None:
     new_tracks: list[YouTubeMusicTrack] = snapshot_manager.get_diff_from_snapshot(current)
 
     if new_tracks:
+      prepared: list[ScrobblerTrack] = prepare_tracks(new_tracks)
       scrobbled: int = 0
       for scrobbler in scrobblers:
-        scrobbled = max(scrobbled, scrobbler.scrobble(new_tracks))
-        scrobbler.update_like_status(new_tracks)
+        scrobbled = max(scrobbled, scrobbler.scrobble(prepared))
+        scrobbler.update_like_status(prepared)
     else:
       print("No new tracks to scrobble.")
       scrobbled = 0
