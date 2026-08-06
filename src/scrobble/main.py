@@ -4,6 +4,7 @@ from datetime import UTC
 
 from scrobble.scrobblers.base import Scrobbler
 from scrobble.scrobblers.lastfm import LastFmScrobbler
+from scrobble.scrobblers.listenbrainz import ListenBrainzScrobbler
 from scrobble.snapshot_manager import SnapshotManager
 from scrobble.types import YouTubeMusicTrack
 from scrobble.yt_music.youtube_music_client import YouTubeMusicClient
@@ -60,9 +61,21 @@ def write_summary(tracks: list[YouTubeMusicTrack]) -> None:
       )
 
 
+def build_scrobblers() -> list[Scrobbler]:
+  scrobblers: list[Scrobbler] = []
+  lastfm_vars = ("LASTFM_API_KEY", "LASTFM_SECRET", "LASTFM_USERNAME", "LASTFM_PASSWORD")
+  if all(os.environ.get(v) for v in lastfm_vars):
+    scrobblers.append(LastFmScrobbler())
+  if os.environ.get("LISTENBRAINZ_TOKEN"):
+    scrobblers.append(ListenBrainzScrobbler())
+  if not scrobblers:
+    raise RuntimeError("No scrobblers configured. Set at least one set of credentials.")
+  return scrobblers
+
+
 def main() -> None:
   yt_music_client = YouTubeMusicClient()
-  scrobblers: list[Scrobbler] = [LastFmScrobbler()]
+  scrobblers: list[Scrobbler] = build_scrobblers()
   snapshot_manager = SnapshotManager()
 
   try:

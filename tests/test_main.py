@@ -1,9 +1,69 @@
 from datetime import UTC, datetime, timedelta
+from unittest.mock import patch
 
 import pytest
 
-from scrobble.main import prune_logs, write_log, write_summary
+from scrobble.main import build_scrobblers, prune_logs, write_log, write_summary
+from scrobble.scrobblers.lastfm import LastFmScrobbler
+from scrobble.scrobblers.listenbrainz import ListenBrainzScrobbler
 from scrobble.types import YouTubeMusicTrack
+
+LASTFM_VARS = {
+  "LASTFM_API_KEY": "key",
+  "LASTFM_SECRET": "secret",
+  "LASTFM_USERNAME": "user",
+  "LASTFM_PASSWORD": "pass",
+}
+
+
+class TestBuildScrobblers:
+  def test_lastfm_only(self, monkeypatch: pytest.MonkeyPatch) -> None:
+    for k, v in LASTFM_VARS.items():
+      monkeypatch.setenv(k, v)
+    monkeypatch.delenv("LISTENBRAINZ_TOKEN", raising=False)
+    with patch("scrobble.scrobblers.lastfm.pylast.LastFMNetwork"):
+      result = build_scrobblers()
+    assert len(result) == 1
+    assert isinstance(result[0], LastFmScrobbler)
+
+  def test_listenbrainz_only(self, monkeypatch: pytest.MonkeyPatch) -> None:
+    for k in LASTFM_VARS:
+      monkeypatch.delenv(k, raising=False)
+    monkeypatch.setenv("LISTENBRAINZ_TOKEN", "token")
+    with patch("scrobble.scrobblers.listenbrainz.pylistenbrainz.ListenBrainz"):
+      result = build_scrobblers()
+    assert len(result) == 1
+    assert isinstance(result[0], ListenBrainzScrobbler)
+
+  def test_both_scrobblers(self, monkeypatch: pytest.MonkeyPatch) -> None:
+    for k, v in LASTFM_VARS.items():
+      monkeypatch.setenv(k, v)
+    monkeypatch.setenv("LISTENBRAINZ_TOKEN", "token")
+    with (
+      patch("scrobble.scrobblers.lastfm.pylast.LastFMNetwork"),
+      patch("scrobble.scrobblers.listenbrainz.pylistenbrainz.ListenBrainz"),
+    ):
+      result = build_scrobblers()
+    assert len(result) == 2
+    assert isinstance(result[0], LastFmScrobbler)
+    assert isinstance(result[1], ListenBrainzScrobbler)
+
+  def test_no_credentials_raises(self, monkeypatch: pytest.MonkeyPatch) -> None:
+    for k in LASTFM_VARS:
+      monkeypatch.delenv(k, raising=False)
+    monkeypatch.delenv("LISTENBRAINZ_TOKEN", raising=False)
+    with pytest.raises(RuntimeError, match="No scrobblers configured"):
+      build_scrobblers()
+
+  def test_partial_lastfm_vars_skips_lastfm(self, monkeypatch: pytest.MonkeyPatch) -> None:
+    monkeypatch.setenv("LASTFM_API_KEY", "key")
+    for k in ("LASTFM_SECRET", "LASTFM_USERNAME", "LASTFM_PASSWORD"):
+      monkeypatch.delenv(k, raising=False)
+    monkeypatch.setenv("LISTENBRAINZ_TOKEN", "token")
+    with patch("scrobble.scrobblers.listenbrainz.pylistenbrainz.ListenBrainz"):
+      result = build_scrobblers()
+    assert len(result) == 1
+    assert isinstance(result[0], ListenBrainzScrobbler)
 
 
 class TestPruneLogs:

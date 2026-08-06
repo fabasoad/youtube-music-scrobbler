@@ -1,4 +1,7 @@
+import time
+
 from ytmusicapi import YTMusic
+from ytmusicapi.exceptions import YTMusicServerError
 
 from scrobble.types import YouTubeMusicTrack
 from scrobble.yt_music.artist_as_label_filter import ArtistAsLabelFilter
@@ -15,7 +18,19 @@ class YouTubeMusicClient:
 
   def fetch_history(self) -> list[YouTubeMusicTrack]:
     yt: YTMusic = YTMusic(self.auth_path)
-    history: list[dict] = yt.get_history()[: self.history_limit]
+    history: list[dict] | None = None
+    for attempt in range(3):
+      try:
+        history = yt.get_history()[: self.history_limit]
+        break
+      except YTMusicServerError as e:
+        print(f"Attempt {attempt + 1} failed to fetch YTMusic history: {e}")
+        if attempt < 2:
+          time.sleep(5)
+        else:
+          raise
+
+    assert history is not None
     tracks: list[YouTubeMusicTrack] = []
     for item in history:
       artists: list[dict] = item.get("artists") or []

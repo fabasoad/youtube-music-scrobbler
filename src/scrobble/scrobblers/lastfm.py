@@ -19,13 +19,13 @@ class LastFmTrack:
   duration_seconds: int | None
 
 
-def convert_track_ytm_to_lfm(track: YouTubeMusicTrack) -> LastFmTrack:
+def convert_track_ytm_to_lfm(track: YouTubeMusicTrack, timestamp: int) -> LastFmTrack:
   artist: str = " & ".join(track.artists) if track.artists else "Unknown Artist"
   album_artist: str = track.artists[0] if track.artists else "Unknown Artist"
   return LastFmTrack(
     artist=artist,
     title=track.title,
-    timestamp=0,
+    timestamp=timestamp,
     album=track.album,
     album_artist=album_artist,
     duration=track.duration,
@@ -41,15 +41,6 @@ class LastFmScrobbler(Scrobbler):
       username=os.environ["LASTFM_USERNAME"],
       password_hash=pylast.md5(os.environ["LASTFM_PASSWORD"]),
     )
-
-  @staticmethod
-  def _assign_timestamps(tracks: list[LastFmTrack]) -> list[LastFmTrack]:
-    now: int = int(time.time())
-    offset: int = 0
-    for track in reversed(tracks):
-      track.timestamp = now - offset
-      offset += track.duration_seconds or 180
-    return tracks
 
   @staticmethod
   def _log_like_status(prefix: str, track: YouTubeMusicTrack) -> None:
@@ -73,9 +64,8 @@ class LastFmScrobbler(Scrobbler):
           LastFmScrobbler._log_like_status("Disliked", track)
 
   def scrobble(self, tracks: list[YouTubeMusicTrack]) -> int:
-    lastfm_tracks = LastFmScrobbler._assign_timestamps(
-      [convert_track_ytm_to_lfm(track) for track in tracks],
-    )
+    timestamped = Scrobbler.assign_timestamps(tracks)
+    lastfm_tracks = [convert_track_ytm_to_lfm(track, ts) for track, ts in timestamped]
     scrobbled: int = 0
     for lastfm_track in lastfm_tracks:
       for attempt in range(3):
