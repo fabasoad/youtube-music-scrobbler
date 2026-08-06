@@ -2,7 +2,8 @@ import os
 import sys
 from datetime import UTC
 
-from scrobble.lastfm_client import LastFmClient
+from scrobble.scrobblers.base import Scrobbler
+from scrobble.scrobblers.lastfm import LastFmScrobbler
 from scrobble.snapshot_manager import SnapshotManager
 from scrobble.types import YouTubeMusicTrack
 from scrobble.yt_music.youtube_music_client import YouTubeMusicClient
@@ -61,7 +62,7 @@ def write_summary(tracks: list[YouTubeMusicTrack]) -> None:
 
 def main() -> None:
   yt_music_client = YouTubeMusicClient()
-  lastfm_client = LastFmClient()
+  scrobblers: list[Scrobbler] = [LastFmScrobbler()]
   snapshot_manager = SnapshotManager()
 
   try:
@@ -69,8 +70,10 @@ def main() -> None:
     new_tracks: list[YouTubeMusicTrack] = snapshot_manager.get_diff_from_snapshot(current)
 
     if new_tracks:
-      scrobbled: int = lastfm_client.scrobble(new_tracks)
-      lastfm_client.update_like_status(new_tracks)
+      scrobbled: int = 0
+      for scrobbler in scrobblers:
+        scrobbled = max(scrobbled, scrobbler.scrobble(new_tracks))
+        scrobbler.update_like_status(new_tracks)
     else:
       print("No new tracks to scrobble.")
       scrobbled = 0

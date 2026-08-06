@@ -1,12 +1,39 @@
 import os
 import time
+from dataclasses import dataclass
 
 import pylast
 
-from scrobble.types import LastFmTrack, YouTubeMusicTrack, convert_track_ytm_to_lfm
+from scrobble.scrobblers.base import Scrobbler
+from scrobble.types import YouTubeMusicTrack
 
 
-class LastFmClient:
+@dataclass
+class LastFmTrack:
+  artist: str
+  title: str
+  timestamp: int
+  album: str | None
+  album_artist: str | None
+  duration: str | None
+  duration_seconds: int | None
+
+
+def convert_track_ytm_to_lfm(track: YouTubeMusicTrack) -> LastFmTrack:
+  artist: str = " & ".join(track.artists) if track.artists else "Unknown Artist"
+  album_artist: str = track.artists[0] if track.artists else "Unknown Artist"
+  return LastFmTrack(
+    artist=artist,
+    title=track.title,
+    timestamp=0,
+    album=track.album,
+    album_artist=album_artist,
+    duration=track.duration,
+    duration_seconds=track.duration_seconds,
+  )
+
+
+class LastFmScrobbler(Scrobbler):
   def __init__(self) -> None:
     self.network: pylast.LastFMNetwork = pylast.LastFMNetwork(
       api_key=os.environ["LASTFM_API_KEY"],
@@ -21,7 +48,7 @@ class LastFmClient:
     offset: int = 0
     for track in reversed(tracks):
       track.timestamp = now - offset
-      offset += track.duration_seconds or 180  # fallback 3 min
+      offset += track.duration_seconds or 180
     return tracks
 
   @staticmethod
@@ -37,19 +64,16 @@ class LastFmClient:
     for track in tracks:
       if track.like_status != "INDIFFERENT":
         artist: str = " & ".join(track.artists) if track.artists else "Unknown Artist"
-        pylast_track: pylast.Track = self.network.get_track(
-          artist,
-          track.title,
-        )
+        pylast_track: pylast.Track = self.network.get_track(artist, track.title)
         if track.like_status == "LIKE":
           pylast_track.love()
-          LastFmClient._log_like_status("Liked", track)
+          LastFmScrobbler._log_like_status("Liked", track)
         else:
           pylast_track.unlove()
-          LastFmClient._log_like_status("Disliked", track)
+          LastFmScrobbler._log_like_status("Disliked", track)
 
   def scrobble(self, tracks: list[YouTubeMusicTrack]) -> int:
-    lastfm_tracks = LastFmClient._assign_timestamps(
+    lastfm_tracks = LastFmScrobbler._assign_timestamps(
       [convert_track_ytm_to_lfm(track) for track in tracks],
     )
     scrobbled: int = 0
