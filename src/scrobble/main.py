@@ -75,7 +75,7 @@ def build_scrobblers() -> list[Scrobbler]:
       scrobblers.append(ListenBrainzScrobbler())
       print("[ListenBrainz] Scrobbler configured.")
     except Exception as e:
-      print(f"[ListenBrainz] Failed to configure scrobbler: {e}")
+      print(f"[ListenBrainz] Failed to configure scrobbler: {e!r}")
   else:
     print("[ListenBrainz] Not configured. Missing: LISTENBRAINZ_TOKEN")
   if not scrobblers:
