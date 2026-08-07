@@ -1,5 +1,29 @@
 [
   {
+    "video_id": "gAJArHbFp_E",
+    "title": "DTWD",
+    "artists": [
+      "Southpaw FLHC"
+    ],
+    "duration": "2:23",
+    "album": "The Standard",
+    "like_status": "INDIFFERENT",
+    "duration_seconds": 143,
+    "thumbnail": "https://yt3.googleusercontent.com/cN_CtQzwyd0wGgJGyUzTRXIkjAh2iB7Qo5kVfq14xK9XBYZGegj0aVXEtZqRJq6nBaaR7K5r8UX2KdfnIg=w60-h60-l90-rj"
+  },
+  {
+    "video_id": "a3lXOIere84",
+    "title": "The Standard",
+    "artists": [
+      "Southpaw FLHC"
+    ],
+    "duration": "3:45",
+    "album": "The Standard",
+    "like_status": "INDIFFERENT",
+    "duration_seconds": 225,
+    "thumbnail": "https://yt3.googleusercontent.com/cN_CtQzwyd0wGgJGyUzTRXIkjAh2iB7Qo5kVfq14xK9XBYZGegj0aVXEtZqRJq6nBaaR7K5r8UX2KdfnIg=w60-h60-l90-rj"
+  },
+  {
     "video_id": "-WD-7QL4E3o",
     "title": "Play The Fool",
     "artists": [
@@ -576,29 +600,5 @@
     "like_status": "INDIFFERENT",
     "duration_seconds": 91,
     "thumbnail": "https://yt3.googleusercontent.com/Oast50EbygK4tUPdtqWjm0UV6r13NEWdf9huEXKmPX7Qa_fG9DZpIKV4g0DC5I-bqe6z303FLQjLgA1B=w60-h60-l90-rj"
-  },
-  {
-    "video_id": "sYMuumTPWh4",
-    "title": "The Colossal Rage",
-    "artists": [
-      "Monstrosity"
-    ],
-    "duration": "3:25",
-    "album": "Screams from Beneath the Surface",
-    "like_status": "INDIFFERENT",
-    "duration_seconds": 205,
-    "thumbnail": "https://yt3.googleusercontent.com/YVQ7q5sCkEP03EZaGgWEFQhVt1bTkxOlhGgNyT4_D-gZI8JmaVpe_vV45mPZesN-QPx89H5AEDf_T1o=w60-h60-l90-rj"
-  },
-  {
-    "video_id": "nr7q3W6b_n8",
-    "title": "Banished to the Skies",
-    "artists": [
-      "Monstrosity"
-    ],
-    "duration": "6:41",
-    "album": "Screams from Beneath the Surface",
-    "like_status": "INDIFFERENT",
-    "duration_seconds": 401,
-    "thumbnail": "https://yt3.googleusercontent.com/YVQ7q5sCkEP03EZaGgWEFQhVt1bTkxOlhGgNyT4_D-gZI8JmaVpe_vV45mPZesN-QPx89H5AEDf_T1o=w60-h60-l90-rj"
   }
 ]
