@@ -1,5 +1,77 @@
 [
   {
+    "video_id": "mT_9kN-dHYQ",
+    "title": "Always the Last One to Leave",
+    "artists": [
+      "Citizen"
+    ],
+    "duration": "3:30",
+    "album": "Halcyon Blues",
+    "like_status": "INDIFFERENT",
+    "duration_seconds": 210,
+    "thumbnail": "https://yt3.googleusercontent.com/3IoD9q-JG_pklxAkH767xeVMKfZ-7BrKL64oUEWK_cWy7BW6m3kKK6FyDj45VmKitCCcmFRgmlqP0NHbjQ=w60-h60-l90-rj"
+  },
+  {
+    "video_id": "d8T6Doh0jpE",
+    "title": "Is It In My Brain?",
+    "artists": [
+      "Citizen"
+    ],
+    "duration": "3:18",
+    "album": "Halcyon Blues",
+    "like_status": "INDIFFERENT",
+    "duration_seconds": 198,
+    "thumbnail": "https://yt3.googleusercontent.com/3IoD9q-JG_pklxAkH767xeVMKfZ-7BrKL64oUEWK_cWy7BW6m3kKK6FyDj45VmKitCCcmFRgmlqP0NHbjQ=w60-h60-l90-rj"
+  },
+  {
+    "video_id": "JosSXjOE0S0",
+    "title": "Halcyon Blues",
+    "artists": [
+      "Citizen"
+    ],
+    "duration": "3:30",
+    "album": "Halcyon Blues",
+    "like_status": "INDIFFERENT",
+    "duration_seconds": 210,
+    "thumbnail": "https://yt3.googleusercontent.com/3IoD9q-JG_pklxAkH767xeVMKfZ-7BrKL64oUEWK_cWy7BW6m3kKK6FyDj45VmKitCCcmFRgmlqP0NHbjQ=w60-h60-l90-rj"
+  },
+  {
+    "video_id": "sKOJ0Jk1Sw4",
+    "title": "I Can See You From Here",
+    "artists": [
+      "Citizen"
+    ],
+    "duration": "3:11",
+    "album": "Halcyon Blues",
+    "like_status": "INDIFFERENT",
+    "duration_seconds": 191,
+    "thumbnail": "https://yt3.googleusercontent.com/3IoD9q-JG_pklxAkH767xeVMKfZ-7BrKL64oUEWK_cWy7BW6m3kKK6FyDj45VmKitCCcmFRgmlqP0NHbjQ=w60-h60-l90-rj"
+  },
+  {
+    "video_id": "v96V3B9z4DI",
+    "title": "Good Fortune",
+    "artists": [
+      "Citizen"
+    ],
+    "duration": "3:08",
+    "album": "Halcyon Blues",
+    "like_status": "INDIFFERENT",
+    "duration_seconds": 188,
+    "thumbnail": "https://yt3.googleusercontent.com/3IoD9q-JG_pklxAkH767xeVMKfZ-7BrKL64oUEWK_cWy7BW6m3kKK6FyDj45VmKitCCcmFRgmlqP0NHbjQ=w60-h60-l90-rj"
+  },
+  {
+    "video_id": "Q4hBP8ka3jQ",
+    "title": "Eyes Of The Devil",
+    "artists": [
+      "Seether"
+    ],
+    "duration": "5:01",
+    "album": "Johnny\u2019s Favs and a Few Deep Cuts",
+    "like_status": "LIKE",
+    "duration_seconds": 301,
+    "thumbnail": "https://yt3.googleusercontent.com/cmmvejRyfX2z4TW1twckYcE77tlr_xgCZAs8cy6uuFvEBNdvjdZkXFXRJ38nFybYNuSEAinD66Tx3A4=w60-h60-l90-rj"
+  },
+  {
     "video_id": "-KLGA-sXc8Q",
     "title": "Dead Seeds",
     "artists": [
@@ -7,7 +79,7 @@
     ],
     "duration": "4:03",
     "album": "Holding Onto Strings Better Left To Fray (Deluxe Version)",
-    "like_status": "LIKE",
+    "like_status": "INDIFFERENT",
     "duration_seconds": 243,
     "thumbnail": "https://yt3.googleusercontent.com/sX7TnyKAkxil6HVxVXLugpEIEt7vUZzGwT6U_hOcVyNnpO7IcSTMuyHKRO7ZqT310LqofDAlgqem8qW6=w60-h60-l90-rj"
   },
@@ -117,18 +189,6 @@
     "album": "Johnny\u2019s Favs and a Few Deep Cuts",
     "like_status": "INDIFFERENT",
     "duration_seconds": 274,
-    "thumbnail": "https://yt3.googleusercontent.com/cmmvejRyfX2z4TW1twckYcE77tlr_xgCZAs8cy6uuFvEBNdvjdZkXFXRJ38nFybYNuSEAinD66Tx3A4=w60-h60-l90-rj"
-  },
-  {
-    "video_id": "Q4hBP8ka3jQ",
-    "title": "Eyes Of The Devil",
-    "artists": [
-      "Seether"
-    ],
-    "duration": "5:01",
-    "album": "Johnny\u2019s Favs and a Few Deep Cuts",
-    "like_status": "LIKE",
-    "duration_seconds": 301,
     "thumbnail": "https://yt3.googleusercontent.com/cmmvejRyfX2z4TW1twckYcE77tlr_xgCZAs8cy6uuFvEBNdvjdZkXFXRJ38nFybYNuSEAinD66Tx3A4=w60-h60-l90-rj"
   },
   {
@@ -540,65 +600,5 @@
     "like_status": "INDIFFERENT",
     "duration_seconds": 214,
     "thumbnail": "https://yt3.googleusercontent.com/4lFWkw-6VN5GEmuqBGhV6UQAuWDPuxR-FkGz-KTkcNLtcYP_sYrXgzdSar_maaoVA6ctfMPNRQ-gSiIU=w60-h60-l90-rj"
-  },
-  {
-    "video_id": "Dbz_oXmOO6k",
-    "title": "Veil of Disillusion",
-    "artists": [
-      "Monstrosity"
-    ],
-    "duration": "5:18",
-    "album": "Screams from Beneath the Surface",
-    "like_status": "INDIFFERENT",
-    "duration_seconds": 318,
-    "thumbnail": "https://yt3.googleusercontent.com/YVQ7q5sCkEP03EZaGgWEFQhVt1bTkxOlhGgNyT4_D-gZI8JmaVpe_vV45mPZesN-QPx89H5AEDf_T1o=w60-h60-l90-rj"
-  },
-  {
-    "video_id": "LLB4Bt58XZw",
-    "title": "The Dark Aura",
-    "artists": [
-      "Monstrosity"
-    ],
-    "duration": "4:09",
-    "album": "Screams from Beneath the Surface",
-    "like_status": "INDIFFERENT",
-    "duration_seconds": 249,
-    "thumbnail": "https://yt3.googleusercontent.com/YVQ7q5sCkEP03EZaGgWEFQhVt1bTkxOlhGgNyT4_D-gZI8JmaVpe_vV45mPZesN-QPx89H5AEDf_T1o=w60-h60-l90-rj"
-  },
-  {
-    "video_id": "_8h9rz2h9qE",
-    "title": "Blood Works",
-    "artists": [
-      "Monstrosity"
-    ],
-    "duration": "3:17",
-    "album": "Screams from Beneath the Surface",
-    "like_status": "INDIFFERENT",
-    "duration_seconds": 197,
-    "thumbnail": "https://yt3.googleusercontent.com/YVQ7q5sCkEP03EZaGgWEFQhVt1bTkxOlhGgNyT4_D-gZI8JmaVpe_vV45mPZesN-QPx89H5AEDf_T1o=w60-h60-l90-rj"
-  },
-  {
-    "video_id": "DBTPdksitWM",
-    "title": "The Thorns",
-    "artists": [
-      "Monstrosity"
-    ],
-    "duration": "3:55",
-    "album": "Screams from Beneath the Surface",
-    "like_status": "INDIFFERENT",
-    "duration_seconds": 235,
-    "thumbnail": "https://yt3.googleusercontent.com/YVQ7q5sCkEP03EZaGgWEFQhVt1bTkxOlhGgNyT4_D-gZI8JmaVpe_vV45mPZesN-QPx89H5AEDf_T1o=w60-h60-l90-rj"
-  },
-  {
-    "video_id": "LfWNIXio3VQ",
-    "title": "Vapors",
-    "artists": [
-      "Monstrosity"
-    ],
-    "duration": "3:24",
-    "album": "Screams from Beneath the Surface",
-    "like_status": "INDIFFERENT",
-    "duration_seconds": 204,
-    "thumbnail": "https://yt3.googleusercontent.com/YVQ7q5sCkEP03EZaGgWEFQhVt1bTkxOlhGgNyT4_D-gZI8JmaVpe_vV45mPZesN-QPx89H5AEDf_T1o=w60-h60-l90-rj"
   }
 ]
