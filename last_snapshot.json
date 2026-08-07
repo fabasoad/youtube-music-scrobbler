@@ -1,5 +1,29 @@
 [
   {
+    "video_id": "Dbz_oXmOO6k",
+    "title": "Veil of Disillusion",
+    "artists": [
+      "Monstrosity"
+    ],
+    "duration": "5:18",
+    "album": "Screams from Beneath the Surface",
+    "like_status": "INDIFFERENT",
+    "duration_seconds": 318,
+    "thumbnail": "https://yt3.googleusercontent.com/YVQ7q5sCkEP03EZaGgWEFQhVt1bTkxOlhGgNyT4_D-gZI8JmaVpe_vV45mPZesN-QPx89H5AEDf_T1o=w60-h60-l90-rj"
+  },
+  {
+    "video_id": "LLB4Bt58XZw",
+    "title": "The Dark Aura",
+    "artists": [
+      "Monstrosity"
+    ],
+    "duration": "4:09",
+    "album": "Screams from Beneath the Surface",
+    "like_status": "INDIFFERENT",
+    "duration_seconds": 249,
+    "thumbnail": "https://yt3.googleusercontent.com/YVQ7q5sCkEP03EZaGgWEFQhVt1bTkxOlhGgNyT4_D-gZI8JmaVpe_vV45mPZesN-QPx89H5AEDf_T1o=w60-h60-l90-rj"
+  },
+  {
     "video_id": "_8h9rz2h9qE",
     "title": "Blood Works",
     "artists": [
@@ -573,30 +597,6 @@
     "album": "13 Unlucky Numbers",
     "like_status": "INDIFFERENT",
     "duration_seconds": 7,
-    "thumbnail": "https://yt3.googleusercontent.com/mgfdNMZDsvI3SmTYeEwZWImkDJ48qUvXTuijOFMen5LNLtHcx_6l_H0mWMm0bAcbTSBP12PcYNH_gePw=w60-h60-l90-rj"
-  },
-  {
-    "video_id": "ox6zHDemN0w",
-    "title": "Knot",
-    "artists": [
-      "Wax"
-    ],
-    "duration": "1:55",
-    "album": "13 Unlucky Numbers",
-    "like_status": "INDIFFERENT",
-    "duration_seconds": 115,
-    "thumbnail": "https://yt3.googleusercontent.com/mgfdNMZDsvI3SmTYeEwZWImkDJ48qUvXTuijOFMen5LNLtHcx_6l_H0mWMm0bAcbTSBP12PcYNH_gePw=w60-h60-l90-rj"
-  },
-  {
-    "video_id": "zEALZBdCeMA",
-    "title": "Too Well",
-    "artists": [
-      "Wax"
-    ],
-    "duration": "2:04",
-    "album": "13 Unlucky Numbers",
-    "like_status": "INDIFFERENT",
-    "duration_seconds": 124,
     "thumbnail": "https://yt3.googleusercontent.com/mgfdNMZDsvI3SmTYeEwZWImkDJ48qUvXTuijOFMen5LNLtHcx_6l_H0mWMm0bAcbTSBP12PcYNH_gePw=w60-h60-l90-rj"
   }
 ]
