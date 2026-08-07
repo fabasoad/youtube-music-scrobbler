@@ -11,7 +11,7 @@ from scrobble.types import ScrobblerTrack
 class ListenBrainzScrobbler(Scrobbler):
   def __init__(self) -> None:
     self.client: pylistenbrainz.ListenBrainz = pylistenbrainz.ListenBrainz()
-    self.client.set_auth_token(os.environ["LISTENBRAINZ_TOKEN"].strip())
+    self.client.set_auth_token(os.environ["LISTENBRAINZ_TOKEN"], check_validity=False)
 
   def scrobble(self, tracks: list[ScrobblerTrack]) -> int:
     print(f"[ListenBrainz] Scrobbling {len(tracks)} track(s)...")

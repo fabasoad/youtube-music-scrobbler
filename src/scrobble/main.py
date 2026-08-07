@@ -85,7 +85,6 @@ def build_scrobblers() -> list[Scrobbler]:
 
 def main() -> None:
   yt_music_client = YouTubeMusicClient()
-  scrobblers: list[Scrobbler] = build_scrobblers()
   snapshot_manager = SnapshotManager()
 
   try:
@@ -93,6 +92,7 @@ def main() -> None:
     new_tracks: list[YouTubeMusicTrack] = snapshot_manager.get_diff_from_snapshot(current)
 
     if new_tracks:
+      scrobblers: list[Scrobbler] = build_scrobblers()
       prepared: list[ScrobblerTrack] = prepare_tracks(new_tracks)
       scrobbled: int = 0
       for scrobbler in scrobblers:
