@@ -1,5 +1,29 @@
 [
   {
+    "video_id": "9xHVHrv-4uw",
+    "title": "Lost All Control",
+    "artists": [
+      "Seether"
+    ],
+    "duration": "4:34",
+    "album": "Johnny\u2019s Favs and a Few Deep Cuts",
+    "like_status": "INDIFFERENT",
+    "duration_seconds": 274,
+    "thumbnail": "https://yt3.googleusercontent.com/cmmvejRyfX2z4TW1twckYcE77tlr_xgCZAs8cy6uuFvEBNdvjdZkXFXRJ38nFybYNuSEAinD66Tx3A4=w60-h60-l90-rj"
+  },
+  {
+    "video_id": "Q4hBP8ka3jQ",
+    "title": "Eyes Of The Devil",
+    "artists": [
+      "Seether"
+    ],
+    "duration": "5:01",
+    "album": "Johnny\u2019s Favs and a Few Deep Cuts",
+    "like_status": "LIKE",
+    "duration_seconds": 301,
+    "thumbnail": "https://yt3.googleusercontent.com/cmmvejRyfX2z4TW1twckYcE77tlr_xgCZAs8cy6uuFvEBNdvjdZkXFXRJ38nFybYNuSEAinD66Tx3A4=w60-h60-l90-rj"
+  },
+  {
     "video_id": "gAJArHbFp_E",
     "title": "DTWD",
     "artists": [
@@ -575,30 +599,6 @@
     "album": "Within",
     "like_status": "INDIFFERENT",
     "duration_seconds": 281,
-    "thumbnail": "https://yt3.googleusercontent.com/Oast50EbygK4tUPdtqWjm0UV6r13NEWdf9huEXKmPX7Qa_fG9DZpIKV4g0DC5I-bqe6z303FLQjLgA1B=w60-h60-l90-rj"
-  },
-  {
-    "video_id": "wd3CnH3MXqs",
-    "title": "Grandfather's Axe",
-    "artists": [
-      "Protest The Hero"
-    ],
-    "duration": "5:10",
-    "album": "Within",
-    "like_status": "INDIFFERENT",
-    "duration_seconds": 310,
-    "thumbnail": "https://yt3.googleusercontent.com/Oast50EbygK4tUPdtqWjm0UV6r13NEWdf9huEXKmPX7Qa_fG9DZpIKV4g0DC5I-bqe6z303FLQjLgA1B=w60-h60-l90-rj"
-  },
-  {
-    "video_id": "RVaexoBPMxQ",
-    "title": "i. above",
-    "artists": [
-      "Protest The Hero"
-    ],
-    "duration": "1:31",
-    "album": "Within",
-    "like_status": "INDIFFERENT",
-    "duration_seconds": 91,
     "thumbnail": "https://yt3.googleusercontent.com/Oast50EbygK4tUPdtqWjm0UV6r13NEWdf9huEXKmPX7Qa_fG9DZpIKV4g0DC5I-bqe6z303FLQjLgA1B=w60-h60-l90-rj"
   }
 ]
