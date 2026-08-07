@@ -86,6 +86,8 @@ def build_scrobblers() -> list[Scrobbler]:
 
 
 def main() -> None:
+  logger.remove()
+  logger.add(sys.stderr, format="{time:YYYY-MM-DD HH:mm:ss} | {level:<8} | {message}")
   yt_music_client = YouTubeMusicClient()
   snapshot_manager = SnapshotManager()
 

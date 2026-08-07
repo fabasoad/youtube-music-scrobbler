@@ -42,6 +42,8 @@ def parse_curl(curl: str) -> dict:
 
 
 def main() -> None:
+  logger.remove()
+  logger.add(sys.stderr, format="{time:YYYY-MM-DD HH:mm:ss} | {level:<8} | {message}")
   curl_file: str = "curl.txt"
   if not os.path.exists(curl_file):
     logger.info(
