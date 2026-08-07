@@ -54,11 +54,11 @@ jobs:
 
       - name: Run scrobble script
         env:
-          LASTFM_API_KEY: ${{ secrets.LASTFM_API_KEY }}
-          LASTFM_SECRET: ${{ secrets.LASTFM_SECRET }}
-          LASTFM_USERNAME: ${{ secrets.LASTFM_USERNAME }}
-          LASTFM_PASSWORD: ${{ secrets.LASTFM_PASSWORD }}
-          LISTENBRAINZ_TOKEN: ${{ secrets.LISTENBRAINZ_TOKEN }}
+          LASTFM_API_KEY: "${{ secrets.LASTFM_API_KEY }}"
+          LASTFM_SECRET: "${{ secrets.LASTFM_SECRET }}"
+          LASTFM_USERNAME: "${{ secrets.LASTFM_USERNAME }}"
+          LASTFM_PASSWORD: "${{ secrets.LASTFM_PASSWORD }}"
+          LISTENBRAINZ_TOKEN: "${{ secrets.LISTENBRAINZ_TOKEN }}"
         run: make run
 
       - name: Setup git config
