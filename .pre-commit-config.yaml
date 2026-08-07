@@ -15,7 +15,7 @@ repos:
         stages: ["pre-push"]
   # Security
       - id: audit
-        name: pnpm audit
+        name: uv audit
         entry: make audit
         language: unsupported
         pass_filenames: false

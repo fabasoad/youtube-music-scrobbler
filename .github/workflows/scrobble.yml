@@ -58,6 +58,7 @@ jobs:
           LASTFM_SECRET: "${{ secrets.LASTFM_SECRET }}"
           LASTFM_USERNAME: "${{ secrets.LASTFM_USERNAME }}"
           LASTFM_PASSWORD: "${{ secrets.LASTFM_PASSWORD }}"
+          LISTENBRAINZ_USERNAME: "${{ secrets.LISTENBRAINZ_USERNAME }}"
           LISTENBRAINZ_TOKEN: "${{ secrets.LISTENBRAINZ_TOKEN }}"
         run: make run
 

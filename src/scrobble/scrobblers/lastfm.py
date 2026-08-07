@@ -23,17 +23,26 @@ class LastFmScrobbler(Scrobbler):
     return f"0{duration}" if len(duration) == 4 else duration
 
   def update_like_status(self, tracks: list[ScrobblerTrack]) -> None:
-    for track in tracks:
-      if track.like_status != "INDIFFERENT":
-        pylast_track: pylast.Track = self.network.get_track(track.artist, track.title)
-        album_part: str = "" if track.album is None else f" ({track.album})"
-        duration_part: str = LastFmScrobbler._format_duration(track.duration)
-        if track.like_status == "LIKE":
-          pylast_track.love()
-          print(f"[Last.fm] Liked: [{duration_part}] {track.artist} — {track.title}{album_part}")
-        else:
-          pylast_track.unlove()
-          print(f"[Last.fm] Disliked: [{duration_part}] {track.artist} — {track.title}{album_part}")
+    scored: list[ScrobblerTrack] = [t for t in tracks if t.like_status != "INDIFFERENT"]
+    if not scored:
+      return
+
+    print(f"[Last.fm] Updating feedback for {len(scored)} track(s)...")
+
+    submitted: int = 0
+    for track in scored:
+      pylast_track: pylast.Track = self.network.get_track(track.artist, track.title)
+      album_part: str = "" if track.album is None else f" ({track.album})"
+      duration_part: str = LastFmScrobbler._format_duration(track.duration)
+      if track.like_status == "LIKE":
+        pylast_track.love()
+        print(f"[Last.fm] Liked: [{duration_part}] {track.artist} — {track.title}{album_part}")
+      else:
+        pylast_track.unlove()
+        print(f"[Last.fm] Disliked: [{duration_part}] {track.artist} — {track.title}{album_part}")
+      submitted += 1
+
+    print(f"[Last.fm] Feedback done. {submitted}/{len(scored)} track(s) updated.")
 
   def scrobble(self, tracks: list[ScrobblerTrack]) -> int:
     print(f"[Last.fm] Scrobbling {len(tracks)} track(s)...")
