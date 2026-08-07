@@ -1,5 +1,29 @@
 [
   {
+    "video_id": "_8h9rz2h9qE",
+    "title": "Blood Works",
+    "artists": [
+      "Monstrosity"
+    ],
+    "duration": "3:17",
+    "album": "Screams from Beneath the Surface",
+    "like_status": "INDIFFERENT",
+    "duration_seconds": 197,
+    "thumbnail": "https://yt3.googleusercontent.com/YVQ7q5sCkEP03EZaGgWEFQhVt1bTkxOlhGgNyT4_D-gZI8JmaVpe_vV45mPZesN-QPx89H5AEDf_T1o=w60-h60-l90-rj"
+  },
+  {
+    "video_id": "DBTPdksitWM",
+    "title": "The Thorns",
+    "artists": [
+      "Monstrosity"
+    ],
+    "duration": "3:55",
+    "album": "Screams from Beneath the Surface",
+    "like_status": "INDIFFERENT",
+    "duration_seconds": 235,
+    "thumbnail": "https://yt3.googleusercontent.com/YVQ7q5sCkEP03EZaGgWEFQhVt1bTkxOlhGgNyT4_D-gZI8JmaVpe_vV45mPZesN-QPx89H5AEDf_T1o=w60-h60-l90-rj"
+  },
+  {
     "video_id": "LfWNIXio3VQ",
     "title": "Vapors",
     "artists": [
@@ -573,30 +597,6 @@
     "album": "13 Unlucky Numbers",
     "like_status": "INDIFFERENT",
     "duration_seconds": 124,
-    "thumbnail": "https://yt3.googleusercontent.com/mgfdNMZDsvI3SmTYeEwZWImkDJ48qUvXTuijOFMen5LNLtHcx_6l_H0mWMm0bAcbTSBP12PcYNH_gePw=w60-h60-l90-rj"
-  },
-  {
-    "video_id": "G5vfiuFmcp8",
-    "title": "Settle Down",
-    "artists": [
-      "Wax"
-    ],
-    "duration": "3:06",
-    "album": "13 Unlucky Numbers",
-    "like_status": "INDIFFERENT",
-    "duration_seconds": 186,
-    "thumbnail": "https://yt3.googleusercontent.com/mgfdNMZDsvI3SmTYeEwZWImkDJ48qUvXTuijOFMen5LNLtHcx_6l_H0mWMm0bAcbTSBP12PcYNH_gePw=w60-h60-l90-rj"
-  },
-  {
-    "video_id": "qRiOtJBTRbg",
-    "title": "Jiffy Boy",
-    "artists": [
-      "Wax"
-    ],
-    "duration": "1:49",
-    "album": "13 Unlucky Numbers",
-    "like_status": "INDIFFERENT",
-    "duration_seconds": 109,
     "thumbnail": "https://yt3.googleusercontent.com/mgfdNMZDsvI3SmTYeEwZWImkDJ48qUvXTuijOFMen5LNLtHcx_6l_H0mWMm0bAcbTSBP12PcYNH_gePw=w60-h60-l90-rj"
   }
 ]
