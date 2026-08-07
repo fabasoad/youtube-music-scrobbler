@@ -2,6 +2,8 @@ import os
 import sys
 from datetime import UTC
 
+from loguru import logger
+
 from scrobble.scrobblers.base import Scrobbler
 from scrobble.scrobblers.lastfm import LastFmScrobbler
 from scrobble.scrobblers.listenbrainz import ListenBrainzScrobbler
@@ -66,18 +68,18 @@ def build_scrobblers() -> list[Scrobbler]:
   lastfm_vars = ("LASTFM_API_KEY", "LASTFM_SECRET", "LASTFM_USERNAME", "LASTFM_PASSWORD")
   missing_lastfm: list[str] = [v for v in lastfm_vars if not os.environ.get(v)]
   if missing_lastfm:
-    print(f"[Last.fm] Not configured. Missing: {', '.join(missing_lastfm)}")
+    logger.warning("[Last.fm] Not configured. Missing: {}", ", ".join(missing_lastfm))
   else:
     scrobblers.append(LastFmScrobbler())
-    print("[Last.fm] Scrobbler configured.")
+    logger.info("[Last.fm] Scrobbler configured.")
   if os.environ.get("LISTENBRAINZ_TOKEN"):
     try:
       scrobblers.append(ListenBrainzScrobbler())
-      print("[ListenBrainz] Scrobbler configured.")
+      logger.info("[ListenBrainz] Scrobbler configured.")
     except Exception as e:
-      print(f"[ListenBrainz] Failed to configure scrobbler: {e!r}")
+      logger.error("[ListenBrainz] Failed to configure scrobbler: {!r}", e)
   else:
-    print("[ListenBrainz] Not configured. Missing: LISTENBRAINZ_TOKEN")
+    logger.warning("[ListenBrainz] Not configured. Missing: LISTENBRAINZ_TOKEN")
   if not scrobblers:
     raise RuntimeError("No scrobblers configured. Set at least one set of credentials.")
   return scrobblers
@@ -99,19 +101,16 @@ def main() -> None:
         scrobbled = max(scrobbled, scrobbler.scrobble(prepared))
         scrobbler.update_like_status(prepared)
     else:
-      print("No new tracks to scrobble.")
+      logger.info("No new tracks to scrobble.")
       scrobbled = 0
 
     snapshot_manager.save_snapshot(current)
     write_log("runs.log", scrobbled, len(new_tracks))
     write_summary(new_tracks)
-    print(f"Done. Scrobbled {scrobbled} track(s).")
+    logger.info("Done. Scrobbled {} track(s).", scrobbled)
 
   except Exception as e:
-    import traceback
-
-    print(f"Error: {e}")
-    traceback.print_exc()
+    logger.exception("Error: {}", e)
     sys.exit(1)
 
 

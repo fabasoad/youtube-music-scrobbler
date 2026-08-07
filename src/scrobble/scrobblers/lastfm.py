@@ -2,6 +2,7 @@ import os
 import time
 
 import pylast
+from loguru import logger
 
 from scrobble.scrobblers.base import Scrobbler
 from scrobble.types import ScrobblerTrack
@@ -27,7 +28,7 @@ class LastFmScrobbler(Scrobbler):
     if not scored:
       return
 
-    print(f"[Last.fm] Updating feedback for {len(scored)} track(s)...")
+    logger.info("[Last.fm] Updating feedback for {} track(s)...", len(scored))
 
     submitted: int = 0
     for track in scored:
@@ -36,16 +37,18 @@ class LastFmScrobbler(Scrobbler):
       duration_part: str = LastFmScrobbler._format_duration(track.duration)
       if track.like_status == "LIKE":
         pylast_track.love()
-        print(f"[Last.fm] Liked: [{duration_part}] {track.artist} — {track.title}{album_part}")
+        logger.info("[Last.fm] Liked: [{}] {} — {}{}", duration_part, track.artist, track.title, album_part)
       else:
         pylast_track.unlove()
-        print(f"[Last.fm] Disliked: [{duration_part}] {track.artist} — {track.title}{album_part}")
+        logger.info(
+          "[Last.fm] Disliked: [{}] {} — {}{}", duration_part, track.artist, track.title, album_part
+        )
       submitted += 1
 
-    print(f"[Last.fm] Feedback done. {submitted}/{len(scored)} track(s) updated.")
+    logger.info("[Last.fm] Feedback done. {}/{} track(s) updated.", submitted, len(scored))
 
   def scrobble(self, tracks: list[ScrobblerTrack]) -> int:
-    print(f"[Last.fm] Scrobbling {len(tracks)} track(s)...")
+    logger.info("[Last.fm] Scrobbling {} track(s)...", len(tracks))
     scrobbled: int = 0
     for track in tracks:
       for attempt in range(3):
@@ -60,16 +63,18 @@ class LastFmScrobbler(Scrobbler):
           )
           album_part: str = "" if track.album is None else f" ({track.album})"
           duration_part: str = LastFmScrobbler._format_duration(track.duration)
-          print(f"[Last.fm] Scrobbled: [{duration_part}] {track.artist} — {track.title}{album_part}")
+          logger.info(
+            "[Last.fm] Scrobbled: [{}] {} — {}{}", duration_part, track.artist, track.title, album_part
+          )
           scrobbled += 1
           time.sleep(1)
           break
         except (pylast.NetworkError, pylast.MalformedResponseError) as e:
-          print(f"[Last.fm] Attempt {attempt + 1} failed for {track.title}: {e}")
+          logger.warning("[Last.fm] Attempt {} failed for {}: {}", attempt + 1, track.title, e)
           if attempt < 2:
             time.sleep(5)
           else:
-            print(f"[Last.fm] Skipping: {track.title} after 3 failed attempts")
+            logger.error("[Last.fm] Skipping: {} after 3 failed attempts", track.title)
 
-    print(f"[Last.fm] Done. {scrobbled}/{len(tracks)} track(s) scrobbled.")
+    logger.info("[Last.fm] Done. {}/{} track(s) scrobbled.", scrobbled, len(tracks))
     return scrobbled

@@ -44,11 +44,11 @@ class TestLastFmScrobblerUpdateLikeStatus:
       scrobbler.update_like_status([track])
 
     mock_pylast_track.love.assert_called_once()
-    out = capsys.readouterr().out
-    assert "Liked" in out
-    assert "A" in out
-    assert "T" in out
-    assert "Alb" in out
+    err = capsys.readouterr().err
+    assert "Liked" in err
+    assert "A" in err
+    assert "T" in err
+    assert "Alb" in err
 
   def test_dislike_calls_unlove(self, capsys: pytest.CaptureFixture) -> None:
     from unittest.mock import MagicMock, patch
@@ -63,8 +63,8 @@ class TestLastFmScrobblerUpdateLikeStatus:
       scrobbler.update_like_status([track])
 
     mock_pylast_track.unlove.assert_called_once()
-    out = capsys.readouterr().out
-    assert "Disliked" in out
+    err = capsys.readouterr().err
+    assert "Disliked" in err
 
   def test_indifferent_skipped(self) -> None:
     from unittest.mock import MagicMock

@@ -13,6 +13,8 @@ import os
 import re
 import sys
 
+from loguru import logger
+
 
 def parse_curl(curl: str) -> dict:
   cookie: re.Match | None = re.search(r"-b '([^']+)'", curl)
@@ -28,8 +30,8 @@ def parse_curl(curl: str) -> dict:
     missing.append("x-goog-authuser header")
 
   if missing:
-    print(f"Error: Could not find: {', '.join(missing)}")
-    print("Make sure you copied the full cURL command.")
+    logger.error("Could not find: {}", ", ".join(missing))
+    logger.error("Make sure you copied the full cURL command.")
     sys.exit(1)
 
   return {
@@ -42,7 +44,9 @@ def parse_curl(curl: str) -> dict:
 def main() -> None:
   curl_file: str = "curl.txt"
   if not os.path.exists(curl_file):
-    print(f"Please paste your cURL command into a file called '{curl_file}' and run this script again.")
+    logger.info(
+      "Please paste your cURL command into a file called '{}' and run this script again.", curl_file
+    )
     sys.exit(0)
 
   with open(curl_file) as f:
@@ -61,9 +65,9 @@ def main() -> None:
   with open("browser.json", "w") as f:
     json.dump(data, f, indent=4)
 
-  print("\nbrowser.json updated successfully!")
-  print("\nNext: copy the contents of browser.json and update the YTM_BROWSER GitHub Secret.")
-  print("Run: cat browser.json | pbcopy")
+  logger.info("browser.json updated successfully!")
+  logger.info("Next: copy the contents of browser.json and update the YTM_BROWSER GitHub Secret.")
+  logger.info("Run: cat browser.json | pbcopy")
 
 
 if __name__ == "__main__":

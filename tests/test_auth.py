@@ -53,8 +53,8 @@ class TestParseCurl:
   def test_missing_fields_prints_error(self, capsys: pytest.CaptureFixture) -> None:
     with pytest.raises(SystemExit):
       parse_curl("curl 'https://music.youtube.com/youtubei/v1/browse'")
-    out: str = capsys.readouterr().out
-    assert "Error: Could not find:" in out
+    err: str = capsys.readouterr().err
+    assert "Could not find:" in err
 
   def test_authuser_value_extracted(self) -> None:
     curl: str = (
@@ -85,8 +85,8 @@ class TestMain:
     monkeypatch.chdir(tmp_path)
     with pytest.raises(SystemExit):
       main()
-    out: str = capsys.readouterr().out
-    assert "curl.txt" in out
+    err: str = capsys.readouterr().err
+    assert "curl.txt" in err
 
   def test_creates_browser_json_when_missing(
     self, tmp_path: pytest.TempPathFactory, monkeypatch: pytest.MonkeyPatch
@@ -137,5 +137,5 @@ class TestMain:
 
     main()
 
-    out: str = capsys.readouterr().out
-    assert "browser.json updated successfully" in out
+    err: str = capsys.readouterr().err
+    assert "browser.json updated successfully" in err

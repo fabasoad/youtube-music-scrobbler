@@ -1,6 +1,17 @@
+import sys
+
 import pytest
+from loguru import logger
 
 from scrobble.types import YouTubeMusicTrack
+
+
+@pytest.fixture(autouse=True)
+def _patch_loguru_stderr(capsys: pytest.CaptureFixture) -> None:
+  logger.remove()
+  logger.add(sys.stderr)
+  yield
+  logger.remove()
 
 
 @pytest.fixture

@@ -1,5 +1,6 @@
 import time
 
+from loguru import logger
 from ytmusicapi import YTMusic
 from ytmusicapi.exceptions import YTMusicServerError
 
@@ -24,7 +25,7 @@ class YouTubeMusicClient:
         history = yt.get_history()[: self.history_limit]
         break
       except YTMusicServerError as e:
-        print(f"Attempt {attempt + 1} failed to fetch YTMusic history: {e}")
+        logger.warning("Attempt {} failed to fetch YTMusic history: {}", attempt + 1, e)
         if attempt < 2:
           time.sleep(5)
         else:
