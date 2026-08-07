@@ -30,7 +30,7 @@ class TestBuildScrobblers:
     for k in LASTFM_VARS:
       monkeypatch.delenv(k, raising=False)
     monkeypatch.setenv("LISTENBRAINZ_TOKEN", "token")
-    with patch("scrobble.scrobblers.listenbrainz.pylistenbrainz.ListenBrainz"):
+    with patch("scrobble.scrobblers.listenbrainz.liblistenbrainz.ListenBrainz"):
       result = build_scrobblers()
     assert len(result) == 1
     assert isinstance(result[0], ListenBrainzScrobbler)
@@ -41,7 +41,7 @@ class TestBuildScrobblers:
     monkeypatch.setenv("LISTENBRAINZ_TOKEN", "token")
     with (
       patch("scrobble.scrobblers.lastfm.pylast.LastFMNetwork"),
-      patch("scrobble.scrobblers.listenbrainz.pylistenbrainz.ListenBrainz"),
+      patch("scrobble.scrobblers.listenbrainz.liblistenbrainz.ListenBrainz"),
     ):
       result = build_scrobblers()
     assert len(result) == 2
@@ -60,7 +60,7 @@ class TestBuildScrobblers:
     for k in ("LASTFM_SECRET", "LASTFM_USERNAME", "LASTFM_PASSWORD"):
       monkeypatch.delenv(k, raising=False)
     monkeypatch.setenv("LISTENBRAINZ_TOKEN", "token")
-    with patch("scrobble.scrobblers.listenbrainz.pylistenbrainz.ListenBrainz"):
+    with patch("scrobble.scrobblers.listenbrainz.liblistenbrainz.ListenBrainz"):
       result = build_scrobblers()
     assert len(result) == 1
     assert isinstance(result[0], ListenBrainzScrobbler)

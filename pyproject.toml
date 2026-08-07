@@ -5,7 +5,7 @@ description = "Automatically scrobbles your YouTube Music listening history to L
 requires-python = ">=3.14"
 dependencies = [
   "pylast==7.1.0",
-  "pylistenbrainz>=0.5.1",
+  "liblistenbrainz>=0.7.0",
   "ytmusicapi==1.12.1",
 ]
 

@@ -123,6 +123,18 @@ wheels = [
 ]
 
 [[package]]
+name = "liblistenbrainz"
+version = "0.7.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "requests" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/70/76/f224593e1f9fffb4296c8b6c0f342c5a874c317159bd0660aba6c981a3a6/liblistenbrainz-0.7.0.tar.gz", hash = "sha256:186421d7fb61f98062a555c75d3ea2c370776fd07ffc5c2d54d4a1bd187ac3fe", size = 33905, upload-time = "2026-02-23T12:07:17.128Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/e6/2b/3fc613000cb256a9e2fe92955c97d5de697883e5c4fd9c376bf21aafcca7/liblistenbrainz-0.7.0-py3-none-any.whl", hash = "sha256:7097a10461bdc9866ef988f47bc5ebdd7d3ee3982c95b39b6e38823e799082b6", size = 24526, upload-time = "2026-02-23T12:07:15.903Z" },
+]
+
+[[package]]
 name = "packaging"
 version = "26.2"
 source = { registry = "https://pypi.org/simple" }
@@ -159,18 +171,6 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/5e/1d/aaf99f82be962381ac07331106c72ff201ad98da9f18e74c0ee5f74e5a41/pylast-7.1.0.tar.gz", hash = "sha256:0c1fc381d649f256842c665ede52591d3b32789e281cd9b5601c01d2dc3a2d88", size = 437205, upload-time = "2026-06-30T11:32:55.353Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/84/18/07d29ce3b5702d835a09e42e1547762021e871f5d73b3330f97b8c31da99/pylast-7.1.0-py3-none-any.whl", hash = "sha256:2cba13d489344c6d85b195a9f472976e369fdfc0a027da3fb114d3d4906d7ecd", size = 26686, upload-time = "2026-06-30T11:32:53.723Z" },
-]
-
-[[package]]
-name = "pylistenbrainz"
-version = "0.5.1"
-source = { registry = "https://pypi.org/simple" }
-dependencies = [
-    { name = "requests" },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/e3/11/24ca2dcec2be635728521610274088888fbf721e5cc0e2302d658fe8ebf2/pylistenbrainz-0.5.1.tar.gz", hash = "sha256:20f4649bad2e5d5e949ad0bf9238c4e632a8df0a0b2b2220bd055506fb95ab48", size = 11292, upload-time = "2021-12-11T18:45:29.904Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/17/07/1af138c78dafcea3d1e5262b148cdf589593ff00cdf6db34effc69a89012/pylistenbrainz-0.5.1-py3-none-any.whl", hash = "sha256:5d56c281898f0ff3a75ade720a09fbfe56832e277fd0c2b5cc0949848c46dfc2", size = 28890, upload-time = "2021-12-11T18:45:24.547Z" },
 ]
 
 [[package]]
@@ -252,8 +252,8 @@ name = "youtube-music-scrobbler"
 version = "0.1.0"
 source = { editable = "." }
 dependencies = [
+    { name = "liblistenbrainz" },
     { name = "pylast" },
-    { name = "pylistenbrainz" },
     { name = "ytmusicapi" },
 ]
 
@@ -265,8 +265,8 @@ dev = [
 
 [package.metadata]
 requires-dist = [
+    { name = "liblistenbrainz", specifier = ">=0.7.0" },
     { name = "pylast", specifier = "==7.1.0" },
-    { name = "pylistenbrainz", specifier = ">=0.5.1" },
     { name = "ytmusicapi", specifier = "==1.12.1" },
 ]
 
