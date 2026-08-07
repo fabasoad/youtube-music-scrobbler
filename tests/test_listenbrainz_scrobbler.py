@@ -67,4 +67,4 @@ class TestListenBrainzScrobbler:
     with patch("scrobble.scrobblers.listenbrainz.pylistenbrainz.ListenBrainz") as MockClient:
       MockClient.return_value.set_auth_token = MagicMock()
       ListenBrainzScrobbler()
-      MockClient.return_value.set_auth_token.assert_called_once_with("test-token")
+      MockClient.return_value.set_auth_token.assert_called_once_with("test-token", check_validity=False)
