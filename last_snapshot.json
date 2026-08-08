@@ -12,6 +12,42 @@
     "thumbnail": "https://yt3.googleusercontent.com/8VjfILOF4PNwAB3yE8C8Iw27EdezzMAbsjdcie_-UJ0S55wcNrLwKUhuAQ8BLY2M97Y8uYeOOSN1HsIr=w60-h60-l90-rj"
   },
   {
+    "video_id": "L3OHi_vw4jY",
+    "title": "Iron Maiden",
+    "artists": [
+      "Iron Maiden"
+    ],
+    "duration": "3:35",
+    "album": "Iron Maiden",
+    "like_status": "INDIFFERENT",
+    "duration_seconds": 215,
+    "thumbnail": "https://yt3.googleusercontent.com/8VjfILOF4PNwAB3yE8C8Iw27EdezzMAbsjdcie_-UJ0S55wcNrLwKUhuAQ8BLY2M97Y8uYeOOSN1HsIr=w60-h60-l90-rj"
+  },
+  {
+    "video_id": "0OEF5-fhNyQ",
+    "title": "Charlotte the Harlot",
+    "artists": [
+      "Iron Maiden"
+    ],
+    "duration": "4:14",
+    "album": "Iron Maiden",
+    "like_status": "INDIFFERENT",
+    "duration_seconds": 254,
+    "thumbnail": "https://yt3.googleusercontent.com/8VjfILOF4PNwAB3yE8C8Iw27EdezzMAbsjdcie_-UJ0S55wcNrLwKUhuAQ8BLY2M97Y8uYeOOSN1HsIr=w60-h60-l90-rj"
+  },
+  {
+    "video_id": "e0nsNrrPfAU",
+    "title": "Strange World",
+    "artists": [
+      "Iron Maiden"
+    ],
+    "duration": "5:48",
+    "album": "Iron Maiden",
+    "like_status": "INDIFFERENT",
+    "duration_seconds": 348,
+    "thumbnail": "https://yt3.googleusercontent.com/8VjfILOF4PNwAB3yE8C8Iw27EdezzMAbsjdcie_-UJ0S55wcNrLwKUhuAQ8BLY2M97Y8uYeOOSN1HsIr=w60-h60-l90-rj"
+  },
+  {
     "video_id": "p2ct4xXak24",
     "title": "Phantom of the Opera",
     "artists": [
@@ -562,41 +598,5 @@
     "like_status": "INDIFFERENT",
     "duration_seconds": 78,
     "thumbnail": "https://yt3.googleusercontent.com/OtFcCZmOsXFcS6NWWw1zp3O6HUyON3gRlXbtKPn15_JgXJ88tdYlT0UQlsTAd__MwFsakGpHqZYPZy4=w60-h60-l90-rj"
-  },
-  {
-    "video_id": "l5k_dHYWXbs",
-    "title": "Burden",
-    "artists": [
-      "Gets Worse"
-    ],
-    "duration": "0:44",
-    "album": "No Bones",
-    "like_status": "INDIFFERENT",
-    "duration_seconds": 44,
-    "thumbnail": "https://yt3.googleusercontent.com/OtFcCZmOsXFcS6NWWw1zp3O6HUyON3gRlXbtKPn15_JgXJ88tdYlT0UQlsTAd__MwFsakGpHqZYPZy4=w60-h60-l90-rj"
-  },
-  {
-    "video_id": "2dyasjJ7hGg",
-    "title": "Strong Lad",
-    "artists": [
-      "Gets Worse"
-    ],
-    "duration": "1:13",
-    "album": "No Bones",
-    "like_status": "INDIFFERENT",
-    "duration_seconds": 73,
-    "thumbnail": "https://yt3.googleusercontent.com/OtFcCZmOsXFcS6NWWw1zp3O6HUyON3gRlXbtKPn15_JgXJ88tdYlT0UQlsTAd__MwFsakGpHqZYPZy4=w60-h60-l90-rj"
-  },
-  {
-    "video_id": "5Rgz19pz2pM",
-    "title": "Flowerchild",
-    "artists": [
-      "Citizen"
-    ],
-    "duration": "4:42",
-    "album": "Live At Studio 4",
-    "like_status": "INDIFFERENT",
-    "duration_seconds": 282,
-    "thumbnail": "https://yt3.googleusercontent.com/FnOHnaINBlFgVmKjpAUpoj2qWPKJ5P-VYBNF-hN2kCKw_YNqgM5c6vDEgns6beiEdl6PG6WfjbdwqV__=w60-h60-l90-rj"
   }
 ]
