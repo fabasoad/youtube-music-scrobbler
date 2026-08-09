@@ -8,10 +8,12 @@ dependencies = [
   "liblistenbrainz>=0.7.0",
   "ytmusicapi==1.12.1",
   "loguru>=0.7.3",
+  "psycopg[binary]>=3.2.0",
 ]
 
 [project.scripts]
 scrobble = "scrobble.main:main"
+fetch = "scrobble.fetch:main"
 refresh-auth = "scrobble.auth:main"
 
 [dependency-groups]

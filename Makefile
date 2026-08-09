@@ -1,3 +1,7 @@
+.PHONY: fetch
+fetch:
+	uv run fetch
+
 .PHONY: run
 run:
 	uv run scrobble

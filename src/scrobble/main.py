@@ -4,12 +4,11 @@ from datetime import UTC
 
 from loguru import logger
 
+from scrobble.db import PlayDb
 from scrobble.scrobblers.base import Scrobbler
 from scrobble.scrobblers.lastfm import LastFmScrobbler
 from scrobble.scrobblers.listenbrainz import ListenBrainzScrobbler
-from scrobble.snapshot_manager import SnapshotManager
 from scrobble.types import ScrobblerTrack, YouTubeMusicTrack, prepare_tracks
-from scrobble.yt_music.youtube_music_client import YouTubeMusicClient
 
 
 def prune_logs(log_path: str, keep_days: int = 365) -> None:
@@ -88,32 +87,46 @@ def build_scrobblers() -> list[Scrobbler]:
 def main() -> None:
   logger.remove()
   logger.add(sys.stderr, format="{time:YYYY-MM-DD HH:mm:ss} | {level:<8} | {message}")
-  yt_music_client = YouTubeMusicClient()
-  snapshot_manager = SnapshotManager()
 
+  scrobblers: list[Scrobbler] = build_scrobblers()
+  scrobbler_keys: list[str] = []
+  if any(isinstance(s, LastFmScrobbler) for s in scrobblers):
+    scrobbler_keys.append("lastfm")
+  if any(isinstance(s, ListenBrainzScrobbler) for s in scrobblers):
+    scrobbler_keys.append("listenbrainz")
+
+  db = PlayDb()
   try:
-    current: list[YouTubeMusicTrack] = yt_music_client.fetch_history()
-    new_tracks: list[YouTubeMusicTrack] = snapshot_manager.get_diff_from_snapshot(current)
+    db.init_schema()
 
-    if new_tracks:
-      scrobblers: list[Scrobbler] = build_scrobblers()
-      prepared: list[ScrobblerTrack] = prepare_tracks(new_tracks)
-      scrobbled: int = 0
-      for scrobbler in scrobblers:
-        scrobbled = max(scrobbled, scrobbler.scrobble(prepared))
-        scrobbler.update_like_status(prepared)
-    else:
-      logger.info("No new tracks to scrobble.")
-      scrobbled = 0
+    total_scrobbled: int = 0
+    all_new_tracks: list[YouTubeMusicTrack] = []
 
-    snapshot_manager.save_snapshot(current)
-    write_log("runs.log", scrobbled, len(new_tracks))
-    write_summary(new_tracks)
-    logger.info("Done. Scrobbled {} track(s).", scrobbled)
+    for key, scrobbler in zip(scrobbler_keys, scrobblers, strict=True):
+      rows: list[tuple[int, YouTubeMusicTrack]] = db.get_unscrobbled(key)
+      if not rows:
+        logger.info("No unscrobbled tracks for {}.", key)
+        continue
+
+      play_ids: list[int] = [r[0] for r in rows]
+      tracks: list[YouTubeMusicTrack] = [r[1] for r in rows]
+      prepared: list[ScrobblerTrack] = prepare_tracks(tracks)
+
+      count: int = scrobbler.scrobble(prepared)
+      db.mark_scrobbled(play_ids, key)
+      total_scrobbled = max(total_scrobbled, count)
+      if len(tracks) > len(all_new_tracks):
+        all_new_tracks = tracks
+
+    write_log("runs.log", total_scrobbled, len(all_new_tracks))
+    write_summary(all_new_tracks)
+    logger.info("Done. Scrobbled {} track(s).", total_scrobbled)
 
   except Exception as e:
     logger.exception("Error: {}", e)
     sys.exit(1)
+  finally:
+    db.close()
 
 
 if __name__ == "__main__":
