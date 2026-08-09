@@ -61,12 +61,10 @@ class ListenBrainzScrobbler(Scrobbler):
 
     logger.info("[ListenBrainz] Updating feedback for {} track(s)...", len(scored))
 
-    min_ts: int = min(t.timestamp for t, _ in scored)
     try:
       listens: list[liblistenbrainz.Listen] = self.client.get_listens(
         username=os.environ["LISTENBRAINZ_USERNAME"],
-        min_ts=min_ts - 1,
-        count=len(scored),
+        count=200,
       )
     except liblistenbrainz.errors.ListenBrainzException as e:
       logger.error("[ListenBrainz] Failed to fetch listens for feedback: {}", e)

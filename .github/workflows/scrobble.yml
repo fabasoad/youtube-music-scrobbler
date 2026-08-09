@@ -19,8 +19,18 @@ jobs:
     runs-on: [ubuntu-latest]
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
     steps:
+      - name: Get GitHub token
+        uses: actions/create-github-app-token@bcd2ba49218906704ab6c1aa796996da409d3eb1 # v3.2.0
+        id: github-app
+        with:
+          client-id: ${{ secrets.GH_APP_CONTENTS_CRUD_CLIENT_ID }}
+          private-key: ${{ secrets.GH_APP_CONTENTS_CRUD_PRIVATE_KEY }}
+
       - name: Checkout ${{ github.repository }}
         uses: actions/checkout@v7
+        with:
+          token: "${{ steps.github-app.outputs.token }}"
+          persist-credentials: "true"
 
       - name: Set up Python
         uses: actions/setup-python@v6
@@ -46,10 +56,18 @@ jobs:
           LISTENBRAINZ_TOKEN: "${{ secrets.LISTENBRAINZ_TOKEN }}"
         run: make run
 
-      - name: Commit runs.log
+      - name: Setup git config
+        env:
+          GH_TOKEN: "${{ steps.github-app.outputs.token }}"
+          STEPS_APP_TOKEN_OUTPUTS_APP_SLUG: ${{ steps.github-app.outputs.app-slug }}
         run: |
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git config user.name "github-actions[bot]"
-          git add runs.log
-          git diff --staged --quiet || git commit -m "chore: update runs.log"
+          user_name="${STEPS_APP_TOKEN_OUTPUTS_APP_SLUG}[bot]"
+          user_id="$(gh api "/users/${user_name}" --jq .id)"
+          git config user.email "${user_id}+${user_name}@users.noreply.github.com"
+          git config user.name "${user_name}"
+
+      - name: Commit updated snapshot and log
+        run: |
+          git add last_snapshot.json runs.log
+          git diff --staged --quiet || git commit -m "chore: update snapshot"
           git push
