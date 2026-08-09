@@ -1,5 +1,6 @@
 import json
 import os
+import time
 import urllib.error
 import urllib.request
 
@@ -98,14 +99,25 @@ class ListenBrainzScrobbler(Scrobbler):
         headers={"Authorization": f"Token {token}", "Content-Type": "application/json"},
         method="POST",
       )
-      try:
-        with urllib.request.urlopen(req, timeout=10):
-          label: str = "Liked" if score == 1 else "Disliked"
-          logger.info("[ListenBrainz] {}: {} — {}", label, track.artist, track.title)
-          submitted += 1
-      except urllib.error.HTTPError as http_err:
-        logger.error(
-          "[ListenBrainz] Feedback failed for {} — {}: {}", track.artist, track.title, http_err.code
-        )
+      for attempt in range(3):
+        try:
+          with urllib.request.urlopen(req, timeout=10):
+            label: str = "Liked" if score == 1 else "Disliked"
+            logger.info("[ListenBrainz] {}: {} — {}", label, track.artist, track.title)
+            submitted += 1
+            break
+        except urllib.error.HTTPError as http_err:
+          logger.error(
+            "[ListenBrainz] Feedback failed for {} — {}: {}", track.artist, track.title, http_err.code
+          )
+          break
+        except (TimeoutError, urllib.error.URLError) as e:
+          logger.warning(
+            "[ListenBrainz] Attempt {} failed for {} — {}: {}", attempt + 1, track.artist, track.title, e
+          )
+          if attempt < 2:
+            time.sleep(5)
+          else:
+            logger.error("[ListenBrainz] Skipping {} — {} after 3 failed attempts", track.artist, track.title)
 
     logger.info("[ListenBrainz] Feedback done. {}/{} track(s) updated.", submitted, len(scored))
