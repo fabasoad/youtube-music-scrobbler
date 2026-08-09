@@ -2,9 +2,9 @@
 name: Scrobble YT Music History
 
 on:
-  # Due to unstable scheduler for free accounts and significant delays, this job
-  # is running on schedule via cron-job.org instead of "schedule" trigger.
-  workflow_dispatch: {}
+  workflow_run:
+    workflows: ["Fetch YT Music History"]
+    types: [completed]
 
 permissions:
   contents: write
@@ -17,6 +17,7 @@ jobs:
   scrobble:
     name: Scrobble
     runs-on: [ubuntu-latest]
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     steps:
       - name: Checkout ${{ github.repository }}
         uses: actions/checkout@v7

@@ -1,12 +1,9 @@
-import os
 import sys
 
 from loguru import logger
 
 from scrobble.db import PlayDb
-from scrobble.scrobblers.lastfm import LastFmScrobbler
-from scrobble.scrobblers.listenbrainz import ListenBrainzScrobbler
-from scrobble.types import ScrobblerTrack, YouTubeMusicTrack, prepare_tracks
+from scrobble.types import YouTubeMusicTrack
 from scrobble.yt_music.youtube_music_client import YouTubeMusicClient
 
 
@@ -26,14 +23,6 @@ def _diff(
   return list(reversed(current[:join]))  # oldest first
 
 
-def _update_like_status(tracks: list[YouTubeMusicTrack]) -> None:
-  prepared: list[ScrobblerTrack] = prepare_tracks(tracks)
-  if os.environ.get("LASTFM_API_KEY"):
-    LastFmScrobbler().update_like_status(prepared)
-  if os.environ.get("LISTENBRAINZ_TOKEN"):
-    ListenBrainzScrobbler().update_like_status(prepared)
-
-
 def main() -> None:
   logger.remove()
   logger.add(sys.stderr, format="{time:YYYY-MM-DD HH:mm:ss} | {level:<8} | {message}")
@@ -51,8 +40,6 @@ def main() -> None:
       logger.info("Fetch done. {} new track(s) saved.", len(new_tracks))
     else:
       logger.info("Fetch done. No new tracks.")
-
-    _update_like_status(current)
 
   except Exception as e:
     logger.exception("Fetch error: {}", e)

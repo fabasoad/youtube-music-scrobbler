@@ -1,10 +1,10 @@
 ---
-name: Fetch YT Music History
+name: Update Likes
 
 on:
-  # Due to unstable scheduler for free accounts and significant delays, this job
-  # is running on schedule via cron-job.org instead of "schedule" trigger.
-  workflow_dispatch: {}
+  workflow_run:
+    workflows: ["Fetch YT Music History"]
+    types: [completed]
 
 permissions:
   contents: read
@@ -14,9 +14,10 @@ defaults:
     shell: sh
 
 jobs:
-  fetch:
-    name: Fetch
+  update-likes:
+    name: Update Likes
     runs-on: [ubuntu-latest]
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     steps:
       - name: Checkout ${{ github.repository }}
         uses: actions/checkout@v7
@@ -42,7 +43,12 @@ jobs:
           main: echo "${YTM_BROWSER}" > browser.json
           post: rm -f browser.json
 
-      - name: Fetch history
+      - name: Update like status
         env:
-          NEON_DATABASE_URL: "${{ secrets.NEON_DATABASE_URL }}"
-        run: make fetch
+          LASTFM_API_KEY: "${{ secrets.LASTFM_API_KEY }}"
+          LASTFM_SECRET: "${{ secrets.LASTFM_SECRET }}"
+          LASTFM_USERNAME: "${{ secrets.LASTFM_USERNAME }}"
+          LASTFM_PASSWORD: "${{ secrets.LASTFM_PASSWORD }}"
+          LISTENBRAINZ_USERNAME: "${{ secrets.LISTENBRAINZ_USERNAME }}"
+          LISTENBRAINZ_TOKEN: "${{ secrets.LISTENBRAINZ_TOKEN }}"
+        run: make update-likes

@@ -9,7 +9,7 @@ class YouTubeMusicTrack:
   artists: list[str]
   duration: str | None
   album: str | None
-  like_status: str
+  like_status: str = field(default="INDIFFERENT")
   duration_seconds: int | None = field(default=None)
   thumbnail: str | None = field(default=None)
 

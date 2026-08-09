@@ -6,6 +6,10 @@ fetch:
 run:
 	uv run scrobble
 
+.PHONY: update-likes
+update-likes:
+	uv run update-likes
+
 .PHONY: refresh-auth
 refresh-auth:
 	uv run refresh-auth

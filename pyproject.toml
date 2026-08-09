@@ -14,6 +14,7 @@ dependencies = [
 [project.scripts]
 scrobble = "scrobble.main:main"
 fetch = "scrobble.fetch:main"
+update-likes = "scrobble.update_likes:main"
 refresh-auth = "scrobble.auth:main"
 
 [dependency-groups]
