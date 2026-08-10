@@ -37,9 +37,18 @@ class PlayDb:
           PRIMARY KEY (play_id, position)
         )
       """)
+      cur.execute("""
+        CREATE TABLE IF NOT EXISTS runs (
+          id         BIGSERIAL PRIMARY KEY,
+          ran_at     TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+          scrobbled  INTEGER NOT NULL,
+          new_tracks INTEGER NOT NULL
+        )
+      """)
       cur.execute("CREATE INDEX IF NOT EXISTS plays_video_id_idx ON plays (video_id)")
       cur.execute("CREATE INDEX IF NOT EXISTS plays_fetched_at_idx ON plays (fetched_at DESC)")
       cur.execute("CREATE INDEX IF NOT EXISTS play_artists_artist_name_idx ON play_artists (artist_name)")
+      cur.execute("CREATE INDEX IF NOT EXISTS runs_ran_at_idx ON runs (ran_at DESC)")
     self.conn.commit()
     logger.debug("DB schema initialized.")
 
@@ -120,6 +129,15 @@ class PlayDb:
       cur.execute(query, [play_ids])
     self.conn.commit()
     logger.info("Marked {} play(s) as scrobbled for {}.", len(play_ids), scrobbler)
+
+  def insert_run(self, scrobbled: int, new_tracks: int) -> None:
+    with self.conn.cursor() as cur:
+      cur.execute(
+        "INSERT INTO runs (scrobbled, new_tracks) VALUES (%s, %s)",
+        (scrobbled, new_tracks),
+      )
+    self.conn.commit()
+    logger.debug("Run recorded: scrobbled={}, new_tracks={}.", scrobbled, new_tracks)
 
   def close(self) -> None:
     self.conn.close()
