@@ -1,3 +1,4 @@
+import json
 import urllib.error
 from unittest.mock import MagicMock, patch
 
@@ -102,7 +103,7 @@ class TestListenBrainzUpdateLikeStatus:
   def test_indifferent_skipped(self, monkeypatch: pytest.MonkeyPatch) -> None:
     monkeypatch.setenv("LISTENBRAINZ_TOKEN", "tok")
     scrobbler = make_scrobbler()
-    with patch.object(scrobbler, "_lookup_recording_metadata") as mock_lookup:
+    with patch.object(scrobbler, "_lookup_recording_mbid") as mock_lookup:
       scrobbler.update_like_status([make_track(like_status="INDIFFERENT")])
     mock_lookup.assert_not_called()
 
@@ -111,7 +112,7 @@ class TestListenBrainzUpdateLikeStatus:
     scrobbler = make_scrobbler()
     track = make_track(like_status="LIKE", title="Title", artist="Artist")
     with (
-      patch.object(scrobbler, "_lookup_recording_metadata", return_value=("mbid-1", None)),
+      patch.object(scrobbler, "_lookup_recording_mbid", return_value="mbid-1"),
       patch("scrobble.scrobblers.listenbrainz.urllib.request.urlopen", return_value=_make_urlopen_ctx()),
     ):
       scrobbler.update_like_status([track])
@@ -121,7 +122,7 @@ class TestListenBrainzUpdateLikeStatus:
     scrobbler = make_scrobbler()
     track = make_track(like_status="DISLIKE", title="Title", artist="Artist")
     with (
-      patch.object(scrobbler, "_lookup_recording_metadata", return_value=("mbid-1", None)),
+      patch.object(scrobbler, "_lookup_recording_mbid", return_value="mbid-1"),
       patch("scrobble.scrobblers.listenbrainz.urllib.request.urlopen", return_value=_make_urlopen_ctx()),
     ):
       scrobbler.update_like_status([track])
@@ -131,7 +132,7 @@ class TestListenBrainzUpdateLikeStatus:
     scrobbler = make_scrobbler()
     track = make_track(like_status="LIKE", title="Killpop", artist="Slipknot")
     with (
-      patch.object(scrobbler, "_lookup_recording_metadata", return_value=("mbid-1", None)) as mock_lookup,
+      patch.object(scrobbler, "_lookup_recording_mbid", return_value="mbid-1") as mock_lookup,
       patch("scrobble.scrobblers.listenbrainz.urllib.request.urlopen", return_value=_make_urlopen_ctx()),
     ):
       scrobbler.update_like_status([track])
@@ -144,7 +145,7 @@ class TestListenBrainzUpdateLikeStatus:
     scrobbler = make_scrobbler()
     track = make_track(like_status="LIKE", title="Missing", artist="Nobody")
     with (
-      patch.object(scrobbler, "_lookup_recording_metadata", return_value=(None, None)),
+      patch.object(scrobbler, "_lookup_recording_mbid", return_value=None),
       patch("scrobble.scrobblers.listenbrainz.urllib.request.urlopen") as mock_urlopen,
     ):
       scrobbler.update_like_status([track])
@@ -159,7 +160,7 @@ class TestListenBrainzUpdateLikeStatus:
     track = make_track(like_status="LIKE", title="Title", artist="Artist")
     http_err = urllib.error.HTTPError(url=None, code=403, msg="Forbidden", hdrs=None, fp=None)
     with (
-      patch.object(scrobbler, "_lookup_recording_metadata", return_value=("mbid-1", None)),
+      patch.object(scrobbler, "_lookup_recording_mbid", return_value="mbid-1"),
       patch("scrobble.scrobblers.listenbrainz.urllib.request.urlopen", side_effect=http_err),
     ):
       scrobbler.update_like_status([track])
@@ -172,7 +173,7 @@ class TestListenBrainzUpdateLikeStatus:
     scrobbler = make_scrobbler()
     track = make_track(like_status="LIKE", title="Title", artist="Artist")
     with (
-      patch.object(scrobbler, "_lookup_recording_metadata", return_value=("mbid-1", None)),
+      patch.object(scrobbler, "_lookup_recording_mbid", return_value="mbid-1"),
       patch("scrobble.scrobblers.listenbrainz.urllib.request.urlopen", side_effect=TimeoutError("timeout")),
       patch("scrobble.scrobblers.listenbrainz.time.sleep") as mock_sleep,
     ):
@@ -187,7 +188,7 @@ class TestListenBrainzUpdateLikeStatus:
     track = make_track(like_status="LIKE", title="Title", artist="Artist")
     url_err = urllib.error.URLError("network down")
     with (
-      patch.object(scrobbler, "_lookup_recording_metadata", return_value=("mbid-1", None)),
+      patch.object(scrobbler, "_lookup_recording_mbid", return_value="mbid-1"),
       patch(
         "scrobble.scrobblers.listenbrainz.urllib.request.urlopen",
         side_effect=[url_err, _make_urlopen_ctx()],
@@ -195,3 +196,56 @@ class TestListenBrainzUpdateLikeStatus:
       patch("scrobble.scrobblers.listenbrainz.time.sleep"),
     ):
       scrobbler.update_like_status([track])
+
+
+class TestListenBrainzLookupRecordingMbid:
+  def test_returns_mbid_on_success(self) -> None:
+    scrobbler = make_scrobbler()
+    resp = MagicMock()
+    resp.read.return_value = json.dumps({"recording_mbid": "abc-123"}).encode()
+    ctx = MagicMock()
+    ctx.__enter__ = MagicMock(return_value=resp)
+    ctx.__exit__ = MagicMock(return_value=False)
+    with patch("scrobble.scrobblers.listenbrainz.urllib.request.urlopen", return_value=ctx):
+      result = scrobbler._lookup_recording_mbid("Artist", "Title")
+    assert result == "abc-123"
+
+  def test_returns_none_when_mbid_missing(self) -> None:
+    scrobbler = make_scrobbler()
+    resp = MagicMock()
+    resp.read.return_value = json.dumps({}).encode()
+    ctx = MagicMock()
+    ctx.__enter__ = MagicMock(return_value=resp)
+    ctx.__exit__ = MagicMock(return_value=False)
+    with patch("scrobble.scrobblers.listenbrainz.urllib.request.urlopen", return_value=ctx):
+      result = scrobbler._lookup_recording_mbid("Artist", "Title")
+    assert result is None
+
+  def test_returns_none_on_url_error(self) -> None:
+    scrobbler = make_scrobbler()
+    with patch(
+      "scrobble.scrobblers.listenbrainz.urllib.request.urlopen",
+      side_effect=urllib.error.URLError("fail"),
+    ):
+      result = scrobbler._lookup_recording_mbid("Artist", "Title")
+    assert result is None
+
+  def test_returns_none_on_timeout(self) -> None:
+    scrobbler = make_scrobbler()
+    with patch(
+      "scrobble.scrobblers.listenbrainz.urllib.request.urlopen",
+      side_effect=TimeoutError("timeout"),
+    ):
+      result = scrobbler._lookup_recording_mbid("Artist", "Title")
+    assert result is None
+
+  def test_returns_none_on_json_decode_error(self) -> None:
+    scrobbler = make_scrobbler()
+    resp = MagicMock()
+    resp.read.return_value = b"not-json"
+    ctx = MagicMock()
+    ctx.__enter__ = MagicMock(return_value=resp)
+    ctx.__exit__ = MagicMock(return_value=False)
+    with patch("scrobble.scrobblers.listenbrainz.urllib.request.urlopen", return_value=ctx):
+      result = scrobbler._lookup_recording_mbid("Artist", "Title")
+    assert result is None

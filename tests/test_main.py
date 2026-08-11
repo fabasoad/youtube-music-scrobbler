@@ -1,8 +1,10 @@
-from unittest.mock import patch
+import importlib.util
+import runpy
+from unittest.mock import MagicMock, patch
 
 import pytest
 
-from scrobble.main import build_scrobblers, write_summary
+from scrobble.main import build_scrobblers, main, write_summary
 from scrobble.scrobblers.lastfm import LastFmScrobbler
 from scrobble.scrobblers.listenbrainz import ListenBrainzScrobbler
 from scrobble.types import YouTubeMusicTrack
@@ -119,3 +121,146 @@ class TestWriteSummary:
     with open(summary_file) as f:
       content = f.read()
     assert "No new tracks scrobbled" in content
+
+  def test_short_duration_prefixed(
+    self, tmp_path: pytest.TempPathFactory, monkeypatch: pytest.MonkeyPatch
+  ) -> None:
+    summary_file = str(tmp_path / "summary.md")
+    monkeypatch.setenv("GITHUB_STEP_SUMMARY", summary_file)
+    track = YouTubeMusicTrack(
+      video_id="v1", title="Song", artists=["A"], duration="3:00", album=None, like_status="INDIFFERENT"
+    )
+    write_summary([track])
+    content = (tmp_path / "summary.md").read_text()
+    assert "03:00" in content
+
+
+class TestBuildScrobblersListenBrainzError:
+  def test_listenbrainz_init_error_skips_and_warns(
+    self, monkeypatch: pytest.MonkeyPatch, capsys: pytest.CaptureFixture
+  ) -> None:
+    for k in ("LASTFM_API_KEY", "LASTFM_SECRET", "LASTFM_USERNAME", "LASTFM_PASSWORD"):
+      monkeypatch.delenv(k, raising=False)
+    monkeypatch.setenv("LISTENBRAINZ_TOKEN", "token")
+    with patch(
+      "scrobble.main.ListenBrainzScrobbler", side_effect=RuntimeError("bad token")
+    ):
+      with pytest.raises(RuntimeError, match="No scrobblers configured"):
+        build_scrobblers()
+    assert "Failed to configure" in capsys.readouterr().err
+
+
+def _make_db_mock(tracks: list | None = None) -> MagicMock:
+  db = MagicMock()
+  rows = [(i, t) for i, t in enumerate(tracks or [])]
+  db.get_unscrobbled.return_value = rows
+  return db
+
+
+def _make_scrobbler_mock(count: int = 0) -> MagicMock:
+  s = MagicMock()
+  s.scrobble.return_value = count
+  return s
+
+
+def _ytm_track(video_id: str = "v1") -> YouTubeMusicTrack:
+  return YouTubeMusicTrack(
+    video_id=video_id, title="Song", artists=["Artist"], duration="3:00", album=None, like_status="INDIFFERENT"
+  )
+
+
+class TestMain:
+  def _patch_main(
+    self,
+    monkeypatch: pytest.MonkeyPatch,
+    db: MagicMock,
+    scrobblers: list[MagicMock],
+    scrobbler_keys: list[str] | None = None,
+  ):
+    monkeypatch.delenv("GITHUB_STEP_SUMMARY", raising=False)
+    patch_build = patch("scrobble.main.build_scrobblers", return_value=scrobblers)
+    patch_db = patch("scrobble.main.PlayDb", return_value=db)
+    if scrobbler_keys is not None:
+      patch_lastfm = patch(
+        "scrobble.main.LastFmScrobbler",
+        side_effect=lambda: scrobblers[scrobbler_keys.index("lastfm")]
+        if "lastfm" in scrobbler_keys
+        else None,
+      )
+    return patch_build, patch_db
+
+  def test_scrobbles_and_marks(self, monkeypatch: pytest.MonkeyPatch) -> None:
+    monkeypatch.delenv("GITHUB_STEP_SUMMARY", raising=False)
+    track = _ytm_track()
+    db = _make_db_mock([track])
+    scrobbler = _make_scrobbler_mock(count=1)
+    scrobbler.__class__ = LastFmScrobbler
+    with (
+      patch("scrobble.main.build_scrobblers", return_value=[scrobbler]),
+      patch("scrobble.main.PlayDb", return_value=db),
+      patch("scrobble.main.isinstance", side_effect=lambda obj, cls: cls == LastFmScrobbler),
+      patch("scrobble.main.prepare_tracks", return_value=[MagicMock()]),
+    ):
+      main()
+    scrobbler.scrobble.assert_called_once()
+    db.mark_scrobbled.assert_called_once()
+
+  def test_no_unscrobbled_skips_scrobble(self, monkeypatch: pytest.MonkeyPatch) -> None:
+    monkeypatch.delenv("GITHUB_STEP_SUMMARY", raising=False)
+    db = _make_db_mock([])
+    scrobbler = _make_scrobbler_mock()
+    with (
+      patch("scrobble.main.build_scrobblers", return_value=[scrobbler]),
+      patch("scrobble.main.PlayDb", return_value=db),
+      patch("scrobble.main.isinstance", side_effect=lambda obj, cls: cls == LastFmScrobbler),
+    ):
+      main()
+    scrobbler.scrobble.assert_not_called()
+
+  def test_exception_exits_1(self, monkeypatch: pytest.MonkeyPatch) -> None:
+    monkeypatch.delenv("GITHUB_STEP_SUMMARY", raising=False)
+    db = MagicMock()
+    db.init_schema.side_effect = RuntimeError("db down")
+    with (
+      patch("scrobble.main.build_scrobblers", return_value=[MagicMock()]),
+      patch("scrobble.main.PlayDb", return_value=db),
+      pytest.raises(SystemExit) as exc_info,
+    ):
+      main()
+    assert exc_info.value.code == 1
+
+  def test_db_closed_on_exception(self, monkeypatch: pytest.MonkeyPatch) -> None:
+    monkeypatch.delenv("GITHUB_STEP_SUMMARY", raising=False)
+    db = MagicMock()
+    db.init_schema.side_effect = RuntimeError("db down")
+    with (
+      patch("scrobble.main.build_scrobblers", return_value=[MagicMock()]),
+      patch("scrobble.main.PlayDb", return_value=db),
+      pytest.raises(SystemExit),
+    ):
+      main()
+    db.close.assert_called_once()
+
+  def test_db_closed_on_success(self, monkeypatch: pytest.MonkeyPatch) -> None:
+    monkeypatch.delenv("GITHUB_STEP_SUMMARY", raising=False)
+    db = _make_db_mock([])
+    scrobbler = _make_scrobbler_mock()
+    with (
+      patch("scrobble.main.build_scrobblers", return_value=[scrobbler]),
+      patch("scrobble.main.PlayDb", return_value=db),
+      patch("scrobble.main.isinstance", side_effect=lambda obj, cls: cls == LastFmScrobbler),
+    ):
+      main()
+    db.close.assert_called_once()
+
+  def test_dunder_main_calls_main(self, monkeypatch: pytest.MonkeyPatch) -> None:
+    monkeypatch.delenv("GITHUB_STEP_SUMMARY", raising=False)
+    db = _make_db_mock([])
+    spec = importlib.util.find_spec("scrobble.main")
+    assert spec is not None
+    with (
+      patch("scrobble.main.build_scrobblers", return_value=[MagicMock()]),
+      patch("scrobble.main.PlayDb", return_value=db),
+      patch("scrobble.main.isinstance", side_effect=lambda obj, cls: False),
+    ):
+      runpy.run_path(spec.origin, run_name="__main__")

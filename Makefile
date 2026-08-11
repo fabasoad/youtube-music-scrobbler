@@ -37,4 +37,4 @@ lint:
 
 .PHONY: test
 test:
-	uv run pytest --cov=src/scrobble --cov-report=term --cov-fail-under=70
+	uv run pytest --cov=src/scrobble --cov-report=term --cov-fail-under=80

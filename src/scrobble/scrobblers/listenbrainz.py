@@ -51,18 +51,22 @@ class ListenBrainzScrobbler(Scrobbler):
       logger.error("[ListenBrainz] Submission failed: {}", e)
       return 0
 
-  def _lookup_recording_metadata(self, artist: str, title: str) -> tuple[str | None, str | None]:
+  def _lookup_recording_mbid(self, artist: str, title: str) -> str | None:
     params: str = urllib.parse.urlencode(
       {"artist_name": artist, "recording_name": title, "metadata": "false"}
     )
-    url: str = f"{_METADATA_LOOKUP_URL}?{params}"
-    req: urllib.request.Request = urllib.request.Request(url, headers={"Accept": "application/json"})
+    token: str = os.environ["LISTENBRAINZ_TOKEN"]
+    req: urllib.request.Request = urllib.request.Request(
+      f"{_METADATA_LOOKUP_URL}?{params}",
+      headers={"Authorization": f"Token {token}", "Accept": "application/json"},
+      method="GET",
+    )
     try:
       with urllib.request.urlopen(req, timeout=10) as resp:
         data: dict = json.loads(resp.read())
-        return data.get("recording_mbid"), data.get("recording_msid")
+        return data.get("recording_mbid")
     except urllib.error.URLError, TimeoutError, json.JSONDecodeError:
-      return None, None
+      return None
 
   def update_like_status(self, tracks: list[ScrobblerTrack]) -> None:
     scored: list[tuple[ScrobblerTrack, int]] = []
@@ -80,14 +84,12 @@ class ListenBrainzScrobbler(Scrobbler):
     token: str = os.environ["LISTENBRAINZ_TOKEN"]
     submitted: int = 0
     for track, score in scored:
-      mbid, msid = self._lookup_recording_metadata(track.artist, track.title)
+      mbid = self._lookup_recording_mbid(track.artist, track.title)
       if not mbid:
         logger.warning("[ListenBrainz] Recording not found for feedback: {} — {}", track.artist, track.title)
         continue
 
       body: dict[str, str | int] = {"score": score, "recording_mbid": mbid}
-      if msid:
-        body["recording_msid"] = msid
 
       req: urllib.request.Request = urllib.request.Request(
         _FEEDBACK_URL,

@@ -139,3 +139,15 @@ class TestMain:
 
     err: str = capsys.readouterr().err
     assert "browser.json updated successfully" in err
+
+  def test_dunder_main_calls_main(
+    self, tmp_path: pytest.TempPathFactory, monkeypatch: pytest.MonkeyPatch
+  ) -> None:
+    import importlib.util
+    import runpy
+
+    monkeypatch.chdir(tmp_path)
+    (tmp_path / "curl.txt").write_text(VALID_CURL)
+    spec = importlib.util.find_spec("scrobble.auth")
+    assert spec is not None
+    runpy.run_path(spec.origin, run_name="__main__")

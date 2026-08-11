@@ -1,4 +1,10 @@
-from scrobble.fetch import _diff
+import importlib.util
+import runpy
+from unittest.mock import MagicMock, patch
+
+import pytest
+
+from scrobble.fetch import _diff, main
 from scrobble.types import YouTubeMusicTrack
 
 
@@ -46,3 +52,82 @@ class TestDiff:
     result = _diff(current, recent_ids, min_seq=1)
     assert len(result) == 1
     assert result[0].video_id == "v4"
+
+
+def _make_db(recent_ids: list[str] | None = None) -> MagicMock:
+  db = MagicMock()
+  db.get_recent_video_ids.return_value = recent_ids or []
+  return db
+
+
+def _make_yt_client(tracks: list[YouTubeMusicTrack] | None = None, limit: int = 50) -> MagicMock:
+  client = MagicMock()
+  client.fetch_history.return_value = tracks or []
+  client.history_limit = limit
+  return client
+
+
+class TestFetchMain:
+  def test_inserts_new_tracks(self) -> None:
+    # recent_ids has matches so _diff finds new tracks ahead of the overlap
+    tracks = [_make_track("v3"), _make_track("v1"), _make_track("v2"), _make_track("v3")]
+    db = _make_db(recent_ids=["v1", "v2", "v3"])
+    yt = _make_yt_client(tracks=tracks)
+    with (
+      patch("scrobble.fetch.PlayDb", return_value=db),
+      patch("scrobble.fetch.YouTubeMusicClient", return_value=yt),
+    ):
+      main()
+    db.insert_plays.assert_called_once()
+
+  def test_no_new_tracks_skips_insert(self) -> None:
+    tracks = [_make_track("v1"), _make_track("v2"), _make_track("v3")]
+    db = _make_db(recent_ids=["v1", "v2", "v3"])
+    yt = _make_yt_client(tracks=tracks)
+    with (
+      patch("scrobble.fetch.PlayDb", return_value=db),
+      patch("scrobble.fetch.YouTubeMusicClient", return_value=yt),
+    ):
+      main()
+    db.insert_plays.assert_not_called()
+
+  def test_exception_exits_with_code_1(self) -> None:
+    db = _make_db()
+    db.init_schema.side_effect = RuntimeError("boom")
+    with (
+      patch("scrobble.fetch.PlayDb", return_value=db),
+      pytest.raises(SystemExit) as exc_info,
+    ):
+      main()
+    assert exc_info.value.code == 1
+
+  def test_db_closed_on_exception(self) -> None:
+    db = _make_db()
+    db.init_schema.side_effect = RuntimeError("boom")
+    with (
+      patch("scrobble.fetch.PlayDb", return_value=db),
+      pytest.raises(SystemExit),
+    ):
+      main()
+    db.close.assert_called_once()
+
+  def test_db_closed_on_success(self) -> None:
+    db = _make_db()
+    yt = _make_yt_client()
+    with (
+      patch("scrobble.fetch.PlayDb", return_value=db),
+      patch("scrobble.fetch.YouTubeMusicClient", return_value=yt),
+    ):
+      main()
+    db.close.assert_called_once()
+
+  def test_dunder_main_calls_main(self) -> None:
+    db = _make_db()
+    yt = _make_yt_client()
+    spec = importlib.util.find_spec("scrobble.fetch")
+    assert spec is not None
+    with (
+      patch("scrobble.fetch.PlayDb", return_value=db),
+      patch("scrobble.fetch.YouTubeMusicClient", return_value=yt),
+    ):
+      runpy.run_path(spec.origin, run_name="__main__")
