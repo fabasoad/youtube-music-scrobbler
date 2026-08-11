@@ -1,4 +1,7 @@
-from unittest.mock import patch
+from unittest.mock import MagicMock, call, patch
+
+import pytest
+from ytmusicapi.exceptions import YTMusicServerError
 
 from scrobble.yt_music.youtube_music_client import YouTubeMusicClient
 
@@ -157,3 +160,27 @@ class TestFetchHistory:
       client = YouTubeMusicClient()
       result = client.fetch_history()
     assert len(result) == 50  # default limit
+
+  def test_retry_succeeds_on_second_attempt(self) -> None:
+    items = [_make_ytm_item()]
+    mock_yt: MagicMock = MagicMock()
+    mock_yt.get_history.side_effect = [YTMusicServerError("err"), items]
+    with (
+      patch("scrobble.yt_music.youtube_music_client.YTMusic", return_value=mock_yt),
+      patch("scrobble.yt_music.youtube_music_client.time.sleep") as mock_sleep,
+    ):
+      result = YouTubeMusicClient().fetch_history()
+    assert len(result) == 1
+    mock_sleep.assert_called_once_with(5)
+
+  def test_retry_raises_after_three_failures(self) -> None:
+    mock_yt: MagicMock = MagicMock()
+    mock_yt.get_history.side_effect = YTMusicServerError("err")
+    with (
+      patch("scrobble.yt_music.youtube_music_client.YTMusic", return_value=mock_yt),
+      patch("scrobble.yt_music.youtube_music_client.time.sleep") as mock_sleep,
+      pytest.raises(YTMusicServerError),
+    ):
+      YouTubeMusicClient().fetch_history()
+    assert mock_sleep.call_count == 2
+    assert mock_sleep.call_args_list == [call(5), call(5)]

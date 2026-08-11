@@ -6,7 +6,7 @@ requires-python = ">=3.14"
 dependencies = [
   "pylast==7.1.0",
   "liblistenbrainz>=0.7.0",
-  "ytmusicapi==1.12.1",
+  "ytmusicapi==1.12.2",
   "loguru>=0.7.3",
   "psycopg[binary]>=3.2.0",
 ]
@@ -20,7 +20,8 @@ refresh-auth = "scrobble.auth:main"
 [dependency-groups]
 dev = [
   "pytest>=9.1.1",
-  "ruff>=0.16.1",
+  "pytest-cov>=7.1.0",
+  "ruff>=0.16.2",
 ]
 
 [tool.uv]

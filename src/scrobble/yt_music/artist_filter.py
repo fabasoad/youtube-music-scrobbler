@@ -3,5 +3,5 @@ from abc import ABC, abstractmethod
 
 class ArtistFilter(ABC):
   @abstractmethod
-  def filter(self, artist: str) -> bool:
+  def filter(self, artist: str) -> bool:  # pragma: no cover
     pass

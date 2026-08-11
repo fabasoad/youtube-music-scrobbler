@@ -5,7 +5,7 @@ from scrobble.types import ScrobblerTrack
 
 class Scrobbler(ABC):
   @abstractmethod
-  def scrobble(self, tracks: list[ScrobblerTrack]) -> int:
+  def scrobble(self, tracks: list[ScrobblerTrack]) -> int:  # pragma: no cover
     pass
 
   def update_like_status(self, tracks: list[ScrobblerTrack]) -> None:  # noqa: B027
