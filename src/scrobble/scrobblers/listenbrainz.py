@@ -2,6 +2,7 @@ import json
 import os
 import time
 import urllib.error
+import urllib.parse
 import urllib.request
 
 import liblistenbrainz
@@ -12,6 +13,7 @@ from scrobble.scrobblers.base import Scrobbler
 from scrobble.types import ScrobblerTrack
 
 _FEEDBACK_URL = "https://api.listenbrainz.org/1/feedback/recording-feedback"
+_METADATA_LOOKUP_URL = "https://api.listenbrainz.org/1/metadata/lookup/"
 
 
 class ListenBrainzScrobbler(Scrobbler):
@@ -49,6 +51,19 @@ class ListenBrainzScrobbler(Scrobbler):
       logger.error("[ListenBrainz] Submission failed: {}", e)
       return 0
 
+  def _lookup_recording_metadata(self, artist: str, title: str) -> tuple[str | None, str | None]:
+    params: str = urllib.parse.urlencode(
+      {"artist_name": artist, "recording_name": title, "metadata": "false"}
+    )
+    url: str = f"{_METADATA_LOOKUP_URL}?{params}"
+    req: urllib.request.Request = urllib.request.Request(url, headers={"Accept": "application/json"})
+    try:
+      with urllib.request.urlopen(req, timeout=10) as resp:
+        data: dict = json.loads(resp.read())
+        return data.get("recording_mbid"), data.get("recording_msid")
+    except urllib.error.URLError, TimeoutError, json.JSONDecodeError:
+      return None, None
+
   def update_like_status(self, tracks: list[ScrobblerTrack]) -> None:
     scored: list[tuple[ScrobblerTrack, int]] = []
     for track in tracks:
@@ -62,36 +77,17 @@ class ListenBrainzScrobbler(Scrobbler):
 
     logger.info("[ListenBrainz] Updating feedback for {} track(s)...", len(scored))
 
-    try:
-      listens: list[liblistenbrainz.Listen] = self.client.get_listens(
-        username=os.environ["LISTENBRAINZ_USERNAME"],
-        count=200,
-      )
-    except liblistenbrainz.errors.ListenBrainzException as e:
-      logger.error("[ListenBrainz] Failed to fetch listens for feedback: {}", e)
-      return
-
-    listen_index: dict[tuple[str, str], liblistenbrainz.Listen] = {
-      (listen.track_name.lower(), listen.artist_name.lower()): listen for listen in listens
-    }
-
     token: str = os.environ["LISTENBRAINZ_TOKEN"]
     submitted: int = 0
     for track, score in scored:
-      listen: liblistenbrainz.Listen | None = listen_index.get((track.title.lower(), track.artist.lower()))
-      if listen is None:
-        logger.warning("[ListenBrainz] Listen not found for feedback: {} — {}", track.artist, track.title)
+      mbid, msid = self._lookup_recording_metadata(track.artist, track.title)
+      if not mbid:
+        logger.warning("[ListenBrainz] Recording not found for feedback: {} — {}", track.artist, track.title)
         continue
 
-      body: dict[str, str | int] = {"score": score}
-      if listen.recording_msid:
-        body["recording_msid"] = listen.recording_msid
-      if listen.recording_mbid:
-        body["recording_mbid"] = listen.recording_mbid
-
-      if "recording_msid" not in body and "recording_mbid" not in body:
-        logger.warning("[ListenBrainz] No recording ID available for: {} — {}", track.artist, track.title)
-        continue
+      body: dict[str, str | int] = {"score": score, "recording_mbid": mbid}
+      if msid:
+        body["recording_msid"] = msid
 
       req: urllib.request.Request = urllib.request.Request(
         _FEEDBACK_URL,
