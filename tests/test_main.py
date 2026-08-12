@@ -142,11 +142,11 @@ class TestBuildScrobblersListenBrainzError:
     for k in ("LASTFM_API_KEY", "LASTFM_SECRET", "LASTFM_USERNAME", "LASTFM_PASSWORD"):
       monkeypatch.delenv(k, raising=False)
     monkeypatch.setenv("LISTENBRAINZ_TOKEN", "token")
-    with patch(
-      "scrobble.main.ListenBrainzScrobbler", side_effect=RuntimeError("bad token")
+    with (
+      patch("scrobble.main.ListenBrainzScrobbler", side_effect=RuntimeError("bad token")),
+      pytest.raises(RuntimeError, match="No scrobblers configured"),
     ):
-      with pytest.raises(RuntimeError, match="No scrobblers configured"):
-        build_scrobblers()
+      build_scrobblers()
     assert "Failed to configure" in capsys.readouterr().err
 
 
@@ -165,7 +165,12 @@ def _make_scrobbler_mock(count: int = 0) -> MagicMock:
 
 def _ytm_track(video_id: str = "v1") -> YouTubeMusicTrack:
   return YouTubeMusicTrack(
-    video_id=video_id, title="Song", artists=["Artist"], duration="3:00", album=None, like_status="INDIFFERENT"
+    video_id=video_id,
+    title="Song",
+    artists=["Artist"],
+    duration="3:00",
+    album=None,
+    like_status="INDIFFERENT",
   )
 
 
@@ -175,18 +180,10 @@ class TestMain:
     monkeypatch: pytest.MonkeyPatch,
     db: MagicMock,
     scrobblers: list[MagicMock],
-    scrobbler_keys: list[str] | None = None,
   ):
     monkeypatch.delenv("GITHUB_STEP_SUMMARY", raising=False)
     patch_build = patch("scrobble.main.build_scrobblers", return_value=scrobblers)
     patch_db = patch("scrobble.main.PlayDb", return_value=db)
-    if scrobbler_keys is not None:
-      patch_lastfm = patch(
-        "scrobble.main.LastFmScrobbler",
-        side_effect=lambda: scrobblers[scrobbler_keys.index("lastfm")]
-        if "lastfm" in scrobbler_keys
-        else None,
-      )
     return patch_build, patch_db
 
   def test_scrobbles_and_marks(self, monkeypatch: pytest.MonkeyPatch) -> None:
