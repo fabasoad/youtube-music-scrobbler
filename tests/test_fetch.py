@@ -127,7 +127,7 @@ class TestFetchMain:
     spec = importlib.util.find_spec("scrobble.fetch")
     assert spec is not None
     with (
-      patch("scrobble.fetch.PlayDb", return_value=db),
-      patch("scrobble.fetch.YouTubeMusicClient", return_value=yt),
+      patch("scrobble.db.PlayDb", return_value=db),
+      patch("scrobble.yt_music.youtube_music_client.YouTubeMusicClient", return_value=yt),
     ):
       runpy.run_path(spec.origin, run_name="__main__")

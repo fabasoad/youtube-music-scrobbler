@@ -29,6 +29,7 @@ def make_scrobbler() -> ListenBrainzScrobbler:
     MockClient.return_value.set_auth_token = MagicMock()
     scrobbler = ListenBrainzScrobbler.__new__(ListenBrainzScrobbler)
     scrobbler.client = MockClient.return_value
+    scrobbler.token = "fake-token"
   return scrobbler
 
 

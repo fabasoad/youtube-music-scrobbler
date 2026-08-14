@@ -18,8 +18,9 @@ _METADATA_LOOKUP_URL = "https://api.listenbrainz.org/1/metadata/lookup/"
 
 class ListenBrainzScrobbler(Scrobbler):
   def __init__(self) -> None:
+    self.token: str = os.environ["LISTENBRAINZ_TOKEN"]
     self.client: liblistenbrainz.ListenBrainz = liblistenbrainz.ListenBrainz()
-    self.client.set_auth_token(os.environ["LISTENBRAINZ_TOKEN"], check_validity=False)
+    self.client.set_auth_token(self.token, check_validity=False)
 
   def scrobble(self, tracks: list[ScrobblerTrack]) -> int:
     logger.info("[ListenBrainz] Scrobbling {} track(s)...", len(tracks))
@@ -55,10 +56,9 @@ class ListenBrainzScrobbler(Scrobbler):
     params: str = urllib.parse.urlencode(
       {"artist_name": artist, "recording_name": title, "metadata": "false"}
     )
-    token: str = os.environ["LISTENBRAINZ_TOKEN"]
     req: urllib.request.Request = urllib.request.Request(
       f"{_METADATA_LOOKUP_URL}?{params}",
-      headers={"Authorization": f"Token {token}", "Accept": "application/json"},
+      headers={"Authorization": f"Token {self.token}", "Accept": "application/json"},
       method="GET",
     )
     try:
@@ -81,7 +81,6 @@ class ListenBrainzScrobbler(Scrobbler):
 
     logger.info("[ListenBrainz] Updating feedback for {} track(s)...", len(scored))
 
-    token: str = os.environ["LISTENBRAINZ_TOKEN"]
     submitted: int = 0
     for track, score in scored:
       mbid = self._lookup_recording_mbid(track.artist, track.title)
@@ -94,7 +93,7 @@ class ListenBrainzScrobbler(Scrobbler):
       req: urllib.request.Request = urllib.request.Request(
         _FEEDBACK_URL,
         data=json.dumps(body).encode(),
-        headers={"Authorization": f"Token {token}", "Content-Type": "application/json"},
+        headers={"Authorization": f"Token {self.token}", "Content-Type": "application/json"},
         method="POST",
       )
       for attempt in range(3):

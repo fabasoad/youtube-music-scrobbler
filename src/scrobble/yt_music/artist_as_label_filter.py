@@ -11,6 +11,8 @@ class ArtistAsLabelFilter(ArtistFilter):
       # and all its releases are shown as InVogue Records & <Artist>.
       # We need to filter out InVogue Records and leave <Artist> only.
       "InVogue Records",
+      # Same here: https://music.youtube.com/channel/UCaR2hMhiQHeiBtLDCcdwwUA
+      "Thriller Records",
     ]
     self._excluded_lower: set[str] = {a.casefold() for a in self.excluded_artists}
 

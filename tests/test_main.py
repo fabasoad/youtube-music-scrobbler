@@ -252,12 +252,12 @@ class TestMain:
 
   def test_dunder_main_calls_main(self, monkeypatch: pytest.MonkeyPatch) -> None:
     monkeypatch.delenv("GITHUB_STEP_SUMMARY", raising=False)
+    monkeypatch.setenv("LISTENBRAINZ_TOKEN", "fake-token")
     db = _make_db_mock([])
     spec = importlib.util.find_spec("scrobble.main")
     assert spec is not None
     with (
-      patch("scrobble.main.build_scrobblers", return_value=[MagicMock()]),
-      patch("scrobble.main.PlayDb", return_value=db),
-      patch("scrobble.main.isinstance", side_effect=lambda obj, cls: False),
+      patch("scrobble.db.PlayDb", return_value=db),
+      patch("scrobble.scrobblers.listenbrainz.liblistenbrainz.ListenBrainz"),
     ):
       runpy.run_path(spec.origin, run_name="__main__")

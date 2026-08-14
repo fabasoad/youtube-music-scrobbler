@@ -1,3 +1,4 @@
+import os
 from unittest.mock import MagicMock, patch
 
 import pytest
@@ -9,7 +10,10 @@ from scrobble.types import YouTubeMusicTrack
 def _make_db() -> tuple[PlayDb, MagicMock]:
   """Return a PlayDb whose psycopg connection is fully mocked."""
   mock_conn = MagicMock()
-  with patch("scrobble.db.psycopg.connect", return_value=mock_conn):
+  with (
+    patch.dict(os.environ, {"NEON_DATABASE_URL": "postgresql://test"}),
+    patch("scrobble.db.psycopg.connect", return_value=mock_conn),
+  ):
     db = PlayDb()
   return db, mock_conn
 
