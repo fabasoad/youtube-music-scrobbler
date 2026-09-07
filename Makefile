@@ -22,6 +22,11 @@ verify:
 install:
 	uv sync
 
+.PHONY: reinstall
+reinstall:
+	rm -f uv.lock
+	uv sync
+
 .PHONY: outdated
 outdated:
 	uv tree --outdated --depth 1
