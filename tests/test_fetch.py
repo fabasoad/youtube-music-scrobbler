@@ -46,6 +46,15 @@ class TestDiff:
     assert result[0].video_id == "v4"  # oldest first
     assert result[1].video_id == "v5"
 
+  def test_reordered_overlap_returns_new_tracks(self) -> None:
+    # YT Music returned v1,v2,v3 last time, but this time their order shifted to v1,v3,v2
+    recent_ids = ["v1", "v2", "v3"]
+    current = [_make_track("v5"), _make_track("v4"), _make_track("v1"), _make_track("v3"), _make_track("v2")]
+    result = _diff(current, recent_ids)
+    assert len(result) == 2
+    assert result[0].video_id == "v4"  # oldest first
+    assert result[1].video_id == "v5"
+
   def test_min_seq_parameter(self) -> None:
     recent_ids = ["v1", "v2", "v3"]
     current = [_make_track("v4"), _make_track("v1"), _make_track("v2")]
@@ -70,7 +79,7 @@ def _make_yt_client(tracks: list[YouTubeMusicTrack] | None = None, limit: int = 
 class TestFetchMain:
   def test_inserts_new_tracks(self) -> None:
     # recent_ids has matches so _diff finds new tracks ahead of the overlap
-    tracks = [_make_track("v3"), _make_track("v1"), _make_track("v2"), _make_track("v3")]
+    tracks = [_make_track("v4"), _make_track("v1"), _make_track("v2"), _make_track("v3")]
     db = _make_db(recent_ids=["v1", "v2", "v3"])
     yt = _make_yt_client(tracks=tracks)
     with (

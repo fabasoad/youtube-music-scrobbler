@@ -154,12 +154,12 @@ class TestFetchHistory:
     assert result[0].album is None
 
   def test_history_limit(self) -> None:
-    items = [_make_ytm_item(video_id=f"v{i}") for i in range(60)]
+    items = [_make_ytm_item(video_id=f"v{i}") for i in range(110)]
     with patch("scrobble.yt_music.youtube_music_client.YTMusic") as mock_cls:
       mock_cls.return_value.get_history.return_value = items
       client = YouTubeMusicClient()
       result = client.fetch_history()
-    assert len(result) == 50  # default limit
+    assert len(result) == 100  # default limit
 
   def test_retry_succeeds_on_second_attempt(self) -> None:
     items = [_make_ytm_item()]
