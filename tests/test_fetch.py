@@ -55,6 +55,16 @@ class TestDiff:
     assert result[0].video_id == "v4"  # oldest first
     assert result[1].video_id == "v5"
 
+  def test_duplicate_recent_ids_finds_anchor(self) -> None:
+    # If a prior bad run re-inserted tracks, recent_ids may contain duplicates.
+    # The anchor must still be found so we don't spiral and insert everything again.
+    recent_ids = ["v3", "v3", "v2", "v1"]  # v3 duplicated from a prior bad run
+    current = [_make_track("v5"), _make_track("v4"), _make_track("v1"), _make_track("v2"), _make_track("v3")]
+    result = _diff(current, recent_ids)
+    assert len(result) == 2
+    assert result[0].video_id == "v4"
+    assert result[1].video_id == "v5"
+
   def test_min_seq_parameter(self) -> None:
     recent_ids = ["v1", "v2", "v3"]
     current = [_make_track("v4"), _make_track("v1"), _make_track("v2")]

@@ -14,9 +14,10 @@ def _diff(
     return []
 
   curr_ids: list[str] = [t.video_id for t in current]
+  recent_id_set: set[str] = set(recent_ids)
   join: int = len(current)
   for i in range(len(current) - min_seq + 1):
-    if set(curr_ids[i : i + min_seq]) == set(recent_ids[:min_seq]):
+    if all(curr_ids[i + j] in recent_id_set for j in range(min_seq)):
       join = i
       break
 
