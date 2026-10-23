@@ -118,7 +118,7 @@ Per-service scrobble tracking: `lastfm_scrobbled_at` and `listenbrainz_scrobbled
 
 ## Code Style
 
-- Python `>=3.14` required
+- Python `>=3.15` required
 - Line length: 110 characters
 - Indentation: 2 spaces
 - Strings: double quotes preferred over single quotes

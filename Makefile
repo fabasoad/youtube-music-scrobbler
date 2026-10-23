@@ -14,6 +14,10 @@ update-likes:
 refresh-auth:
 	uv run refresh-auth
 
+.PHONY: refresh-auth-and-copy
+refresh-auth-and-copy: refresh-auth
+	jq -cr '.' browser.json | pbcopy
+
 .PHONY: verify
 verify:
 	uv run python verify.py
