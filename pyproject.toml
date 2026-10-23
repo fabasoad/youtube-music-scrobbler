@@ -25,8 +25,12 @@ dev = [
 ]
 
 [tool.uv]
-required-version = ">=0.11.28"
+required-version = ">=0.13.5"
 package = true
+
+override-dependencies = [
+  "certifi>=2026.10.19",
+]
 
 [build-system]
 requires = ["hatchling"]
