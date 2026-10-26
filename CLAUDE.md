@@ -51,7 +51,12 @@ All source lives in `src/scrobble/`:
 
 ### Fetch diffing
 
-`_diff()` in `fetch.py` finds the join point where the current YT Music list re-aligns with the saved DB snapshot using a minimum consecutive-match window (`min_seq=3`). Everything before that join point is treated as new plays, returned oldest-first for insertion.
+`_diff()` in `fetch.py` detects new plays by comparing the current YT Music history against the previous fetch's ordered snapshot (stored in `history_snapshot`). A track at position `i` in the current list is treated as a new play if its position in the previous snapshot was absent or greater than `i` (i.e., the track moved up or appeared). This catches re-plays of previously-captured `video_id`s, which the YT Music history endpoint can't surface directly (history is deduplicated by track, no timestamps). After the diff, the current ordering is persisted as the new snapshot.
+
+Known limitations:
+- If the user plays the same track N times in a row between fetches, it counts as 1 new play (position-based detection has no visibility into play count).
+- Re-playing a track already at position 0 is invisible (position unchanged).
+- On the very first fetch after this feature deploys the snapshot is empty, so `_diff` returns `[]`; the snapshot is initialized that run and detection activates on the next fetch.
 
 ### Timestamp assignment
 
@@ -109,6 +114,11 @@ play_artists (
   artist_name TEXT NOT NULL,
   position SMALLINT NOT NULL,
   PRIMARY KEY (play_id, position)
+)
+history_snapshot (
+  id SMALLINT PRIMARY KEY DEFAULT 1 CHECK (id = 1),  -- single row
+  video_ids TEXT[] NOT NULL,                          -- ordered, most-recent-first
+  snapshotted_at TIMESTAMPTZ DEFAULT NOW()
 )
 ```
 
