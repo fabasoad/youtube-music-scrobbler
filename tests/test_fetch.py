@@ -21,61 +21,81 @@ def _make_track(video_id: str, title: str = "Song") -> YouTubeMusicTrack:
 
 
 class TestDiff:
-  def test_empty_recent_ids_returns_empty(self) -> None:
+  def test_empty_previous_returns_empty(self) -> None:
     current = [_make_track("v1"), _make_track("v2")]
     assert _diff(current, []) == []
 
-  def test_no_overlap_returns_all_current(self) -> None:
-    recent_ids = ["v1", "v2", "v3"]
-    current = [_make_track("v4"), _make_track("v5"), _make_track("v6")]
-    result = _diff(current, recent_ids)
-    assert len(result) == 3
-    assert result[0].video_id == "v6"  # oldest first
-    assert result[2].video_id == "v4"
-
-  def test_full_overlap_returns_empty(self) -> None:
-    recent_ids = ["v1", "v2", "v3"]
+  def test_identical_snapshot_returns_empty(self) -> None:
+    previous = ["v1", "v2", "v3"]
     current = [_make_track("v1"), _make_track("v2"), _make_track("v3")]
-    assert _diff(current, recent_ids) == []
+    assert _diff(current, previous) == []
 
-  def test_partial_overlap_returns_new_tracks(self) -> None:
-    recent_ids = ["v1", "v2", "v3"]
-    current = [_make_track("v5"), _make_track("v4"), _make_track("v1"), _make_track("v2"), _make_track("v3")]
-    result = _diff(current, recent_ids)
+  def test_new_tracks_at_top_are_detected(self) -> None:
+    # user played v5 then v4; snapshot shifts down
+    previous = ["v1", "v2", "v3"]
+    current = [_make_track("v4"), _make_track("v5"), _make_track("v1"), _make_track("v2"), _make_track("v3")]
+    # Wait — if user played v5 then v4, YT Music shows [v4, v5, v1, v2, v3]
+    # v4 at i=0 not in prev → new; v5 at i=1 not in prev → new
+    result = _diff(current, previous)
     assert len(result) == 2
-    assert result[0].video_id == "v4"  # oldest first
-    assert result[1].video_id == "v5"
+    assert result[0].video_id == "v5"  # oldest first
+    assert result[1].video_id == "v4"
 
-  def test_reordered_overlap_returns_new_tracks(self) -> None:
-    # YT Music returned v1,v2,v3 last time, but this time their order shifted to v1,v3,v2
-    recent_ids = ["v1", "v2", "v3"]
-    current = [_make_track("v5"), _make_track("v4"), _make_track("v1"), _make_track("v3"), _make_track("v2")]
-    result = _diff(current, recent_ids)
-    assert len(result) == 2
-    assert result[0].video_id == "v4"  # oldest first
-    assert result[1].video_id == "v5"
+  def test_replay_of_lower_track_is_detected(self) -> None:
+    # user re-played v3 (was at pos 2, now at pos 0)
+    previous = ["v1", "v2", "v3"]
+    current = [_make_track("v3"), _make_track("v1"), _make_track("v2")]
+    result = _diff(current, previous)
+    assert len(result) == 1
+    assert result[0].video_id == "v3"
 
-  def test_duplicate_recent_ids_finds_anchor(self) -> None:
-    # If a prior bad run re-inserted tracks, recent_ids may contain duplicates.
-    # The anchor must still be found so we don't spiral and insert everything again.
-    recent_ids = ["v3", "v3", "v2", "v1"]  # v3 duplicated from a prior bad run
-    current = [_make_track("v5"), _make_track("v4"), _make_track("v1"), _make_track("v2"), _make_track("v3")]
-    result = _diff(current, recent_ids)
-    assert len(result) == 2
-    assert result[0].video_id == "v4"
-    assert result[1].video_id == "v5"
+  def test_replay_at_top_is_not_detected(self) -> None:
+    # user re-played v1 which was already at top — position unchanged, blind spot
+    previous = ["v1", "v2", "v3"]
+    current = [_make_track("v1"), _make_track("v2"), _make_track("v3")]
+    assert _diff(current, previous) == []
 
-  def test_min_seq_parameter(self) -> None:
-    recent_ids = ["v1", "v2", "v3"]
-    current = [_make_track("v4"), _make_track("v1"), _make_track("v2")]
-    result = _diff(current, recent_ids, min_seq=1)
+  def test_mix_of_new_and_replayed_tracks(self) -> None:
+    # user played NEW, then v3 (prev pos 2), then NEW2
+    previous = ["v1", "v2", "v3"]
+    current = [
+      _make_track("NEW2"),
+      _make_track("v3"),
+      _make_track("NEW1"),
+      _make_track("v1"),
+      _make_track("v2"),
+    ]
+    result = _diff(current, previous)
+    assert [t.video_id for t in result] == ["NEW1", "v3", "NEW2"]  # oldest first
+
+  def test_track_moved_down_is_not_new(self) -> None:
+    # new play of v4 pushes v1 from pos 0 to pos 1 — v1 should not be flagged
+    previous = ["v1", "v2", "v3"]
+    current = [_make_track("v4"), _make_track("v1"), _make_track("v2"), _make_track("v3")]
+    result = _diff(current, previous)
     assert len(result) == 1
     assert result[0].video_id == "v4"
 
+  def test_video_id_absent_from_previous_is_new(self) -> None:
+    # even deep in current, a brand-new video_id is still flagged
+    previous = ["v1", "v2", "v3", "v4", "v5"]
+    current = [
+      _make_track("v1"),
+      _make_track("v2"),
+      _make_track("v3"),
+      _make_track("v4"),
+      _make_track("v5"),
+      _make_track("vNEW"),
+    ]
+    # vNEW at i=5, sentinel > 5 → new
+    result = _diff(current, previous)
+    assert len(result) == 1
+    assert result[0].video_id == "vNEW"
 
-def _make_db(recent_ids: list[str] | None = None) -> MagicMock:
+
+def _make_db(previous_ids: list[str] | None = None) -> MagicMock:
   db = MagicMock()
-  db.get_recent_video_ids.return_value = recent_ids or []
+  db.get_history_snapshot.return_value = previous_ids or []
   return db
 
 
@@ -88,9 +108,8 @@ def _make_yt_client(tracks: list[YouTubeMusicTrack] | None = None, limit: int = 
 
 class TestFetchMain:
   def test_inserts_new_tracks(self) -> None:
-    # recent_ids has matches so _diff finds new tracks ahead of the overlap
     tracks = [_make_track("v4"), _make_track("v1"), _make_track("v2"), _make_track("v3")]
-    db = _make_db(recent_ids=["v1", "v2", "v3"])
+    db = _make_db(previous_ids=["v1", "v2", "v3"])
     yt = _make_yt_client(tracks=tracks)
     with (
       patch("scrobble.fetch.PlayDb", return_value=db),
@@ -101,7 +120,7 @@ class TestFetchMain:
 
   def test_no_new_tracks_skips_insert(self) -> None:
     tracks = [_make_track("v1"), _make_track("v2"), _make_track("v3")]
-    db = _make_db(recent_ids=["v1", "v2", "v3"])
+    db = _make_db(previous_ids=["v1", "v2", "v3"])
     yt = _make_yt_client(tracks=tracks)
     with (
       patch("scrobble.fetch.PlayDb", return_value=db),
@@ -109,6 +128,28 @@ class TestFetchMain:
     ):
       main()
     db.insert_plays.assert_not_called()
+
+  def test_saves_snapshot_after_fetch(self) -> None:
+    tracks = [_make_track("v4"), _make_track("v1"), _make_track("v2")]
+    db = _make_db(previous_ids=["v1", "v2"])
+    yt = _make_yt_client(tracks=tracks)
+    with (
+      patch("scrobble.fetch.PlayDb", return_value=db),
+      patch("scrobble.fetch.YouTubeMusicClient", return_value=yt),
+    ):
+      main()
+    db.save_history_snapshot.assert_called_once_with(["v4", "v1", "v2"])
+
+  def test_saves_snapshot_even_when_no_new_tracks(self) -> None:
+    tracks = [_make_track("v1"), _make_track("v2"), _make_track("v3")]
+    db = _make_db(previous_ids=["v1", "v2", "v3"])
+    yt = _make_yt_client(tracks=tracks)
+    with (
+      patch("scrobble.fetch.PlayDb", return_value=db),
+      patch("scrobble.fetch.YouTubeMusicClient", return_value=yt),
+    ):
+      main()
+    db.save_history_snapshot.assert_called_once_with(["v1", "v2", "v3"])
 
   def test_exception_exits_with_code_1(self) -> None:
     db = _make_db()

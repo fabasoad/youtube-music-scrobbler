@@ -52,8 +52,15 @@ class TestInitSchema:
     db, mock_conn = _make_db()
     cur = _make_cursor(mock_conn)
     db.init_schema()
-    assert cur.execute.call_count == 7  # 3 CREATE TABLE + 4 CREATE INDEX
+    assert cur.execute.call_count == 8  # 4 CREATE TABLE + 4 CREATE INDEX
     mock_conn.commit.assert_called_once()
+
+  def test_creates_history_snapshot_table(self) -> None:
+    db, mock_conn = _make_db()
+    cur = _make_cursor(mock_conn)
+    db.init_schema()
+    sql_stmts = [c.args[0] for c in cur.execute.call_args_list]
+    assert any("history_snapshot" in s and "CREATE TABLE" in s for s in sql_stmts)
 
   def test_creates_plays_table(self) -> None:
     db, mock_conn = _make_db()
@@ -77,28 +84,36 @@ class TestInitSchema:
     assert any("runs" in s and "CREATE TABLE" in s for s in sql_stmts)
 
 
-class TestGetRecentVideoIds:
+class TestGetHistorySnapshot:
   def test_returns_video_ids(self) -> None:
     db, mock_conn = _make_db()
     cur = _make_cursor(mock_conn)
-    cur.fetchall.return_value = [("v1",), ("v2",), ("v3",)]
-    result = db.get_recent_video_ids(limit=3)
+    cur.fetchone.return_value = (["v1", "v2", "v3"],)
+    result = db.get_history_snapshot()
     assert result == ["v1", "v2", "v3"]
 
-  def test_passes_limit_to_query(self) -> None:
+  def test_returns_empty_when_no_row(self) -> None:
     db, mock_conn = _make_db()
     cur = _make_cursor(mock_conn)
-    cur.fetchall.return_value = []
-    db.get_recent_video_ids(limit=25)
-    cur.execute.assert_called_once()
-    assert [25] in [list(c.args[1]) for c in cur.execute.call_args_list]
+    cur.fetchone.return_value = None
+    assert db.get_history_snapshot() == []
 
-  def test_default_limit_is_50(self) -> None:
+
+class TestSaveHistorySnapshot:
+  def test_upserts_and_commits(self) -> None:
     db, mock_conn = _make_db()
     cur = _make_cursor(mock_conn)
-    cur.fetchall.return_value = []
-    db.get_recent_video_ids()
-    assert [50] in [list(c.args[1]) for c in cur.execute.call_args_list]
+    db.save_history_snapshot(["v1", "v2", "v3"])
+    cur.execute.assert_called_once()
+    assert [["v1", "v2", "v3"]] in [list(c.args[1]) for c in cur.execute.call_args_list]
+    mock_conn.commit.assert_called_once()
+
+  def test_handles_empty_list(self) -> None:
+    db, mock_conn = _make_db()
+    cur = _make_cursor(mock_conn)
+    db.save_history_snapshot([])
+    cur.execute.assert_called_once()
+    mock_conn.commit.assert_called_once()
 
 
 class TestInsertPlays:

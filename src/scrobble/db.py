@@ -45,6 +45,13 @@ class PlayDb:
           new_tracks INTEGER NOT NULL
         )
       """)
+      cur.execute("""
+        CREATE TABLE IF NOT EXISTS history_snapshot (
+          id             SMALLINT PRIMARY KEY DEFAULT 1 CHECK (id = 1),
+          video_ids      TEXT[] NOT NULL,
+          snapshotted_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+        )
+      """)
       cur.execute("CREATE INDEX IF NOT EXISTS plays_video_id_idx ON plays (video_id)")
       cur.execute("CREATE INDEX IF NOT EXISTS plays_fetched_at_idx ON plays (fetched_at DESC)")
       cur.execute("CREATE INDEX IF NOT EXISTS play_artists_artist_name_idx ON play_artists (artist_name)")
@@ -52,10 +59,25 @@ class PlayDb:
     self.conn.commit()
     logger.debug("DB schema initialized.")
 
-  def get_recent_video_ids(self, limit: int = 50) -> list[str]:
+  def get_history_snapshot(self) -> list[str]:
     with self.conn.cursor() as cur:
-      cur.execute("SELECT video_id FROM plays ORDER BY id DESC LIMIT %s", [limit])
-      return [row[0] for row in cur.fetchall()]
+      cur.execute("SELECT video_ids FROM history_snapshot WHERE id = 1")
+      row = cur.fetchone()
+      return list(row[0]) if row else []
+
+  def save_history_snapshot(self, video_ids: list[str]) -> None:
+    with self.conn.cursor() as cur:
+      cur.execute(
+        """
+        INSERT INTO history_snapshot (id, video_ids, snapshotted_at)
+        VALUES (1, %s, NOW())
+        ON CONFLICT (id) DO UPDATE
+          SET video_ids = EXCLUDED.video_ids, snapshotted_at = NOW()
+        """,
+        [video_ids],
+      )
+    self.conn.commit()
+    logger.debug("Saved history snapshot with {} track(s).", len(video_ids))
 
   def insert_plays(self, tracks: list[YouTubeMusicTrack]) -> int:
     if not tracks:

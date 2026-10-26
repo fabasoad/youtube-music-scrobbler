@@ -7,21 +7,16 @@ from scrobble.types import YouTubeMusicTrack
 from scrobble.yt_music.youtube_music_client import YouTubeMusicClient
 
 
-def _diff(
-  current: list[YouTubeMusicTrack], recent_ids: list[str], min_seq: int = 3
-) -> list[YouTubeMusicTrack]:
-  if not recent_ids:
+def _diff(current: list[YouTubeMusicTrack], previous_ids: list[str]) -> list[YouTubeMusicTrack]:
+  if not previous_ids:
     return []
 
-  curr_ids: list[str] = [t.video_id for t in current]
-  recent_id_set: set[str] = set(recent_ids)
-  join: int = len(current)
-  for i in range(len(current) - min_seq + 1):
-    if all(curr_ids[i + j] in recent_id_set for j in range(min_seq)):
-      join = i
-      break
-
-  return list(reversed(current[:join]))  # oldest first
+  prev_pos: dict[str, int] = {vid: i for i, vid in enumerate(previous_ids)}
+  sentinel: int = len(current) + 1
+  new_plays: list[YouTubeMusicTrack] = [
+    track for i, track in enumerate(current) if prev_pos.get(track.video_id, sentinel) > i
+  ]
+  return list(reversed(new_plays))
 
 
 def main() -> None:
@@ -33,14 +28,16 @@ def main() -> None:
     db.init_schema()
     yt_client = YouTubeMusicClient()
     current: list[YouTubeMusicTrack] = yt_client.fetch_history()
-    recent_ids: list[str] = db.get_recent_video_ids(limit=yt_client.history_limit)
-    new_tracks: list[YouTubeMusicTrack] = _diff(current, recent_ids)
+    previous_ids: list[str] = db.get_history_snapshot()
+    new_tracks: list[YouTubeMusicTrack] = _diff(current, previous_ids)
 
     if new_tracks:
       db.insert_plays(new_tracks)
       logger.info("Fetch done. {} new track(s) saved.", len(new_tracks))
     else:
       logger.info("Fetch done. No new tracks.")
+
+    db.save_history_snapshot([t.video_id for t in current])
 
   except Exception as e:
     logger.exception("Fetch error: {}", e)
