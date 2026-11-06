@@ -39,8 +39,11 @@ def build_scrobblers() -> list[Scrobbler]:
   if missing_lastfm:
     logger.warning("[Last.fm] Not configured. Missing: {}", ", ".join(missing_lastfm))
   else:
-    scrobblers.append(LastFmScrobbler())
-    logger.info("[Last.fm] Scrobbler configured.")
+    try:
+      scrobblers.append(LastFmScrobbler())
+      logger.info("[Last.fm] Scrobbler configured.")
+    except Exception as e:
+      logger.error("[Last.fm] Failed to configure scrobbler: {!r}", e)
   if os.environ.get("LISTENBRAINZ_TOKEN"):
     try:
       scrobblers.append(ListenBrainzScrobbler())
@@ -82,9 +85,19 @@ def main() -> None:
       tracks: list[YouTubeMusicTrack] = [r[1] for r in rows]
       prepared: list[ScrobblerTrack] = prepare_tracks(tracks)
 
-      count: int = scrobbler.scrobble(prepared)
-      db.mark_scrobbled(play_ids, key)
-      total_scrobbled = max(total_scrobbled, count)
+      # Only the tracks the service actually accepted get marked, so anything skipped after a
+      # failed retry is picked up by the next run instead of being silently dropped.
+      scrobbled_indices: list[int] = scrobbler.scrobble(prepared)
+      if scrobbled_indices:
+        db.mark_scrobbled([play_ids[i] for i in scrobbled_indices], key)
+      if len(scrobbled_indices) < len(tracks):
+        logger.warning(
+          "{}: {}/{} track(s) not scrobbled, will retry next run.",
+          key,
+          len(tracks) - len(scrobbled_indices),
+          len(tracks),
+        )
+      total_scrobbled = max(total_scrobbled, len(scrobbled_indices))
       if len(tracks) > len(all_new_tracks):
         all_new_tracks = tracks
 

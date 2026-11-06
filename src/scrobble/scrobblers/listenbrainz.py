@@ -22,7 +22,7 @@ class ListenBrainzScrobbler(Scrobbler):
     self.client: liblistenbrainz.ListenBrainz = liblistenbrainz.ListenBrainz()
     self.client.set_auth_token(self.token, check_validity=False)
 
-  def scrobble(self, tracks: list[ScrobblerTrack]) -> int:
+  def scrobble(self, tracks: list[ScrobblerTrack]) -> list[int]:
     logger.info("[ListenBrainz] Scrobbling {} track(s)...", len(tracks))
     listens: list[liblistenbrainz.Listen] = [
       liblistenbrainz.Listen(
@@ -38,6 +38,7 @@ class ListenBrainzScrobbler(Scrobbler):
       result: dict[str, str] = self.client.submit_multiple_listens(listens)
       if result["status"] != "ok":
         logger.error("[ListenBrainz] Submission failed: {}", result["message"])
+        return []
       for track in tracks:
         album_part: str = "" if track.album is None else f" ({track.album})"
         duration_part: str = "N/A"
@@ -47,10 +48,10 @@ class ListenBrainzScrobbler(Scrobbler):
           "[ListenBrainz] Scrobbled: [{}] {} — {}{}", duration_part, track.artist, track.title, album_part
         )
       logger.info("[ListenBrainz] Done. {}/{} track(s) scrobbled.", len(listens), len(tracks))
-      return len(listens)
+      return list(range(len(tracks)))
     except liblistenbrainz.errors.ListenBrainzException as e:
       logger.error("[ListenBrainz] Submission failed: {}", e)
-      return 0
+      return []
 
   def _lookup_recording_mbid(self, artist: str, title: str) -> str | None:
     params: str = urllib.parse.urlencode(

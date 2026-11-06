@@ -159,7 +159,7 @@ def _make_db_mock(tracks: list | None = None) -> MagicMock:
 
 def _make_scrobbler_mock(count: int = 0) -> MagicMock:
   s = MagicMock()
-  s.scrobble.return_value = count
+  s.scrobble.return_value = list(range(count))
   return s
 
 
@@ -261,3 +261,61 @@ class TestMain:
       patch("scrobble.scrobblers.listenbrainz.liblistenbrainz.ListenBrainz"),
     ):
       runpy.run_path(spec.origin, run_name="__main__")
+
+
+class TestMainPartialScrobbles:
+  def test_only_successful_plays_are_marked(self, monkeypatch: pytest.MonkeyPatch) -> None:
+    monkeypatch.delenv("GITHUB_STEP_SUMMARY", raising=False)
+    tracks = [_ytm_track("v1"), _ytm_track("v2"), _ytm_track("v3")]
+    db = _make_db_mock(tracks)  # play ids 0, 1, 2
+    scrobbler = MagicMock()
+    scrobbler.scrobble.return_value = [0, 2]  # middle track was skipped after failed retries
+    with (
+      patch("scrobble.main.build_scrobblers", return_value=[scrobbler]),
+      patch("scrobble.main.PlayDb", return_value=db),
+      patch("scrobble.main.isinstance", side_effect=lambda obj, cls: cls == LastFmScrobbler),
+      patch("scrobble.main.prepare_tracks", side_effect=lambda t: list(t)),
+    ):
+      main()
+    db.mark_scrobbled.assert_called_once_with([0, 2], "lastfm")
+
+  def test_nothing_marked_when_all_scrobbles_fail(self, monkeypatch: pytest.MonkeyPatch) -> None:
+    monkeypatch.delenv("GITHUB_STEP_SUMMARY", raising=False)
+    db = _make_db_mock([_ytm_track()])
+    scrobbler = MagicMock()
+    scrobbler.scrobble.return_value = []
+    with (
+      patch("scrobble.main.build_scrobblers", return_value=[scrobbler]),
+      patch("scrobble.main.PlayDb", return_value=db),
+      patch("scrobble.main.isinstance", side_effect=lambda obj, cls: cls == LastFmScrobbler),
+      patch("scrobble.main.prepare_tracks", side_effect=lambda t: list(t)),
+    ):
+      main()
+    db.mark_scrobbled.assert_not_called()
+
+
+class TestBuildScrobblersLastFmError:
+  def test_lastfm_init_error_keeps_listenbrainz(
+    self, monkeypatch: pytest.MonkeyPatch, capsys: pytest.CaptureFixture
+  ) -> None:
+    for k, v in LASTFM_VARS.items():
+      monkeypatch.setenv(k, v)
+    monkeypatch.setenv("LISTENBRAINZ_TOKEN", "token")
+    with (
+      patch("scrobble.main.LastFmScrobbler", side_effect=RuntimeError("read timed out")),
+      patch("scrobble.scrobblers.listenbrainz.liblistenbrainz.ListenBrainz"),
+    ):
+      result = build_scrobblers()
+    assert len(result) == 1
+    assert isinstance(result[0], ListenBrainzScrobbler)
+    assert "[Last.fm] Failed to configure" in capsys.readouterr().err
+
+  def test_lastfm_init_error_alone_raises(self, monkeypatch: pytest.MonkeyPatch) -> None:
+    for k, v in LASTFM_VARS.items():
+      monkeypatch.setenv(k, v)
+    monkeypatch.delenv("LISTENBRAINZ_TOKEN", raising=False)
+    with (
+      patch("scrobble.main.LastFmScrobbler", side_effect=RuntimeError("read timed out")),
+      pytest.raises(RuntimeError, match="No scrobblers configured"),
+    ):
+      build_scrobblers()
