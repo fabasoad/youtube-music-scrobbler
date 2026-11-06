@@ -268,3 +268,58 @@ class TestLastFmScrobblerInitRetries:
     assert result == []
     assert s.network.scrobble.call_count == 1
     mock_sleep.assert_not_called()
+
+
+class TestLastFmScrobblerFeedbackRetries:
+  def _make_scrobbler(self) -> tuple[LastFmScrobbler, MagicMock]:
+    s = LastFmScrobbler.__new__(LastFmScrobbler)
+    s.network = MagicMock()
+    pylast_track = MagicMock()
+    s.network.get_track.return_value = pylast_track
+    return s, pylast_track
+
+  def test_love_retries_on_http_503_then_succeeds(self, capsys: pytest.CaptureFixture) -> None:
+    s, pylast_track = self._make_scrobbler()
+    pylast_track.love.side_effect = [_ws_error(503), None]
+    with patch("scrobble.scrobblers.lastfm.time.sleep") as mock_sleep:
+      s.update_like_status([make_track(like_status="LIKE")])
+    assert pylast_track.love.call_count == 2
+    mock_sleep.assert_called_once_with(5)
+    err = capsys.readouterr().err
+    assert "Liked" in err
+    assert "1/1 track(s) updated" in err
+
+  def test_unlove_retries_on_http_503_then_succeeds(self) -> None:
+    s, pylast_track = self._make_scrobbler()
+    pylast_track.unlove.side_effect = [_ws_error(503), None]
+    with patch("scrobble.scrobblers.lastfm.time.sleep"):
+      s.update_like_status([make_track(like_status="DISLIKE")])
+    assert pylast_track.unlove.call_count == 2
+
+  def test_feedback_skipped_after_three_failures(self, capsys: pytest.CaptureFixture) -> None:
+    s, pylast_track = self._make_scrobbler()
+    pylast_track.love.side_effect = _ws_error(503)
+    with patch("scrobble.scrobblers.lastfm.time.sleep"):
+      s.update_like_status([make_track(like_status="LIKE")])
+    assert pylast_track.love.call_count == 3
+    err = capsys.readouterr().err
+    assert "Skipping feedback" in err
+    assert "0/1 track(s) updated" in err
+
+  def test_feedback_does_not_retry_permanent_error(self) -> None:
+    s, pylast_track = self._make_scrobbler()
+    pylast_track.love.side_effect = _ws_error("10")  # invalid API key
+    with patch("scrobble.scrobblers.lastfm.time.sleep") as mock_sleep:
+      s.update_like_status([make_track(like_status="LIKE")])
+    assert pylast_track.love.call_count == 1
+    mock_sleep.assert_not_called()
+
+  def test_feedback_continues_after_one_track_fails(self, capsys: pytest.CaptureFixture) -> None:
+    s, pylast_track = self._make_scrobbler()
+    pylast_track.love.side_effect = [_ws_error("10"), None]
+    with patch("scrobble.scrobblers.lastfm.time.sleep"):
+      s.update_like_status(
+        [make_track(title="T1", like_status="LIKE"), make_track(title="T2", like_status="LIKE")]
+      )
+    assert pylast_track.love.call_count == 2
+    assert "1/2 track(s) updated" in capsys.readouterr().err

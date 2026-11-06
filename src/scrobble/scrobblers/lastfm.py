@@ -82,16 +82,17 @@ class LastFmScrobbler(Scrobbler):
     submitted: int = 0
     for track in scored:
       pylast_track: pylast.Track = self.network.get_track(track.artist, track.title)
+      liked: bool = track.like_status == "LIKE"
+      try:
+        _call_with_retry(track.title, pylast_track.love if liked else pylast_track.unlove)
+      except pylast.PyLastError as e:
+        logger.error("[Last.fm] Skipping feedback for {}: {}", track.title, e)
+        continue
+
       album_part: str = "" if track.album is None else f" ({track.album})"
       duration_part: str = LastFmScrobbler._format_duration(track.duration)
-      if track.like_status == "LIKE":
-        pylast_track.love()
-        logger.info("[Last.fm] Liked: [{}] {} — {}{}", duration_part, track.artist, track.title, album_part)
-      else:
-        pylast_track.unlove()
-        logger.info(
-          "[Last.fm] Disliked: [{}] {} — {}{}", duration_part, track.artist, track.title, album_part
-        )
+      label: str = "Liked" if liked else "Disliked"
+      logger.info("[Last.fm] {}: [{}] {} — {}{}", label, duration_part, track.artist, track.title, album_part)
       submitted += 1
 
     logger.info("[Last.fm] Feedback done. {}/{} track(s) updated.", submitted, len(scored))
