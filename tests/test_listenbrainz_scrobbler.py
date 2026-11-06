@@ -36,17 +36,17 @@ def make_scrobbler() -> ListenBrainzScrobbler:
 class TestListenBrainzScrobbler:
   def test_scrobble_submits_all_tracks(self) -> None:
     scrobbler = make_scrobbler()
-    scrobbler.client.submit_multiple_listens = MagicMock()
+    scrobbler.client.submit_multiple_listens = MagicMock(return_value={"status": "ok"})
     tracks = [make_track(title="T1"), make_track(title="T2")]
     result = scrobbler.scrobble(tracks)
-    assert result == 2
+    assert result == [0, 1]
     scrobbler.client.submit_multiple_listens.assert_called_once()
     submitted: list[liblistenbrainz.Listen] = scrobbler.client.submit_multiple_listens.call_args[0][0]
     assert len(submitted) == 2
 
   def test_scrobble_maps_fields_correctly(self) -> None:
     scrobbler = make_scrobbler()
-    scrobbler.client.submit_multiple_listens = MagicMock()
+    scrobbler.client.submit_multiple_listens = MagicMock(return_value={"status": "ok"})
     track = make_track(artist="Test Artist", title="Test Song", album="Test Album", timestamp=999)
     scrobbler.scrobble([track])
     submitted: list[liblistenbrainz.Listen] = scrobbler.client.submit_multiple_listens.call_args[0][0]
@@ -57,13 +57,13 @@ class TestListenBrainzScrobbler:
     assert listen.listened_at == 999
     assert listen.listening_from == "youtube-music"
 
-  def test_scrobble_returns_zero_on_api_error(self) -> None:
+  def test_scrobble_returns_nothing_on_api_error(self) -> None:
     scrobbler = make_scrobbler()
     scrobbler.client.submit_multiple_listens = MagicMock(
       side_effect=liblistenbrainz.errors.ListenBrainzAPIException(400, "Bad Request")
     )
     result = scrobbler.scrobble([make_track()])
-    assert result == 0
+    assert result == []
 
   def test_init_sets_auth_token(self, monkeypatch: pytest.MonkeyPatch) -> None:
     monkeypatch.setenv("LISTENBRAINZ_TOKEN", "test-token")
@@ -75,22 +75,23 @@ class TestListenBrainzScrobbler:
   def test_scrobble_failed_status_logs_error(self, capsys: pytest.CaptureFixture) -> None:
     scrobbler = make_scrobbler()
     scrobbler.client.submit_multiple_listens = MagicMock(return_value={"status": "error", "message": "bad"})
-    scrobbler.scrobble([make_track()])
+    result = scrobbler.scrobble([make_track()])
+    assert result == []
     assert "bad" in capsys.readouterr().err
 
   def test_scrobble_no_album(self) -> None:
     scrobbler = make_scrobbler()
-    scrobbler.client.submit_multiple_listens = MagicMock()
+    scrobbler.client.submit_multiple_listens = MagicMock(return_value={"status": "ok"})
     track = make_track(album=None, duration=None)
     result = scrobbler.scrobble([track])
-    assert result == 1
+    assert result == [0]
 
   def test_scrobble_long_duration(self) -> None:
     scrobbler = make_scrobbler()
-    scrobbler.client.submit_multiple_listens = MagicMock()
+    scrobbler.client.submit_multiple_listens = MagicMock(return_value={"status": "ok"})
     track = make_track(duration="10:00")
     result = scrobbler.scrobble([track])
-    assert result == 1
+    assert result == [0]
 
 
 def _make_urlopen_ctx() -> MagicMock:
