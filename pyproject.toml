@@ -8,7 +8,7 @@ dependencies = [
   "liblistenbrainz>=0.7.0",
   "ytmusicapi==1.12.3",
   "loguru>=0.7.3",
-  "psycopg[binary]>=3.3.6",
+  "psycopg[binary]>=3.3.8",
 ]
 
 [project.scripts]
@@ -21,7 +21,7 @@ refresh-auth = "scrobble.auth:main"
 dev = [
   "pytest>=9.1.1",
   "pytest-cov>=7.1.0",
-  "ruff>=0.17.2",
+  "ruff>=0.17.4",
 ]
 
 [tool.uv]
