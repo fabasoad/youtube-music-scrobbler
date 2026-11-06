@@ -17,10 +17,22 @@ def _ytm_track() -> YouTubeMusicTrack:
   )
 
 
-def _patch_client() -> object:
+def _make_client() -> MagicMock:
   client = MagicMock()
   client.fetch_history.return_value = [_ytm_track()]
-  return patch("scrobble.update_likes.YouTubeMusicClient", return_value=client)
+  return client
+
+
+def _patch_client() -> object:
+  # main() resolves YouTubeMusicClient through scrobble.update_likes' own namespace.
+  return patch("scrobble.update_likes.YouTubeMusicClient", return_value=_make_client())
+
+
+def _patch_client_at_source() -> object:
+  # runpy re-executes the module as __main__, so it re-runs its own `from ... import
+  # YouTubeMusicClient`. Patching scrobble.update_likes would not reach that fresh namespace,
+  # and the real client would try to read browser.json and hit the network.
+  return patch("scrobble.yt_music.youtube_music_client.YouTubeMusicClient", return_value=_make_client())
 
 
 class TestUpdateLikesMain:
@@ -105,5 +117,8 @@ class TestUpdateLikesMain:
     monkeypatch.delenv("LISTENBRAINZ_TOKEN", raising=False)
     spec = importlib.util.find_spec("scrobble.update_likes")
     assert spec is not None
-    with _patch_client():
+    with _patch_client_at_source() as mock_client_cls:
       runpy.run_path(spec.origin, run_name="__main__")
+    # Guards the patch target: if the mock went unused the real client ran, which would read
+    # browser.json and hit the network, passing locally but failing in CI.
+    mock_client_cls.assert_called_once()
