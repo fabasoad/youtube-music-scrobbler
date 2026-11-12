@@ -21,6 +21,15 @@ class TestParseCurl:
       "x-goog-authuser": "0",
     }
 
+  def test_cookie_from_header(self) -> None:
+    curl: str = (
+      "curl 'https://music.youtube.com/youtubei/v1/player' "
+      "-H 'authorization: Bearer ya29.abc123' "
+      "-H 'x-goog-authuser: 0' "
+      "-H 'Cookie: CONSENT=YES; SID=abc'"
+    )
+    assert parse_curl(curl)["cookie"] == "CONSENT=YES; SID=abc"
+
   def test_missing_cookie_exits(self) -> None:
     curl: str = (
       "curl 'https://music.youtube.com/youtubei/v1/browse' "

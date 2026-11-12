@@ -3,7 +3,10 @@ from unittest.mock import MagicMock, call, patch
 import pytest
 from ytmusicapi.exceptions import YTMusicServerError
 
-from scrobble.yt_music.youtube_music_client import YouTubeMusicClient
+from scrobble.yt_music.youtube_music_client import (
+  YouTubeMusicClient,
+  YouTubeMusicSessionExpiredError,
+)
 
 
 def _make_ytm_item(
@@ -172,6 +175,18 @@ class TestFetchHistory:
       result = YouTubeMusicClient().fetch_history()
     assert len(result) == 1
     mock_sleep.assert_called_once_with(5)
+
+  def test_empty_error_means_session_expired_without_retry(self) -> None:
+    mock_yt: MagicMock = MagicMock()
+    mock_yt.get_history.side_effect = YTMusicServerError(None)
+    with (
+      patch("scrobble.yt_music.youtube_music_client.YTMusic", return_value=mock_yt),
+      patch("scrobble.yt_music.youtube_music_client.time.sleep") as mock_sleep,
+      pytest.raises(YouTubeMusicSessionExpiredError, match="YTM_BROWSER"),
+    ):
+      YouTubeMusicClient().fetch_history()
+    assert mock_yt.get_history.call_count == 1
+    mock_sleep.assert_not_called()
 
   def test_retry_raises_after_three_failures(self) -> None:
     mock_yt: MagicMock = MagicMock()
