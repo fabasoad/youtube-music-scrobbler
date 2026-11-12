@@ -9,6 +9,10 @@ from scrobble.yt_music.artist_as_label_filter import ArtistAsLabelFilter
 from scrobble.yt_music.artist_filter import ArtistFilter
 
 
+class YouTubeMusicSessionExpiredError(Exception):
+  pass
+
+
 class YouTubeMusicClient:
   def __init__(self) -> None:
     self.auth_path: str = "browser.json"
@@ -25,6 +29,13 @@ class YouTubeMusicClient:
         history = yt.get_history()[: self.history_limit]
         break
       except YTMusicServerError as e:
+        # ytmusicapi raises this with no message when the response has no history shelf, which is what
+        # YouTube Music returns for a logged-out (expired or rotated cookie) session. Retrying is useless.
+        if not e.args or e.args[0] is None:
+          raise YouTubeMusicSessionExpiredError(
+            "YouTube Music returned no history, the session cookie is most likely expired or rotated. "
+            "Regenerate the YTM_BROWSER secret (preferably from an incognito window)."
+          ) from e
         logger.warning("Attempt {} failed to fetch YTMusic history: {}", attempt + 1, e)
         if attempt < 2:
           time.sleep(5)

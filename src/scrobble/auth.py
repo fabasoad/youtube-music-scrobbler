@@ -17,7 +17,10 @@ from loguru import logger
 
 
 def parse_curl(curl: str) -> dict:
-  cookie: re.Match | None = re.search(r"-b '([^']+)'", curl)
+  # Chrome emits cookies as `-b '...'`, but when it omits them they are added manually as `-H 'Cookie: ...'`
+  cookie: re.Match | None = re.search(r"-b '([^']+)'", curl) or re.search(
+    r"-H 'cookie: ([^']+)'", curl, re.IGNORECASE
+  )
   auth: re.Match | None = re.search(r"'authorization: ([^']+)'", curl)
   authuser: re.Match | None = re.search(r"'x-goog-authuser: ([^']+)'", curl)
 
